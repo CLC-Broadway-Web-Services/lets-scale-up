@@ -1,944 +1,1362 @@
-<?= $this->extend('Frontend/layouts/main') ?>
+<?= $this->extend('Frontend/layouts/main'); ?>
 
-<?= $this->section('content') ?>
+<?= $this->section('content'); ?>
 
-<!-- END HOME -->
-<section class="bg-light d-flex align-content-center flex-wrap" style="min-height:75vh;">
-    <div class="home-center">
-        <div class="home-desc-center">
-            <div class="container">
-                <div class="row align-items-center justify-content-center align-content-center">
-                    <div class="col-lg-9">
-                        <div class="home-content text-center mt-5 pt-5">
-                            <!-- <div class="home-badge mt-5">
-                                <p class="f-13 bg-primary text-white-50"><span class="text-white">70% Off</span> for first 3 month</p>
-                            </div> -->
-                            <!-- <h1 class="mt-3"><span class="element" data-elements="Starting & Managing Your Business has never been easier!"></span></h1> -->
-                            <h1 class="mt-3">Starting & Managing Your Business has never been easier!</h1>
-                            <p class="text-muted mt-3 f-20"> Start a Company, IP registration, Tax registration & Filings
-                                <br> venenaatis nec biendum Susisse potenti.
-                            </p>
+    <!--begin home section -->
+    <section class="home-section" id="home">
 
-                        </div>
-                    </div>
-                    <div class="row mt-4 mb-5">
-                        <div class="col-lg-4">
-                            <div class="work-box text-center p-3">
-                                <div class="arrow">
-                                    <img src="/public/assets/images/arrow-1.png" alt="">
-                                </div>
-                                <!-- <div class="work-count">
-                                    <p class="mb-0">1</p>
-                                </div> -->
-                                <div class="work-icon">
-                                    <i class="pe-7s-light"></i>
-                                </div>
-                                <h5 class="mt-4">5000+ Businesses Served</h5>
-                                <!-- <p class="text-muted mt-3">
-                                    Sellesque vel pellentesque eros at commodo dui varius natoque penatibus magnis dis parturient montes ridiculus.
-                                </p> -->
-                            </div>
-                        </div>
+      <!--begin container -->
+      <div class="container">
 
-                        <div class="col-lg-4">
-                            <div class="work-box text-center p-3">
-                                <div class="arrow">
-                                    <img src="/public/assets/images/arrow-2.png" alt="">
-                                </div>
-                                <!-- <div class="work-count">
-                                    <p class="mb-0">2</p>
-                                </div> -->
-                                <div class="work-icon">
-                                    <i class="pe-7s-pen"></i>
-                                </div>
-                                <h5 class="mt-4">9.6/10 Unfiltered Customer Ratings</h5>
+        <!--begin row -->
+        <div class="row align-items-center">
 
-                            </div>
-                        </div>
+          <!--begin col-md-6-->
+          <div class="col-md-6">
 
-                        <div class="col-lg-4">
-                            <div class="work-box text-center p-3">
-                                <!-- <div class="work-count">
-                                    <p class="mb-0">3</p>
-                                </div> -->
-                                <div class="work-icon">
-                                    <i class="pe-7s-monitor"></i>
-                                </div>
-                                <h5 class="mt-4">Satisfaction or Money Back Guarantee</h5>
-                            </div>
-                        </div>
+            <h1>Discover The Wold's Most Advanced Online Tool </h1>
 
-                    </div>
-                </div>
+            <p class="hero-text">Track and analyze all your data in one central location nisledis qui officia deserunt
+              etimus quis autem netsum loremisat entimus velis netsad.</p>
+
+            <!--begin popup-video-wrapper-->
+            <div class="popup-gallery-wrapper">
+
+              <!--begin popup-video-->
+              <div class="popup-gallery hero-gallery">
+
+                <a class="popup4 video-icon" href="https://www.youtube.com/watch?v=FPfQMVf4vwQ">
+                  <i class="bi bi-play-fill"></i>
+                </a>
+
+              </div>
+              <!--end popup-video-->
+
+              <p class="popup-video-text">Watch Presentation</p>
+
             </div>
-        </div>
-    </div>
-</section>
-<!-- END HOME -->
+            <!--end popup-video-wrapper-->
 
-<!-- SERVICES -->
-<section class="section pt-5">
-    <div class="container">
+          </div>
+          <!--end col-md-6-->
+
+          <!--begin col-md-5-->
+          <div class="col-md-6">
+
+            <img src="http://placehold.it/555x515" class="hero-image width-100" alt="pic">
+
+          </div>
+          <!--end col-md-5-->
+
+        </div>
+        <!--end row -->
+
+      </div>
+      <!--end container -->
+
+    </section>
+    <!--end home section -->
+
+    <!--begin section-white -->
+    <section class="section-white" id="about">
+
+      <!--begin container -->
+      <div class="container">
+
+        <!--begin row -->
         <div class="row">
 
-            <?php foreach ($services as $service) : ?>
-                <div class="col-lg-6">
-                    <div class="counter-box mt-4">
-                        <div class="media box-shadow bg-white p-4 rounded">
-                            <div class="counter-icon mr-3">
-                                <i class="mdi mdi-<?=$service['service_icon']?> text-primary h2"></i>
-                            </div>
-                            <div class="media-body pl-2">
-                                <h3><?=$service['service_title']?></h3>
-                                <p class="text-muted mb-0 mt-2 f-15">
-                                <?=$service['service_summary']?>
-                                </p>
-                                <div class="row form-inline mt-3">
-                                    <div class="col-lg-6">
-                                        <span class="h5 pt-2"><b>₹ <?=$service['service_starts_at']?></b> <small>(All Inclusive)</small></span>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <a href="/service/<?=$service['service_slug']?>" class="btn btn-primary float-right">Get Started</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach ?>
+          <!--begin col-md-12 -->
+          <div class="col-md-12 text-center">
 
+            <h2>How It Works</h2>
+
+          </div>
+          <!--end col-md-12 -->
+
+          <!--begin col-md-4 -->
+          <div class="col-md-4">
+
+            <div class="main-services">
+
+              <i class="bi bi-megaphone green"></i>
+
+              <h4>Search Oportunities</h4>
+
+              <p>Curabitur quamtis etsum lacus etsumis nulatis iaculis etsum vitae etsum ets nisle varius.</p>
+
+            </div>
+
+          </div>
+          <!--end col-md-4 -->
+
+          <!--begin col-md-4 -->
+          <div class="col-md-4">
+
+            <div class="main-services">
+
+              <i class="bi bi-gem red"></i>
+
+              <h4>Reach Clients</h4>
+
+              <p>Curabitur quamtis etsum lacus etsumis nulatis iaculis etsum vitae etsum ets nisle varius.</p>
+
+            </div>
+
+          </div>
+          <!--end col-md-4 -->
+
+          <!--begin col-md-4 -->
+          <div class="col-md-4">
+
+            <div class="main-services">
+
+              <i class="bi bi-speedometer2 blue"></i>
+
+              <h4>Get Rewarded</h4>
+
+              <p>Curabitur quamtis etsum lacus etsumis nulatis iaculis etsum vitae etsum ets nisle varius.</p>
+
+            </div>
+
+          </div>
+          <!--end col-md-4 -->
 
         </div>
-    </div>
-</section>
-<!-- SERVICES -->
+        <!--end row -->
 
+      </div>
+      <!--end container -->
 
-<!-- START CLIENT-IMG -->
-<section class="section pt-0">
-    <div class="container">
-        <div class="row mt-5">
-            <div class="col-lg-3">
-                <div class="client-images mt-4">
-                    <img src="/public/assets/images/clients/1.png" alt="logo-img" class="mx-auto img-fluid d-block">
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="client-images mt-4">
-                    <img src="/public/assets/images/clients/2.png" alt="logo-img" class="mx-auto img-fluid d-block">
-                </div>
-            </div>
-            <div class="col-lg-3 ">
-                <div class="client-images mt-4">
-                    <img src="/public/assets/images/clients/3.png" alt="logo-img" class="mx-auto img-fluid d-block">
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="client-images mt-4">
-                    <img src="/public/assets/images/clients/4.png" alt="logo-img" class="mx-auto img-fluid d-block">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END CLIENT IMG -->
+    </section>
+    <!--end section-white -->
 
-<!-- START HOW IT WORK -->
-<section class="section pt-5" id="how-it-work">
-    <div class="container">
+    <!--begin testimonials section -->
+    <section class="section-grey small-padding-bottom">
 
+      <!--begin container -->
+      <div class="container" style="overflow: hidden">
+
+        <!--begin row -->
         <div class="row">
-            <div class="col-lg-12">
-                <div class="title-box text-center">
-                    <h6 class="title-sub-title mb-0 text-primary f-17">How It Work</h6>
-                    <h3 class="title-heading mt-4">Let’s get started in 3 easy
-                        <br> steps
-                    </h3>
+
+          <!--begin col md 12 -->
+          <div class="col-md-12 mx-auto padding-top-10 padding-bottom-30">
+
+            <!--begin testimonials carousel -->
+            <div id="carouselTestimonials" class="carousel slide" data-bs-ride="carousel">
+
+              <!--begin carousel-indicators -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div>
+              <!--end carousel-indicators -->
+
+              <!--begin carousel-inner -->
+              <div class="carousel-inner">
+
+                <!--begin carousel-item -->
+                <div class="carousel-item active">
+
+                  <!--begin row -->
+                  <div class="row align-items-center testim-inner">
+
+                    <!--begin col-md-6 -->
+                    <div class="col-md-6">
+
+                      <!--begin video-popup-wrapper-->
+                      <div class="video-popup-wrapper margin-right-25">
+
+                        <!--begin popup-gallery-->
+                        <div class="popup-gallery">
+
+                          <img src="http://placehold.it/555x365" alt="testimonials"
+                            class="width-100 image-shadow video-popup-image responsive-bottom-margins">
+
+                          <a class="popup4 video-play-icon" href="https://www.youtube.com/watch?v=FPfQMVf4vwQ">
+                            <i class="bi bi-caret-right-fill"></i>
+                          </a>
+
+                        </div>
+                        <!--end popup-gallery-->
+
+                      </div>
+                      <!--end video-popup-wrapper-->
+
+                    </div>
+                    <!--end col-md-6 -->
+
+                    <!--begin col-md-6 -->
+                    <div class="col-md-6 testim-info">
+
+                      <i class="bi bi-chat-left-quote green"></i>
+
+                      <p>Nemo enimat ipsam voluptatem quia voluptas situm ets aspernatis netsum loris fugit, sed quia
+                        magnitus honoratis quis ratione sequi etum nets.</p>
+
+                      <h6>Jennifer Smith<span> — Designer <span class="red">@EpicThemes</span></span></h6>
+
+                    </div>
+                    <!--end col-md-5 -->
+
+                  </div>
+                  <!--end row -->
+
                 </div>
+                <!--end carousel-item -->
+
+                <!--begin carousel-item -->
+                <div class="carousel-item">
+
+                  <!--begin row -->
+                  <div class="row align-items-center testim-inner">
+
+                    <!--begin col-md-6 -->
+                    <div class="col-md-6">
+
+                      <!--begin video-popup-wrapper-->
+                      <div class="video-popup-wrapper margin-right-25">
+
+                        <!--begin popup-gallery-->
+                        <div class="popup-gallery">
+
+                          <img src="http://placehold.it/555x365" alt="testimonials"
+                            class="width-100 image-shadow video-popup-image responsive-bottom-margins">
+
+                          <a class="popup4 video-play-icon" href="https://www.youtube.com/watch?v=FPfQMVf4vwQ">
+                            <i class="bi bi-caret-right-fill"></i>
+                          </a>
+
+                        </div>
+                        <!--end popup-gallery-->
+
+                      </div>
+                      <!--end video-popup-wrapper-->
+
+                    </div>
+                    <!--end col-md-6 -->
+
+                    <!--begin col-md-6 -->
+                    <div class="col-md-6 testim-info">
+
+                      <i class="bi bi-chat-left-quote green"></i>
+
+                      <p>Nemo enimat ipsam voluptatem quia voluptas situm ets aspernatis netsum loris fugit, sed quia
+                        magnitus honoratis quis ratione sequi etum nets.</p>
+
+                      <h6>John Doe<span> — General Manager <span class="red">@BeSmart</span></span></h6>
+
+                    </div>
+                    <!--end col-md-5 -->
+
+                  </div>
+                  <!--end row -->
+
+                </div>
+                <!--end carousel-item -->
+
+                <!--begin carousel-item -->
+                <div class="carousel-item">
+
+                  <!--begin row -->
+                  <div class="row align-items-center testim-inner">
+
+                    <!--begin col-md-6 -->
+                    <div class="col-md-6">
+
+                      <!--begin video-popup-wrapper-->
+                      <div class="video-popup-wrapper margin-right-25">
+
+                        <!--begin popup-gallery-->
+                        <div class="popup-gallery">
+
+                          <img src="http://placehold.it/555x365" alt="testimonials"
+                            class="width-100 image-shadow video-popup-image responsive-bottom-margins">
+
+                          <a class="popup4 video-play-icon" href="https://www.youtube.com/watch?v=FPfQMVf4vwQ">
+                            <i class="bi bi-caret-right-fill"></i>
+                          </a>
+
+                        </div>
+                        <!--end popup-gallery-->
+
+                      </div>
+                      <!--end video-popup-wrapper-->
+
+                    </div>
+                    <!--end col-md-6 -->
+
+                    <!--begin col-md-6 -->
+                    <div class="col-md-6 testim-info">
+
+                      <i class="bi bi-chat-left-quote green"></i>
+
+                      <p>Nemo enimat ipsam voluptatem quia voluptas situm ets aspernatis netsum loris fugit, sed quia
+                        magnitus honoratis quis ratione sequi etum nets.</p>
+
+                      <h6>Emily Richards<span> — Copywriter <span class="red">@Books-Online</span></span></h6>
+
+                    </div>
+                    <!--end col-md-5 -->
+
+                  </div>
+                  <!--end row -->
+
+                </div>
+                <!--end carousel-item -->
+
+              </div>
+              <!--end carousel-inner -->
+
             </div>
+            <!--end testimonials carousel -->
+
+          </div>
+          <!--end col md 12-->
+
         </div>
+        <!--end row -->
 
-        <div class="row mt-5">
-            <div class="col-lg-4">
-                <div class="work-box text-center p-3">
-                    <div class="arrow">
-                        <img src="/public/assets/images/arrow-1.png" alt="">
-                    </div>
-                    <div class="work-count">
-                        <p class="mb-0">1</p>
-                    </div>
-                    <div class="work-icon">
-                        <i class="pe-7s-light"></i>
-                    </div>
-                    <h5 class="mt-4">Product Review</h5>
-                    <p class="text-muted mt-3">
-                        Sellesque vel pellentesque eros at commodo dui varius natoque penatibus magnis dis parturient montes ridiculus.
-                    </p>
-                </div>
-            </div>
+      </div>
+      <!--end container -->
 
-            <div class="col-lg-4">
-                <div class="work-box text-center p-3">
-                    <div class="arrow">
-                        <img src="/public/assets/images/arrow-2.png" alt="">
-                    </div>
-                    <div class="work-count">
-                        <p class="mb-0">2</p>
-                    </div>
-                    <div class="work-icon">
-                        <i class="pe-7s-pen"></i>
-                    </div>
-                    <h5 class="mt-4">Product Design</h5>
-                    <p class="text-muted mt-3">
-                        Pellentesque pellentesque eros at commodo dui varius penatibus magnis dis parturient natoque montes ridiculus.
-                    </p>
+    </section>
+    <!--end testimonials section -->
 
-                </div>
-            </div>
+    <!--begin section-grey -->
+    <section class="section-grey small-padding-top">
 
-            <div class="col-lg-4">
-                <div class="work-box text-center p-3">
-                    <div class="work-count">
-                        <p class="mb-0">3</p>
-                    </div>
-                    <div class="work-icon">
-                        <i class="pe-7s-monitor"></i>
-                    </div>
-                    <h5 class="mt-4">Product Checkup</h5>
-                    <p class="text-muted mt-3">
-                        commodo ellentesque vel pellentesque eros dui Orci varius natoque penatibus dis partient montes magnis.
-                    </p>
-                </div>
-            </div>
+      <!--begin container -->
+      <div class="container">
 
-        </div>
-
-    </div>
-</section>
-<!-- END HOE IT WORK -->
-
-<!-- START SERVICES -->
-<section class="section bg-light" id="services">
-    <div class="container">
+        <!--begin row -->
         <div class="row">
-            <div class="col-lg-12">
-                <div class="title-box text-center">
-                    <h6 class="title-sub-title mb-0 text-primary f-17">Services</h6>
-                    <h3 class="title-heading mt-4">Best Web Services For Effective <br> Business</h3>
-                </div>
-            </div>
-        </div>
 
+          <!--begin col-md-12 -->
+          <div class="col-md-12 text-center padding-bottom-20">
 
-        <div class="row align-items-center mt-5">
+            <h3>Trusted By Over 9,000+ Businesses</h3>
 
-            <div class="col-lg-6">
-                <div class="tab-content mt-4" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-gen-ques" role="tabpanel" aria-labelledby="v-pills-gen-ques-tab">
-                        <div class="services-img">
-                            <img src="/public/assets/images/features/img-4.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade" id="v-pills-privacy" role="tabpanel" aria-labelledby="v-pills-privacy-tab">
-                        <div class="services-img">
-                            <img src="/public/assets/images/features/img-5.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade" id="v-pills-support" role="tabpanel" aria-labelledby="v-pills-support-tab">
-                        <div class="services-img">
-                            <img src="/public/assets/images/features/img-6.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="nav flex-column nav-pills mt-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="v-pills-gen-ques-tab" data-toggle="pill" href="#v-pills-gen-ques" role="tab" aria-controls="v-pills-gen-ques" aria-selected="true">
-                        <div class="p-3">
-                            <div class="media">
-                                <div class="services-title">
-                                    <i class="mdi mdi-wordpress"></i>
-                                </div>
-                                <div class="media-body pl-4">
-                                    <h5 class="mb-2 services-title mt-2">
-                                        Wordpress Development</h5>
-                                    <p class="mb-0"> Nulla et urna mauris Phasellus varius odio ut quam pharetra tristique Quisque lobortis velit felis nec aliquet est ursus velit ac tincidunt urna.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="nav-link" id="v-pills-privacy-tab" data-toggle="pill" href="#v-pills-privacy" role="tab" aria-controls="v-pills-privacy" aria-selected="false">
-                        <div class="p-3">
-                            <div class="media">
-                                <div class="services-title">
-                                    <i class="mdi mdi-security"></i>
-                                </div>
-                                <div class="media-body pl-4">
-                                    <h5 class="mb-2 services-title mt-2">Backup solution</h5>
-                                    <p class="mb-0"> Vestibulum euismod tincidunt ligula at pharetra velit. Mauris nisi diam ornare dignissim metus ac vehicula imperdiet tortor Mauris a consequat mi.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="nav-link" id="v-pills-support-tab" data-toggle="pill" href="#v-pills-support" role="tab" aria-controls="v-pills-support" aria-selected="false">
-                        <div class="p-3">
-                            <div class="media">
-                                <div class="services-title">
-                                    <i class="mdi mdi-cloud-download-outline"></i>
-                                </div>
-                                <div class="media-body pl-4">
-                                    <h5 class="mb-2 f-18 services-title mt-2">Cloud Hosting</h5>
-                                    <p class="mb-0"> Laoreet est eleifend Phasellus nec mi eget libero ornare venenatis sit amet id turpis Interdum et malesuada fames ac ante primis in faucibus.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-<!-- END SERVICES -->
-
-<!-- START COUNTER -->
-<section class="section bg-light pt-5">
-    <div class="container">
-        <div class="row" id="counter">
-            <div class="col-lg-5">
-                <div class="counter-info mt-4">
-                    <h3>A focused Lizehen with a specialized skill set</h3>
-                    <p class="text-muted mt-4">Praesent libero nisi,consequat vitae felis vitae pharetra tincidunt augue Duis ligula ligula pharetra a mauris eu euismod cursus velit.</p>
-                    <div class="mt-4">
-                        <a href="" class="btn btn-primary">Learn More <i class="mdi mdi-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="counter-box mt-4">
-                            <div class="media box-shadow bg-white p-4 rounded">
-                                <div class="counter-icon mr-3">
-                                    <i class="mdi mdi-gift text-primary h2"></i>
-                                </div>
-                                <div class="media-body pl-2">
-                                    <h3 class="counter-count"> <span class="counter-value" data-count="370">0</span>
-                                        +</h3>
-                                    <h5 class="mt-2 mb-0 f-17">Happy Clients </h5>
-                                    <p class="text-muted mb-0 mt-2 f-15">Consequat vitae felis vitae pharetra tincidunt
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="counter-box mt-4">
-                            <div class="media box-shadow bg-white p-4 rounded">
-                                <div class="counter-icon mr-3">
-                                    <i class="mdi mdi-progress-download text-primary h2"></i>
-                                </div>
-                                <div class="media-body pl-2">
-                                    <h3 class="counter-count"> <span class="counter-value" data-count="2">0</span> M
-                                    </h3>
-                                    <h5 class="mt-2 mb-0 f-17">Download </h5>
-                                    <p class="text-muted mb-0 mt-2 f-15">Consequat vitae felis vitae pharetra tincidunt
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row mt-1">
-                    <div class="col-lg-6">
-                        <div class="counter-box mt-4">
-                            <div class="media box-shadow bg-white p-4 rounded">
-                                <div class="counter-icon mr-3">
-                                    <i class="mdi mdi-emoticon-outline text-primary h2"></i>
-                                </div>
-                                <div class="media-body pl-2">
-                                    <h3 class="counter-count"> <span class="counter-value" data-count="45000">0</span> +
-                                    </h3>
-                                    <h5 class="mt-2 mb-0 f-17">Happy Users </h5>
-                                    <p class="text-muted mb-0 mt-2 f-15">Consequat vitae felis vitae pharetra tincidunt
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="counter-box mt-4">
-                            <div class="media box-shadow bg-white p-4 rounded">
-                                <div class="counter-icon mr-3">
-                                    <i class="mdi mdi-timer text-primary h2"></i>
-                                </div>
-                                <div class="media-body pl-2">
-                                    <h3 class="counter-count"> <span class="counter-value" data-count="5">0</span> +
-                                    </h3>
-                                    <h5 class="mt-2 mb-0 f-17">Years of expe. </h5>
-                                    <p class="text-muted mb-0 mt-2 f-15">Consequat vitae felis vitae pharetra tincidunt
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END COUNTER -->
-
-<!-- START PRICING -->
-<section class="section" id="pricing">
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="title-box text-center">
-                    <h6 class="title-sub-title mb-0 text-primary f-17">Pricing</h6>
-                    <h3 class="title-heading mt-4">Best Pricing Package Start <br> Business</h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-5 pt-4">
-            <div class="col-lg-4">
-                <div class="pricing-box mt-4 rounded">
-                    <div class="pricing-content">
-                        <h4 class="text-uppercase">Starter</h4>
-                        <p class="text-muted mb-4 pb-1">Aliquam porttitor sagittis dignissim nibh amet rhoncus risus.
-                        </p>
-                        <hr>
-                        <div class="pricing-plan mt-4 text-primary text-center">
-                            <h1><sup class="text-muted">$ </sup>34 <small class="f-16 text-muted">/ Mo</small></h1>
-                        </div>
-                        <hr>
-
-                        <div class="pricing-features pt-3">
-                            <p class="text-muted"><strong class="text-dark">2</strong> Website</p>
-                            <p class="text-muted"><strong class="text-dark">30 GB</strong> Storage</p>
-                            <p class="text-muted"><strong class="text-dark">Unmetered</strong> Bandwidth</p>
-                            <p class="text-muted"><strong class="text-dark">Email</strong> 1 Year trail</p>
-                            <p class="text-muted"><strong class="text-dark">Free domain</strong> annual plan</p>
-                        </div>
-                        <div class="pricing-border mt-3"></div>
-                        <div class="mt-4 pt-2 text-center">
-                            <a href="" class="btn btn-primary btn-round">Purchase Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="pricing-box border border-primary mt-4 rounded">
-                    <div class="pricing-content">
-
-                        <div class="pricing-lable">Popular</div>
-                        <h4 class="text-uppercase">Personal</h4>
-                        <p class="text-muted mb-4 pb-1">Aliquam porttitor sagittis dignissim nibh amet rhoncus risus.
-                        </p>
-                        <hr>
-                        <div class="pricing-plan mt-4 text-primary text-center">
-                            <h1><sup class="text-muted">$ </sup>94 <small class="f-16 text-muted">/ Mo</small></h1>
-                        </div>
-
-                        <hr>
-                        <div class="pricing-features pt-3">
-                            <p class="text-muted"><strong class="text-dark">2</strong> Website</p>
-                            <p class="text-muted"><strong class="text-dark">30 GB</strong> Storage</p>
-                            <p class="text-muted"><strong class="text-dark">Unmetered</strong> Bandwidth</p>
-                            <p class="text-muted"><strong class="text-dark">Email</strong> 1 Year trail</p>
-                            <p class="text-muted"><strong class="text-dark">Free domain</strong> annual plan</p>
-                        </div>
-                        <div class="pricing-border mt-3"></div>
-                        <div class="mt-4 pt-2 text-center">
-                            <a href="" class="btn btn-primary btn-round">Purchase Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="pricing-box mt-4 rounded">
-                    <div class="pricing-content">
-                        <h4 class="text-uppercase">Ultimate</h4>
-                        <p class="text-muted mb-4 pb-1">Aliquam porttitor sagittis dignissim nibh amet rhoncus risus.
-                        </p>
-                        <hr>
-                        <div class="pricing-plan mt-4 text-primary text-center">
-                            <h1><sup class="text-muted">$ </sup>64 <small class="f-16 text-muted">/ Mo</small></h1>
-                        </div>
-                        <hr>
-                        <div class="pricing-features pt-3">
-                            <p class="text-muted"><strong class="text-dark">2</strong> Website</p>
-                            <p class="text-muted"><strong class="text-dark">30 GB</strong> Storage</p>
-                            <p class="text-muted"><strong class="text-dark">Unmetered</strong> Bandwidth</p>
-                            <p class="text-muted"><strong class="text-dark">Email</strong> 1 Year trail</p>
-                            <p class="text-muted"><strong class="text-dark">Free domain</strong> annual plan</p>
-                        </div>
-                        <div class="pricing-border mt-3"></div>
-                        <div class="mt-4 pt-2 text-center">
-                            <a href="" class="btn btn-primary btn-round">Purchase Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <!--end col-md-12 -->
 
         </div>
+        <!--end row -->
 
-    </div>
-</section>
-<!-- END PRICING -->
-
-<!-- START TESTIMONIAL -->
-<section class="section bg-testimonial" id="testimonial">
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="title-box text-center">
-                    <h6 class="title-sub-title mb-0 text-primary f-17">Testimonial</h6>
-                    <h3 class="title-heading mt-4">What they say about us <br> honest reviews</h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="row justify-content-center mt-5">
-            <div class="col-lg-10">
-                <div class="testi-carousel">
-
-                    <div class="testimonial-box text-center p-4">
-                        <div class="testi-img-user">
-                            <img src="/public/assets/images/users/img-1.jpg" alt="" class="rounded-circle testi-user mx-auto d-block">
-                        </div>
-                        <img src="/public/assets/images/client-quote.png" class="mt-4 pt-2" alt="">
-
-                        <h4 class="font-italic mt-4 pt-2">The European languages are members of the same family
-                            Their
-                            separate existence is a myth For science, music, sport, etc, europe their Eopean
-                            languages common the theory of popular words.</h4>
-
-                        <div class="testi-border mt-4"></div>
-                        <p class="text-uppercase text-muted mb-0 mt-4 f-14">Developer</p>
-                        <h5 class="mt-2">Jeremiah Eskew</h5>
-                    </div>
-
-                    <div class="testimonial-box text-center p-4">
-                        <div class="testi-img-user">
-                            <img src="/public/assets/images/users/img-2.jpg" alt="" class="rounded-circle testi-user mx-auto d-block">
-                        </div>
-                        <img src="/public/assets/images/client-quote.png" class="mt-4 pt-2" alt="">
-
-                        <h4 class="font-italic mt-4 pt-2">The European languages are members of the same family
-                            Their
-                            separate existence is a myth For science, music, sport, etc, europe their Eopean
-                            languages common the theory of popular words.</h4>
-
-                        <div class="testi-border mt-4"></div>
-                        <p class="text-uppercase text-muted mb-0 mt-4 f-14">Designer</p>
-                        <h5 class="mt-2">Cameron Green</h5>
-                    </div>
-
-                    <div class="testimonial-box text-center p-4">
-                        <div class="testi-img-user">
-                            <img src="/public/assets/images/users/img-3.jpg" alt="" class="rounded-circle testi-user mx-auto d-block">
-                        </div>
-                        <img src="/public/assets/images/client-quote.png" class="mt-4 pt-2" alt="">
-
-                        <h4 class="font-italic mt-4 pt-2">The European languages are members of the same family
-                            Their
-                            separate existence is a myth For science, music, sport, etc, europe their Eopean
-                            languages common the theory of popular words.</h4>
-
-                        <div class="testi-border mt-4"></div>
-                        <p class="text-uppercase text-muted mb-0 mt-4 f-14">Manager</p>
-                        <h5 class="mt-2">Sammy Randolph</h5>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END TESTIMONIAL -->
-
-<!-- START VIDEO -->
-<section class="section bg-light">
-    <div class="container">
+        <!--begin row -->
         <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="text-center">
-                    <h6 class="text-uppercase desc-white f-14">Why you need Lizehen</h6>
-                    <h2 class="line-height_1_4 mt-4">Join millions of users and grow your <br> business.</h2>
-                    <p class="mt-3 desc-white">Join the free trial now. </p>
-                    <div class="mt-4 pt-2">
-                        <a href="http://vimeo.com/99025203" class="video-play-icon text-white">
-                            <i class="mdi mdi-play play-icon-circle text-white mr-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END VIDEO -->
 
-<!-- START TEAM -->
-<section class="section" id="team">
-    <div class="container">
+          <!--begin col-md-1 -->
+          <div class="col-md-1"></div>
+          <!--end col-md-1 -->
+
+          <!--begin col-md-2 -->
+          <div class="col-md-2 col-xs-6">
+
+            <div class="our-partners">
+
+              <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+
+            </div>
+
+          </div>
+          <!--end col-md-2 -->
+
+          <!--begin col-md-2 -->
+          <div class="col-md-2 col-xs-6">
+
+            <div class="our-partners">
+
+              <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+
+            </div>
+
+          </div>
+          <!--end col-md-2 -->
+
+          <!--begin col-md-2 -->
+          <div class="col-md-2 col-xs-6">
+
+            <div class="our-partners">
+
+              <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+
+            </div>
+
+          </div>
+          <!--end col-md-2 -->
+
+          <!--begin col-md-2 -->
+          <div class="col-md-2 col-xs-6">
+
+            <div class="our-partners">
+
+              <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+
+            </div>
+
+          </div>
+          <!--end col-md-2 -->
+
+          <!--begin col-md-2 -->
+          <div class="col-md-2 col-xs-6">
+
+            <div class="our-partners">
+
+              <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+
+            </div>
+
+          </div>
+          <!--end col-md-2 -->
+
+          <!--begin col-md-1 -->
+          <div class="col-md-1 d-none d-md-block"></div>
+          <!--end col-md-1 -->
+
+          <!--begin col-md-2 -->
+          <div class="col-md-2 col-xs-6">
+
+            <div class="our-partners">
+
+              <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+
+            </div>
+
+          </div>
+          <!--end col-md-2 -->
+
+          <!--begin col-md-2 -->
+          <div class="col-md-2 col-xs-6">
+
+            <div class="our-partners">
+
+              <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+
+            </div>
+
+          </div>
+          <!--end col-md-2 -->
+
+          <!--begin col-md-2 -->
+          <div class="col-md-2 col-xs-6">
+
+            <div class="our-partners">
+
+              <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+
+            </div>
+
+          </div>
+          <!--end col-md-2 -->
+
+          <!--begin col-md-2 -->
+          <div class="col-md-2 col-xs-6">
+
+            <div class="our-partners">
+
+              <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+
+            </div>
+
+          </div>
+          <!--end col-md-2 -->
+
+        </div>
+        <!--end row -->
+
+      </div>
+      <!--end container -->
+
+    </section>
+    <!--end section-grey -->
+
+    <!--begin section-white -->
+    <section class="section-white">
+
+      <!--begin container-->
+      <div class="container">
+
+        <!--begin row-->
+        <div class="row align-items-center">
+
+          <!--begin col-md-6-->
+          <div class="col-md-6">
+
+            <h3>Discover how we can help you to grow your business fast.</h3>
+
+            <p>Anticas quia voluptas sit aspernatur netsum demo ets ipsam voluptatem lorem fugit, seditum netis velas
+              net nesciunt.</p>
+
+            <ul class="benefits">
+              <li><i class="bi bi-check blue"></i>Quias netus magni netsum qui ratione sequi.</li>
+              <li><i class="bi bi-check blue"></i>Venis ratione sequi netus enim tempor magni.</li>
+              <li><i class="bi bi-check blue"></i>Enim ipsam netus voluptatem voluptas.</li>
+            </ul>
+
+            <a href="#" class="scrool"><button type="button" class="btn btn-lg btn-primary">Discover More</button></a>
+
+          </div>
+          <!--end col-md-6-->
+
+          <!--begin col-md-6-->
+          <div class="col-md-6">
+
+            <img src="http://placehold.it/555x461" class="width-100 responsive-top-margins" alt="pic">
+
+          </div>
+          <!--end col-sm-6-->
+
+        </div>
+        <!--end row-->
+
+      </div>
+      <!--end container-->
+
+    </section>
+    <!--end section-white-->
+
+    <!--begin fun-facts -->
+    <section class="section-grey medium-padding-bottom">
+
+      <!--begin container-->
+      <div class="container">
+
+        <!--begin row-->
         <div class="row">
-            <div class="col-lg-12">
-                <div class="title-box text-center">
-                    <h6 class="title-sub-title mb-0 text-primary f-17">Team</h6>
-                    <h3 class="title-heading mt-4">Meet our expert people of <br> payonline</h3>
-                </div>
-            </div>
+
+          <!--begin col md 7 -->
+          <div class="col-md-7 mx-auto margin-bottom-10 text-center">
+
+            <h3>Fun Facts About Our Agency</h3>
+
+          </div>
+          <!--end col md 7-->
+
         </div>
+        <!--end row-->
 
-        <div class="row mt-5 pt-2">
-            <div class="col-lg-3">
-                <div class="team-box text-center py-3 rounded mt-4">
-                    <div class="team-img">
-                        <img src="/public/assets/images/users/img-1.jpg" class="img-fluid rounded-circle" alt="">
-                    </div>
-                    <div class="team-social-icon">
-                        <i class="mdi mdi-email"></i>
-                    </div>
-                    <h5 class="f-18 mt-4 mb-2">Lora Scott</h5>
-                    <p class="text-muted">CEO</p>
-                    <hr>
-                    <div class="team-social mt-2">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item">
-                                <a href="" class="text-reset"><i class="mdi mdi-facebook"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="" class="text-reset"><i class="mdi mdi-twitter"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="" class="text-reset"><i class="mdi mdi-google"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="" class="text-reset"><i class="mdi mdi-pinterest"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-lg-3">
-                <div class="team-box text-center py-3 rounded mt-4">
-                    <div class="team-img">
-                        <img src="/public/assets/images/users/img-2.jpg" class="img-fluid rounded-circle" alt="">
-                    </div>
-                    <div class="team-social-icon">
-                        <i class="mdi mdi-email"></i>
-                    </div>
-                    <h5 class="f-18 mt-4 mb-2">Andrew Schimke</h5>
-                    <p class="text-muted">Developer</p>
-                    <hr>
-                    <div class="team-social mt-2">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item">
-                                <a href="" class="text-reset"><i class="mdi mdi-facebook"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="" class="text-reset"><i class="mdi mdi-twitter"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="" class="text-reset"><i class="mdi mdi-google"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="" class="text-reset"><i class="mdi mdi-pinterest"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-lg-3">
-                <div class="team-box text-center py-3 rounded mt-4">
-                    <div class="team-img">
-                        <img src="/public/assets/images/users/img-3.jpg" class="img-fluid rounded-circle" alt="">
-                    </div>
-                    <div class="team-social-icon">
-                        <i class="mdi mdi-email"></i>
-                    </div>
-                    <h5 class="f-18 mt-4 mb-2">Mary Rivers</h5>
-                    <p class="text-muted">Manager</p>
-                    <hr>
-                    <div class="team-social mt-2">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item">
-                                <a href="" class="text-reset"><i class="mdi mdi-facebook"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="" class="text-reset"><i class="mdi mdi-twitter"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="" class="text-reset"><i class="mdi mdi-google"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="" class="text-reset"><i class="mdi mdi-pinterest"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-lg-3">
-                <div class="team-box text-center py-3 rounded mt-4">
-                    <div class="team-img">
-                        <img src="/public/assets/images/users/img-4.jpg" class="img-fluid rounded-circle" alt="">
-                    </div>
-                    <div class="team-social-icon">
-                        <i class="mdi mdi-email"></i>
-                    </div>
-                    <h5 class="f-18 mt-4 mb-2">John Wright</h5>
-                    <p class="text-muted">Designer</p>
-                    <hr>
-                    <div class="team-social mt-2">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item">
-                                <a href="" class="text-reset"><i class="mdi mdi-facebook"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="" class="text-reset"><i class="mdi mdi-twitter"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="" class="text-reset"><i class="mdi mdi-google"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="" class="text-reset"><i class="mdi mdi-pinterest"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END TEAM -->
-
-<!-- START BLOG -->
-<section class="section bg-light" id="blog">
-    <div class="container">
+        <!--begin row-->
         <div class="row">
-            <div class="col-lg-12">
-                <div class="title-box text-center">
-                    <h6 class="title-sub-title mb-0 text-primary f-17">Blogs</h6>
-                    <h3 class="title-heading mt-4">Our latest blog posts <br> insights articles</h3>
-                </div>
-            </div>
-        </div>
 
-        <div class="row mt-5">
-            <div class="col-lg-4">
-                <div class="blog-box mt-4">
-                    <div class="blog-img">
-                        <img src="/public/assets/images/blog/img-1.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="blog-content mt-3">
-                        <div class="blog-lable">
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><i class="mdi mdi-share-variant mr-1"></i>12</li>
-                                <li class="list-inline-item"><i class="mdi mdi-account mr-1"></i>15</li>
-                            </ul>
-                        </div>
-                        <h6 class="f-13 text-muted">UI & UX Design</h6>
-                        <h5 class="mt-2">
-                            <a href="" class="blog-title">Doing a cross country road trip</a>
-                        </h5>
-                        <p class="text-muted mt-3">Curabitur lacus maximus suscipit curtur eget lectus lacinia consectetur dolor id volutpat magna fermentum bibendum.</p>
-                        <div class="mt-4">
-                            <a href="" class="btn btn-sm btn-primary btn-round">Read More <i class="mdi mdi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <!--begin fun-facts-box -->
+          <div class="col-md-2 offset-md-1 fun-facts-box blue text-center">
 
-            <div class="col-lg-4">
-                <div class="blog-box mt-4">
-                    <div class="blog-img">
-                        <img src="/public/assets/images/blog/img-2.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="blog-content mt-3">
-                        <div class="blog-lable">
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><i class="mdi mdi-share-variant mr-1"></i>12</li>
-                                <li class="list-inline-item"><i class="mdi mdi-account mr-1"></i>15</li>
-                            </ul>
-                        </div>
-                        <h6 class="f-13 text-muted">Digital Marketing</h6>
-                        <h5 class="mt-2">
-                            <a href="" class="blog-title">New exhibition at our Museum</a>
-                        </h5>
-                        <p class="text-muted mt-3">The wise man therefore always holds in these matters to this principle of selection rejects pleasures secure other pains.</p>
-                        <div class="mt-4">
-                            <a href="" class="btn btn-sm btn-primary btn-round">Read More <i class="mdi mdi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <i class="bi bi-gift-fill"></i>
 
-            <div class="col-lg-4">
-                <div class="blog-box mt-4">
-                    <div class="blog-img">
-                        <img src="/public/assets/images/blog/img-3.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="blog-content mt-3">
-                        <div class="blog-lable">
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><i class="mdi mdi-share-variant mr-1"></i>12</li>
-                                <li class="list-inline-item"><i class="mdi mdi-account mr-1"></i>15</li>
-                            </ul>
-                        </div>
-                        <h6 class="f-13 text-muted">Travelling</h6>
-                        <h5 class="mt-2">
-                            <a href="" class="blog-title">Why are so many people..</a>
-                        </h5>
-                        <p class="text-muted mt-3">Juis autem vel eumat reprehenderit voluptate velit esse quam nihil molestiae consequatur fugiat voluptas nulla pariatur.</p>
-                        <div class="mt-4">
-                            <a href="" class="btn btn-sm btn-primary btn-round">Read More <i class="mdi mdi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p class="fun-facts-title"><span class="facts-numbers">1050+</span><br>Projects Completed</p>
+
+          </div>
+          <!--end fun-facts-box -->
+
+          <!--begin fun-facts-box -->
+          <div class="col-md-2 fun-facts-box red text-center">
+
+            <i class="bi bi-heart-fill"></i>
+
+            <p class="fun-facts-title"><span class="facts-numbers">217k</span><br>Happy Clients</p>
+
+          </div>
+          <!--end fun-facts-box -->
+
+          <!--begin fun-facts-box -->
+          <div class="col-md-2 fun-facts-box green text-center">
+
+            <i class="bi bi-award-fill"></i>
+
+            <p class="fun-facts-title"><span class="facts-numbers">1210</span><br>Design Awards</p>
+
+          </div>
+          <!--end fun-facts-box -->
+
+          <!--begin fun-facts-box -->
+          <div class="col-md-2 fun-facts-box red text-center">
+
+            <i class="bi bi-basket3-fill"></i>
+
+            <p class="fun-facts-title"><span class="facts-numbers">217k</span><br>Happy Clients</p>
+
+          </div>
+          <!--end fun-facts-box -->
+
+          <!--begin fun-facts-box -->
+          <div class="col-md-2 fun-facts-box yellow text-center">
+
+            <i class="bi bi-bell-fill"></i>
+
+            <p class="fun-facts-title"><span class="facts-numbers">2137</span><br>Line Of Codes</p>
+
+          </div>
+          <!--end fun-facts-box -->
 
         </div>
+        <!--end row-->
 
-    </div>
-</section>
-<!-- END BLOG -->
+      </div>
+      <!--end container-->
 
-<!-- START CONTACT -->
-<section class="section" id="contact">
-    <div class="container">
+    </section>
+    <!--end fun-facts -->
 
+    <!--begin team section -->
+    <section class="section-white medium-padding-bottom" id="team">
+
+      <!--begin container-->
+      <div class="container">
+
+        <!--begin row-->
         <div class="row">
-            <div class="col-lg-12">
-                <div class="title-box text-center">
-                    <h6 class="title-sub-title mb-0 text-primary f-17">Contact us</h6>
-                    <h3 class="title-heading mt-4">Have a project on mind? </h3>
-                </div>
+
+          <!--begin col-md-12 -->
+          <div class="col-md-12 text-center">
+
+            <h2>Meet Our Team</h2>
+
+          </div>
+          <!--end col-md-12 -->
+
+          <!--begin team-item -->
+          <div class="col-sm-12 col-md-4 margin-top-30">
+
+            <img src="http://placehold.it/555x555" class="team-img width-100" alt="pic">
+
+            <div class="team-item">
+
+              <h4>Christina Hawkings</h4>
+
+              <div class="team-info">
+                <p>Head of SEO</p>
+              </div>
+
+              <p>Johnathan is our co-founder and has developed search strategies for a variety of clients for over 5
+                years.</p>
+
+              <ul class="team-icon">
+
+                <li><a href="#" class="twitter"><i class="bi bi-twitter"></i></a></li>
+
+                <li><a href="#" class="pinterest"><i class="bi bi-instagram"></i></a></li>
+
+                <li><a href="#" class="facebook"><i class="bi bi-mic"></i></a></li>
+
+                <li><a href="#" class="dribble"><i class="bi bi-envelope-open"></i></a></li>
+
+              </ul>
+
             </div>
+
+          </div>
+          <!--end team-item -->
+
+          <!--begin team-item -->
+          <div class="col-sm-12 col-md-4 margin-top-30">
+
+            <img src="http://placehold.it/555x555" class="team-img width-100" alt="pic">
+
+            <div class="team-item">
+
+              <h4>Andreas Johansons</h4>
+
+              <div class="team-info geen">
+                <p>Marketing Manager</p>
+              </div>
+
+              <p>Andres fell in love with marketing at the school and looks forward to being part of the industry for
+                years.</p>
+
+              <ul class="team-icon">
+
+                <li><a href="#" class="twitter"><i class="bi bi-twitter"></i></a></li>
+
+                <li><a href="#" class="pinterest"><i class="bi bi-instagram"></i></a></li>
+
+                <li><a href="#" class="facebook"><i class="bi bi-mic"></i></a></li>
+
+                <li><a href="#" class="dribble"><i class="bi bi-envelope-open"></i></a></li>
+
+              </ul>
+
+            </div>
+
+          </div>
+          <!--end team-item -->
+
+          <!--begin team-item -->
+          <div class="col-sm-12 col-md-4 margin-top-30">
+
+            <img src="http://placehold.it/555x555" class="team-img width-100" alt="pic">
+
+            <div class="team-item">
+
+              <h4>Alexandra Smiths</h4>
+
+              <div class="team-info green">
+                <p>SEO Specialist</p>
+              </div>
+
+              <p>Graduating with a degree in Spanish, English and French, she has always loved writing.</p>
+
+              <ul class="team-icon">
+
+                <li><a href="#" class="twitter"><i class="bi bi-twitter"></i></a></li>
+
+                <li><a href="#" class="pinterest"><i class="bi bi-instagram"></i></a></li>
+
+                <li><a href="#" class="facebook"><i class="bi bi-mic"></i></a></li>
+
+                <li><a href="#" class="dribble"><i class="bi bi-envelope-open"></i></a></li>
+
+              </ul>
+
+            </div>
+
+          </div>
+          <!--end team-item -->
+
         </div>
+        <!--end row-->
 
-        <div class="row mt-5">
-            <div class="col-lg-4">
-                <div class="contact-info bg-light p-4 rounded mt-4">
-                    <h5 class="f-18">Contact Details</h5>
-                    <p class="text-muted">Faucibus orci luctus atet ultrices posuere duiorci sollicitudin luctus.</p>
-                    <div class="mt-4">
-                        <div class="media">
-                            <i class="pe-7s-home h4"></i>
-                            <div class="media-body pl-3">
-                                <h5 class="mt-0 f-17">Head Office</h5>
-                                <p class="text-muted mb-0">2301 Finwood Road Monmouth Junction, NJ 08852</p>
-                            </div>
-                        </div>
+      </div>
+      <!--end container-->
 
-                        <div class="mt-4 pt-1">
-                            <div class="media">
-                                <i class="pe-7s-mail-open-file h4"></i>
-                                <div class="media-body pl-3">
-                                    <h5 class="mt-0 f-17">Email Us</h5>
-                                    <p class="text-muted mb-0">RuthJSimpson@armyspy.com</p>
-                                </div>
-                            </div>
-                        </div>
+    </section>
+    <!--end team section-->
 
-                        <div class="mt-4 pt-1">
-                            <div class="media">
-                                <i class="pe-7s-call h4"></i>
-                                <div class="media-body pl-3">
-                                    <h5 class="mt-0 f-17">Call Support</h5>
-                                    <p class="text-muted mb-0">
-                                        +001 513-965-6401
-                                    </p>
-                                    <p class="text-muted mb-0">
-                                        +225 303-760-9330
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+    <!--begin how-it-works section -->
+    <section class="section-grey" id="how-it-works">
 
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <div class="pl-0 pl-lg-2 mt-4">
-                    <h5 class="f-18">Send a Message</h5>
+      <!--begin container -->
+      <div class="container">
 
-                    <div class="custom-form mt-3">
-                        <div id="message"></div>
-                        <form method="post" action="php/contact.php" name="contact-form" id="contact-form">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group mt-3">
-                                        <label class="contact-lable">First Name</label>
-                                        <input name="name" id="name" class="form-control" type="text">
-                                    </div>
-                                </div>
+        <!--begin row -->
+        <div class="row align-items-center">
 
-                                <div class="col-lg-6">
-                                    <div class="form-group mt-3">
-                                        <label class="contact-lable">Last Name</label>
-                                        <input name="name" id="lastname" class="form-control" type="text">
-                                    </div>
-                                </div>
-                            </div>
+          <!--begin col-md-5 -->
+          <div class="col-md-5 col-sm-12">
 
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group mt-3">
-                                        <label class="contact-lable">Email Address</label>
-                                        <input name="email" id="email" class="form-control" type="text">
-                                    </div>
-                                </div>
-                            </div>
+            <h2>How It Works.</h2>
 
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group mt-3">
-                                        <label class="contact-lable">Subject</label>
-                                        <input name="subject" id="subject" class="form-control" type="text">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group mt-3">
-                                        <label class="contact-lable">Your Message</label>
-                                        <textarea name="comments" id="comments" rows="5" class="form-control"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12 mt-3 text-right">
-                                    <input id="submit" name="send" class="submitBnt btn btn-primary btn-round" value="Send Message" type="submit">
-                                    <div id="simple-msg"></div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+            <p>Quis autem velis ets reprehender net etid quiste netsum voluptate. Utise wisi enim minim veniam, quis
+              etsad ets aspernatis netsum stationes nets qualitats.</p>
+
+            <!--begin row-->
+            <div class="row">
+
+              <!--begin col-md-4-->
+              <div class="col-md-4 col-sm-6">
+
+                <!--begin testim-platform-->
+                <div class="testim-platform first">
+
+                  <p>LinkedIn</p>
+
+                  <div class="testim-rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
 
                 </div>
+                <!--end testim-platform-->
+
+              </div>
+              <!--end col-sm-4-->
+
+              <!--begin col-md-4-->
+              <div class="col-md-4 col-sm-6">
+
+                <!--begin testim-platform-->
+                <div class="testim-platform">
+
+                  <p>Upwork</p>
+
+                  <div class="testim-rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+
+                </div>
+                <!--end testim-platform-->
+
+              </div>
+              <!--end col-sm-4-->
+
             </div>
+            <!--end row-->
+
+          </div>
+          <!--end col-md-5 -->
+
+          <!--begin col-md-1 -->
+          <div class="col-md-1"></div>
+          <!--end col-md-1 -->
+
+          <!--begin col-md-6-->
+          <div class="col-md-6">
+
+            <!--begin accordion -->
+            <div class="accordion accordion-flush" id="accordionOne">
+
+              <div class="accordion-item">
+
+                <h2 class="accordion-header" id="headingOne">
+
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <i class="bi bi-pencil-fill"></i> Create Account
+                  </button>
+
+                </h2>
+
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionOne">
+
+                  <div class="accordion-body">
+                    This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These classes control the style.
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="accordion-item">
+
+                <h2 class="accordion-header" id="headingTwo">
+
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <i class="bi bi-bar-chart-line-fill"></i> Choose Package
+                  </button>
+
+                </h2>
+
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionOne">
+
+                  <div class="accordion-body">
+                    This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These classes control the style.
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="accordion-item">
+
+                <h2 class="accordion-header" id="headingThree">
+
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <i class="bi bi-hand-thumbs-up-fill"></i> Enjoy Smart
+                  </button>
+
+                </h2>
+
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                  data-bs-parent="#accordionOne">
+
+                  <div class="accordion-body">
+                    This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These classes control the style.
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+            <!--end accordion -->
+
+          </div>
+          <!--end col-md-6-->
+
         </div>
-    </div>
+        <!--end row -->
 
-</section>
-<!-- END CONTACT -->
+      </div>
+      <!--end container -->
 
-<?= $this->endSection() ?>
+    </section>
+    <!--end how-it-works section -->
+
+    <!--begin pricing section -->
+    <section class="section-white" id="pricing">
+
+      <!--begin container -->
+      <div class="container">
+
+        <!--begin row -->
+        <div class="row">
+
+          <!--begin col-md-12 -->
+          <div class="col-md-12 text-center padding-bottom-40">
+
+            <h2>Pricing for every business, at any stage</h2>
+
+          </div>
+          <!--end col-md-12 -->
+
+          <!--begin col-md-4-->
+          <div class="col-md-4">
+
+            <div class="price-box">
+
+              <ul class="pricing-list">
+
+                <li class="price-title">BASIC</li>
+
+                <li class="price-value">$25</li>
+
+                <li class="price-subtitle">Per Month</li>
+
+                <li class="price-text"><i class="bi bi-check-circle-fill blue"></i>Custom Charts</li>
+
+                <li class="price-text"><i class="bi bi-check-circle-fill blue"></i>5 Mailboxes, 10 Gb Storage</li>
+
+                <li class="price-text"><i class="bi bi-check-circle-fill blue"></i>Unlimited Free Dashboards</li>
+
+                <li class="price-text"><i class="bi bi-check-circle-fill blue"></i>Access to all APIs</li>
+
+                <li class="price-tag-line"><a href="#">FREE 15-DAY TRIAL</a></li>
+
+              </ul>
+
+            </div>
+
+          </div>
+          <!--end col-md-4 -->
+
+          <!--begin col-md-4-->
+          <div class="col-md-4">
+
+            <div class="price-box">
+
+              <div class="ribbon blue"><span>Popular</span></div>
+
+              <ul class="pricing-list">
+
+                <li class="price-title">STANDARD</li>
+
+                <li class="price-value">$99</li>
+
+                <li class="price-subtitle">Per Month</li>
+
+                <li class="price-text strong"><i class="bi bi-check-circle-fill blue"></i><strong>All Basic
+                    features</strong></li>
+
+                <li class="price-text"><i class="bi bi-check-circle-fill blue"></i>15 Mailboxes, 50 Gb Storage</li>
+
+                <li class="price-text"><i class="bi bi-check-circle-fill blue"></i>Interactive Screen Sharing</li>
+
+                <li class="price-text"><i class="bi bi-check-circle-fill blue"></i>Full Reports History</li>
+
+                <li class="price-tag"><a href="#">FREE 15-DAY TRIAL</a></li>
+
+              </ul>
+
+            </div>
+
+          </div>
+          <!--end col-md-4 -->
+
+          <!--begin col-md-4-->
+          <div class="col-md-4">
+
+            <div class="price-box">
+
+              <ul class="pricing-list">
+
+                <li class="price-title white-text">PRO</li>
+
+                <li class="price-value white-text">$199</li>
+
+                <li class="price-subtitle white-text">Per Month</li>
+
+                <li class="price-text white-text"><i class="bi bi-check-circle-fill blue"></i><strong>All Standard
+                    Features</strong></li>
+
+                <li class="price-text"><i class="bi bi-check-circle-fill blue"></i>50 Mailboxes, 90 Gb Storage</li>
+
+                <li class="price-text"><i class="bi bi-check-circle-fill blue"></i>Dedicated Account Manager</li>
+
+                <li class="price-text"><i class="bi bi-check-circle-fill blue"></i>24/7 Priority Support</li>
+
+                <li class="price-tag-line"><a href="#">FREE 15-DAY TRIAL</a></li>
+
+              </ul>
+
+            </div>
+
+          </div>
+          <!--end col-md-4 -->
+
+        </div>
+        <!--end row -->
+
+      </div>
+      <!--end container -->
+
+    </section>
+    <!--end pricing section -->
+
+    <!--begin features section -->
+    <section class="section-grey medium-padding-bottom" id="features">
+
+      <!--begin container -->
+      <div class="container">
+
+        <!--begin row -->
+        <div class="row">
+
+          <!--begin col-md-12-->
+          <div class="col-md-12 text-center">
+
+            <h2>Amazing Features</h2>
+
+          </div>
+          <!--end col-md-12 -->
+
+        </div>
+        <!--end row -->
+
+        <!--begin row -->
+        <div class="row">
+
+          <!--begin col-md-4-->
+          <div class="col-md-4">
+
+            <div class="feature-box light-green">
+
+              <i class="bi bi-gem"></i>
+
+              <div class="feature-box-text">
+
+                <h4>Support 24/7</h4>
+
+                <p>Utise wisi enim nets venias, quis tation ullamcorper nets lobotis nisle consequat.</p>
+
+              </div>
+
+            </div>
+
+          </div>
+          <!--end col-md-4 -->
+
+          <!--begin col-md-4-->
+          <div class="col-md-4">
+
+            <div class="feature-box light-blue">
+
+              <i class="bi bi-people"></i>
+
+              <div class="feature-box-text">
+
+                <h4>User Friendly</h4>
+
+                <p>Utise wisi enim nets venias, quis tation ullamcorper nets lobotis nisle consequat.</p>
+
+              </div>
+
+            </div>
+
+          </div>
+          <!--end col-md-4 -->
+
+          <!--begin col-md 4-->
+          <div class="col-md-4">
+
+            <div class="feature-box orange">
+
+              <i class="bi bi-bell"></i>
+
+              <div class="feature-box-text">
+
+                <h4>Notifications</h4>
+
+                <p>Utise wisi enim nets venias, quis tation ullamcorper nets lobotis nisle consequat.</p>
+
+              </div>
+
+            </div>
+
+          </div>
+          <!--end col-md-4 -->
+
+        </div>
+        <!--end row -->
+
+        <!--begin row -->
+        <div class="row">
+
+          <!--begin col-md-4-->
+          <div class="col-md-4">
+
+            <div class="feature-box dark-blue">
+
+              <i class="bi bi-gear"></i>
+
+              <div class="feature-box-text">
+
+                <h4>Accesibility</h4>
+
+                <p>Utise wisi enim nets venias, quis tation ullamcorper nets lobotis nisle consequat.</p>
+
+              </div>
+
+            </div>
+
+          </div>
+          <!--end col-md-4 -->
+
+          <!--begin col-md-4-->
+          <div class="col-md-4">
+
+            <div class="feature-box light-red">
+
+              <i class="bi bi-cash-stack"></i>
+
+              <div class="feature-box-text">
+
+                <h4>Cost Control</h4>
+
+                <p>Utise wisi enim nets venias, quis tation ullamcorper nets lobotis nisle consequat.</p>
+
+              </div>
+
+            </div>
+
+          </div>
+          <!--end col-md-4 -->
+
+          <!--begin col-md-4-->
+          <div class="col-md-4">
+
+            <div class="feature-box dark-green">
+
+              <i class="bi bi-chat-left-text"></i>
+
+              <div class="feature-box-text">
+
+                <h4>Chat With Friends</h4>
+
+                <p>Utise wisi enim nets venias, quis tation ullamcorper nets lobotis nisle consequat.</p>
+
+              </div>
+
+            </div>
+
+          </div>
+          <!--end col-md-4 -->
+
+        </div>
+        <!--end row -->
+
+      </div>
+      <!--end container -->
+
+    </section>
+    <!--end features section -->
+
+    <!--begin section-white -->
+    <section class="section-white no-padding-bottom">
+
+      <!--begin container -->
+      <div class="container">
+
+        <!--begin row -->
+        <div class="row align-items-center">
+
+          <!--begin col-md-6-->
+          <div class="col-md-6 text-center">
+
+            <p class="testimonial-single">“People who succeed in business aren't afraid to hear feedback from their
+              customers - they actually thrive from it.”</p>
+
+            <h5 class="margin-bottom-5">Johanna S. Richardson</h5>
+
+            <p class="blue">CEO Essentials</p>
+
+          </div>
+          <!--end col-md-6-->
+
+          <!--begin col-md-6-->
+          <div class="col-md-6">
+
+            <img src="http://placehold.it/555x500" class="width-100" alt="pic">
+
+          </div>
+          <!--end col-md-6-->
+
+        </div>
+        <!--end row -->
+
+      </div>
+      <!--end container -->
+
+    </section>
+    <!--end section-white -->
+
+    <!--begin blog -->
+    <section class="section-grey medium-padding-bottom" id="blog">
+
+      <!--begin container-->
+      <div class="container">
+
+        <!--begin row-->
+        <div class="row">
+
+          <!--begin col-md-12-->
+          <div class="col-md-12 text-center">
+
+            <h2>Our Blog</h2>
+
+          </div>
+          <!--end col-md-12-->
+
+        </div>
+        <!--end row-->
+
+        <!--begin row-->
+        <div class="row">
+
+          <!--begin col-sm-4 -->
+          <div class="col-md-4">
+
+            <!--begin blog-item -->
+            <div class="blog-item">
+
+              <!--begin popup image -->
+              <div class="popup-wrapper">
+                <div class="popup-gallery">
+                  <a href="#">
+                    <img src="http://placehold.it/555x400" class="width-100" alt="pic">
+                    <span class="eye-wrapper2"><i class="bi bi-link-45deg"></i></span>
+                  </a>
+                </div>
+              </div>
+              <!--end popup image -->
+
+              <!--begin blog-item_inner -->
+              <div class="blog-item-inner">
+
+                <h3 class="blog-title"><a href="#">The Guide To LinkedIn Ads</a></h3>
+
+                <a href="#" class="blog-icons last"><i class="bi bi-card-text"></i> Marketing &amp; Design &#8212; 11
+                  Min Read</a>
+
+                <p>Quis autem velis reprehender nets quiste voluptate velite estum quants etsamis sedit varias nets.</p>
+
+              </div>
+              <!--end blog-item-inner -->
+
+            </div>
+            <!--end blog-item -->
+
+          </div>
+          <!--end col-sm-4-->
+
+          <!--begin col-sm-4 -->
+          <div class="col-md-4">
+
+            <!--begin blog-item -->
+            <div class="blog-item">
+
+              <!--begin popup image -->
+              <div class="popup-wrapper">
+                <div class="popup-gallery">
+                  <a href="#">
+                    <img src="http://placehold.it/555x400" class="width-100" alt="pic">
+                    <span class="eye-wrapper2"><i class="bi bi-link-45deg"></i></span>
+                  </a>
+                </div>
+              </div>
+              <!--end popup image -->
+
+              <!--begin blog-item_inner -->
+              <div class="blog-item-inner">
+
+                <h3 class="blog-title"><a href="#">Affinity Designer Quick Start</a></h3>
+
+                <a href="#" class="blog-icons last"><i class="bi bi-play-circle"></i> SaaS Solutions &#8212; 25 Min
+                  Watch</a>
+
+                <p>Quis autem velis reprehender nets quiste voluptate velite estum quants etsamis sedit varias nets.</p>
+
+              </div>
+              <!--end blog-item-inner -->
+
+            </div>
+            <!--end blog-item -->
+
+          </div>
+          <!--end col-sm-4-->
+
+          <!--begin col-sm-4 -->
+          <div class="col-md-4">
+
+            <!--begin blog-item -->
+            <div class="blog-item">
+
+              <!--begin popup image -->
+              <div class="popup-wrapper">
+                <div class="popup-gallery">
+                  <a href="#">
+                    <img src="http://placehold.it/555x400" class="width-100" alt="pic">
+                    <span class="eye-wrapper2"><i class="bi bi-link-45deg"></i></span>
+                  </a>
+                </div>
+              </div>
+              <!--end popup image -->
+
+              <!--begin blog-item_inner -->
+              <div class="blog-item-inner">
+
+                <h3 class="blog-title"><a href="#">Our Happy Team</a></h3>
+
+                <a href="#" class="blog-icons last"><i class="bi bi-mic"></i> Product Launch &#8212; 19 Min Listen</a>
+
+                <p>Quis autem velis reprehender nets quiste voluptate velite estum quants etsamis sedit varias nets.</p>
+
+              </div>
+              <!--end blog-item-inner -->
+
+            </div>
+            <!--end blog-item -->
+
+          </div>
+          <!--end col-sm-4-->
+
+        </div>
+        <!--end row-->
+
+      </div>
+      <!--end container-->
+
+    </section>
+    <!--end blog -->
+
+
+<style>
+    .circled_icon i {
+        padding: 10px 14.5px;
+        line-height: 50px;
+        background-color: #800000;
+        font-size: 25px;
+        color: #ffffff !important;
+        border-radius: 50%;
+    }
+</style>
+
+<?= $this->endSection(); ?>

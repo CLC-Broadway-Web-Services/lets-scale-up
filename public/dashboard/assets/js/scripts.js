@@ -113,33 +113,33 @@
     //         self.closest("li").removeClass('active current-page').parents().closest("li:not(.current-page)").removeClass("active");
     //     }
     // });
-    var navlink1 = document.getElementsByClassName("nk-menu-link");
-    Array.prototype.forEach.call(navlink1, function (navlink1) {
-      if (navlink1.href == fullpath) {
-        navlink1.parentElement.classList.add("active");
-        navlink1.parentElement.classList.add("current-page");
-        navlink1.parentElement.parentElement.parentElement.classList.add(
-          "active"
-        );
-        navlink1.parentElement.parentElement.parentElement.classList.add(
-          "current-page"
-        );
-      }
-    });
-    var navlink2 = document.getElementsByClassName("menu-link");
-    Array.prototype.forEach.call(navlink2, function (navlink2) {
-      if (navlink2.href == fullpath) {
-        navlink2.parentElement.classList.add("active");
-        navlink2.parentElement.classList.add("current-page");
-      }
-    });
-    var navlink3 = document.getElementsByClassName("nav-link");
-    Array.prototype.forEach.call(navlink3, function (navlink3) {
-      if (navlink3.href == fullpath) {
-        navlink3.parentElement.classList.add("active");
-        navlink3.parentElement.classList.add("current-page");
-      }
-    });
+    // var navlink1 = document.getElementsByClassName("nk-menu-link");
+    // Array.prototype.forEach.call(navlink1, function (navlink1) {
+    //   if (navlink1.href == fullpath) {
+    //     navlink1.parentElement.classList.add("active");
+    //     navlink1.parentElement.classList.add("current-page");
+    //     navlink1.parentElement.parentElement.parentElement.classList.add(
+    //       "active"
+    //     );
+    //     navlink1.parentElement.parentElement.parentElement.classList.add(
+    //       "current-page"
+    //     );
+    //   }
+    // });
+    // var navlink2 = document.getElementsByClassName("menu-link");
+    // Array.prototype.forEach.call(navlink2, function (navlink2) {
+    //   if (navlink2.href == fullpath) {
+    //     navlink2.parentElement.classList.add("active");
+    //     navlink2.parentElement.classList.add("current-page");
+    //   }
+    // });
+    // var navlink3 = document.getElementsByClassName("nav-link");
+    // Array.prototype.forEach.call(navlink3, function (navlink3) {
+    //   if (navlink3.href == fullpath) {
+    //     navlink3.parentElement.classList.add("active");
+    //     navlink3.parentElement.classList.add("current-page");
+    //   }
+    // });
   };
 
   // PasswordSwitch @v1.0

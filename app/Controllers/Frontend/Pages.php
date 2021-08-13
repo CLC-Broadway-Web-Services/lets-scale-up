@@ -13,21 +13,19 @@ class Pages extends Controller
 	{
 		// $servicesDB = new FrontservicesModel();
 		// $services = $servicesDB->getAllHomepageServices();
-		// // return print_r($services);
+		// return print_r($services);
 		// $data['services'] = $services;
+
 		$testimonialsDB = new TestimonialsModel();
 		$data['testimonials'] = $testimonialsDB->getAllTestimonialsFront();
 
 		// return print_r($data);
+		// $data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';
+		// $data['pageJSbefore'] = '<script src="/public/libraries/splide/dist/js/splide.min.js"></script>';
 
-		$data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';
+		$data['pageJS'] = '<script src="/public/custom/assets/js/homepage.js"></script>';
 
-		$data['pageJSbefore'] = '<script src="/public/libraries/splide/dist/js/splide.min.js"></script>';
-
-		$data['pageJS'] = '<script src="/public/assets/js/counter.init.js"></script>
-		<script src="/public/custom/assets/js/homepage2.js"></script>';
-
-		return view('Frontend/pages2/homepage', $data);
+		return view('Frontend/pages/homepage', $data);
 	}
 	public function initiatives()
 	{
@@ -48,7 +46,7 @@ class Pages extends Controller
 		// $data['pageJS'] = '<script src="/public/assets/js/counter.init.js"></script>
 		// <script src="/public/custom/assets/js/homepage2.js"></script>';
 
-		return view('Frontend/pages2/initiatives', $data);
+		return view('Frontend/pages/initiatives', $data);
 	}
 	public function contact_us()
 	{
@@ -97,7 +95,7 @@ class Pages extends Controller
 			$data['statusMessage'] = $session->getFlashdata('responseMessage');
 		}
 
-		return view('Frontend/pages2/contact_us', $data);
+		return view('Frontend/pages/contact_us', $data);
 	}
 	public function terms_of_use()
 	{
@@ -118,7 +116,7 @@ class Pages extends Controller
 		// $data['pageJS'] = '<script src="/public/assets/js/counter.init.js"></script>
 		// <script src="/public/custom/assets/js/homepage2.js"></script>';
 
-		return view('Frontend/pages2/terms_of_use', $data);
+		return view('Frontend/pages/terms_of_use', $data);
 	}
 	public function aboutus()
 	{
@@ -139,9 +137,8 @@ class Pages extends Controller
 		// $data['pageJS'] = '<script src="/public/assets/js/counter.init.js"></script>
 		// <script src="/public/custom/assets/js/homepage2.js"></script>';
 
-		return view('Frontend/pages2/about_us', $data);
+		return view('Frontend/pages/about_us', $data);
 	}
-
 	public function privacy_policy()
 	{
 		$data = array();
@@ -161,6 +158,6 @@ class Pages extends Controller
 		// $data['pageJS'] = '<script src="/public/assets/js/counter.init.js"></script>
 		// <script src="/public/custom/assets/js/homepage2.js"></script>';
 
-		return view('Frontend/pages2/privacy_policy', $data);
+		return view('Frontend/pages/privacy_policy', $data);
 	}
 }

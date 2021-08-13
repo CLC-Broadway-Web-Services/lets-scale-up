@@ -82,9 +82,9 @@ class Database extends \CodeIgniter\Database\Config
 	public $development = [
 		'DSN'      => '',
 		'hostname' => 'localhost',
-		'username' => 'root',
-		'password' => '',
-		'database' => 'leegalist',
+		'username' => 'admin',
+		'password' => '23988725',
+		'database' => 'broadway_letsscaleup',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,

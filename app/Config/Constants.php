@@ -103,6 +103,6 @@ define('SERVICES_FOLDER', 'public/images/services/');
 define('PROJECTS_FOLDER', 'public/images/projects/');
 define('BLOGS_FOLDER', 'public/images/blogs/');
 define('TEAM_FOLDER', 'public/images/teams/');
-// define('APP_URL', 'https://leegalist.test/');
-define('APP_URL', 'https://letsscaleup.in/');
+define('APP_URL', 'http://localhost:8080/');
+// define('APP_URL', 'https://letsscaleup.in/');
 

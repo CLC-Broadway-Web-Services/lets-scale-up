@@ -75,9 +75,9 @@
     </div>
     <!-- app-root @e -->
     <!-- JavaScript -->
-    <script src="/public/dashboard/assets/js/bundle.js?ver=2.2.0"></script>
-    <script src="/public/dashboard/assets/js/scripts.js?ver=2.2.0"></script>
-    <script src="/public/dashboard/assets/js/charts/gd-default.js?ver=2.2.0"></script>
+    <script src="/public/dashboard/assets/js/bundle.js?ver=2.5.0"></script>
+    <script src="/public/dashboard/assets/js/scripts.js?ver=2.5.0"></script>
+    <script src="/public/dashboard/assets/js/charts/gd-default.js?ver=2.5.0"></script>
 
     <!-- page js -->
     <?php if (isset($pageJS)) {
