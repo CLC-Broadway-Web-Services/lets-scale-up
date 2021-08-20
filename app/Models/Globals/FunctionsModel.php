@@ -30,4 +30,31 @@ class FunctionsModel extends Model
         // Return result
         return $text;
     }
+    public function checkSlugDuplicacy($slug, $table, $slug_key)
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table($table);
+
+        // $data = $this->where(['project_slug' => $slug])->countAll();
+
+        $data = $builder->getWhere([$slug_key => $slug])->countAll();
+
+        if ($data > 0) {
+            $slug2 = $slug . '-' . $data;
+            return $slug2;
+        } else {
+            return $slug;
+        }
+    }
+    // public function getSingleEntityWithCategoryBySlug($table, $ent_cat_key, $cat_table, $cat_key, $slug, $slug_key)
+    // {
+    //     $db = \Config\Database::connect();
+    //     $entity = $db->table($table);
+    //     $cat_entity = $db->table($cat_table);
+
+    //     $entity_data = $entity->where([$slug_key => $slug])->get();
+    //     return $entity_data;
+    //     $entity_data[0]['category_name'] = $cat_entity->where($entity_data[0][$ent_cat_key])->get()[$cat_key];
+    //     return $entity_data[0];
+    // }
 }

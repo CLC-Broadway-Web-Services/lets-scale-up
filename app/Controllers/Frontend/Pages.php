@@ -3,6 +3,7 @@
 namespace App\Controllers\Frontend;
 
 use App\Models\Admin\ContactsModel;
+use App\Models\Admin\ServicesModel;
 use CodeIgniter\Controller;
 
 use App\Models\Admin\TestimonialsModel;
@@ -17,7 +18,12 @@ class Pages extends Controller
 		// $data['services'] = $services;
 
 		$testimonialsDB = new TestimonialsModel();
+		$servicesDb = new ServicesModel();
 		$data['testimonials'] = $testimonialsDB->getAllTestimonialsFront();
+		$searchservices = $servicesDb->select('service_id, service_title, service_slug')->where(['service_status' => 1])->orderBy('service_title', 'asc')->findAll();
+		$radom_services = $servicesDb->select('service_id, service_title, service_slug')->where(['service_status' => 1])->orderBy('service_title', 'RAND')->findAll(5);
+		$data['searchservices'] = $searchservices;
+		$data['radom_services'] = $radom_services;
 
 		// return print_r($data);
 		// $data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';

@@ -31,6 +31,13 @@
                 <!-- // services menu -->
                 <?php echo view('Administrator/globals/menus/projects_menu'); ?>
             <?php endif ?>
+            <?php if ($uriSegments[2] == 'initiatives') : ?>
+                <li class="nk-menu-heading">
+                    <h6 class="overline-title text-primary-alt">Initiatives</h6>
+                </li>
+                <!-- // services menu -->
+                <?php echo view('Administrator/globals/menus/initiatives_menu'); ?>
+            <?php endif ?>
             <?php if ($uriSegments[2] == 'teams' || $uriSegments[2] == 'team') : ?>
                 <li class="nk-menu-heading">
                     <h6 class="overline-title text-primary-alt">Team</h6>

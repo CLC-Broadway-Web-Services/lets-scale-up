@@ -48,7 +48,7 @@ class ServicesModel extends Model
 		$session = session();
 		helper('form');
 		$serviceid = intval($service['service_id']);
-		$slugify = new FunctionsModel();
+		$functions = new FunctionsModel();
 		$data = [
 			'service_title' => esc($service['service_title']),
 			'service_summary' => esc($service['service_summary']),
@@ -58,8 +58,8 @@ class ServicesModel extends Model
 			'service_home_view' => intval($service['service_home_view']),
 		];
 		if ($serviceid == 0) {
-			$slug = $slugify->slugify($service['service_title']);
-			$correctSlug = $this->checkSlugDuplicacy($slug);
+			$slug = $functions->slugify($service['service_title']);
+			$correctSlug = $functions->checkSlugDuplicacy($slug, 'services', 'service_slug');
 			$data['service_slug'] = esc($correctSlug);
 			$query = $this->insert($data);
 			if ($query) {

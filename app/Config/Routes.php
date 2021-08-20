@@ -142,6 +142,20 @@ $routes->group('administrator', function ($routes) {
 		$routes->match(['get', 'post'], 'homestatus/(:num)', 'Admin\Projects::homeStatusChange/$1', ['as' => 'admin_project_home_status']);
 	});
 
+	// ADMIN INITIATIVES ROUTES
+	$routes->group('initiatives', ['filter' => 'adminauth'], function ($routes) {
+		$routes->match(['get', 'post'], '', 'Admin\Initiatives::index', ['as' => 'admin_initiatives_index']);
+
+		$routes->match(['get', 'post'], 'categories', 'Admin\Initiatives::categories', ['as' => 'admin_initiative_categories_index']);
+		$routes->match(['get', 'post'], 'categories/(:num)', 'Admin\Initiatives::categories/$1', ['as' => 'admin_initiative_category_edit']);
+		$routes->match(['get', 'post'], 'categories/delete/(:num)', 'Admin\Initiatives::categoriesDelete/$1', ['as' => 'admin_initiative_category_delete']);
+
+		$routes->match(['get', 'post'], 'add', 'Admin\Initiatives::addEditInitiative', ['as' => 'admin_initiative_add']);
+		$routes->match(['get', 'post'], 'edit/(:num)', 'Admin\Initiatives::addEditInitiative/$1/$2', ['as' => 'admin_initiative_edit']);
+		$routes->match(['get', 'post'], 'status/(:num)', 'Admin\Initiatives::statusChange/$1', ['as' => 'admin_initiative_status']);
+		$routes->match(['get', 'post'], 'homestatus/(:num)', 'Admin\Initiatives::homeStatusChange/$1', ['as' => 'admin_initiative_home_status']);
+	});
+
 	// ADMIN CLIENTS ROUTES
 	$routes->group('clients', ['filter' => 'adminauth'], function ($routes) {
 		$routes->match(['get', 'post'], '', 'Admin\Clients::index', ['as' => 'admin_clients_index']);

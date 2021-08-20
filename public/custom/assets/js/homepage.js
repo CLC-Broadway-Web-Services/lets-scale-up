@@ -21,3 +21,8 @@
 //         }
 //     }).mount();
 // });
+
+function onClickDataList(url_to_go) {
+    console.log(url_to_go);
+    window.location.href = url_to_go;
+}

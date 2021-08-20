@@ -101,6 +101,7 @@ if (isset($type)) {
     <script src="/public/assets/js/jquery.magnific-popup.min.js"></script>
     <script src="/public/assets/js/jquery.nav.js"></script>
     <script src="/public/assets/js/wow.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="/public/assets/js/plugins.js"></script>
     <script src="/public/assets/js/custom.js"></script>
 

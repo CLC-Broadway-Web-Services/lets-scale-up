@@ -46,6 +46,9 @@ class ProjectsModel extends Model
 	}
     public function getSingleProject($slug = null)
     {
+		// $functions = new FunctionsModel();
+		// return $functions->getSingleEntityWithCategoryBySlug('projects', 'project_category', 'project_category', 'cat_name', $slug, 'project_slug');
+
         if($slug != null) {
 			$catDB = new ProjectcategoriesModel();
 			$project = $this->where('project_slug', $slug)->first();
@@ -59,7 +62,7 @@ class ProjectsModel extends Model
 		$session = session();
 		helper('form');
 		$project_id = intval($project['project_id']);
-		$slugify = new FunctionsModel();
+		$functions = new FunctionsModel();
 		$data = [
 			'project_name' => $project['project_name'],
 			'project_summary' => $project['project_summary'],
@@ -75,8 +78,8 @@ class ProjectsModel extends Model
 			$data['project_image'] = $project['project_image'];
 		}
 		if ($project_id == 0) {
-			$slug = $slugify->slugify($project['project_name']);
-			$correctSlug = $this->checkSlugDuplicacy($slug);
+			$slug = $functions->slugify($project['project_name']);
+			$correctSlug = $functions->checkSlugDuplicacy($slug, 'projects', 'project_slug');
 			$data['project_slug'] = esc($correctSlug);
 			$query = $this->insert($data);
 			if ($query) {

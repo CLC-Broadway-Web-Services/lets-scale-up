@@ -75,7 +75,7 @@
             <!--begin col-md-7 -->
             <div class="col-md-7">
 
-                <p>© 2021 <span class="template-name">Smart</span>. Designed by <a href="https://1.envato.market/rkB1y" target="_blank">Epic-Themes</a></p>
+                <p>© <?= date('Y') ?> <span class="template-name">Lets Scale Up</span>. Developed by <a href="https://www.clcbws.com" target="_blank" rel="follow" class="template-name">Broadway Web Services</a></p>
 
             </div>
             <!--end col-md-7 -->
