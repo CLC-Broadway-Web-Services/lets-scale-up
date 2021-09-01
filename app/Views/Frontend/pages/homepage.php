@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 
-<!--begin home banner section -->
+
 <section class="home-section" id="home">
   <div class="home-section-overlay"></div>
   <div class="container home-wrapper">
@@ -53,35 +53,35 @@
     </div>
   </div>
 </section>
-<!--end home banner section -->
 
-<!--begin testimonials section -->
+
+
 <section class="section-grey small-padding-bottom">
 
-  <!--begin container -->
+  
   <div class="container" style="overflow: hidden">
 
-    <!--begin row -->
+    
     <div class="row">
 
-      <!--begin col md 12 -->
+      
       <div class="col-md-12 mx-auto padding-top-10 padding-bottom-30">
 
-        <!--begin testimonials carousel -->
+        
         <div id="carouselTestimonials" class="carousel slide" data-bs-ride="carousel">
 
-          <!--begin carousel-indicators -->
+          
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
-          <!--end carousel-indicators -->
+          
 
-          <!--begin carousel-inner -->
+          
           <div class="carousel-inner text-center">
             
-            <!--start carousel-item -->
+            
             <div class="carousel-item active">
               <div class="row align-items-center testim-inner">
                 <div class="col-12 testim-info">
@@ -92,184 +92,184 @@
                 </div>
               </div>
             </div>
-            <!--end carousel-item -->
+            
 
           </div>
-          <!--end carousel-inner -->
+          
 
         </div>
-        <!--end testimonials carousel -->
+        
 
       </div>
-      <!--end col md 12-->
+      
 
     </div>
-    <!--end row -->
+    
 
   </div>
-  <!--end container -->
+  
 
 </section>
-<!--end testimonials section -->
 
-<!--begin section-grey -->
+
+
 <section class="section-grey small-padding-top">
 
-  <!--begin container -->
+  
   <div class="container">
 
-    <!--begin row -->
+    
     <div class="row">
 
-      <!--begin col-md-12 -->
+      
       <div class="col-md-12 text-center padding-bottom-20">
 
         <h3>Trusted By Over 9,000+ Businesses</h3>
 
       </div>
-      <!--end col-md-12 -->
+      
 
     </div>
-    <!--end row -->
+    
 
-    <!--begin row -->
+    
     <div class="row justify-content-center">
 
-      <!--begin col-md-1 -->
+      
       <div class="col-md-1"></div>
-      <!--end col-md-1 -->
+      
 
-      <!--begin col-md-2 -->
+      
       <div class="col-md-2 col-xs-6">
 
         <div class="our-partners">
 
-          <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+          <img src="/public/demoimages/316x95.png" class="width-100" alt="pic">
 
         </div>
 
       </div>
-      <!--end col-md-2 -->
+      
 
-      <!--begin col-md-2 -->
+      
       <div class="col-md-2 col-xs-6">
 
         <div class="our-partners">
 
-          <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+          <img src="/public/demoimages/316x95.png" class="width-100" alt="pic">
 
         </div>
 
       </div>
-      <!--end col-md-2 -->
+      
 
-      <!--begin col-md-2 -->
+      
       <div class="col-md-2 col-xs-6">
 
         <div class="our-partners">
 
-          <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+          <img src="/public/demoimages/316x95.png" class="width-100" alt="pic">
 
         </div>
 
       </div>
-      <!--end col-md-2 -->
+      
 
-      <!--begin col-md-2 -->
+      
       <div class="col-md-2 col-xs-6">
 
         <div class="our-partners">
 
-          <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+          <img src="/public/demoimages/316x95.png" class="width-100" alt="pic">
 
         </div>
 
       </div>
-      <!--end col-md-2 -->
+      
 
-      <!--begin col-md-2 -->
+      
       <div class="col-md-2 col-xs-6">
 
         <div class="our-partners">
 
-          <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+          <img src="/public/demoimages/316x95.png" class="width-100" alt="pic">
 
         </div>
 
       </div>
-      <!--end col-md-2 -->
+      
 
-      <!--begin col-md-1 -->
+      
       <div class="col-md-1 d-none d-md-block"></div>
-      <!--end col-md-1 -->
+      
 
-      <!--begin col-md-2 -->
+      
       <div class="col-md-2 col-xs-6">
 
         <div class="our-partners">
 
-          <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+          <img src="/public/demoimages/316x95.png" class="width-100" alt="pic">
 
         </div>
 
       </div>
-      <!--end col-md-2 -->
+      
 
-      <!--begin col-md-2 -->
+      
       <div class="col-md-2 col-xs-6">
 
         <div class="our-partners">
 
-          <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+          <img src="/public/demoimages/316x95.png" class="width-100" alt="pic">
 
         </div>
 
       </div>
-      <!--end col-md-2 -->
+      
 
-      <!--begin col-md-2 -->
+      
       <div class="col-md-2 col-xs-6">
 
         <div class="our-partners">
 
-          <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+          <img src="/public/demoimages/316x95.png" class="width-100" alt="pic">
 
         </div>
 
       </div>
-      <!--end col-md-2 -->
+      
 
-      <!--begin col-md-2 -->
+      
       <div class="col-md-2 col-xs-6">
 
         <div class="our-partners">
 
-          <img src="http://placehold.it/316x95" class="width-100" alt="pic">
+          <img src="/public/demoimages/316x95.png" class="width-100" alt="pic">
 
         </div>
 
       </div>
-      <!--end col-md-2 -->
+      
 
     </div>
-    <!--end row -->
+    
 
   </div>
-  <!--end container -->
+  
 
 </section>
-<!--end section-grey -->
 
-<!--begin section-white -->
+
+
 <section class="section-white">
 
-  <!--begin container-->
+  
   <div class="container">
 
-    <!--begin row-->
+    
     <div class="row align-items-center">
 
-      <!--begin col-md-6-->
+      
       <div class="col-md-6">
 
         <h3>Discover how we can help you to grow your business fast.</h3>
@@ -286,49 +286,49 @@
         <a href="#" class="scrool"><button type="button" class="btn btn-lg btn-primary">Discover More</button></a>
 
       </div>
-      <!--end col-md-6-->
+      
 
-      <!--begin col-md-6-->
+      
       <div class="col-md-6">
 
-        <img src="http://placehold.it/555x461" class="width-100 responsive-top-margins" alt="pic">
+        <img src="/public/demoimages/555x461.png" class="width-100 responsive-top-margins" alt="pic">
 
       </div>
-      <!--end col-sm-6-->
+      
 
     </div>
-    <!--end row-->
+    
 
   </div>
-  <!--end container-->
+  
 
 </section>
-<!--end section-white-->
 
-<!--begin fun-facts -->
+
+
 <section class="section-grey medium-padding-bottom">
 
-  <!--begin container-->
+  
   <div class="container">
 
-    <!--begin row-->
+    
     <div class="row">
 
-      <!--begin col md 7 -->
+      
       <div class="col-md-7 mx-auto margin-bottom-10 text-center">
 
         <h3>Fun Facts About Our Agency</h3>
 
       </div>
-      <!--end col md 7-->
+      
 
     </div>
-    <!--end row-->
+    
 
-    <!--begin row-->
+    
     <div class="row">
 
-      <!--begin fun-facts-box -->
+      
       <div class="col-md-2 offset-md-1 fun-facts-box blue text-center">
 
         <i class="bi bi-gift-fill"></i>
@@ -336,9 +336,9 @@
         <p class="fun-facts-title"><span class="facts-numbers">1050+</span><br>Projects Completed</p>
 
       </div>
-      <!--end fun-facts-box -->
+      
 
-      <!--begin fun-facts-box -->
+      
       <div class="col-md-2 fun-facts-box red text-center">
 
         <i class="bi bi-heart-fill"></i>
@@ -346,9 +346,9 @@
         <p class="fun-facts-title"><span class="facts-numbers">217k</span><br>Happy Clients</p>
 
       </div>
-      <!--end fun-facts-box -->
+      
 
-      <!--begin fun-facts-box -->
+      
       <div class="col-md-2 fun-facts-box green text-center">
 
         <i class="bi bi-award-fill"></i>
@@ -356,9 +356,9 @@
         <p class="fun-facts-title"><span class="facts-numbers">1210</span><br>Design Awards</p>
 
       </div>
-      <!--end fun-facts-box -->
+      
 
-      <!--begin fun-facts-box -->
+      
       <div class="col-md-2 fun-facts-box red text-center">
 
         <i class="bi bi-basket3-fill"></i>
@@ -366,9 +366,9 @@
         <p class="fun-facts-title"><span class="facts-numbers">217k</span><br>Happy Clients</p>
 
       </div>
-      <!--end fun-facts-box -->
+      
 
-      <!--begin fun-facts-box -->
+      
       <div class="col-md-2 fun-facts-box yellow text-center">
 
         <i class="bi bi-bell-fill"></i>
@@ -376,38 +376,38 @@
         <p class="fun-facts-title"><span class="facts-numbers">2137</span><br>Line Of Codes</p>
 
       </div>
-      <!--end fun-facts-box -->
+      
 
     </div>
-    <!--end row-->
+    
 
   </div>
-  <!--end container-->
+  
 
 </section>
-<!--end fun-facts -->
 
-<!--begin team section -->
+
+
 <section class="section-white medium-padding-bottom" id="team">
 
-  <!--begin container-->
+  
   <div class="container">
 
-    <!--begin row-->
+    
     <div class="row">
 
-      <!--begin col-md-12 -->
+      
       <div class="col-md-12 text-center">
 
         <h2>Meet Our Team</h2>
 
       </div>
-      <!--end col-md-12 -->
+      
 
-      <!--begin team-item -->
+      
       <div class="col-sm-12 col-md-4 margin-top-30">
 
-        <img src="http://placehold.it/555x555" class="team-img width-100" alt="pic">
+        <img src="/public/demoimages/555x555.png" class="team-img width-100" alt="pic">
 
         <div class="team-item">
 
@@ -435,12 +435,12 @@
         </div>
 
       </div>
-      <!--end team-item -->
+      
 
-      <!--begin team-item -->
+      
       <div class="col-sm-12 col-md-4 margin-top-30">
 
-        <img src="http://placehold.it/555x555" class="team-img width-100" alt="pic">
+        <img src="/public/demoimages/555x555.png" class="team-img width-100" alt="pic">
 
         <div class="team-item">
 
@@ -468,12 +468,12 @@
         </div>
 
       </div>
-      <!--end team-item -->
+      
 
-      <!--begin team-item -->
+      
       <div class="col-sm-12 col-md-4 margin-top-30">
 
-        <img src="http://placehold.it/555x555" class="team-img width-100" alt="pic">
+        <img src="/public/demoimages/555x555.png" class="team-img width-100" alt="pic">
 
         <div class="team-item">
 
@@ -500,27 +500,27 @@
         </div>
 
       </div>
-      <!--end team-item -->
+      
 
     </div>
-    <!--end row-->
+    
 
   </div>
-  <!--end container-->
+  
 
 </section>
-<!--end team section-->
 
-<!--begin how-it-works section -->
+
+
 <section class="section-grey" id="how-it-works">
 
-  <!--begin container -->
+  
   <div class="container">
 
-    <!--begin row -->
+    
     <div class="row align-items-center">
 
-      <!--begin col-md-5 -->
+      
       <div class="col-md-5 col-sm-12">
 
         <h2>How It Works.</h2>
@@ -528,13 +528,13 @@
         <p>Quis autem velis ets reprehender net etid quiste netsum voluptate. Utise wisi enim minim veniam, quis
           etsad ets aspernatis netsum stationes nets qualitats.</p>
 
-        <!--begin row-->
+        
         <div class="row">
 
-          <!--begin col-md-4-->
+          
           <div class="col-md-4 col-sm-6">
 
-            <!--begin testim-platform-->
+            
             <div class="testim-platform first">
 
               <p>LinkedIn</p>
@@ -548,15 +548,15 @@
               </div>
 
             </div>
-            <!--end testim-platform-->
+            
 
           </div>
-          <!--end col-sm-4-->
+          
 
-          <!--begin col-md-4-->
+          
           <div class="col-md-4 col-sm-6">
 
-            <!--begin testim-platform-->
+            
             <div class="testim-platform">
 
               <p>Upwork</p>
@@ -570,25 +570,25 @@
               </div>
 
             </div>
-            <!--end testim-platform-->
+            
 
           </div>
-          <!--end col-sm-4-->
+          
 
         </div>
-        <!--end row-->
+        
 
       </div>
-      <!--end col-md-5 -->
+      
 
-      <!--begin col-md-1 -->
+      
       <div class="col-md-1"></div>
-      <!--end col-md-1 -->
+      
 
-      <!--begin col-md-6-->
+      
       <div class="col-md-6">
 
-        <!--begin accordion -->
+        
         <div class="accordion accordion-flush" id="accordionOne">
 
           <div class="accordion-item">
@@ -655,38 +655,38 @@
           </div>
 
         </div>
-        <!--end accordion -->
+        
 
       </div>
-      <!--end col-md-6-->
+      
 
     </div>
-    <!--end row -->
+    
 
   </div>
-  <!--end container -->
+  
 
 </section>
-<!--end how-it-works section -->
 
-<!--begin pricing section -->
+
+
 <section class="section-white" id="pricing">
 
-  <!--begin container -->
+  
   <div class="container">
 
-    <!--begin row -->
+    
     <div class="row">
 
-      <!--begin col-md-12 -->
+      
       <div class="col-md-12 text-center padding-bottom-40">
 
         <h2>Pricing for every business, at any stage</h2>
 
       </div>
-      <!--end col-md-12 -->
+      
 
-      <!--begin col-md-4-->
+      
       <div class="col-md-4">
 
         <div class="price-box">
@@ -714,9 +714,9 @@
         </div>
 
       </div>
-      <!--end col-md-4 -->
+      
 
-      <!--begin col-md-4-->
+      
       <div class="col-md-4">
 
         <div class="price-box">
@@ -747,9 +747,9 @@
         </div>
 
       </div>
-      <!--end col-md-4 -->
+      
 
-      <!--begin col-md-4-->
+      
       <div class="col-md-4">
 
         <div class="price-box">
@@ -778,41 +778,41 @@
         </div>
 
       </div>
-      <!--end col-md-4 -->
+      
 
     </div>
-    <!--end row -->
+    
 
   </div>
-  <!--end container -->
+  
 
 </section>
-<!--end pricing section -->
 
-<!--begin features section -->
+
+
 <section class="section-grey medium-padding-bottom" id="services">
 
-  <!--begin container -->
+  
   <div class="container">
 
-    <!--begin row -->
+    
     <div class="row">
 
-      <!--begin col-md-12-->
+      
       <div class="col-md-12 text-center">
 
         <h2>Amazing Features</h2>
 
       </div>
-      <!--end col-md-12 -->
+      
 
     </div>
-    <!--end row -->
+    
 
-    <!--begin row -->
+    
     <div class="row">
 
-      <!--begin col-md-4-->
+      
       <div class="col-md-4">
 
         <div class="feature-box light-green">
@@ -833,29 +833,29 @@
         </div>
 
       </div>
-      <!--end col-md-4 -->
+      
 
 
     </div>
-    <!--end row -->
+    
 
 
   </div>
-  <!--end container -->
+  
 
 </section>
-<!--end features section -->
 
-<!--begin section-white -->
+
+
 <section class="section-white no-padding-bottom">
 
-  <!--begin container -->
+  
   <div class="container">
 
-    <!--begin row -->
+    
     <div class="row align-items-center">
 
-      <!--begin col-md-6-->
+      
       <div class="col-md-6 text-center">
 
         <p class="testimonial-single">“People who succeed in business aren't afraid to hear feedback from their
@@ -866,66 +866,66 @@
         <p class="blue">CEO Essentials</p>
 
       </div>
-      <!--end col-md-6-->
+      
 
-      <!--begin col-md-6-->
+      
       <div class="col-md-6">
 
-        <img src="http://placehold.it/555x500" class="width-100" alt="pic">
+        <img src="/public/demoimages/555x500.png" class="width-100" alt="pic">
 
       </div>
-      <!--end col-md-6-->
+      
 
     </div>
-    <!--end row -->
+    
 
   </div>
-  <!--end container -->
+  
 
 </section>
-<!--end section-white -->
 
-<!--begin blog -->
+
+
 <section class="section-grey medium-padding-bottom" id="blog">
 
-  <!--begin container-->
+  
   <div class="container">
 
-    <!--begin row-->
+    
     <div class="row">
 
-      <!--begin col-md-12-->
+      
       <div class="col-md-12 text-center">
 
         <h2>Our Blog</h2>
 
       </div>
-      <!--end col-md-12-->
+      
 
     </div>
-    <!--end row-->
+    
 
-    <!--begin row-->
+    
     <div class="row">
 
-      <!--begin col-sm-4 -->
+      
       <div class="col-md-4">
 
-        <!--begin blog-item -->
+        
         <div class="blog-item">
 
-          <!--begin popup image -->
+          
           <div class="popup-wrapper">
             <div class="popup-gallery">
               <a href="#">
-                <img src="http://placehold.it/555x400" class="width-100" alt="pic">
+                <img src="/public/demoimages/555x400.png" class="width-100" alt="pic">
                 <span class="eye-wrapper2"><i class="bi bi-link-45deg"></i></span>
               </a>
             </div>
           </div>
-          <!--end popup image -->
+          
 
-          <!--begin blog-item_inner -->
+          
           <div class="blog-item-inner">
 
             <h3 class="blog-title"><a href="#">The Guide To LinkedIn Ads</a></h3>
@@ -936,32 +936,32 @@
             <p>Quis autem velis reprehender nets quiste voluptate velite estum quants etsamis sedit varias nets.</p>
 
           </div>
-          <!--end blog-item-inner -->
+          
 
         </div>
-        <!--end blog-item -->
+        
 
       </div>
-      <!--end col-sm-4-->
+      
 
-      <!--begin col-sm-4 -->
+      
       <div class="col-md-4">
 
-        <!--begin blog-item -->
+        
         <div class="blog-item">
 
-          <!--begin popup image -->
+          
           <div class="popup-wrapper">
             <div class="popup-gallery">
               <a href="#">
-                <img src="http://placehold.it/555x400" class="width-100" alt="pic">
+                <img src="/public/demoimages/555x400.png" class="width-100" alt="pic">
                 <span class="eye-wrapper2"><i class="bi bi-link-45deg"></i></span>
               </a>
             </div>
           </div>
-          <!--end popup image -->
+          
 
-          <!--begin blog-item_inner -->
+          
           <div class="blog-item-inner">
 
             <h3 class="blog-title"><a href="#">Affinity Designer Quick Start</a></h3>
@@ -972,32 +972,32 @@
             <p>Quis autem velis reprehender nets quiste voluptate velite estum quants etsamis sedit varias nets.</p>
 
           </div>
-          <!--end blog-item-inner -->
+          
 
         </div>
-        <!--end blog-item -->
+        
 
       </div>
-      <!--end col-sm-4-->
+      
 
-      <!--begin col-sm-4 -->
+      
       <div class="col-md-4">
 
-        <!--begin blog-item -->
+        
         <div class="blog-item">
 
-          <!--begin popup image -->
+          
           <div class="popup-wrapper">
             <div class="popup-gallery">
               <a href="#">
-                <img src="http://placehold.it/555x400" class="width-100" alt="pic">
+                <img src="/public/demoimages/555x400.png" class="width-100" alt="pic">
                 <span class="eye-wrapper2"><i class="bi bi-link-45deg"></i></span>
               </a>
             </div>
           </div>
-          <!--end popup image -->
+          
 
-          <!--begin blog-item_inner -->
+          
           <div class="blog-item-inner">
 
             <h3 class="blog-title"><a href="#">Our Happy Team</a></h3>
@@ -1007,22 +1007,22 @@
             <p>Quis autem velis reprehender nets quiste voluptate velite estum quants etsamis sedit varias nets.</p>
 
           </div>
-          <!--end blog-item-inner -->
+          
 
         </div>
-        <!--end blog-item -->
+        
 
       </div>
-      <!--end col-sm-4-->
+      
 
     </div>
-    <!--end row-->
+    
 
   </div>
-  <!--end container-->
+  
 
 </section>
-<!--end blog -->
+
 
 <style>
   .circled_icon i {
