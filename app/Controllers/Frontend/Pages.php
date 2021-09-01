@@ -2,13 +2,13 @@
 
 namespace App\Controllers\Frontend;
 
+use App\Controllers\BaseController;
 use App\Models\Admin\ContactsModel;
 use App\Models\Admin\ServicesModel;
-use CodeIgniter\Controller;
 
 use App\Models\Admin\TestimonialsModel;
 
-class Pages extends Controller
+class Pages extends BaseController
 {
 	public function index()
 	{

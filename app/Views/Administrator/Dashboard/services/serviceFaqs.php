@@ -8,7 +8,7 @@
         <div class="nk-block nk-block-lg">
             <div class="nk-block-head">
                 <div class="nk-block-head-content">
-                    <h4 class="nk-block-title">Service Document Blocks</h4>
+                    <h4 class="nk-block-title">Service FAQ's</h4>
                     <?php if (isset($sessionData['serviceStatusMessage'])) : ?>
                         <div class="alert alert-icon alert-danger" role="alert">
                             <em class="icon ni ni-alert-circle"></em>
@@ -28,8 +28,8 @@
                                         <label class="custom-control-label" for="uid"></label>
                                     </div>
                                 </th>
-                                <th class="nk-tb-col"><span class="sub-text">Document Block</span></th>
                                 <th class="nk-tb-col tb-col-mb"><span class="sub-text">Service</span></th>
+                                <th class="nk-tb-col"><span class="sub-text">FAQ</span></th>
                                 <th class="nk-tb-col tb-col-xl"><span class="sub-text">Created</span></th>
                                 <th class="nk-tb-col tb-col-xl"><span class="sub-text">Updated</span></th>
                                 <th class="nk-tb-col tb-col-md"><span class="sub-text">Status</span></th>
@@ -46,16 +46,16 @@
                                             <label class="custom-control-label" for="uid<?= $serviceFaq['faq_id'] ?>"></label>
                                         </div>
                                     </td>
+                                    <td class="nk-tb-col tb-col-mb">
+                                        <span><?= $serviceFaq['service_title'] ?></span>
+                                    </td>
                                     <td class="nk-tb-col">
                                         <div class="user-card">
                                             <div class="user-info">
                                                 <span class="tb-lead"><?= $serviceFaq['faq_title'] ?> <span class="dot dot-success d-md-none ml-1"></span></span>
-                                                <span><?= $serviceFaq['faq_content'] ?></span>
+                                                <span><?php //$serviceFaq['faq_content'] ?></span>
                                             </div>
                                         </div>
-                                    </td>
-                                    <td class="nk-tb-col tb-col-mb">
-                                        <span><?= $serviceFaq['service_title'] ?></span>
                                     </td>
                                     <td class="nk-tb-col tb-col-xl">
                                         <span><?= date('d M Y', strtotime($serviceFaq['faq_created_at'])) ?></span>

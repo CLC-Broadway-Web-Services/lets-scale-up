@@ -56,7 +56,7 @@
                                                 <div class="form-icon form-icon-left">
                                                     <em class="icon ni ni-sign-inr"></em>
                                                 </div>
-                                                <input type="number" class="form-control" id="package_price" id="package_price" value="<?= $packageData['package_price'] ?>" placeholder="ex: 1500" required>
+                                                <input type="number" class="form-control" id="package_price" name="package_price" value="<?= $packageData['package_price'] ?>" placeholder="ex: 1500" required>
                                             </div>
                                         </div>
                                     </div>
@@ -79,7 +79,7 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    <input type="number" hidden id="package_isSpecial" name="package_isSpecial" value="<?= $packageData['package_isSpecial'] ?>">
                                     <div class="col-12" id="addPackageButtonDiv">
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-lg btn-primary">

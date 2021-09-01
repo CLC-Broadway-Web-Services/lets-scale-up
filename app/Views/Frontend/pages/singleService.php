@@ -1,216 +1,418 @@
-<?= $this->extend('Frontend/layouts/main') ?>
+<?= $this->extend('Frontend/layouts/main'); ?>
 
-<?= $this->section('content') ?>
+<?= $this->section('content'); ?>
 
-<!-- END HOME -->
-<section class="bg-home mainAreaBackground" id="home">
-    <div class="home-center">
-        <div class="home-desc-center">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="home-content">
-                            <!-- <div class="home-badge">
-                                    <p class="f-13"><span class="text-primary">70% Off</span> for first 3 month</p>
-                                </div> -->
-                            <h1 class="home-title"><?= $service['service_title'] ?></h1>
-                            <p class="text-muted mt-3 f-20"> <?= $service['service_summary'] ?></p>
-                            <!-- <div class="mt-5">
-                                <a href="" class="btn btn-primary">Get Started <span class="text-white-50">- For
-                                        Free</span> <i class="mdi mdi-arrow-right"></i></a>
-                            </div> -->
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="media box-shadow bg-white p-4 rounded">
-                            <div class="custom-form mt-3">
-                                <div id="message"></div>
-                                <form method="post" action="" name="serviceGetStarted" id="serviceGetStarted" action="javascript:void(0);">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group mt-3">
-                                                <label class="contact-lable">First Name</label>
-                                                <input name="user_firstname" id="user_firstname" class="form-control" type="text" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6">
-                                            <div class="form-group mt-3">
-                                                <label class="contact-lable">Last Name</label>
-                                                <input name="user_lastname" id="user_lastname" class="form-control" type="text" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group mt-3">
-                                                <label class="contact-lable">Mobile</label>
-                                                <input name="user_mobile" id="user_mobile" class="form-control" type="tel" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6">
-                                            <div class="form-group mt-3">
-                                                <label class="contact-lable">Email</label>
-                                                <input name="user_email" id="user_email" class="form-control" type="email" required>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-12 mt-3">
-                                            <span><span class="h3"></span></span>
-                                            <button class="submitBnt btn btn-primary btn-round float-right" type="submit">Get Started <i class="mdi mdi-arrow-right"></i></button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- <img src="/public/assets/images/features/img-2.png" class="img-fluid" alt=""> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END HOME -->
-
-<!-- OVERVIEW -->
-<section class="d-flex align-content-center flex-wrap">
-    <div class="home-center">
-        <div class="home-desc-center">
-            <div class="container">
-                <div class="row align-items-center justify-content-center align-content-center">
-                    <div class="col-lg-9 mb-5">
-                        <div class="title-box text-center mt-5 pt-5">
-                            <h6 class="title-sub-title mb-0 text-primary f-17">Overview</h6>
-                            <p class="text-muted mt-3 f-20">
-                                <?= html_entity_decode($service['service_overview']) ?>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- OVERVIEW -->
-
-<!-- REQUIRED DOCS -->
-<section class="section bg-light pt-5">
+<section class="home-section" id="home">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="title-box text-center">
-                    <h6 class="title-sub-title mb-0 text-primary f-17">Documents</h6>
-                    <h4 class="mt-3">Documents required for service - <?= $service['service_title'] ?></h4>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1><?= $service['service_title'] ?></i></h1>
+                <p class="hero-text"><?= $service['service_summary'] ?></p>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-3">
+                    <div class="col-md-6 col-sm-12">
+                        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <h3 class="d-inline">₹ 7999</h3> All Inclusive
+                    </div>
+                    <div class="col-md-6 col-sm-12 d-grid gap-2">
+                        <button type="submit" class="btn btn-warning">Sign in</button>
+                    </div>
                 </div>
-                <div class="row">
+            </div>
+        </div>
+    </div>
+</section>
 
-                    <?php foreach ($service['docs'] as $doc) : ?>
-                        <div class="col-lg-4 mt-2">
-                            <div class="counter-box mt-4">
-                                <div class="media box-shadow bg-white p-4 rounded">
-                                    <div class="counter-icon mr-1 mt-1">
-                                        <i class="mdi mdi-file text-primary h4"></i>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="service-navbar">
+    <div class="container-fluid">
+        <div class="mx-auto">
+            <ul class="navbar-nav" id="service_navbar_nav">
+                <?php if ($service['service_overview']) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#overview">Overview</a>
+                    </li>
+                <?php endif; ?>
+                <?php if (count($service['benefits'])) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#benefits">Benefits</a>
+                    </li>
+                <?php endif; ?>
+                <?php if (count($service['docs'])) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#documents">Documents</a>
+                    </li>
+                <?php endif; ?>
+                <?php if (count($service['packages'])) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#packages">Packages</a>
+                    </li>
+                <?php endif; ?>
+                <?php if (count($service['faqs'])) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faqs">FAQ</a>
+                    </li>
+                <?php endif; ?>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<?php if ($service['service_overview']) : ?>
+    <section class="section-white" id="overview">
+        <div class="container pt-md-5 pt-sm-2">
+            <div class="row align-items-center text-center">
+                <div class="col-12">
+                    <h4>OVERVIEW</h4>
+                    <h3><?= $service['service_overview_subtitle'] ?></h3>
+                    <div><?= html_entity_decode($service['service_overview']) ?></div>
+                </div>
+            </div>
+        </div>
+    </section>
+<?php endif; ?>
+<?php if (count($service['benefits'])) : ?>
+    <section class="section-grey" id="benefits">
+        <div class="container pt-md-5 pt-sm-2">
+            <div class="row">
+                <div class="col-12">
+                    <div class="title-box text-center">
+                        <h4>BENEFITS</h4>
+                        <h3><?= $service['service_benefit_subtitle'] ?></h3>
+                    </div>
+                    <div class="row">
+
+                        <?php foreach ($service['benefits'] as $benefit) : ?>
+                            <div class="col-md-6 col-12 mt-4">
+                                <div class="benefits-box card">
+                                    <div class="card-body">
+                                        <h5 class="mt-2 mb-0 f-17"><b><i class="bi bi-file-<?= $benefit['icon'] ?> lsu"></i></b> <?= $benefit['title'] ?> </h5>
+                                        <p class="text-muted mb-0 mt-2 f-15">
+                                            <?= $benefit['summary'] ?>
+                                        </p>
                                     </div>
-                                    <div class="media-body pl-2">
-                                        <h5 class="mt-2 mb-0 f-17"><?= $doc['document_title'] ?> </h5>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<?php endif; ?>
+<?php if (count($service['docs'])) : ?>
+    <section class="section-white" id="documents">
+        <div class="container pt-md-5 pt-sm-2">
+            <div class="row">
+                <div class="col-12">
+                    <div class="title-box text-center">
+                        <h4>DOCUMENTS</h4>
+                        <h3><?= $service['service_documents_subtitle'] ?></h3>
+                    </div>
+                    <div class="row">
+
+                        <?php foreach ($service['docs'] as $doc) : ?>
+                            <div class="col-md-4 col-sm-6 col-12 mt-4">
+                                <div class="documents-box card bg-light">
+                                    <div class="card-body">
+                                        <h5 class="mt-2 mb-0 f-17"><b><i class="bi bi-file-text lsu"></i></b> <?= $doc['document_title'] ?> </h5>
                                         <p class="text-muted mb-0 mt-2 f-15">
                                             <?= $doc['document_summary'] ?>
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
 
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- REQUIRED DOCS -->
-
-<!-- PACKAGES -->
-<section class="section" id="pricing">
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="title-box text-center">
-                    <h6 class="title-sub-title mb-0 text-primary f-17">Choose Your Package</h6>
-                    <h3 class="title-heading mt-4">Our flexible pricing options make it easy to get started.</h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="row pt-4">
-
-            <?php foreach ($service['packages'] as $key => $package) : ?>
-                <div class="col-lg-4">
-                    <div class="pricing-box mt-4 rounded <?php if ($package['package_isSpecial']) echo 'border border-primary' ?>">
-                        <div class="pricing-content">
-                            <?php if ($package['package_isSpecial']) : ?>
-                                <div class="pricing-lable">Popular</div>
-                            <?php endif; ?>
-                            <h6 class="text-uppercase"><?= $package['package_name'] ?></h6>
-                            <hr>
-                            <div class="pricing-plan mt-4 text-primary text-center">
-                                <h1><sup class="text-muted"><i class="mdi mdi-currency-inr"></i> </sup><?= number_format($package['package_price']) ?> </h1>
-                            </div>
-                            <hr>
-
-                            <div class="pricing-features pt-1">
-                                <?= $package['package_details'] ?>
-                            </div>
-                            <div class="mb-3 pt-2 text-center">
-                                <a href="/service/<?= $service['service_slug'] ?>/packages/<?= $package['package_id'] ?>" class="btn btn-primary btn-round">Select Package</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
-            <?php endforeach; ?>
-
+            </div>
         </div>
-
-    </div>
-</section>
-<!-- PACKAGES -->
-
-<!-- FREQUENTLY ASKED QUESTIONS -->
-<section class="section" id="team">
-    <div class="container">
-        <div class="row align-items-center justify-content-center align-content-center">
-            <div class="col-9">
-                <div class="title-box text-center mt-5 pt-5">
-                    <h6 class="title-sub-title mb-0 text-primary f-17">Frequently Asked Questions</h6>
-                    <h4 class="title-heading mt-4">All You Need to Know Before Applying for <br><?= $service['service_title'] ?></h4>
+    </section>
+<?php endif; ?>
+<?php if (count($service['packages'])) : ?>
+    <section class="section-grey" id="packages">
+        <div class="container pt-md-5 pt-sm-2">
+            <div class="row align-items-center text-center">
+                <div class="col-12">
+                    <h4>PACKAGES</h4>
                 </div>
             </div>
-            <div class="accordion" id="faqList" style="width: 100%; max-width:900px;margin:auto;">
+            <div class="row">
+                <?php foreach ($service['packages'] as $key => $package) : ?>
+                    <div class="col-md-4 col-sm-6 col-12">
+                        <div class="price-box">
+                            <?php if ($package['package_isSpecial']) : ?>
+                                <div class="ribbon blue"><span>Exclusive</span></div>
+                            <?php endif; ?>
+                            <ul class="pricing-list">
+                                <li class="price-title"><?= $package['package_name'] ?></li>
+                                <li class="price-value"><?= number_to_currency($package['package_price'], 'INR') ?></li>
+                                <!-- <li class="price-subtitle">Per Month</li> -->
+                                <li class="price-text strong">
+                                    <i class="bi bi-check-circle-fill lsu"></i>
+                                    <strong>All Basic features</strong>
+                                </li>
 
-                <?php foreach ($service['faqs'] as $key => $faq) : ?>
-                    <div class="card">
-                        <div class="card-header" id="heading<?= $key ?>">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#faq<?= $key ?>" aria-expanded="true" aria-controls="faq<?= $key ?>">
-                                    <?= $faq['faq_title'] ?>
-                                    <i class="mdi mdi-plus-circle-outline text-primary float-right"></i>
-                                </button>
-                            </h2>
-                        </div>
+                                <li class="price-text">
+                                    <i class="bi bi-check-circle-fill lsu"></i>
+                                    15 Mailboxes, 50 Gb Storage
+                                </li>
 
-                        <div id="faq<?= $key ?>" class="collapse" aria-labelledby="<?= $key ?>" data-parent="#faqList">
-                            <div class="card-body">
-                                <?= $faq['faq_content'] ?>
-                            </div>
+                                <li class="price-text">
+                                    <i class="bi bi-check-circle-fill lsu"></i>
+                                    Interactive Screen Sharing
+                                </li>
+
+                                <li class="price-text">
+                                    <i class="bi bi-check-circle-fill lsu"></i>
+                                    Full Reports History
+                                </li>
+
+                                <!-- <li class="price-tag">
+                                    <a href="#">FREE 15-DAY TRIAL</a>
+                                </li> -->
+                            </ul>
+                            <a type="button" class="btn btn-warning">
+                                Get Started
+                            </a>
+
                         </div>
                     </div>
                 <?php endforeach; ?>
-
             </div>
         </div>
-    </div>
-</section>
-<!-- FREQUENTLY ASKED QUESTIONS -->
+    </section>
+<?php endif; ?>
+<?php if (count($service['faqs'])) : ?>
+    <section class="section-white" id="faqs">
+        <div class="container pt-md-5 pt-sm-2">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h4>FREQUENTLY ASKED QUESTIONS</h4>
+                    <h3><?= $service['service_faq_subtitle'] ?></h3>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-10 col-sm-12">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
 
-<?= $this->endSection() ?>
+                        <?php foreach ($service['faqs'] as $key => $faq) : ?>
+                            <?php if ($faq['faq_status']) : ?>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-heading_<?= $faq['faq_id'] ?>">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse_<?= $faq['faq_id'] ?>" aria-expanded="false" aria-controls="flush-collapse_<?= $faq['faq_id'] ?>">
+                                            <?= $faq['faq_title'] ?>
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse_<?= $faq['faq_id'] ?>" class="accordion-collapse collapse" aria-labelledby="flush-heading_<?= $faq['faq_id'] ?>" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <?= html_entity_decode($faq['faq_content']) ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<?php endif; ?>
+
+<!-- <section class="section-grey medium-padding-bottom" id="blog">
+
+
+    <div class="container">
+
+
+        <div class="row">
+
+
+            <div class="col-md-12 text-center">
+
+                <h2>Our Blog</h2>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="row">
+
+
+            <div class="col-md-4">
+
+
+                <div class="blog-item">
+
+
+                    <div class="popup-wrapper">
+                        <div class="popup-gallery">
+                            <a href="#">
+                                <img src="http://placehold.it/555x400" class="width-100" alt="pic">
+                                <span class="eye-wrapper2"><i class="bi bi-link-45deg"></i></span>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="blog-item-inner">
+
+                        <h3 class="blog-title"><a href="#">The Guide To LinkedIn Ads</a></h3>
+
+                        <a href="#" class="blog-icons last"><i class="bi bi-card-text"></i> Marketing &amp; Design &#8212; 11
+                            Min Read</a>
+
+                        <p>Quis autem velis reprehender nets quiste voluptate velite estum quants etsamis sedit varias nets.</p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="col-md-4">
+
+
+                <div class="blog-item">
+
+
+                    <div class="popup-wrapper">
+                        <div class="popup-gallery">
+                            <a href="#">
+                                <img src="http://placehold.it/555x400" class="width-100" alt="pic">
+                                <span class="eye-wrapper2"><i class="bi bi-link-45deg"></i></span>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="blog-item-inner">
+
+                        <h3 class="blog-title"><a href="#">Affinity Designer Quick Start</a></h3>
+
+                        <a href="#" class="blog-icons last"><i class="bi bi-play-circle"></i> SaaS Solutions &#8212; 25 Min
+                            Watch</a>
+
+                        <p>Quis autem velis reprehender nets quiste voluptate velite estum quants etsamis sedit varias nets.</p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="col-md-4">
+
+
+                <div class="blog-item">
+
+
+                    <div class="popup-wrapper">
+                        <div class="popup-gallery">
+                            <a href="#">
+                                <img src="http://placehold.it/555x400" class="width-100" alt="pic">
+                                <span class="eye-wrapper2"><i class="bi bi-link-45deg"></i></span>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="blog-item-inner">
+
+                        <h3 class="blog-title"><a href="#">Our Happy Team</a></h3>
+
+                        <a href="#" class="blog-icons last"><i class="bi bi-mic"></i> Product Launch &#8212; 19 Min Listen</a>
+
+                        <p>Quis autem velis reprehender nets quiste voluptate velite estum quants etsamis sedit varias nets.</p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section> -->
+
+<style>
+    nav#service-navbar {
+        top: 106px;
+        box-shadow: 0px 10px 32px -13px rgb(0 0 0 / 50%) !important;
+        z-index: 998;
+    }
+
+    @media all and (max-width: 992px) {
+        nav#service-navbar {
+            display: none;
+        }
+    }
+
+    #service_navbar_nav>li>a {
+        font-weight: 700;
+    }
+
+    .benefits-box {
+        height: 100%;
+        border: 0;
+    }
+
+    .documents-box {
+        height: 100%;
+        border: 0;
+    }
+
+    .price-value {
+        font-size: 45px !important;
+    }
+
+    .price-value::first-letter {
+        font-size: 30px !important;
+        margin-right: 10px;
+    }
+
+    .price-value span {
+        font-size: 30px !important;
+    }
+
+    #packages .price-box:hover {
+        border-bottom: 3px solid #6d1311;
+    }
+</style>
+
+<?= $this->endSection(); ?>

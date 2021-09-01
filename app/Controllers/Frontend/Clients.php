@@ -2,10 +2,10 @@
 
 namespace App\Controllers\Frontend;
 
+use App\Controllers\BaseController;
 use App\Models\Admin\ProjectsModel;
-use CodeIgniter\Controller;
 
-class Clients extends Controller
+class Clients extends BaseController
 {
 	public function index()
 	{

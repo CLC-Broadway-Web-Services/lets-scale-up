@@ -8,6 +8,29 @@ function previewServiceImage(event) {
     serviceImageBlock.html(imageSrc);
 }
 
+var parentCategory = $('#parentCategory');
+
+const childCategory = $('#childCategory');
+const childCategoryBlock = $('#childCategoryBlock');
+const allChildCategories = JSON.parse($('#allChildCategories').html());
+
+parentCategory.change(function () {
+    console.log($(this).val());
+    console.log(allChildCategories)
+    var options = `<option value="" selected>Select child category</option>`;
+    if (allChildCategories.length > 0) {
+        allChildCategories.forEach((option) => {
+            if (option.parent == $(this).val()) {
+                options += `<option value="` + option.id + `">` + option.name + `</option>`;
+            }
+        })
+        childCategory.html(options);
+        childCategoryBlock.show();
+    } else {
+        childCategory.html('');
+        childCategoryBlock.hide();
+    }
+})
 
 
 // serviceAddEditForm.submit(function (e) {

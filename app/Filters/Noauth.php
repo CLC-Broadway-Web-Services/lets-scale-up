@@ -8,7 +8,7 @@ class Noauth implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        if (session()->get('isLoggedIn')) {
+        if (session()->get('isUserLoggedin')) {
 			return redirect()->to('/account/profile');
 		}
     }

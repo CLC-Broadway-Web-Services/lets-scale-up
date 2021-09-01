@@ -46,26 +46,26 @@ $routes->group('/', function ($routes) {
 
 	$routes->get('blogs', 'Frontend\Blogs::index', ['as' => 'blogs_page']);
 	$routes->get('blog/(:segment)', 'Frontend\Blogs::single/$1', ['as' => 'single_post_page']);
-	
+
 	$routes->addRedirect('blog', 'blogs_page');
 	$routes->addRedirect('client', 'clients_page');
-	// $routes->group('service', function ($routes) {
-	// 	$routes->get('(:segment)', 'Frontend\Services::singleService/$1');
-	// 	$routes->get('(:segment)/packages', 'Frontend\Services::singleServicePackages/$1');
-	// 	$routes->match(['get', 'post'], '(:segment)/packages/(:num)', 'Frontend\Services::serviceSelectedPackage/$1/$2');
-	// });
+	$routes->group('c', function ($routes) {
+		$routes->match(['get', 'post'], '(:segment)', 'Frontend\Services::categoryPage/$1', ['as' => 'category']);
+	});
+	$routes->group('service', function ($routes) {
+		$routes->get('(:segment)', 'Frontend\Services::singleService/$1', ['as' => 'service_detail']);
+		$routes->get('(:segment)/packages', 'Frontend\Services::singleServicePackages/$1');
+		$routes->match(['get', 'post'], '(:segment)/packages/(:num)', 'Frontend\Services::serviceSelectedPackage/$1/$2');
+	});
 });
 
 
 
-// $routes->group('/', function ($routes) {
-// 	$routes->get('', 'Home::index');
-// 	$routes->group('service', function ($routes) {
-// 		$routes->get('(:segment)', 'Frontend\Services::singleService/$1');
-// 		$routes->get('(:segment)/packages', 'Frontend\Services::singleServicePackages/$1');
-// 		$routes->match(['get', 'post'], '(:segment)/packages/(:num)', 'Frontend\Services::serviceSelectedPackage/$1/$2');
-// 	});
-// });
+$routes->group('auth', function ($routes) {
+	$routes->match(['get', 'post'], 'login', 'Frontend\User::login', ['as' => 'user_login']);
+	$routes->match(['get', 'post'], 'register', 'Frontend\User::register', ['as' => 'user_register']);
+	$routes->match(['get', 'post'], 'logout', 'Frontend\User::logout', ['as' => 'user_logout']);
+});
 
 // ADMIN ROUTES ONLY
 $routes->group('administrator', function ($routes) {
@@ -85,6 +85,28 @@ $routes->group('administrator', function ($routes) {
 		$routes->match(['get', 'post'], 'edit/(:num)', 'Admin\Services::addEditService/$1', ['as' => 'admin_service_edit']);
 		$routes->match(['get', 'post'], 'status/(:num)', 'Admin\Services::serviceStatusChange/$1', ['as' => 'admin_service_status_change']);
 		$routes->match(['get', 'post'], 'homestatus/(:num)', 'Admin\Services::serviceHomeStatusChange/$1', ['as' => 'admin_service_home_status']);
+
+
+		$routes->group('benefits', function ($routes) {
+			$routes->get('', 'Admin\Services::serviceBenefits', ['as' => 'admin_service_benefit_index']);
+			$routes->match(['get', 'post'], 'add', 'Admin\Services::addEditServiceBenefit', ['as' => 'admin_service_benefit_add']);
+			$routes->match(['get', 'post'], 'edit/(:num)', 'Admin\Services::addEditServiceBenefit/$1', ['as' => 'admin_service_benefit_edit']);
+			$routes->match(['get', 'post'], 'status/(:num)', 'Admin\Services::serviceBenefitStatusChange/$1', ['as' => 'admin_service_benefit_status']);
+		});
+
+		$routes->group('categories', function ($routes) {
+			$routes->match(['get', 'post'], '', 'Admin\Services::categories', ['as' => 'admin_service_category_index']);
+			$routes->match(['get', 'post'], '(:num)', 'Admin\Services::categories/$1', ['as' => 'admin_service_category_edit']);
+			$routes->match(['get', 'post'], 'delete/(:num)', 'Admin\Services::categoriesDelete/$1', ['as' => 'admin_service_category_delete']);
+
+			$routes->group('faqs', function ($routes) {
+				$routes->get('', 'Admin\Services::serviceCatFaqs', ['as' => 'admin_service_cat_faq_index']);
+				$routes->match(['get', 'post'], 'add', 'Admin\Services::addEditServiceCatFaq', ['as' => 'admin_service_cat_faq_add']);
+				$routes->match(['get', 'post'], 'edit/(:num)', 'Admin\Services::addEditServiceCatFaq/$1', ['as' => 'admin_service_cat_faq_edit']);
+				$routes->match(['get', 'post'], 'status/(:num)', 'Admin\Services::serviceCatFaqStatusChange/$1', ['as' => 'admin_service_cat_faq_status']);
+			});
+		});
+
 		$routes->group('forms', function ($routes) {
 			$routes->get('', 'Admin\Serviceforms::index', ['as' => 'admin_service_form_index']);
 			$routes->match(['get', 'post'], 'add', 'Admin\Serviceforms::addEditForm', ['as' => 'admin_service_form_add']);
@@ -176,7 +198,7 @@ $routes->group('administrator', function ($routes) {
 	$routes->group('other', ['filter' => 'adminauth'], function ($routes) {
 		$routes->match(['get', 'post'], 'subscribers', 'Admin\Others::subscribers', ['as' => 'admin_subscribers']);
 		$routes->match(['get', 'post'], 'contact-submission', 'Admin\Others::contactSubmission', ['as' => 'admin_contact_submissions']);
-		
+
 		$routes->match(['get', 'post'], 'testimonials', 'Admin\Others::testimonials', ['as' => 'admin_testimonials']);
 		$routes->match(['get', 'post'], 'testimonials/(:num)', 'Admin\Others::testimonials/$1', ['as' => 'admin_testimonials_edit']);
 		$routes->match(['get', 'post'], 'testimonials/delete/(:num)', 'Admin\Others::testimonialsDelete/$1', ['as' => 'admin_testimonials_delete']);

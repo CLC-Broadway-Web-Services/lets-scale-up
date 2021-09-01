@@ -37,7 +37,7 @@ class FunctionsModel extends Model
 
         // $data = $this->where(['project_slug' => $slug])->countAll();
 
-        $data = $builder->getWhere([$slug_key => $slug])->countAll();
+        $data = $builder->where([$slug_key => $slug])->countAll();
 
         if ($data > 0) {
             $slug2 = $slug . '-' . $data;

@@ -12,7 +12,22 @@
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="/public/dashboard/assets/css/dashlite.css?ver=2.2.0">
     <link id="skin-default" rel="stylesheet" href="/public/dashboard/assets/css/theme.css?ver=2.2.0">
+    <style>
+        div#pageLoader {
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            background: rgb(43 43 43 / 76%);
+            z-index: 9999;
+        }
 
+        div#pageLoader>div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
     <!-- page css -->
     <?php if (isset($pageCSS)) {
         echo $pageCSS;
@@ -20,7 +35,29 @@
 </head>
 
 
-<body class="nk-body bg-white npc-default has-aside ">
+<body class="nk-body bg-white npc-default has-aside" style="overflow:hidden;">
+    <div id="pageLoader">
+        <div class="d-flex justify-content-center">
+            <div class="spinner-grow text-warning" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                    "body").style.overflow = "hidden";
+                document.querySelector(
+                    "#pageLoader").style.overflow = "visible";
+            } else {
+                document.querySelector(
+                    "#pageLoader").style.display = "none";
+                document.querySelector(
+                    "body").style.overflow = "visible";
+            }
+        };
+    </script>
 
     <script>
         var dark_mode = localStorage.getItem('dark_mode');
@@ -83,7 +120,6 @@
     <?php if (isset($pageJS)) {
         echo $pageJS;
     } ?>
-
 </body>
 
 </html>

@@ -58,10 +58,7 @@ if (isset($type)) {
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
 
-
-    <!-- css -->
-    <!-- <link href="/public/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="/public/assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link href="/public/assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" /> -->
     <!-- Pe-icon-7 icon -->
     <!-- <link rel="stylesheet" type="text/css" href="/public/assets/css/pe-icon-7-stroke.css"> -->
     <!--Slider-->
@@ -69,9 +66,9 @@ if (isset($type)) {
     <link rel="stylesheet" type="text/css" href="/public/assets/css/owl.theme.css" />
     <link rel="stylesheet" type="text/css" href="/public/assets/css/owl.transitions.css" /> -->
     <!-- magnific pop-up -->
-    <!-- <link rel="stylesheet" type="text/css" href="/public/assets/css/magnific-popup.css" />
-    <link href="/public/assets/css/style.css" rel="stylesheet" type="text/css" />
-    <link href="/public/custom/assets/css/custom.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="/public/assets/css/magnific-popup.css" /> -->
+    <!-- <link href="/public/assets/css/style.css" rel="stylesheet" type="text/css" /> -->
+    <link href="/public/custom/assets/css/custom.css" rel="stylesheet" type="text/css" />
 
     <!-- page css -->
     <?php if (isset($pageCSS)) {
@@ -79,6 +76,7 @@ if (isset($type)) {
     } ?>
 
 </head>
+
 
 <body data-spy="scroll" data-target="#navbarCollapse">
 
@@ -101,7 +99,8 @@ if (isset($type)) {
     <script src="/public/assets/js/jquery.magnific-popup.min.js"></script>
     <script src="/public/assets/js/jquery.nav.js"></script>
     <script src="/public/assets/js/wow.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="/public/assets/js/typed.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> -->
     <script src="/public/assets/js/plugins.js"></script>
     <script src="/public/assets/js/custom.js"></script>
 

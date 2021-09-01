@@ -2,26 +2,40 @@
 
 namespace App\Controllers\Frontend;
 
-use CodeIgniter\Controller;
+use App\Controllers\BaseController;
 use App\Models\Globals\FrontservicesModel;
 
-class Services extends Controller
+class Services extends BaseController
 {
+    private $data;
+    private $serviceDB;
+    private $session;
+
+    public function __construct()
+    {
+        $this->data = array();
+        $this->session = session();
+        $this->data['user'] = session()->get('user');
+        $this->serviceDB = new FrontservicesModel();
+        helper('file');
+        helper('number');
+        helper('form');
+    }
     public function singleService($slug = null)
     {
         helper('number');
         if ($slug == null) {
             return redirect()->to(base_url());
         }
-        $serviceDB = new FrontservicesModel();
-        $service = $serviceDB->getSingleServiceBySlug($slug);
+
+        $service = $this->serviceDB->getSingleServiceBySlug($slug);
         // return print_r($service);
 
-        $data['service'] = $service;
+        $this->data['service'] = $service;
 
-        $data['pageJS'] = '<script src="/public/custom/assets/js/frontSingleService.js"></script>';
+        $this->data['pageJS'] = '<script src="/public/custom/assets/js/frontSingleService.js"></script>';
 
-        return view('Frontend/pages/singleService', $data);
+        return view('Frontend/pages/singleService', $this->data);
     }
 
     public function singleServicePackages($slug = null)
@@ -30,34 +44,46 @@ class Services extends Controller
         if ($slug == null) {
             return redirect()->to(base_url());
         }
-        $serviceDB = new FrontservicesModel();
-        $service = $serviceDB->getSingleServiceBySlug($slug);
+        $service = $this->serviceDB->getSingleServiceBySlug($slug);
         // return print_r($service);
 
-        $data['service'] = $service;
+        $this->data['service'] = $service;
         // return print_r($data);
 
-        $data['pageJS'] = '<script src="/public/custom/assets/js/frontSingleService.js"></script>';
+        $this->data['pageJS'] = '<script src="/public/custom/assets/js/frontSingleService.js"></script>';
 
-        return view('Frontend/pages/singleServicePackages', $data);
+        return view('Frontend/pages/singleServicePackages', $this->data);
     }
     public function serviceSelectedPackage($service_slug = null, $package_id)
     {
         if ($service_slug == null) {
             return redirect()->to(base_url());
         }
-        $serviceDB = new FrontservicesModel();
-        $service = $serviceDB->getSingleServiceOnlyBySlug($service_slug);
-        $package = $serviceDB->getPackagebyID($package_id);
-        $forms = $serviceDB->getFormsByServiceID($service['service_id']);
+        $service = $this->serviceDB->getSingleServiceOnlyBySlug($service_slug);
+        $package = $this->serviceDB->getPackagebyID($package_id);
+        $forms = $this->serviceDB->getFormsByServiceID($service['service_id']);
         // return print_r($service);
-        $data['service'] = $service;
-        $data['package'] = $package;
-        $data['forms'] = $forms;
+        $this->data['service'] = $service;
+        $this->data['package'] = $package;
+        $this->data['forms'] = $forms;
         // return print_r($data);
 
-        $data['pageJS'] = '<script src="/public/custom/assets/js/frontSingleService.js"></script>';
+        $this->data['pageJS'] = '<script src="/public/custom/assets/js/frontSingleService.js"></script>';
 
-        return view('Frontend/pages/selectedPackage', $data);
+        return view('Frontend/pages/selectedPackage', $this->data);
+    }
+
+    public function categoryPage($slug)
+    {
+        // echo 'this is single category page';
+        // find the category by slug, if that was not found go to the alll category OR 404 page
+        $categoryData = null;
+        $categoryData = $this->serviceDB->getParentCategoryWithServices($slug);
+
+        $this->data['category'] = $categoryData;
+
+        // return print_r($categoryData);
+
+        return view('Frontend/pages/category', $this->data);
     }
 }

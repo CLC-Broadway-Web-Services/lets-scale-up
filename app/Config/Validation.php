@@ -1,4 +1,8 @@
-<?php namespace Config;
+<?php
+
+namespace Config;
+
+use App\Validation\Userrules;
 
 class Validation
 {
@@ -17,6 +21,7 @@ class Validation
 		\CodeIgniter\Validation\FormatRules::class,
 		\CodeIgniter\Validation\FileRules::class,
 		\CodeIgniter\Validation\CreditCardRules::class,
+		Userrules::class, // here we have registered
 	];
 
 	/**

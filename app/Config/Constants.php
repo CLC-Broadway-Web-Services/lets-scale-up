@@ -77,6 +77,7 @@ defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9); // lowest automat
 defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
 define('APP_NAME', 'Lets Scale Up');
+define('APP_LOGO', '/public/assets/images/logo-dark.png');
 define('APP_DESCRIPTION', 'Lets Scale Up');
 define('APP_KEYWORDS', 'Lets Scale Up');
 define('APP_AUTHOR', 'Lets Scale Up');
@@ -105,4 +106,3 @@ define('BLOGS_FOLDER', 'public/images/blogs/');
 define('TEAM_FOLDER', 'public/images/teams/');
 define('APP_URL', 'http://localhost:8080/');
 // define('APP_URL', 'https://letsscaleup.in/');
-

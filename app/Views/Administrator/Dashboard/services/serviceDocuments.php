@@ -28,8 +28,8 @@
                                         <label class="custom-control-label" for="uid"></label>
                                     </div>
                                 </th>
-                                <th class="nk-tb-col"><span class="sub-text">Document Block</span></th>
                                 <th class="nk-tb-col tb-col-mb"><span class="sub-text">Service</span></th>
+                                <th class="nk-tb-col"><span class="sub-text">Document Block</span></th>
                                 <th class="nk-tb-col tb-col-xl"><span class="sub-text">Created</span></th>
                                 <th class="nk-tb-col tb-col-xl"><span class="sub-text">Updated</span></th>
                                 <th class="nk-tb-col tb-col-md"><span class="sub-text">Status</span></th>
@@ -46,6 +46,9 @@
                                             <label class="custom-control-label" for="uid<?= $serviceDocument['document_id'] ?>"></label>
                                         </div>
                                     </td>
+                                    <td class="nk-tb-col tb-col-mb">
+                                        <span><?= $serviceDocument['service_title'] ?></span>
+                                    </td>
                                     <td class="nk-tb-col">
                                         <div class="user-card">
                                             <div class="user-info">
@@ -53,9 +56,6 @@
                                                 <span><?= $serviceDocument['document_summary'] ?></span>
                                             </div>
                                         </div>
-                                    </td>
-                                    <td class="nk-tb-col tb-col-mb">
-                                        <span><?= $serviceDocument['service_title'] ?></span>
                                     </td>
                                     <td class="nk-tb-col tb-col-xl">
                                         <span><?= date('d M Y', strtotime($serviceDocument['document_created_at'])) ?></span>

@@ -28,9 +28,9 @@
                                         <label class="custom-control-label" for="uid"></label>
                                     </div>
                                 </th>
+                                <th class="nk-tb-col tb-col-mb"><span class="sub-text">Service</span></th>
                                 <th class="nk-tb-col"><span class="sub-text">Form</span></th>
                                 <th class="nk-tb-col tb-col-mb"><span class="sub-text">Fields</span></th>
-                                <th class="nk-tb-col tb-col-mb"><span class="sub-text">Service</span></th>
                                 <th class="nk-tb-col tb-col-xl"><span class="sub-text">Created</span></th>
                                 <th class="nk-tb-col tb-col-xl"><span class="sub-text">Updated</span></th>
                                 <th class="nk-tb-col tb-col-md"><span class="sub-text">Status</span></th>
@@ -47,6 +47,9 @@
                                             <label class="custom-control-label" for="uid<?= $forms['form_id'] ?>"></label>
                                         </div>
                                     </td>
+                                    <td class="nk-tb-col tb-col-mb">
+                                        <span><?= $forms['service_title'] ?></span>
+                                    </td>
                                     <td class="nk-tb-col">
                                         <div class="user-card">
                                             <div class="user-info">
@@ -56,9 +59,6 @@
                                     </td>
                                     <td class="nk-tb-col tb-col-mb">
                                         <span><?php if($forms['form_fields'] >= 2) { echo $forms['form_fields'].' Fields'; } else { echo $forms['form_fields'].' Field'; } ?></span>
-                                    </td>
-                                    <td class="nk-tb-col tb-col-mb">
-                                        <span><?= $forms['service_title'] ?></span>
                                     </td>
                                     <td class="nk-tb-col tb-col-xl">
                                         <span><?= date('d M Y', strtotime($forms['form_created_at'])) ?></span>

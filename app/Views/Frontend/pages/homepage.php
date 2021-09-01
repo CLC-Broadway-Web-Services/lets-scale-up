@@ -28,26 +28,26 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="homepageBlocks">
       <div class="col-md-4">
         <div class="main-services">
           <i class="bi bi-megaphone green"></i>
-          <h4>Search Oportunities</h4>
-          <p>Curabitur quamtis etsum lacus etsumis nulatis iaculis etsum vitae etsum ets nisle varius.</p>
+          <h4>Legal</h4>
+          <p>Your documents, contracts, and registrations handled by expert lawyers.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="main-services">
           <i class="bi bi-gem red"></i>
-          <h4>Reach Clients</h4>
-          <p>Curabitur quamtis etsum lacus etsumis nulatis iaculis etsum vitae etsum ets nisle varius.</p>
+          <h4>Tax</h4>
+          <p>Filing returns and paying your taxes – made easier for you.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="main-services">
           <i class="bi bi-speedometer2 blue"></i>
-          <h4>Get Rewarded</h4>
-          <p>Curabitur quamtis etsum lacus etsumis nulatis iaculis etsum vitae etsum ets nisle varius.</p>
+          <h4>Compliance</h4>
+          <p>Our chartered accountants & company secretaries will keep your books in order.</p>
         </div>
       </div>
     </div>
@@ -79,152 +79,18 @@
           <!--end carousel-indicators -->
 
           <!--begin carousel-inner -->
-          <div class="carousel-inner">
-
-            <!--begin carousel-item -->
+          <div class="carousel-inner text-center">
+            
+            <!--start carousel-item -->
             <div class="carousel-item active">
-
-              <!--begin row -->
               <div class="row align-items-center testim-inner">
-
-                <!--begin col-md-6 -->
-                <div class="col-md-6">
-
-                  <!--begin video-popup-wrapper-->
-                  <div class="video-popup-wrapper margin-right-25">
-
-                    <!--begin popup-gallery-->
-                    <div class="popup-gallery">
-
-                      <img src="http://placehold.it/555x365" alt="testimonials" class="width-100 image-shadow video-popup-image responsive-bottom-margins">
-
-                      <a class="popup4 video-play-icon" href="https://www.youtube.com/watch?v=FPfQMVf4vwQ">
-                        <i class="bi bi-caret-right-fill"></i>
-                      </a>
-
-                    </div>
-                    <!--end popup-gallery-->
-
-                  </div>
-                  <!--end video-popup-wrapper-->
-
-                </div>
-                <!--end col-md-6 -->
-
-                <!--begin col-md-6 -->
-                <div class="col-md-6 testim-info">
-
+                <div class="col-12 testim-info">
                   <i class="bi bi-chat-left-quote green"></i>
-
                   <p>Nemo enimat ipsam voluptatem quia voluptas situm ets aspernatis netsum loris fugit, sed quia
                     magnitus honoratis quis ratione sequi etum nets.</p>
-
                   <h6>Jennifer Smith<span> — Designer <span class="red">@EpicThemes</span></span></h6>
-
                 </div>
-                <!--end col-md-5 -->
-
               </div>
-              <!--end row -->
-
-            </div>
-            <!--end carousel-item -->
-
-            <!--begin carousel-item -->
-            <div class="carousel-item">
-
-              <!--begin row -->
-              <div class="row align-items-center testim-inner">
-
-                <!--begin col-md-6 -->
-                <div class="col-md-6">
-
-                  <!--begin video-popup-wrapper-->
-                  <div class="video-popup-wrapper margin-right-25">
-
-                    <!--begin popup-gallery-->
-                    <div class="popup-gallery">
-
-                      <img src="http://placehold.it/555x365" alt="testimonials" class="width-100 image-shadow video-popup-image responsive-bottom-margins">
-
-                      <a class="popup4 video-play-icon" href="https://www.youtube.com/watch?v=FPfQMVf4vwQ">
-                        <i class="bi bi-caret-right-fill"></i>
-                      </a>
-
-                    </div>
-                    <!--end popup-gallery-->
-
-                  </div>
-                  <!--end video-popup-wrapper-->
-
-                </div>
-                <!--end col-md-6 -->
-
-                <!--begin col-md-6 -->
-                <div class="col-md-6 testim-info">
-
-                  <i class="bi bi-chat-left-quote green"></i>
-
-                  <p>Nemo enimat ipsam voluptatem quia voluptas situm ets aspernatis netsum loris fugit, sed quia
-                    magnitus honoratis quis ratione sequi etum nets.</p>
-
-                  <h6>John Doe<span> — General Manager <span class="red">@BeSmart</span></span></h6>
-
-                </div>
-                <!--end col-md-5 -->
-
-              </div>
-              <!--end row -->
-
-            </div>
-            <!--end carousel-item -->
-
-            <!--begin carousel-item -->
-            <div class="carousel-item">
-
-              <!--begin row -->
-              <div class="row align-items-center testim-inner">
-
-                <!--begin col-md-6 -->
-                <div class="col-md-6">
-
-                  <!--begin video-popup-wrapper-->
-                  <div class="video-popup-wrapper margin-right-25">
-
-                    <!--begin popup-gallery-->
-                    <div class="popup-gallery">
-
-                      <img src="http://placehold.it/555x365" alt="testimonials" class="width-100 image-shadow video-popup-image responsive-bottom-margins">
-
-                      <a class="popup4 video-play-icon" href="https://www.youtube.com/watch?v=FPfQMVf4vwQ">
-                        <i class="bi bi-caret-right-fill"></i>
-                      </a>
-
-                    </div>
-                    <!--end popup-gallery-->
-
-                  </div>
-                  <!--end video-popup-wrapper-->
-
-                </div>
-                <!--end col-md-6 -->
-
-                <!--begin col-md-6 -->
-                <div class="col-md-6 testim-info">
-
-                  <i class="bi bi-chat-left-quote green"></i>
-
-                  <p>Nemo enimat ipsam voluptatem quia voluptas situm ets aspernatis netsum loris fugit, sed quia
-                    magnitus honoratis quis ratione sequi etum nets.</p>
-
-                  <h6>Emily Richards<span> — Copywriter <span class="red">@Books-Online</span></span></h6>
-
-                </div>
-                <!--end col-md-5 -->
-
-              </div>
-              <!--end row -->
-
             </div>
             <!--end carousel-item -->
 
@@ -1166,6 +1032,22 @@
     font-size: 25px;
     color: #ffffff !important;
     border-radius: 50%;
+  }
+
+  #homepageBlocks .main-services {
+    height: 100%;
+    margin-top: 0;
+  }
+  #homepageBlocks {
+    margin-top: 40px;
+  }
+  #homepageBlocks p {
+    color: #3d3d3d;
+  }
+  .testim-info {
+    max-width: -webkit-fill-available;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 </style>
 
