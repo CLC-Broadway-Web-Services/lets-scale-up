@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controllers;
 
 /**
@@ -14,6 +15,7 @@ namespace App\Controllers;
  * @package CodeIgniter
  */
 
+use App\Models\Admin\Settings;
 use CodeIgniter\Controller;
 
 class BaseController extends Controller
@@ -26,7 +28,9 @@ class BaseController extends Controller
 	 *
 	 * @var array
 	 */
-	protected $helpers = ['custom', 'url'];
+	protected $helpers = ['custom', 'url', 'number'];
+	public $settings;
+	protected $data = [];
 
 	/**
 	 * Constructor.
@@ -34,7 +38,11 @@ class BaseController extends Controller
 	public function initController(\CodeIgniter\HTTP\RequestInterface $request, \CodeIgniter\HTTP\ResponseInterface $response, \Psr\Log\LoggerInterface $logger)
 	{
 		// Do Not Edit This Line
-		parent::initController($request, $response, $logger);
+		// $this->data['SITE_SETTINGS'] = getSettings();
+		$setting_md = new Settings();
+		$this->settings = $setting_md->getSettings();
+		$this->data['SITE_SETTINGS'] = $this->settings;
+		parent::initController($request, $response, $logger, $this->data);
 
 		//--------------------------------------------------------------------
 		// Preload any models, libraries, etc, here.

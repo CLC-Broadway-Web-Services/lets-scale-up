@@ -6,30 +6,32 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <h1><?= $service['service_title'] ?></i></h1>
+                <h1><?= $service['service_title'] ?></h1>
                 <p class="hero-text"><?= $service['service_summary'] ?></p>
             </div>
             <div class="col-md-6">
-                <div class="row g-3">
+                <form class="row g-3" id="service_getstarted_form" method="post">
+                    <input hidden name="service_getstarted_form" value="true">
+                    <input hidden id="service_id" name="service_id" value="<?= $service['service_id'] ?>">
                     <div class="col-md-6 col-sm-12">
-                        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                        <input type="text" class="form-control" id="user_firstname" name="first_name" placeholder="First name" aria-label="First name">
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                        <input type="text" class="form-control" id="user_lastname" name="last_namme" placeholder="Last name" aria-label="Last name">
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                        <input type="email" class="form-control" id="user_email" name="email" placeholder="Valid email address" aria-label="Email">
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                        <input type="tel" class="form-control" id="user_mobile" name="phone" placeholder="Phone number" aria-label="Phone" minlength="10" maxlength="10">
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <h3 class="d-inline">₹ 7999</h3> All Inclusive
+                        <span class="h3 lsu"><span class="currency-value strong"><?= number_to_currency($service['packages'][0]['package_price'], 'INR') ?></span></span> All Inclusive
                     </div>
                     <div class="col-md-6 col-sm-12 d-grid gap-2">
-                        <button type="submit" class="btn btn-warning">Sign in</button>
+                        <button type="submit" class="btn btn-warning">Get Started</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -95,14 +97,7 @@
 
                         <?php foreach ($service['benefits'] as $benefit) : ?>
                             <div class="col-md-6 col-12 mt-4">
-                                <div class="benefits-box card">
-                                    <div class="card-body">
-                                        <h5 class="mt-2 mb-0 f-17"><b><i class="bi bi-file-<?= $benefit['icon'] ?> lsu"></i></b> <?= $benefit['title'] ?> </h5>
-                                        <p class="text-muted mb-0 mt-2 f-15">
-                                            <?= $benefit['summary'] ?>
-                                        </p>
-                                    </div>
-                                </div>
+                                <?= view_cell('\App\Libraries\Blocks::service_benefit_block', ['benefit' => $benefit]) ?>
                             </div>
                         <?php endforeach; ?>
 
@@ -125,14 +120,7 @@
 
                         <?php foreach ($service['docs'] as $doc) : ?>
                             <div class="col-md-4 col-sm-6 col-12 mt-4">
-                                <div class="documents-box card bg-light">
-                                    <div class="card-body">
-                                        <h5 class="mt-2 mb-0 f-17"><b><i class="bi bi-file-text lsu"></i></b> <?= $doc['document_title'] ?> </h5>
-                                        <p class="text-muted mb-0 mt-2 f-15">
-                                            <?= $doc['document_summary'] ?>
-                                        </p>
-                                    </div>
-                                </div>
+                                <?= view_cell('\App\Libraries\Blocks::service_document_block', ['doc' => $doc]) ?>
                             </div>
                         <?php endforeach; ?>
 
@@ -151,45 +139,9 @@
                 </div>
             </div>
             <div class="row">
-                <?php foreach ($service['packages'] as $key => $package) : ?>
+                <?php foreach ($service['packages'] as $package) : ?>
                     <div class="col-md-4 col-sm-6 col-12">
-                        <div class="price-box">
-                            <?php if ($package['package_isSpecial']) : ?>
-                                <div class="ribbon blue"><span>Exclusive</span></div>
-                            <?php endif; ?>
-                            <ul class="pricing-list">
-                                <li class="price-title"><?= $package['package_name'] ?></li>
-                                <li class="price-value"><?= number_to_currency($package['package_price'], 'INR') ?></li>
-                                <!-- <li class="price-subtitle">Per Month</li> -->
-                                <li class="price-text strong">
-                                    <i class="bi bi-check-circle-fill lsu"></i>
-                                    <strong>All Basic features</strong>
-                                </li>
-
-                                <li class="price-text">
-                                    <i class="bi bi-check-circle-fill lsu"></i>
-                                    15 Mailboxes, 50 Gb Storage
-                                </li>
-
-                                <li class="price-text">
-                                    <i class="bi bi-check-circle-fill lsu"></i>
-                                    Interactive Screen Sharing
-                                </li>
-
-                                <li class="price-text">
-                                    <i class="bi bi-check-circle-fill lsu"></i>
-                                    Full Reports History
-                                </li>
-
-                                <!-- <li class="price-tag">
-                                    <a href="#">FREE 15-DAY TRIAL</a>
-                                </li> -->
-                            </ul>
-                            <a type="button" class="btn btn-warning">
-                                Get Started
-                            </a>
-
-                        </div>
+                        <?= view_cell('\App\Libraries\Blocks::service_package_block', ['package' => $package, 'service_slug' => $service['service_slug']]) ?>
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -209,20 +161,9 @@
                 <div class="col-md-10 col-sm-12">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
 
-                        <?php foreach ($service['faqs'] as $key => $faq) : ?>
+                        <?php foreach ($service['faqs'] as $faq) : ?>
                             <?php if ($faq['faq_status']) : ?>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="flush-heading_<?= $faq['faq_id'] ?>">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse_<?= $faq['faq_id'] ?>" aria-expanded="false" aria-controls="flush-collapse_<?= $faq['faq_id'] ?>">
-                                            <?= $faq['faq_title'] ?>
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapse_<?= $faq['faq_id'] ?>" class="accordion-collapse collapse" aria-labelledby="flush-heading_<?= $faq['faq_id'] ?>" data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body">
-                                            <?= html_entity_decode($faq['faq_content']) ?>
-                                        </div>
-                                    </div>
-                                </div>
+                                <?= view_cell('\App\Libraries\Blocks::service_faq_block', ['faq' => $faq]) ?>
                             <?php endif; ?>
                         <?php endforeach; ?>
 
@@ -397,21 +338,22 @@
         border: 0;
     }
 
-    .price-value {
-        font-size: 45px !important;
-    }
-
-    .price-value::first-letter {
-        font-size: 30px !important;
+    .currency-value::first-letter {
+        font-size: 50% !important;
         margin-right: 10px;
-    }
-
-    .price-value span {
-        font-size: 30px !important;
     }
 
     #packages .price-box:hover {
         border-bottom: 3px solid #6d1311;
+    }
+
+    #packages ul.pricing-list {
+        padding: 0 25px;
+    }
+
+    #service_getstarted_form {
+        padding: 10px;
+        box-shadow: rgb(33 33 33 / 6%) 0 4px 24px 5px;
     }
 </style>
 

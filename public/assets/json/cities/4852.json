@@ -1,0 +1,17 @@
+[
+    {
+        "id": 132399,
+        "name": "Kargil",
+        "state_id": 4852,
+        "state_code": "LA",
+        "latitude": "34.55765000",
+        "longitude": "76.12622000"
+    },
+    {
+        "id": 132762,
+        "name": "Leh",
+        "state_id": 4852,
+        "state_code": "LA",
+        "latitude": "34.16504000",
+        "longitude": "77.58402000"
+    }]

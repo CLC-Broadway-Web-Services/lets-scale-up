@@ -14,7 +14,6 @@ use App\Models\Admin\ServicepackagesModel;
 
 class Services extends BaseController
 {
-    private $data;
     private $serviceDB;
     private $documentsDB;
     private $benefitsDB;
@@ -28,7 +27,6 @@ class Services extends BaseController
 
     public function __construct()
     {
-        $this->data = array();
         $this->session = session();
         $this->data['admin'] = session()->get('admin');
         // $this->data['user_name'] = $this->session->get('firstName') . ' ' . $this->session->get('lastname');
@@ -54,14 +52,15 @@ class Services extends BaseController
         // $this->data['pageCSS'] = '';
         // $this->data['pageJS'] = '';
 
-        $this->data['pageCSS'] = '<link href="/public/assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />';
+        $this->data['pageCSS'] = '<link href="/public/assets/css/bootstrap-icons.css" rel="stylesheet" type="text/css" />';
         return view('Administrator/Dashboard/services/services', $this->data);
     }
     public function addEditService($serviceid = 0)
     {
-        $icons = file_get_contents('./public/custom/assets/js/icons.json');
+        $icons = file_get_contents('./public/custom/assets/js/bootstrap-icons.json');
         $iconsDecoded = json_decode($icons);
         $iconsArray = array($iconsDecoded);
+        // return print_r($bsiconsArray[0]);
 
         helper('form', 'file');
 
@@ -151,9 +150,11 @@ class Services extends BaseController
         $this->data['pageJS'] = '<script src="/public/dashboard/assets/js/libs/editors/tinymce.js?ver=2.2.0"></script>
         <script src="/public/dashboard/assets/js/editors.js?ver=2.2.0"></script>
         <script src="/public/custom/assets/js/adminAddEditService.js"></script>';
-
+        // /public/assets/css/bootstrap-icons.css
+        // $this->data['pageCSS'] = '<link rel="stylesheet" href="/public/dashboard/assets/css/editors/tinymce.css?ver=2.2.0">
+        // <link href="/public/assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />';
         $this->data['pageCSS'] = '<link rel="stylesheet" href="/public/dashboard/assets/css/editors/tinymce.css?ver=2.2.0">
-        <link href="/public/assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />';
+        <link href="/public/assets/css/bootstrap-icons.css" rel="stylesheet" type="text/css" />';
 
         return view('Administrator/Dashboard/services/addeditservice', $this->data);
     }
@@ -236,7 +237,7 @@ class Services extends BaseController
         }
 
 
-        $icons = file_get_contents('./public/custom/assets/js/icons.json');
+        $icons = file_get_contents('./public/custom/assets/js/bootstrap-icons.json');
         $iconsDecoded = json_decode($icons);
         $iconsArray = array($iconsDecoded);
         $this->data['icons'] = $iconsArray[0];
@@ -272,9 +273,12 @@ class Services extends BaseController
         // <script src="/public/dashboard/assets/js/editors.js?ver=2.2.0"></script>
         // <script src="/public/custom/assets/js/adminAddEditService.js"></script>';
 
-        $this->data['pageCSS'] = '<link href="/public/assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />';
+        // $this->data['pageCSS'] = '<link href="/public/assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />';
         // $this->data['pageCSS'] = '<link rel="stylesheet" href="/public/dashboard/assets/css/editors/tinymce.css?ver=2.2.0">
         // <link href="/public/assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />';
+
+
+        $this->data['pageCSS'] = '<link href="/public/assets/css/bootstrap-icons.css" rel="stylesheet" type="text/css" />';
 
         return view('Administrator/Dashboard/services/addEditServiceBenefit', $this->data);
     }
@@ -497,8 +501,16 @@ class Services extends BaseController
                 'package_id' => 0,
                 'service_id' => 0,
                 'package_name' => '',
-                'package_price' => '',
+
+                'package_basic_price' => floatval('0.00'),
+                'package_gov_fee' => floatval('0.00'),
+                'package_shipping' => floatval('0.00'),
+                'package_discount' => floatval('0.00'),
+                'package_gst' => floatval('0.00'),
+
+                'package_price' => floatval('0.00'),
                 'package_details' => '',
+                'package_details_count' => 1,
                 'package_status' => 1,
                 'package_isSpecial' => 0,
             ];
@@ -509,8 +521,16 @@ class Services extends BaseController
                 'package_id' => $package['package_id'],
                 'service_id' => $package['service_id'],
                 'package_name' => $package['package_name'],
-                'package_price' => intval($package['package_price']),
-                'package_details' => $package['package_details'],
+
+                'package_basic_price' => $package['package_basic_price'],
+                'package_gov_fee' => $package['package_gov_fee'],
+                'package_shipping' => $package['package_shipping'],
+                'package_discount' => $package['package_discount'],
+                'package_gst' => $package['package_gst'],
+
+                'package_price' => $package['package_price'],
+                'package_details' => json_decode($package['package_details']),
+                'package_details_count' => intval($package['package_details_count']),
                 'package_status' => intval($package['package_status']),
                 'package_isSpecial' => intval($package['package_isSpecial']),
             ];
@@ -519,13 +539,22 @@ class Services extends BaseController
 
         // add edit post request
         if ($this->request->getMethod() == 'post') {
-            // print_r($_POST);
+            // echo json_encode($this->request->getVar('package_details'));
+            // return print_r($_POST);
             $thisData = [
                 'package_id' => $packageid,
                 'service_id' => $this->request->getVar('service_id', FILTER_SANITIZE_NUMBER_INT),
                 'package_name' => $this->request->getVar('package_name'),
-                'package_price' => $this->request->getVar('package_price'),
-                'package_details' => $this->request->getVar('package_details'),
+
+                'package_basic_price' => floatval($this->request->getVar('package_basic_price')),
+                'package_gov_fee' => floatval($this->request->getVar('package_gov_fee')),
+                'package_shipping' => floatval($this->request->getVar('package_shipping')),
+                'package_discount' => floatval($this->request->getVar('package_discount')),
+                'package_gst' => floatval($this->request->getVar('package_gst')),
+
+                'package_price' => floatval($this->request->getVar('package_price')),
+                'package_details' => json_encode($this->request->getVar('package_details')),
+                'package_details_count' => $this->request->getVar('package_details_count'),
                 'package_status' => $this->request->getVar('package_status', FILTER_SANITIZE_NUMBER_INT),
                 'package_isSpecial' => $this->request->getVar('package_isSpecial'),
             ];
@@ -552,13 +581,14 @@ class Services extends BaseController
             }
         }
 
+        // echo '<pre>';
+        // print_r($this->data);
+        // echo '</pre>';
+        // return;
 
-        $this->data['pageJS'] = '<script src="/public/dashboard/assets/js/libs/editors/tinymce.js?ver=2.2.0"></script>
-        <script src="/public/dashboard/assets/js/editors.js?ver=2.2.0"></script>
-        <script src="/public/custom/assets/js/adminAddPackages.js"></script>';
+        $this->data['pageJS'] = '<script src="/public/custom/assets/js/adminAddPackages.js"></script>';
 
-        $this->data['pageCSS'] = '<link rel="stylesheet" href="/public/dashboard/assets/css/editors/tinymce.css?ver=2.2.0">
-        <link href="/public/assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />';
+        // $this->data['pageCSS'] = '<link href="/public/assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />';
 
         return view('Administrator/Dashboard/services/addEditServicePackage', $this->data);
     }

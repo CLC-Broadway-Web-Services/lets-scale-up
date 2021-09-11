@@ -121,7 +121,7 @@ nav#services_navbar {
   padding: 0 !important;
 }
 nav#services_navbar .navbar-nav > li > a {
-  color: inherit;
+  color: #000;
   /* color: #ffffff; */
   font-size: 17px !important;
   line-height: 26px !important;

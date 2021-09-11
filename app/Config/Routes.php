@@ -36,6 +36,7 @@ $routes->setAutoRoute(false);
 $routes->group('/', function ($routes) {
 	$routes->get('', 'Frontend\Pages::index', ['as' => 'home_page']);
 	$routes->get('initiatives', 'Frontend\Pages::initiatives', ['as' => 'initiatives_page']);
+	$routes->get('initiative/(:segment)', 'Frontend\Pages::initiative', ['as' => 'single_initiative']);
 	$routes->get('about-us', 'Frontend\Pages::aboutus', ['as' => 'about_us_page']);
 	$routes->match(['get', 'post'], 'contact-us', 'Frontend\Pages::contact_us', ['as' => 'contact_us_page']);
 	$routes->get('terms-of-use', 'Frontend\Pages::terms_of_use', ['as' => 'terms_page']);
@@ -53,9 +54,24 @@ $routes->group('/', function ($routes) {
 		$routes->match(['get', 'post'], '(:segment)', 'Frontend\Services::categoryPage/$1', ['as' => 'category']);
 	});
 	$routes->group('service', function ($routes) {
-		$routes->get('(:segment)', 'Frontend\Services::singleService/$1', ['as' => 'service_detail']);
-		$routes->get('(:segment)/packages', 'Frontend\Services::singleServicePackages/$1');
-		$routes->match(['get', 'post'], '(:segment)/packages/(:num)', 'Frontend\Services::serviceSelectedPackage/$1/$2');
+		$routes->match(['get', 'post'], '(:segment)', 'Frontend\Services::singleService/$1', ['as' => 'service_detail']);
+		$routes->match(['get', 'post'], '(:segment)/packages', 'Frontend\Services::singleServicePackages/$1');
+		$routes->match(['get', 'post'], '(:segment)/packages/(:num)', 'Frontend\Services::serviceSelectedPackage/$1/$2', ['as' => 'service_selected_package']);
+	});
+	$routes->group('checkout', ['filter' => 'auth'], function ($routes) {
+		$routes->match(['get', 'post'], '(:num)', 'Frontend\PaymentController::checkout/$1', ['as' => 'checkout_order']);
+	});
+	$routes->group('account', ['filter' => 'auth'], function ($routes) {
+		$routes->match(['get', 'post'], '', 'Frontend\AccountController::overview', ['as' => 'account_overview']);
+		$routes->match(['get', 'post'], 'orders', 'Frontend\AccountController::orders', ['as' => 'account_orders']);
+		$routes->match(['get', 'post'], 'documents', 'Frontend\AccountController::documents', ['as' => 'account_documents']);
+		$routes->match(['get', 'post'], 'document-query', 'Frontend\AccountController::documents', ['as' => 'account_doc_query']);
+		$routes->match(['get', 'post'], 'legal-forms', 'Frontend\AccountController::legalForms', ['as' => 'account_legal_forms']);
+		$routes->match(['get', 'post'], 'profile', 'Frontend\AccountController::personalInfo', ['as' => 'account_profile']);
+		$routes->match(['get', 'post'], 'change-password', 'Frontend\AccountController::passwordChange', ['as' => 'account_change_password']);
+		$routes->match(['get', 'post'], 'transactions', 'Frontend\AccountController::paymentHistory', ['as' => 'account_payment_history']);
+		$routes->match(['get', 'post'], 'feedback', 'Frontend\AccountController::feedback', ['as' => 'account_feedback']);
+		$routes->match(['get', 'post'], 'subscriptions', 'Frontend\AccountController::subscriptions', ['as' => 'account_subscriptions']);
 	});
 });
 
@@ -180,10 +196,16 @@ $routes->group('administrator', function ($routes) {
 
 	// ADMIN CLIENTS ROUTES
 	$routes->group('clients', ['filter' => 'adminauth'], function ($routes) {
-		$routes->match(['get', 'post'], '', 'Admin\Clients::index', ['as' => 'admin_clients_index']);
+		$routes->match(['get', 'post'], '', 'Admin\Client::index', ['as' => 'admin_clients_index']);
 
-		$routes->match(['get', 'post'], 'add', 'Admin\Clients::addEditClients', ['as' => 'admin_clients_add']);
-		$routes->match(['get', 'post'], 'edit/(:num)', 'Admin\Clients::addEditClients/$1', ['as' => 'admin_clients_edit']);
+		$routes->match(['get', 'post'], 'add', 'Admin\Client::addEditClient', ['as' => 'admin_clients_add']);
+		$routes->match(['get', 'post'], 'edit/(:num)', 'Admin\Client::addEditClient/$1', ['as' => 'admin_clients_edit']);
+		$routes->match(['get', 'post'], 'status/(:num)', 'Admin\Client::statusChange/$1', ['as' => 'admin_clients_status']);
+		$routes->match(['get', 'post'], 'homestatus/(:num)', 'Admin\Client::homeStatusChange/$1', ['as' => 'admin_clients_home_status']);
+
+		$routes->match(['get', 'post'], 'categories', 'Admin\Client::categories', ['as' => 'admin_clients_categories_index']);
+		$routes->match(['get', 'post'], 'categories/(:num)', 'Admin\Client::categories/$1', ['as' => 'admin_clients_category_edit']);
+		$routes->match(['get', 'post'], 'categories/delete/(:num)', 'Admin\Client::categoriesDelete/$1', ['as' => 'admin_clients_category_delete']);
 	});
 
 	// ADMIN TEAM ROUTES
@@ -202,6 +224,14 @@ $routes->group('administrator', function ($routes) {
 		$routes->match(['get', 'post'], 'testimonials', 'Admin\Others::testimonials', ['as' => 'admin_testimonials']);
 		$routes->match(['get', 'post'], 'testimonials/(:num)', 'Admin\Others::testimonials/$1', ['as' => 'admin_testimonials_edit']);
 		$routes->match(['get', 'post'], 'testimonials/delete/(:num)', 'Admin\Others::testimonialsDelete/$1', ['as' => 'admin_testimonials_delete']);
+
+		$routes->match(['get', 'post'], 'settings', 'Admin\Settings::index', ['as' => 'site_settings']);
+	});
+
+	// ADMIN PROFILE
+	$routes->group('profile', ['filter' => 'adminauth'], function ($routes) {
+		$routes->match(['get', 'post'], 'update', 'Admin\Profile::update', ['as' => 'admin_profile_update']);
+		$routes->match(['get', 'post'], 'password-change', 'Admin\Profile::passwordUpdate', ['as' => 'admin_password_update']);
 	});
 });
 

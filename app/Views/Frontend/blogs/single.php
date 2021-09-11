@@ -4,7 +4,7 @@
 
 
 <!-- UPPER -->
-<section class="bg-home" id="home">
+<section class="home-section" id="home">
     <div class="home-center">
         <div class="home-desc-center">
             <div class="container">
@@ -18,10 +18,6 @@
                             <?php endif; ?>
                             <h1 class="home-title"><?= $post['post_title'] ?></h1>
                             <p class="text-muted mt-3 f-20"> <?= html_entity_decode($post['post_summary']) ?></p>
-                            <!-- <div class="mt-5">
-                                <a href="" class="btn btn-primary">Get Started <span class="text-white-50">- For
-                                        Free</span> <i class="mdi mdi-arrow-right"></i></a>
-                            </div> -->
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -38,7 +34,7 @@
 
 <!-- MAIN CONTENT -->
 
-<section class="section bg-light pt-5">
+<section class="section-grey">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -51,18 +47,18 @@
 </section>
 <!-- <section class="section pt-5"> -->
 
-    <div class="row nextPreviousContainer">
-        <div class="col-6">
-            <?php if (isset($previousPost)) : ?>
-                <a href="<?= route_to('single_post_page', $previousPost['post_slug']) ?>" class="customNextPrevious"><i class="mdi mdi-arrow-left"></i> Previous</a>
-            <?php endif; ?>
-        </div>
-        <div class="col-6 text-right">
-            <?php if (isset($nextPost)) : ?>
-                <a href="<?= route_to('single_post_page', $nextPost['post_slug']) ?>" class="customNextPrevious">Next <i class="mdi mdi-arrow-right"></i></a>
-            <?php endif; ?>
-        </div>
+<div class="row nextPreviousContainer">
+    <div class="col-6">
+        <?php if (isset($previousPost)) : ?>
+            <a href="<?= route_to('single_post_page', $previousPost['post_slug']) ?>" class="customNextPrevious"><i class="mdi mdi-arrow-left"></i> Previous</a>
+        <?php endif; ?>
     </div>
+    <div class="col-6 text-end">
+        <?php if (isset($nextPost)) : ?>
+            <a href="<?= route_to('single_post_page', $nextPost['post_slug']) ?>" class="customNextPrevious">Next <i class="mdi mdi-arrow-right"></i></a>
+        <?php endif; ?>
+    </div>
+</div>
 <!-- </section> -->
 
 <!-- MAIN CONTENT -->

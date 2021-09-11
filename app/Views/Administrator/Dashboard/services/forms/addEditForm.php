@@ -47,17 +47,36 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-3 col-sm-6">
                                     <div class="form-group">
-                                        <label class="form-label">Form Sorting Number</label>
+                                        <label class="form-label">Multiple Allowed?</label>
+                                        <div class="form-control-wrap">
+                                            <select class="form-select" name="form_is_multiple" id="form_is_multiple" required>
+                                                <option <?php if ($formData['form_is_multiple'] == 0) echo 'selected' ?> value="0">No</option>
+                                                <option <?php if ($formData['form_is_multiple'] == 1) echo 'selected' ?> value="1">Yes</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6" id="form_inital_number_div" style="display:none;">
+                                    <div class="form-group">
+                                        <label class="form-label">Initial inputs <small>(if multiple)</small></label>
+                                        <div class="form-control-wrap">
+                                            <input type="number" min="1" name="form_inital_number" id="form_inital_number" class="form-control" placeholder="Initial inputs (if multiple)" value="<?= $formData['form_inital_number'] ?>" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Sorting</label>
                                         <div class="form-control-wrap">
                                             <input type="number" min="0" name="sort_number" id="sort_number" class="form-control" placeholder="Sort Number" value="<?= $formData['sort_number'] ?>" required>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-3 col-sm-6">
                                     <div class="form-group">
-                                        <label class="form-label">Form Status</label>
+                                        <label class="form-label">Status</label>
                                         <div class="form-control-wrap">
                                             <select class="form-select" name="form_status" id="form_status" required>
                                                 <option <?php if ($formData['form_status'] == 1) echo 'selected' ?> value="1">Active</option>
@@ -90,6 +109,9 @@
                                                             <option selected disabled>Select Field Type</option>
                                                             <option value="input">Single Line Input</option>
                                                             <option value="select">Select Menu</option>
+                                                            <!-- <option value="selectstatecity">State & City Dropdown</option> -->
+                                                            <option value="selectstate">States Dropdown</option>
+                                                            <option value="selectcity">Cities Dropdown</option>
                                                             <option value="textarea">Multi Line Input / Area</option>
                                                             <!-- <option value="file">File Uploading</option> -->
                                                         </select>
@@ -169,60 +191,70 @@
                                                     <?php if (!empty($formData['form_fields'])) { ?>
                                                         <?php foreach ($formData['form_fields'] as $key => $inputs) { ?>
                                                             <div class="json-data <?= $inputs->field_name; ?>" id="<?= $inputs->field_name; ?>" json-data='<?= json_encode($inputs) ?>'>
-                                                                <?php if ($inputs->input_type == "text") { ?>
+                                                                <?php if ($inputs->input_type === "text") { ?>
                                                                     <label for="<?= $inputs->field_name; ?>" class="form-label"><?= $inputs->label; ?></label>
                                                                     <input type="text" class="form-control" id="<?= $inputs->field_name; ?>" maxlength="<?= $inputs->maxlength; ?>" minlength="<?= $inputs->minlength; ?>" required="<?= $inputs->required; ?>">
                                                                     <small class="removeFieldForm" id="<?= $key + 1; ?>" style="cursor:pointer;"><strong>Remove</strong></small>
                                                                     <small class="editThisField" id="<?= $key + 1; ?>" style="cursor:pointer;float: right;"><strong> Edit</strong></small>
                                                                 <?php } ?>
-                                                                <?php if ($inputs->input_type == "email") { ?>
+                                                                <?php if ($inputs->input_type === "email") { ?>
                                                                     <label class="form-label"><?= $inputs->label; ?></label>
                                                                     <input type="email" class="form-control" id="<?= $inputs->field_name; ?>" required="<?= $inputs->required; ?>">
                                                                     <small class="removeFieldForm" id="<?= $key + 1; ?>" style="cursor:pointer;"><strong>Remove</strong></small>
                                                                     <small class="editThisField" id="<?= $key + 1; ?>" style="cursor:pointer;float: right;"><strong> Edit</strong></small>
                                                                 <?php } ?>
-                                                                <?php if ($inputs->input_type == "number") { ?>
+                                                                <?php if ($inputs->input_type === "number") { ?>
                                                                     <label class="form-label"><?= $inputs->label; ?></label>
                                                                     <input type="number" class="form-control" id="<?= $inputs->field_name; ?>" required="<?= $inputs->required; ?>" maxlength="<?= $inputs->maxlength; ?>" minlength="<?= $inputs->minlength; ?>" max="<?= $inputs->max; ?>" min="<?= $inputs->min; ?>">
                                                                     <small class="removeFieldForm" id="<?= $key + 1; ?>" style="cursor:pointer;"><strong>Remove</strong></small>
                                                                     <small class="editThisField" id="<?= $key + 1; ?>" style="cursor:pointer;float: right;"><strong> Edit</strong></small>
                                                                 <?php } ?>
-                                                                <?php if ($inputs->input_type == "tel") { ?>
+                                                                <?php if ($inputs->input_type === "tel") { ?>
                                                                     <label class="form-label"><?= $inputs->label; ?></label>
                                                                     <input type="tel" class="form-control" id="<?= $inputs->field_name; ?>" required="<?= $inputs->required; ?>">
                                                                     <small class="removeFieldForm" id="<?= $key + 1; ?>" style="cursor:pointer;"><strong>Remove</strong></small>
                                                                     <small class="editThisField" id="<?= $key + 1; ?>" style="cursor:pointer;float: right;"><strong> Edit</strong></small>
                                                                 <?php } ?>
-                                                                <?php if ($inputs->input_type == "date") { ?>
+                                                                <?php if ($inputs->input_type === "date") { ?>
                                                                     <label class="form-label"><?= $inputs->label; ?></label>
                                                                     <input type="date" class="form-control" id="<?= $inputs->field_name; ?>" required="<?= $inputs->required; ?>" value="">
                                                                     <small class="removeFieldForm" id="<?= $key + 1; ?>" style="cursor:pointer;"><strong>Remove</strong></small>
                                                                     <small class="editThisField" id="<?= $key + 1; ?>" style="cursor:pointer;float: right;"><strong> Edit</strong></small>
                                                                 <?php } ?>
-                                                                <?php if ($inputs->input_type == "checkbox") { ?>
+                                                                <?php if ($inputs->input_type === "checkbox") { ?>
                                                                     <label class="form-label"><?= $inputs->label; ?></label>
                                                                     <input type="checkbox" class="form-check-input" id="<?= $inputs->field_name; ?>" required="<?= $inputs->required; ?>" value="">
                                                                     <small class="removeFieldForm" id="<?= $key + 1; ?>" style="cursor:pointer;"><strong>Remove</strong></small>
                                                                     <small class="editThisField" id="<?= $key + 1; ?>" style="cursor:pointer;float: right;"><strong> Edit</strong></small>
                                                                 <?php } ?>
-                                                                <?php if ($inputs->input_type == "file") { ?>
+                                                                <?php if ($inputs->input_type === "file") { ?>
                                                                     <label class="form-label"><?= $inputs->label; ?></label>
                                                                     <input style="padding: 17px 5px 0 0;" class="form-control-file" id="<?= $inputs->field_name; ?>" type="file" required="<?= $inputs->required; ?>">
                                                                     <small class="removeFieldForm" id="<?= $key + 1; ?>" style="cursor:pointer;"><strong>Remove</strong></small>
                                                                     <small class="editThisField" id="<?= $key + 1; ?>" style="cursor:pointer;float: right;"><strong> Edit</strong></small>
                                                                 <?php } ?>
-                                                                <?php if ($inputs->input_type == "select") { ?>
+                                                                <?php if ($inputs->input_type === "select") { ?>
                                                                     <label class="form-label"><?= $inputs->label; ?></label>
                                                                     <select class="form-control" required="<?= $inputs->required; ?>">
                                                                         <option disabled selected>Select</option>
-                                                                        <?php foreach ($inputs->options as $option) { ?>
-                                                                            <option value="<?= $option; ?>"><?= $option; ?></option>
-                                                                        <?php } ?>
+                                                                        <?php if ($inputs->options) : ?>
+                                                                            <?php foreach ($inputs->options as $option) { ?>
+                                                                                <option value="<?= $option; ?>"><?= $option; ?></option>
+                                                                            <?php } ?>
+                                                                        <?php endif; ?>
                                                                     </select>
                                                                     <small class="removeFieldForm" id="<?= $key + 1; ?>" style="cursor:pointer;"><strong>Remove</strong></small>
                                                                     <small class="editThisField" id="<?= $key + 1; ?>" style="cursor:pointer;float: right;"><strong> Edit</strong></small>
                                                                 <?php } ?>
-                                                                <?php if ($inputs->input_type == "textarea") { ?>
+                                                                <?php if ($inputs->input_type === "selectstate" || $inputs->input_type === "selectcity") { ?>
+                                                                    <label class="form-label"><?= $inputs->label; ?></label>
+                                                                    <select class="form-control" required="<?= $inputs->required; ?>">
+                                                                        <option disabled selected>Select <?= $inputs->label; ?></option>
+                                                                    </select>
+                                                                    <small class="removeFieldForm" id="<?= $key + 1; ?>" style="cursor:pointer;"><strong>Remove</strong></small>
+                                                                    <small class="editThisField" id="<?= $key + 1; ?>" style="cursor:pointer;float: right;"><strong> Edit</strong></small>
+                                                                <?php } ?>
+                                                                <?php if ($inputs->input_type === "textarea") { ?>
                                                                     <label class="form-label"><?= $inputs->label; ?></label>
                                                                     <textarea class="form-control" id="<?= $inputs->field_name; ?>" type="file" required="<?= $inputs->required; ?>"></textarea>
                                                                     <small class="removeFieldForm" id="<?= $key + 1; ?>" style="cursor:pointer;"><strong>Remove</strong></small>

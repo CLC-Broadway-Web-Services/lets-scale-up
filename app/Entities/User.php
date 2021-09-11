@@ -12,6 +12,7 @@ class User extends Entity
 		'name' => null,        // Represents a username
 		'email' => null,
 		'password' => null,
+		'avatar' => null,
 		'created_at' => null,
 		'updated_at' => null,
 	];

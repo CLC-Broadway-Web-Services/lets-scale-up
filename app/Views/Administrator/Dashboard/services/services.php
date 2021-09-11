@@ -56,7 +56,7 @@
                                         </div>
                                     </td>
                                     <td class="nk-tb-col tb-col-mb">
-                                        <span><i class="mdi mdi-<?= $service['service_icon'] ?> h4"></i></span>
+                                        <span><i class="bi bi-<?= $service['service_icon'] ?> h4"></i></span>
                                     </td>
                                     <td class="nk-tb-col tb-col-md" data-order="Visible - Not Visible">
                                         <?php if ($service['service_home_view'] == 1) { ?>

@@ -24,12 +24,12 @@
                 <?php echo view('Administrator/globals/menus/blogs_menu'); ?>
 
             <?php endif ?>
-            <?php if ($uriSegments[2] == 'projects' || $uriSegments[2] == 'project') : ?>
+            <?php if ($uriSegments[2] == 'clients' || $uriSegments[2] == 'client') : ?>
                 <li class="nk-menu-heading">
-                    <h6 class="overline-title text-primary-alt">Projects</h6>
+                    <h6 class="overline-title text-primary-alt">Clients</h6>
                 </li>
                 <!-- // services menu -->
-                <?php echo view('Administrator/globals/menus/projects_menu'); ?>
+                <?php echo view('Administrator/globals/menus/clients_menu'); ?>
             <?php endif ?>
             <?php if ($uriSegments[2] == 'initiatives') : ?>
                 <li class="nk-menu-heading">

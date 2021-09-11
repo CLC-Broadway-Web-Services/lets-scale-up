@@ -3,69 +3,87 @@
 namespace App\Controllers\Frontend;
 
 use App\Controllers\BaseController;
+use App\Models\Admin\BlogsModel;
 use App\Models\Admin\ContactsModel;
 use App\Models\Admin\ServicesModel;
-
 use App\Models\Admin\TestimonialsModel;
+use App\Models\Client\ClientModel;
+use App\Models\Globals\FrontservicesModel;
 
 class Pages extends BaseController
 {
+	public function __construct()
+	{
+	}
 	public function index()
 	{
-		// $servicesDB = new FrontservicesModel();
-		// $services = $servicesDB->getAllHomepageServices();
+		$servicesDB = new FrontservicesModel();
+		$services = $servicesDB->getAllHomepageServices();
+		$clientsDb = new ClientModel();
+		$clients = $clientsDb->getAllClientsHomepage();
+		$blogsDb = new BlogsModel();
+		$blogs = $blogsDb->getAllBlogsHomepage();
 		// return print_r($services);
-		// $data['services'] = $services;
+		// $this->data['services'] = $services;
 
 		$testimonialsDB = new TestimonialsModel();
 		$servicesDb = new ServicesModel();
-		$data['testimonials'] = $testimonialsDB->getAllTestimonialsFront();
+
 		$searchservices = $servicesDb->select('service_id, service_title, service_slug')->where(['service_status' => 1])->orderBy('service_title', 'asc')->findAll();
-		$radom_services = $servicesDb->select('service_id, service_title, service_slug')->where(['service_status' => 1])->orderBy('service_title', 'RAND')->findAll(5);
-		$data['searchservices'] = $searchservices;
-		$data['radom_services'] = $radom_services;
+		$radomize_array = $searchservices;
+		shuffle($radomize_array);
+		$random_services = array_slice($radomize_array, 0, 5);
+		$testimonials = $testimonialsDB->getAllTestimonialsFront();
 
-		// return print_r($data);
-		// $data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';
-		// $data['pageJSbefore'] = '<script src="/public/libraries/splide/dist/js/splide.min.js"></script>';
+		$this->data['searchservices'] = $searchservices;
+		$this->data['random_services'] = $random_services;
+		$this->data['services'] = $services;
+		$this->data['clients'] = $clients;
+		$this->data['blogs'] = $blogs;
+		$this->data['testimonials'] = $testimonials;
 
-		$data['pageJS'] = '<script src="/public/custom/assets/js/homepage.js"></script>';
+		// echo '<pre>';
+		// print_r($this->data);
+		// echo '</pre>';
+		// return;
+		// $this->data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';
+		// $this->data['pageJSbefore'] = '<script src="/public/libraries/splide/dist/js/splide.min.js"></script>';
 
-		return view('Frontend/pages/homepage', $data);
+		$this->data['pageJS'] = '<script src="/public/custom/assets/js/homepage.js"></script>';
+
+		return view('Frontend/pages/homepage', $this->data);
 	}
 	public function initiatives()
 	{
-		$data = array();
 		$pagedata = [
 			'pagename' => 'INITIATIVES'
 		];
-		$data['pagedata'] = $pagedata;
+		$this->data['pagedata'] = $pagedata;
 		// $testimonialsDB = new TestimonialsModel();
-		// $data['testimonials'] = $testimonialsDB->getAllTestimonialsFront();
+		// $this->data['testimonials'] = $testimonialsDB->getAllTestimonialsFront();
 
-		// return print_r($data);
+		// return print_r($this->data);
 
-		// $data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';
+		// $this->data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';
 
-		// $data['pageJSbefore'] = '<script src="/public/libraries/splide/dist/js/splide.min.js"></script>';
+		// $this->data['pageJSbefore'] = '<script src="/public/libraries/splide/dist/js/splide.min.js"></script>';
 
-		// $data['pageJS'] = '<script src="/public/assets/js/counter.init.js"></script>
+		// $this->data['pageJS'] = '<script src="/public/assets/js/counter.init.js"></script>
 		// <script src="/public/custom/assets/js/homepage2.js"></script>';
 
-		return view('Frontend/pages/initiatives', $data);
+		return view('Frontend/pages/initiatives', $this->data);
 	}
 	public function contact_us()
 	{
-		$data = array();
 		$pagedata = [
 			'pagename' => 'Contact Us'
 		];
-		$data['pagedata'] = $pagedata;
+		$this->data['pagedata'] = $pagedata;
 		$session = session();
 		if ($this->request->getMethod() == 'post') {
 			if (!empty($this->request->getPost('user_name')) && !empty($this->request->getPost('user_email')) && !empty($this->request->getPost('user_mobile')) && !empty($this->request->getPost('user_subject')) && !empty($this->request->getPost('user_message'))) {
 				$contactDB = new ContactsModel();
-				$dataToInsert = [
+				$this->dataToInsert = [
 					'user_name' => filter_var($this->request->getPost('user_name'), FILTER_SANITIZE_STRING),
 					'user_email' => filter_var($this->request->getPost('user_email'), FILTER_SANITIZE_STRING),
 					'user_mobile' => filter_var($this->request->getPost('user_mobile'), FILTER_SANITIZE_NUMBER_INT),
@@ -73,7 +91,7 @@ class Pages extends BaseController
 					'user_message' => filter_var($this->request->getPost('user_message'), FILTER_SANITIZE_STRING),
 				];
 
-				$query = $contactDB->insert($dataToInsert);
+				$query = $contactDB->insert($this->dataToInsert);
 
 				if ($query) {
 					$respose = array(
@@ -98,72 +116,69 @@ class Pages extends BaseController
 				);
 				$session->setFlashdata('responseMessage', $respose);
 			}
-			$data['statusMessage'] = $session->getFlashdata('responseMessage');
+			$this->data['statusMessage'] = $session->getFlashdata('responseMessage');
 		}
 
-		return view('Frontend/pages/contact_us', $data);
+		return view('Frontend/pages/contact_us', $this->data);
 	}
 	public function terms_of_use()
 	{
-		$data = array();
 		$pagedata = [
 			'pagename' => 'INITIATIVES'
 		];
-		$data['pagedata'] = $pagedata;
+		$this->data['pagedata'] = $pagedata;
 		// $testimonialsDB = new TestimonialsModel();
-		// $data['testimonials'] = $testimonialsDB->getAllTestimonialsFront();
+		// $this->data['testimonials'] = $testimonialsDB->getAllTestimonialsFront();
 
-		// return print_r($data);
+		// return print_r($this->data);
 
-		// $data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';
+		// $this->data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';
 
-		// $data['pageJSbefore'] = '<script src="/public/libraries/splide/dist/js/splide.min.js"></script>';
+		// $this->data['pageJSbefore'] = '<script src="/public/libraries/splide/dist/js/splide.min.js"></script>';
 
-		// $data['pageJS'] = '<script src="/public/assets/js/counter.init.js"></script>
+		// $this->data['pageJS'] = '<script src="/public/assets/js/counter.init.js"></script>
 		// <script src="/public/custom/assets/js/homepage2.js"></script>';
 
-		return view('Frontend/pages/terms_of_use', $data);
+		return view('Frontend/pages/terms_of_use', $this->data);
 	}
 	public function aboutus()
 	{
-		$data = array();
 		$pagedata = [
 			'pagename' => 'ABOUT US'
 		];
-		$data['pagedata'] = $pagedata;
+		$this->data['pagedata'] = $pagedata;
 		// $testimonialsDB = new TestimonialsModel();
-		// $data['testimonials'] = $testimonialsDB->getAllTestimonialsFront();
+		// $this->data['testimonials'] = $testimonialsDB->getAllTestimonialsFront();
 
-		// return print_r($data);
+		// return print_r($this->data);
 
-		// $data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';
+		// $this->data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';
 
-		// $data['pageJSbefore'] = '<script src="/public/libraries/splide/dist/js/splide.min.js"></script>';
+		// $this->data['pageJSbefore'] = '<script src="/public/libraries/splide/dist/js/splide.min.js"></script>';
 
-		// $data['pageJS'] = '<script src="/public/assets/js/counter.init.js"></script>
+		// $this->data['pageJS'] = '<script src="/public/assets/js/counter.init.js"></script>
 		// <script src="/public/custom/assets/js/homepage2.js"></script>';
 
-		return view('Frontend/pages/about_us', $data);
+		return view('Frontend/pages/about_us', $this->data);
 	}
 	public function privacy_policy()
 	{
-		$data = array();
 		$pagedata = [
 			'pagename' => 'INITIATIVES'
 		];
-		$data['pagedata'] = $pagedata;
+		$this->data['pagedata'] = $pagedata;
 		// $testimonialsDB = new TestimonialsModel();
-		// $data['testimonials'] = $testimonialsDB->getAllTestimonialsFront();
+		// $this->data['testimonials'] = $testimonialsDB->getAllTestimonialsFront();
 
-		// return print_r($data);
+		// return print_r($this->data);
 
-		// $data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';
+		// $this->data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';
 
-		// $data['pageJSbefore'] = '<script src="/public/libraries/splide/dist/js/splide.min.js"></script>';
+		// $this->data['pageJSbefore'] = '<script src="/public/libraries/splide/dist/js/splide.min.js"></script>';
 
-		// $data['pageJS'] = '<script src="/public/assets/js/counter.init.js"></script>
+		// $this->data['pageJS'] = '<script src="/public/assets/js/counter.init.js"></script>
 		// <script src="/public/custom/assets/js/homepage2.js"></script>';
 
-		return view('Frontend/pages/privacy_policy', $data);
+		return view('Frontend/pages/privacy_policy', $this->data);
 	}
 }

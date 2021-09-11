@@ -34,7 +34,10 @@
         <div class="row mt-4">
 
             <?php foreach ($posts as $post) : ?>
-                <?= view_cell('\App\Libraries\Blog::post_block', ['post' => $post]) ?>
+                <div class="col-md-4 mt-4">
+                    <?= view_cell('\App\Libraries\Blocks::blog_post_block', ['post' => $post]) ?>
+
+                </div>
             <?php endforeach ?>
 
         </div>

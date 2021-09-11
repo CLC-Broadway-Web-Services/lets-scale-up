@@ -15,24 +15,13 @@ class ServiceformModel extends Model
         'service_id',
         'form_heading',
         'form_fields',
+        'form_is_multiple', // boolean
+        'form_inital_number', //numbers
         'form_status',
     ];
     protected $useTimestamps = true;
     protected $createdField  = 'form_created_at';
     protected $updatedField  = 'form_updated_at';
-    // protected $deletedField  = 'deleted_at';
-    // protected $validationRules    = [
-    //     'username'     => 'required|alpha_numeric_space|min_length[3]',
-    //     'email'        => 'required|valid_email|is_unique[users.email]',
-    //     'password'     => 'required|min_length[8]',
-    //     'pass_confirm' => 'required_with[password]|matches[password]'
-    // ];
-
-    // protected $validationMessages = [
-    //     'email'        => [
-    //         'is_unique' => 'Sorry. That email has already been taken. Please choose another.'
-    //     ]
-    // ];
 
     public function getAllForms()
     {
@@ -108,6 +97,8 @@ class ServiceformModel extends Model
 			'service_id' => intval($form['service_id']),
 			'form_heading' => esc($form['form_heading']),
 			'form_fields' => $form['form_fields'],
+			'form_is_multiple' => intval($form['form_is_multiple']),
+			'form_inital_number' => intval($form['form_inital_number']),
 			'form_status' => intval($form['form_status']),
 		];
 		if ($formid == 0) {

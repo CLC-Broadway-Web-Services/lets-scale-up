@@ -32,33 +32,44 @@ class FrontservicesModel extends ServicesModel
 
         $this->serviceCatDB = new ServiceCategoryModel();
         $this->faqsCatDB = new ServicecatfaqsModel();
-        
+
         $this->formsDB = new ServiceformModel();
     }
 
     public function getAllHomepageServices()
     {
-        $services = $this->where(['service_status' => 1, 'service_home_view' => 1])->findAll();
+        $services = $this->serviceDB->select('service_id, service_title, service_slug, service_summary, service_icon')->where(['service_status' => 1, 'service_home_view' => 1])->findAll();
         $i = 0;
         for ($i; $i < count($services); $i++) {
             $price = $this->packageDB->select('package_price')->where(['service_id' => $services[$i]['service_id']])->orderBy('package_price', 'asc')->first();
-            $services[$i]['service_starts_at'] = $price['package_price'];
+            $services[$i]['service_price'] = $price['package_price'];
         }
         return $services;
     }
     public function getSingleServiceBySlug($slug)
     {
         $service = $this->serviceDB->where(['service_slug' => $slug])->first();
-        $service['benefits'] = $this->benefitsDB->where(['service_id' => $service['service_id'], 'status' => 1])->findAll();
-        $service['docs'] = $this->documentsDB->where(['service_id' => $service['service_id'], 'document_status' => 1])->findAll();
-        $service['packages'] = $this->packageDB->where(['service_id' => $service['service_id'], 'package_status' => 1])->findAll();
-        $service['faqs'] = $this->faqsDB->where(['service_id' => $service['service_id'], 'faq_status' => 1])->findAll();
+        $benefits = $this->benefitsDB->where(['service_id' => $service['service_id'], 'status' => 1])->findAll();
+        $docs = $this->documentsDB->where(['service_id' => $service['service_id'], 'document_status' => 1])->findAll();
+        $packages = $this->packageDB->where(['service_id' => $service['service_id'], 'package_status' => 1])->findAll();
+        $faqs = $this->faqsDB->where(['service_id' => $service['service_id'], 'faq_status' => 1])->findAll();
+
+        if (count($packages)) {
+            foreach ($packages as $key => $package) {
+                $packages[$key]['package_details'] = json_decode($package['package_details']);
+            }
+        }
+
+        $service['benefits'] = $benefits;
+        $service['docs'] = $docs;
+        $service['packages'] = $packages;
+        $service['faqs'] = $faqs;
 
         return $service;
     }
     public function getSingleServiceOnlyBySlug($slug)
     {
-        $service = $this->where(['service_slug' => $slug])->first();
+        $service = $this->serviceDB->where(['service_slug' => $slug])->first();
         return $service;
     }
     public function getPackagebyID($package_id)
@@ -86,7 +97,7 @@ class FrontservicesModel extends ServicesModel
         foreach ($category['child'] as $key => $child) {
             $category['child'][$key]['services'] = [];
             foreach ($services as $key => $service) {
-                if($service['service_cat'] == $child['id']) {
+                if ($service['service_cat'] == $child['id']) {
                     $category['child'][$key]['services'][] = $service;
                 }
             }

@@ -40,6 +40,8 @@ class Serviceforms extends BaseController
                 'form_heading' => '',
                 'sort_number' => 0,
                 'form_fields' => '',
+                'form_is_multiple' => 0,
+                'form_inital_number' => 1,
                 'form_status' => 0,
             ];
             $data['formData'] = $formData;
@@ -51,6 +53,8 @@ class Serviceforms extends BaseController
                 'form_heading' => $form['form_heading'],
                 'sort_number' => intval($form['sort_number']),
                 'form_fields' => json_decode($form['form_fields']),
+                'form_is_multiple' => intval($form['form_is_multiple']),
+                'form_inital_number' => intval($form['form_inital_number']),
                 'form_status' => intval($form['form_status']),
             ];
             $data['formData'] = $formData;
@@ -58,12 +62,15 @@ class Serviceforms extends BaseController
 
         // add edit post request
         if ($this->request->getMethod() == 'post') {
+            // return print_r($_POST);
             $thisData = [
                 'form_id' => $formid,
                 'service_id' => $this->request->getPost('service_id', FILTER_SANITIZE_NUMBER_INT),
                 'form_heading' => $this->request->getPost('form_heading'),
                 'sort_number' => $this->request->getPost('sort_number', FILTER_SANITIZE_NUMBER_INT),
                 'form_fields' => json_encode($this->request->getPost('form_fields')),
+                'form_is_multiple' => $this->request->getPost('form_is_multiple', FILTER_SANITIZE_NUMBER_INT),
+                'form_inital_number' => $this->request->getPost('form_inital_number', FILTER_SANITIZE_NUMBER_INT),
                 'form_status' => $this->request->getPost('form_status', FILTER_SANITIZE_NUMBER_INT),
             ];
 
@@ -90,7 +97,6 @@ class Serviceforms extends BaseController
                 }
             }
         }
-
 
         $data['pageJS'] = '<script src="/public/dashboard/assets/js/libs/jquery.validate.min.js"></script>
         <script src="/public/custom/assets/js/adminServiceFormDynamicFields.js"></script>';

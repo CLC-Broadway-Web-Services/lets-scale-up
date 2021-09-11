@@ -1,0 +1,5302 @@
+[
+    {
+        "icon": "alarm-fill",
+        "content": "\f101"
+    },
+    {
+        "icon": "alarm",
+        "content": "\f102"
+    },
+    {
+        "icon": "align-bottom",
+        "content": "\f103"
+    },
+    {
+        "icon": "align-center",
+        "content": "\f104"
+    },
+    {
+        "icon": "align-end",
+        "content": "\f105"
+    },
+    {
+        "icon": "align-middle",
+        "content": "\f106"
+    },
+    {
+        "icon": "align-start",
+        "content": "\f107"
+    },
+    {
+        "icon": "align-top",
+        "content": "\f108"
+    },
+    {
+        "icon": "alt",
+        "content": "\f109"
+    },
+    {
+        "icon": "app-indicator",
+        "content": "\f10a"
+    },
+    {
+        "icon": "app",
+        "content": "\f10b"
+    },
+    {
+        "icon": "archive-fill",
+        "content": "\f10c"
+    },
+    {
+        "icon": "archive",
+        "content": "\f10d"
+    },
+    {
+        "icon": "arrow-90deg-down",
+        "content": "\f10e"
+    },
+    {
+        "icon": "arrow-90deg-left",
+        "content": "\f10f"
+    },
+    {
+        "icon": "arrow-90deg-right",
+        "content": "\f110"
+    },
+    {
+        "icon": "arrow-90deg-up",
+        "content": "\f111"
+    },
+    {
+        "icon": "arrow-bar-down",
+        "content": "\f112"
+    },
+    {
+        "icon": "arrow-bar-left",
+        "content": "\f113"
+    },
+    {
+        "icon": "arrow-bar-right",
+        "content": "\f114"
+    },
+    {
+        "icon": "arrow-bar-up",
+        "content": "\f115"
+    },
+    {
+        "icon": "arrow-clockwise",
+        "content": "\f116"
+    },
+    {
+        "icon": "arrow-counterclockwise",
+        "content": "\f117"
+    },
+    {
+        "icon": "arrow-down-circle-fill",
+        "content": "\f118"
+    },
+    {
+        "icon": "arrow-down-circle",
+        "content": "\f119"
+    },
+    {
+        "icon": "arrow-down-left-circle-fill",
+        "content": "\f11a"
+    },
+    {
+        "icon": "arrow-down-left-circle",
+        "content": "\f11b"
+    },
+    {
+        "icon": "arrow-down-left-square-fill",
+        "content": "\f11c"
+    },
+    {
+        "icon": "arrow-down-left-square",
+        "content": "\f11d"
+    },
+    {
+        "icon": "arrow-down-left",
+        "content": "\f11e"
+    },
+    {
+        "icon": "arrow-down-right-circle-fill",
+        "content": "\f11f"
+    },
+    {
+        "icon": "arrow-down-right-circle",
+        "content": "\f120"
+    },
+    {
+        "icon": "arrow-down-right-square-fill",
+        "content": "\f121"
+    },
+    {
+        "icon": "arrow-down-right-square",
+        "content": "\f122"
+    },
+    {
+        "icon": "arrow-down-right",
+        "content": "\f123"
+    },
+    {
+        "icon": "arrow-down-short",
+        "content": "\f124"
+    },
+    {
+        "icon": "arrow-down-square-fill",
+        "content": "\f125"
+    },
+    {
+        "icon": "arrow-down-square",
+        "content": "\f126"
+    },
+    {
+        "icon": "arrow-down-up",
+        "content": "\f127"
+    },
+    {
+        "icon": "arrow-down",
+        "content": "\f128"
+    },
+    {
+        "icon": "arrow-left-circle-fill",
+        "content": "\f129"
+    },
+    {
+        "icon": "arrow-left-circle",
+        "content": "\f12a"
+    },
+    {
+        "icon": "arrow-left-right",
+        "content": "\f12b"
+    },
+    {
+        "icon": "arrow-left-short",
+        "content": "\f12c"
+    },
+    {
+        "icon": "arrow-left-square-fill",
+        "content": "\f12d"
+    },
+    {
+        "icon": "arrow-left-square",
+        "content": "\f12e"
+    },
+    {
+        "icon": "arrow-left",
+        "content": "\f12f"
+    },
+    {
+        "icon": "arrow-repeat",
+        "content": "\f130"
+    },
+    {
+        "icon": "arrow-return-left",
+        "content": "\f131"
+    },
+    {
+        "icon": "arrow-return-right",
+        "content": "\f132"
+    },
+    {
+        "icon": "arrow-right-circle-fill",
+        "content": "\f133"
+    },
+    {
+        "icon": "arrow-right-circle",
+        "content": "\f134"
+    },
+    {
+        "icon": "arrow-right-short",
+        "content": "\f135"
+    },
+    {
+        "icon": "arrow-right-square-fill",
+        "content": "\f136"
+    },
+    {
+        "icon": "arrow-right-square",
+        "content": "\f137"
+    },
+    {
+        "icon": "arrow-right",
+        "content": "\f138"
+    },
+    {
+        "icon": "arrow-up-circle-fill",
+        "content": "\f139"
+    },
+    {
+        "icon": "arrow-up-circle",
+        "content": "\f13a"
+    },
+    {
+        "icon": "arrow-up-left-circle-fill",
+        "content": "\f13b"
+    },
+    {
+        "icon": "arrow-up-left-circle",
+        "content": "\f13c"
+    },
+    {
+        "icon": "arrow-up-left-square-fill",
+        "content": "\f13d"
+    },
+    {
+        "icon": "arrow-up-left-square",
+        "content": "\f13e"
+    },
+    {
+        "icon": "arrow-up-left",
+        "content": "\f13f"
+    },
+    {
+        "icon": "arrow-up-right-circle-fill",
+        "content": "\f140"
+    },
+    {
+        "icon": "arrow-up-right-circle",
+        "content": "\f141"
+    },
+    {
+        "icon": "arrow-up-right-square-fill",
+        "content": "\f142"
+    },
+    {
+        "icon": "arrow-up-right-square",
+        "content": "\f143"
+    },
+    {
+        "icon": "arrow-up-right",
+        "content": "\f144"
+    },
+    {
+        "icon": "arrow-up-short",
+        "content": "\f145"
+    },
+    {
+        "icon": "arrow-up-square-fill",
+        "content": "\f146"
+    },
+    {
+        "icon": "arrow-up-square",
+        "content": "\f147"
+    },
+    {
+        "icon": "arrow-up",
+        "content": "\f148"
+    },
+    {
+        "icon": "arrows-angle-contract",
+        "content": "\f149"
+    },
+    {
+        "icon": "arrows-angle-expand",
+        "content": "\f14a"
+    },
+    {
+        "icon": "arrows-collapse",
+        "content": "\f14b"
+    },
+    {
+        "icon": "arrows-expand",
+        "content": "\f14c"
+    },
+    {
+        "icon": "arrows-fullscreen",
+        "content": "\f14d"
+    },
+    {
+        "icon": "arrows-move",
+        "content": "\f14e"
+    },
+    {
+        "icon": "aspect-ratio-fill",
+        "content": "\f14f"
+    },
+    {
+        "icon": "aspect-ratio",
+        "content": "\f150"
+    },
+    {
+        "icon": "asterisk",
+        "content": "\f151"
+    },
+    {
+        "icon": "at",
+        "content": "\f152"
+    },
+    {
+        "icon": "award-fill",
+        "content": "\f153"
+    },
+    {
+        "icon": "award",
+        "content": "\f154"
+    },
+    {
+        "icon": "back",
+        "content": "\f155"
+    },
+    {
+        "icon": "backspace-fill",
+        "content": "\f156"
+    },
+    {
+        "icon": "backspace-reverse-fill",
+        "content": "\f157"
+    },
+    {
+        "icon": "backspace-reverse",
+        "content": "\f158"
+    },
+    {
+        "icon": "backspace",
+        "content": "\f159"
+    },
+    {
+        "icon": "badge-3d-fill",
+        "content": "\f15a"
+    },
+    {
+        "icon": "badge-3d",
+        "content": "\f15b"
+    },
+    {
+        "icon": "badge-4k-fill",
+        "content": "\f15c"
+    },
+    {
+        "icon": "badge-4k",
+        "content": "\f15d"
+    },
+    {
+        "icon": "badge-8k-fill",
+        "content": "\f15e"
+    },
+    {
+        "icon": "badge-8k",
+        "content": "\f15f"
+    },
+    {
+        "icon": "badge-ad-fill",
+        "content": "\f160"
+    },
+    {
+        "icon": "badge-ad",
+        "content": "\f161"
+    },
+    {
+        "icon": "badge-ar-fill",
+        "content": "\f162"
+    },
+    {
+        "icon": "badge-ar",
+        "content": "\f163"
+    },
+    {
+        "icon": "badge-cc-fill",
+        "content": "\f164"
+    },
+    {
+        "icon": "badge-cc",
+        "content": "\f165"
+    },
+    {
+        "icon": "badge-hd-fill",
+        "content": "\f166"
+    },
+    {
+        "icon": "badge-hd",
+        "content": "\f167"
+    },
+    {
+        "icon": "badge-tm-fill",
+        "content": "\f168"
+    },
+    {
+        "icon": "badge-tm",
+        "content": "\f169"
+    },
+    {
+        "icon": "badge-vo-fill",
+        "content": "\f16a"
+    },
+    {
+        "icon": "badge-vo",
+        "content": "\f16b"
+    },
+    {
+        "icon": "badge-vr-fill",
+        "content": "\f16c"
+    },
+    {
+        "icon": "badge-vr",
+        "content": "\f16d"
+    },
+    {
+        "icon": "badge-wc-fill",
+        "content": "\f16e"
+    },
+    {
+        "icon": "badge-wc",
+        "content": "\f16f"
+    },
+    {
+        "icon": "bag-check-fill",
+        "content": "\f170"
+    },
+    {
+        "icon": "bag-check",
+        "content": "\f171"
+    },
+    {
+        "icon": "bag-dash-fill",
+        "content": "\f172"
+    },
+    {
+        "icon": "bag-dash",
+        "content": "\f173"
+    },
+    {
+        "icon": "bag-fill",
+        "content": "\f174"
+    },
+    {
+        "icon": "bag-plus-fill",
+        "content": "\f175"
+    },
+    {
+        "icon": "bag-plus",
+        "content": "\f176"
+    },
+    {
+        "icon": "bag-x-fill",
+        "content": "\f177"
+    },
+    {
+        "icon": "bag-x",
+        "content": "\f178"
+    },
+    {
+        "icon": "bag",
+        "content": "\f179"
+    },
+    {
+        "icon": "bar-chart-fill",
+        "content": "\f17a"
+    },
+    {
+        "icon": "bar-chart-line-fill",
+        "content": "\f17b"
+    },
+    {
+        "icon": "bar-chart-line",
+        "content": "\f17c"
+    },
+    {
+        "icon": "bar-chart-steps",
+        "content": "\f17d"
+    },
+    {
+        "icon": "bar-chart",
+        "content": "\f17e"
+    },
+    {
+        "icon": "basket-fill",
+        "content": "\f17f"
+    },
+    {
+        "icon": "basket",
+        "content": "\f180"
+    },
+    {
+        "icon": "basket2-fill",
+        "content": "\f181"
+    },
+    {
+        "icon": "basket2",
+        "content": "\f182"
+    },
+    {
+        "icon": "basket3-fill",
+        "content": "\f183"
+    },
+    {
+        "icon": "basket3",
+        "content": "\f184"
+    },
+    {
+        "icon": "battery-charging",
+        "content": "\f185"
+    },
+    {
+        "icon": "battery-full",
+        "content": "\f186"
+    },
+    {
+        "icon": "battery-half",
+        "content": "\f187"
+    },
+    {
+        "icon": "battery",
+        "content": "\f188"
+    },
+    {
+        "icon": "bell-fill",
+        "content": "\f189"
+    },
+    {
+        "icon": "bell",
+        "content": "\f18a"
+    },
+    {
+        "icon": "bezier",
+        "content": "\f18b"
+    },
+    {
+        "icon": "bezier2",
+        "content": "\f18c"
+    },
+    {
+        "icon": "bicycle",
+        "content": "\f18d"
+    },
+    {
+        "icon": "binoculars-fill",
+        "content": "\f18e"
+    },
+    {
+        "icon": "binoculars",
+        "content": "\f18f"
+    },
+    {
+        "icon": "blockquote-left",
+        "content": "\f190"
+    },
+    {
+        "icon": "blockquote-right",
+        "content": "\f191"
+    },
+    {
+        "icon": "book-fill",
+        "content": "\f192"
+    },
+    {
+        "icon": "book-half",
+        "content": "\f193"
+    },
+    {
+        "icon": "book",
+        "content": "\f194"
+    },
+    {
+        "icon": "bookmark-check-fill",
+        "content": "\f195"
+    },
+    {
+        "icon": "bookmark-check",
+        "content": "\f196"
+    },
+    {
+        "icon": "bookmark-dash-fill",
+        "content": "\f197"
+    },
+    {
+        "icon": "bookmark-dash",
+        "content": "\f198"
+    },
+    {
+        "icon": "bookmark-fill",
+        "content": "\f199"
+    },
+    {
+        "icon": "bookmark-heart-fill",
+        "content": "\f19a"
+    },
+    {
+        "icon": "bookmark-heart",
+        "content": "\f19b"
+    },
+    {
+        "icon": "bookmark-plus-fill",
+        "content": "\f19c"
+    },
+    {
+        "icon": "bookmark-plus",
+        "content": "\f19d"
+    },
+    {
+        "icon": "bookmark-star-fill",
+        "content": "\f19e"
+    },
+    {
+        "icon": "bookmark-star",
+        "content": "\f19f"
+    },
+    {
+        "icon": "bookmark-x-fill",
+        "content": "\f1a0"
+    },
+    {
+        "icon": "bookmark-x",
+        "content": "\f1a1"
+    },
+    {
+        "icon": "bookmark",
+        "content": "\f1a2"
+    },
+    {
+        "icon": "bookmarks-fill",
+        "content": "\f1a3"
+    },
+    {
+        "icon": "bookmarks",
+        "content": "\f1a4"
+    },
+    {
+        "icon": "bookshelf",
+        "content": "\f1a5"
+    },
+    {
+        "icon": "bootstrap-fill",
+        "content": "\f1a6"
+    },
+    {
+        "icon": "bootstrap-reboot",
+        "content": "\f1a7"
+    },
+    {
+        "icon": "bootstrap",
+        "content": "\f1a8"
+    },
+    {
+        "icon": "border-all",
+        "content": "\f1a9"
+    },
+    {
+        "icon": "border-bottom",
+        "content": "\f1aa"
+    },
+    {
+        "icon": "border-center",
+        "content": "\f1ab"
+    },
+    {
+        "icon": "border-inner",
+        "content": "\f1ac"
+    },
+    {
+        "icon": "border-left",
+        "content": "\f1ad"
+    },
+    {
+        "icon": "border-middle",
+        "content": "\f1ae"
+    },
+    {
+        "icon": "border-outer",
+        "content": "\f1af"
+    },
+    {
+        "icon": "border-right",
+        "content": "\f1b0"
+    },
+    {
+        "icon": "border-style",
+        "content": "\f1b1"
+    },
+    {
+        "icon": "border-top",
+        "content": "\f1b2"
+    },
+    {
+        "icon": "border-width",
+        "content": "\f1b3"
+    },
+    {
+        "icon": "border",
+        "content": "\f1b4"
+    },
+    {
+        "icon": "bounding-box-circles",
+        "content": "\f1b5"
+    },
+    {
+        "icon": "bounding-box",
+        "content": "\f1b6"
+    },
+    {
+        "icon": "box-arrow-down-left",
+        "content": "\f1b7"
+    },
+    {
+        "icon": "box-arrow-down-right",
+        "content": "\f1b8"
+    },
+    {
+        "icon": "box-arrow-down",
+        "content": "\f1b9"
+    },
+    {
+        "icon": "box-arrow-in-down-left",
+        "content": "\f1ba"
+    },
+    {
+        "icon": "box-arrow-in-down-right",
+        "content": "\f1bb"
+    },
+    {
+        "icon": "box-arrow-in-down",
+        "content": "\f1bc"
+    },
+    {
+        "icon": "box-arrow-in-left",
+        "content": "\f1bd"
+    },
+    {
+        "icon": "box-arrow-in-right",
+        "content": "\f1be"
+    },
+    {
+        "icon": "box-arrow-in-up-left",
+        "content": "\f1bf"
+    },
+    {
+        "icon": "box-arrow-in-up-right",
+        "content": "\f1c0"
+    },
+    {
+        "icon": "box-arrow-in-up",
+        "content": "\f1c1"
+    },
+    {
+        "icon": "box-arrow-left",
+        "content": "\f1c2"
+    },
+    {
+        "icon": "box-arrow-right",
+        "content": "\f1c3"
+    },
+    {
+        "icon": "box-arrow-up-left",
+        "content": "\f1c4"
+    },
+    {
+        "icon": "box-arrow-up-right",
+        "content": "\f1c5"
+    },
+    {
+        "icon": "box-arrow-up",
+        "content": "\f1c6"
+    },
+    {
+        "icon": "box-seam",
+        "content": "\f1c7"
+    },
+    {
+        "icon": "box",
+        "content": "\f1c8"
+    },
+    {
+        "icon": "braces",
+        "content": "\f1c9"
+    },
+    {
+        "icon": "bricks",
+        "content": "\f1ca"
+    },
+    {
+        "icon": "briefcase-fill",
+        "content": "\f1cb"
+    },
+    {
+        "icon": "briefcase",
+        "content": "\f1cc"
+    },
+    {
+        "icon": "brightness-alt-high-fill",
+        "content": "\f1cd"
+    },
+    {
+        "icon": "brightness-alt-high",
+        "content": "\f1ce"
+    },
+    {
+        "icon": "brightness-alt-low-fill",
+        "content": "\f1cf"
+    },
+    {
+        "icon": "brightness-alt-low",
+        "content": "\f1d0"
+    },
+    {
+        "icon": "brightness-high-fill",
+        "content": "\f1d1"
+    },
+    {
+        "icon": "brightness-high",
+        "content": "\f1d2"
+    },
+    {
+        "icon": "brightness-low-fill",
+        "content": "\f1d3"
+    },
+    {
+        "icon": "brightness-low",
+        "content": "\f1d4"
+    },
+    {
+        "icon": "broadcast-pin",
+        "content": "\f1d5"
+    },
+    {
+        "icon": "broadcast",
+        "content": "\f1d6"
+    },
+    {
+        "icon": "brush-fill",
+        "content": "\f1d7"
+    },
+    {
+        "icon": "brush",
+        "content": "\f1d8"
+    },
+    {
+        "icon": "bucket-fill",
+        "content": "\f1d9"
+    },
+    {
+        "icon": "bucket",
+        "content": "\f1da"
+    },
+    {
+        "icon": "bug-fill",
+        "content": "\f1db"
+    },
+    {
+        "icon": "bug",
+        "content": "\f1dc"
+    },
+    {
+        "icon": "building",
+        "content": "\f1dd"
+    },
+    {
+        "icon": "bullseye",
+        "content": "\f1de"
+    },
+    {
+        "icon": "calculator-fill",
+        "content": "\f1df"
+    },
+    {
+        "icon": "calculator",
+        "content": "\f1e0"
+    },
+    {
+        "icon": "calendar-check-fill",
+        "content": "\f1e1"
+    },
+    {
+        "icon": "calendar-check",
+        "content": "\f1e2"
+    },
+    {
+        "icon": "calendar-date-fill",
+        "content": "\f1e3"
+    },
+    {
+        "icon": "calendar-date",
+        "content": "\f1e4"
+    },
+    {
+        "icon": "calendar-day-fill",
+        "content": "\f1e5"
+    },
+    {
+        "icon": "calendar-day",
+        "content": "\f1e6"
+    },
+    {
+        "icon": "calendar-event-fill",
+        "content": "\f1e7"
+    },
+    {
+        "icon": "calendar-event",
+        "content": "\f1e8"
+    },
+    {
+        "icon": "calendar-fill",
+        "content": "\f1e9"
+    },
+    {
+        "icon": "calendar-minus-fill",
+        "content": "\f1ea"
+    },
+    {
+        "icon": "calendar-minus",
+        "content": "\f1eb"
+    },
+    {
+        "icon": "calendar-month-fill",
+        "content": "\f1ec"
+    },
+    {
+        "icon": "calendar-month",
+        "content": "\f1ed"
+    },
+    {
+        "icon": "calendar-plus-fill",
+        "content": "\f1ee"
+    },
+    {
+        "icon": "calendar-plus",
+        "content": "\f1ef"
+    },
+    {
+        "icon": "calendar-range-fill",
+        "content": "\f1f0"
+    },
+    {
+        "icon": "calendar-range",
+        "content": "\f1f1"
+    },
+    {
+        "icon": "calendar-week-fill",
+        "content": "\f1f2"
+    },
+    {
+        "icon": "calendar-week",
+        "content": "\f1f3"
+    },
+    {
+        "icon": "calendar-x-fill",
+        "content": "\f1f4"
+    },
+    {
+        "icon": "calendar-x",
+        "content": "\f1f5"
+    },
+    {
+        "icon": "calendar",
+        "content": "\f1f6"
+    },
+    {
+        "icon": "calendar2-check-fill",
+        "content": "\f1f7"
+    },
+    {
+        "icon": "calendar2-check",
+        "content": "\f1f8"
+    },
+    {
+        "icon": "calendar2-date-fill",
+        "content": "\f1f9"
+    },
+    {
+        "icon": "calendar2-date",
+        "content": "\f1fa"
+    },
+    {
+        "icon": "calendar2-day-fill",
+        "content": "\f1fb"
+    },
+    {
+        "icon": "calendar2-day",
+        "content": "\f1fc"
+    },
+    {
+        "icon": "calendar2-event-fill",
+        "content": "\f1fd"
+    },
+    {
+        "icon": "calendar2-event",
+        "content": "\f1fe"
+    },
+    {
+        "icon": "calendar2-fill",
+        "content": "\f1ff"
+    },
+    {
+        "icon": "calendar2-minus-fill",
+        "content": "\f200"
+    },
+    {
+        "icon": "calendar2-minus",
+        "content": "\f201"
+    },
+    {
+        "icon": "calendar2-month-fill",
+        "content": "\f202"
+    },
+    {
+        "icon": "calendar2-month",
+        "content": "\f203"
+    },
+    {
+        "icon": "calendar2-plus-fill",
+        "content": "\f204"
+    },
+    {
+        "icon": "calendar2-plus",
+        "content": "\f205"
+    },
+    {
+        "icon": "calendar2-range-fill",
+        "content": "\f206"
+    },
+    {
+        "icon": "calendar2-range",
+        "content": "\f207"
+    },
+    {
+        "icon": "calendar2-week-fill",
+        "content": "\f208"
+    },
+    {
+        "icon": "calendar2-week",
+        "content": "\f209"
+    },
+    {
+        "icon": "calendar2-x-fill",
+        "content": "\f20a"
+    },
+    {
+        "icon": "calendar2-x",
+        "content": "\f20b"
+    },
+    {
+        "icon": "calendar2",
+        "content": "\f20c"
+    },
+    {
+        "icon": "calendar3-event-fill",
+        "content": "\f20d"
+    },
+    {
+        "icon": "calendar3-event",
+        "content": "\f20e"
+    },
+    {
+        "icon": "calendar3-fill",
+        "content": "\f20f"
+    },
+    {
+        "icon": "calendar3-range-fill",
+        "content": "\f210"
+    },
+    {
+        "icon": "calendar3-range",
+        "content": "\f211"
+    },
+    {
+        "icon": "calendar3-week-fill",
+        "content": "\f212"
+    },
+    {
+        "icon": "calendar3-week",
+        "content": "\f213"
+    },
+    {
+        "icon": "calendar3",
+        "content": "\f214"
+    },
+    {
+        "icon": "calendar4-event",
+        "content": "\f215"
+    },
+    {
+        "icon": "calendar4-range",
+        "content": "\f216"
+    },
+    {
+        "icon": "calendar4-week",
+        "content": "\f217"
+    },
+    {
+        "icon": "calendar4",
+        "content": "\f218"
+    },
+    {
+        "icon": "camera-fill",
+        "content": "\f219"
+    },
+    {
+        "icon": "camera-reels-fill",
+        "content": "\f21a"
+    },
+    {
+        "icon": "camera-reels",
+        "content": "\f21b"
+    },
+    {
+        "icon": "camera-video-fill",
+        "content": "\f21c"
+    },
+    {
+        "icon": "camera-video-off-fill",
+        "content": "\f21d"
+    },
+    {
+        "icon": "camera-video-off",
+        "content": "\f21e"
+    },
+    {
+        "icon": "camera-video",
+        "content": "\f21f"
+    },
+    {
+        "icon": "camera",
+        "content": "\f220"
+    },
+    {
+        "icon": "camera2",
+        "content": "\f221"
+    },
+    {
+        "icon": "capslock-fill",
+        "content": "\f222"
+    },
+    {
+        "icon": "capslock",
+        "content": "\f223"
+    },
+    {
+        "icon": "card-checklist",
+        "content": "\f224"
+    },
+    {
+        "icon": "card-heading",
+        "content": "\f225"
+    },
+    {
+        "icon": "card-image",
+        "content": "\f226"
+    },
+    {
+        "icon": "card-list",
+        "content": "\f227"
+    },
+    {
+        "icon": "card-text",
+        "content": "\f228"
+    },
+    {
+        "icon": "caret-down-fill",
+        "content": "\f229"
+    },
+    {
+        "icon": "caret-down-square-fill",
+        "content": "\f22a"
+    },
+    {
+        "icon": "caret-down-square",
+        "content": "\f22b"
+    },
+    {
+        "icon": "caret-down",
+        "content": "\f22c"
+    },
+    {
+        "icon": "caret-left-fill",
+        "content": "\f22d"
+    },
+    {
+        "icon": "caret-left-square-fill",
+        "content": "\f22e"
+    },
+    {
+        "icon": "caret-left-square",
+        "content": "\f22f"
+    },
+    {
+        "icon": "caret-left",
+        "content": "\f230"
+    },
+    {
+        "icon": "caret-right-fill",
+        "content": "\f231"
+    },
+    {
+        "icon": "caret-right-square-fill",
+        "content": "\f232"
+    },
+    {
+        "icon": "caret-right-square",
+        "content": "\f233"
+    },
+    {
+        "icon": "caret-right",
+        "content": "\f234"
+    },
+    {
+        "icon": "caret-up-fill",
+        "content": "\f235"
+    },
+    {
+        "icon": "caret-up-square-fill",
+        "content": "\f236"
+    },
+    {
+        "icon": "caret-up-square",
+        "content": "\f237"
+    },
+    {
+        "icon": "caret-up",
+        "content": "\f238"
+    },
+    {
+        "icon": "cart-check-fill",
+        "content": "\f239"
+    },
+    {
+        "icon": "cart-check",
+        "content": "\f23a"
+    },
+    {
+        "icon": "cart-dash-fill",
+        "content": "\f23b"
+    },
+    {
+        "icon": "cart-dash",
+        "content": "\f23c"
+    },
+    {
+        "icon": "cart-fill",
+        "content": "\f23d"
+    },
+    {
+        "icon": "cart-plus-fill",
+        "content": "\f23e"
+    },
+    {
+        "icon": "cart-plus",
+        "content": "\f23f"
+    },
+    {
+        "icon": "cart-x-fill",
+        "content": "\f240"
+    },
+    {
+        "icon": "cart-x",
+        "content": "\f241"
+    },
+    {
+        "icon": "cart",
+        "content": "\f242"
+    },
+    {
+        "icon": "cart2",
+        "content": "\f243"
+    },
+    {
+        "icon": "cart3",
+        "content": "\f244"
+    },
+    {
+        "icon": "cart4",
+        "content": "\f245"
+    },
+    {
+        "icon": "cash-stack",
+        "content": "\f246"
+    },
+    {
+        "icon": "cash",
+        "content": "\f247"
+    },
+    {
+        "icon": "cast",
+        "content": "\f248"
+    },
+    {
+        "icon": "chat-dots-fill",
+        "content": "\f249"
+    },
+    {
+        "icon": "chat-dots",
+        "content": "\f24a"
+    },
+    {
+        "icon": "chat-fill",
+        "content": "\f24b"
+    },
+    {
+        "icon": "chat-left-dots-fill",
+        "content": "\f24c"
+    },
+    {
+        "icon": "chat-left-dots",
+        "content": "\f24d"
+    },
+    {
+        "icon": "chat-left-fill",
+        "content": "\f24e"
+    },
+    {
+        "icon": "chat-left-quote-fill",
+        "content": "\f24f"
+    },
+    {
+        "icon": "chat-left-quote",
+        "content": "\f250"
+    },
+    {
+        "icon": "chat-left-text-fill",
+        "content": "\f251"
+    },
+    {
+        "icon": "chat-left-text",
+        "content": "\f252"
+    },
+    {
+        "icon": "chat-left",
+        "content": "\f253"
+    },
+    {
+        "icon": "chat-quote-fill",
+        "content": "\f254"
+    },
+    {
+        "icon": "chat-quote",
+        "content": "\f255"
+    },
+    {
+        "icon": "chat-right-dots-fill",
+        "content": "\f256"
+    },
+    {
+        "icon": "chat-right-dots",
+        "content": "\f257"
+    },
+    {
+        "icon": "chat-right-fill",
+        "content": "\f258"
+    },
+    {
+        "icon": "chat-right-quote-fill",
+        "content": "\f259"
+    },
+    {
+        "icon": "chat-right-quote",
+        "content": "\f25a"
+    },
+    {
+        "icon": "chat-right-text-fill",
+        "content": "\f25b"
+    },
+    {
+        "icon": "chat-right-text",
+        "content": "\f25c"
+    },
+    {
+        "icon": "chat-right",
+        "content": "\f25d"
+    },
+    {
+        "icon": "chat-square-dots-fill",
+        "content": "\f25e"
+    },
+    {
+        "icon": "chat-square-dots",
+        "content": "\f25f"
+    },
+    {
+        "icon": "chat-square-fill",
+        "content": "\f260"
+    },
+    {
+        "icon": "chat-square-quote-fill",
+        "content": "\f261"
+    },
+    {
+        "icon": "chat-square-quote",
+        "content": "\f262"
+    },
+    {
+        "icon": "chat-square-text-fill",
+        "content": "\f263"
+    },
+    {
+        "icon": "chat-square-text",
+        "content": "\f264"
+    },
+    {
+        "icon": "chat-square",
+        "content": "\f265"
+    },
+    {
+        "icon": "chat-text-fill",
+        "content": "\f266"
+    },
+    {
+        "icon": "chat-text",
+        "content": "\f267"
+    },
+    {
+        "icon": "chat",
+        "content": "\f268"
+    },
+    {
+        "icon": "check-all",
+        "content": "\f269"
+    },
+    {
+        "icon": "check-circle-fill",
+        "content": "\f26a"
+    },
+    {
+        "icon": "check-circle",
+        "content": "\f26b"
+    },
+    {
+        "icon": "check-square-fill",
+        "content": "\f26c"
+    },
+    {
+        "icon": "check-square",
+        "content": "\f26d"
+    },
+    {
+        "icon": "check",
+        "content": "\f26e"
+    },
+    {
+        "icon": "check2-all",
+        "content": "\f26f"
+    },
+    {
+        "icon": "check2-circle",
+        "content": "\f270"
+    },
+    {
+        "icon": "check2-square",
+        "content": "\f271"
+    },
+    {
+        "icon": "check2",
+        "content": "\f272"
+    },
+    {
+        "icon": "chevron-bar-contract",
+        "content": "\f273"
+    },
+    {
+        "icon": "chevron-bar-down",
+        "content": "\f274"
+    },
+    {
+        "icon": "chevron-bar-expand",
+        "content": "\f275"
+    },
+    {
+        "icon": "chevron-bar-left",
+        "content": "\f276"
+    },
+    {
+        "icon": "chevron-bar-right",
+        "content": "\f277"
+    },
+    {
+        "icon": "chevron-bar-up",
+        "content": "\f278"
+    },
+    {
+        "icon": "chevron-compact-down",
+        "content": "\f279"
+    },
+    {
+        "icon": "chevron-compact-left",
+        "content": "\f27a"
+    },
+    {
+        "icon": "chevron-compact-right",
+        "content": "\f27b"
+    },
+    {
+        "icon": "chevron-compact-up",
+        "content": "\f27c"
+    },
+    {
+        "icon": "chevron-contract",
+        "content": "\f27d"
+    },
+    {
+        "icon": "chevron-double-down",
+        "content": "\f27e"
+    },
+    {
+        "icon": "chevron-double-left",
+        "content": "\f27f"
+    },
+    {
+        "icon": "chevron-double-right",
+        "content": "\f280"
+    },
+    {
+        "icon": "chevron-double-up",
+        "content": "\f281"
+    },
+    {
+        "icon": "chevron-down",
+        "content": "\f282"
+    },
+    {
+        "icon": "chevron-expand",
+        "content": "\f283"
+    },
+    {
+        "icon": "chevron-left",
+        "content": "\f284"
+    },
+    {
+        "icon": "chevron-right",
+        "content": "\f285"
+    },
+    {
+        "icon": "chevron-up",
+        "content": "\f286"
+    },
+    {
+        "icon": "circle-fill",
+        "content": "\f287"
+    },
+    {
+        "icon": "circle-half",
+        "content": "\f288"
+    },
+    {
+        "icon": "circle-square",
+        "content": "\f289"
+    },
+    {
+        "icon": "circle",
+        "content": "\f28a"
+    },
+    {
+        "icon": "clipboard-check",
+        "content": "\f28b"
+    },
+    {
+        "icon": "clipboard-data",
+        "content": "\f28c"
+    },
+    {
+        "icon": "clipboard-minus",
+        "content": "\f28d"
+    },
+    {
+        "icon": "clipboard-plus",
+        "content": "\f28e"
+    },
+    {
+        "icon": "clipboard-x",
+        "content": "\f28f"
+    },
+    {
+        "icon": "clipboard",
+        "content": "\f290"
+    },
+    {
+        "icon": "clock-fill",
+        "content": "\f291"
+    },
+    {
+        "icon": "clock-history",
+        "content": "\f292"
+    },
+    {
+        "icon": "clock",
+        "content": "\f293"
+    },
+    {
+        "icon": "cloud-arrow-down-fill",
+        "content": "\f294"
+    },
+    {
+        "icon": "cloud-arrow-down",
+        "content": "\f295"
+    },
+    {
+        "icon": "cloud-arrow-up-fill",
+        "content": "\f296"
+    },
+    {
+        "icon": "cloud-arrow-up",
+        "content": "\f297"
+    },
+    {
+        "icon": "cloud-check-fill",
+        "content": "\f298"
+    },
+    {
+        "icon": "cloud-check",
+        "content": "\f299"
+    },
+    {
+        "icon": "cloud-download-fill",
+        "content": "\f29a"
+    },
+    {
+        "icon": "cloud-download",
+        "content": "\f29b"
+    },
+    {
+        "icon": "cloud-drizzle-fill",
+        "content": "\f29c"
+    },
+    {
+        "icon": "cloud-drizzle",
+        "content": "\f29d"
+    },
+    {
+        "icon": "cloud-fill",
+        "content": "\f29e"
+    },
+    {
+        "icon": "cloud-fog-fill",
+        "content": "\f29f"
+    },
+    {
+        "icon": "cloud-fog",
+        "content": "\f2a0"
+    },
+    {
+        "icon": "cloud-fog2-fill",
+        "content": "\f2a1"
+    },
+    {
+        "icon": "cloud-fog2",
+        "content": "\f2a2"
+    },
+    {
+        "icon": "cloud-hail-fill",
+        "content": "\f2a3"
+    },
+    {
+        "icon": "cloud-hail",
+        "content": "\f2a4"
+    },
+    {
+        "icon": "cloud-haze-1",
+        "content": "\f2a5"
+    },
+    {
+        "icon": "cloud-haze-fill",
+        "content": "\f2a6"
+    },
+    {
+        "icon": "cloud-haze",
+        "content": "\f2a7"
+    },
+    {
+        "icon": "cloud-haze2-fill",
+        "content": "\f2a8"
+    },
+    {
+        "icon": "cloud-lightning-fill",
+        "content": "\f2a9"
+    },
+    {
+        "icon": "cloud-lightning-rain-fill",
+        "content": "\f2aa"
+    },
+    {
+        "icon": "cloud-lightning-rain",
+        "content": "\f2ab"
+    },
+    {
+        "icon": "cloud-lightning",
+        "content": "\f2ac"
+    },
+    {
+        "icon": "cloud-minus-fill",
+        "content": "\f2ad"
+    },
+    {
+        "icon": "cloud-minus",
+        "content": "\f2ae"
+    },
+    {
+        "icon": "cloud-moon-fill",
+        "content": "\f2af"
+    },
+    {
+        "icon": "cloud-moon",
+        "content": "\f2b0"
+    },
+    {
+        "icon": "cloud-plus-fill",
+        "content": "\f2b1"
+    },
+    {
+        "icon": "cloud-plus",
+        "content": "\f2b2"
+    },
+    {
+        "icon": "cloud-rain-fill",
+        "content": "\f2b3"
+    },
+    {
+        "icon": "cloud-rain-heavy-fill",
+        "content": "\f2b4"
+    },
+    {
+        "icon": "cloud-rain-heavy",
+        "content": "\f2b5"
+    },
+    {
+        "icon": "cloud-rain",
+        "content": "\f2b6"
+    },
+    {
+        "icon": "cloud-slash-fill",
+        "content": "\f2b7"
+    },
+    {
+        "icon": "cloud-slash",
+        "content": "\f2b8"
+    },
+    {
+        "icon": "cloud-sleet-fill",
+        "content": "\f2b9"
+    },
+    {
+        "icon": "cloud-sleet",
+        "content": "\f2ba"
+    },
+    {
+        "icon": "cloud-snow-fill",
+        "content": "\f2bb"
+    },
+    {
+        "icon": "cloud-snow",
+        "content": "\f2bc"
+    },
+    {
+        "icon": "cloud-sun-fill",
+        "content": "\f2bd"
+    },
+    {
+        "icon": "cloud-sun",
+        "content": "\f2be"
+    },
+    {
+        "icon": "cloud-upload-fill",
+        "content": "\f2bf"
+    },
+    {
+        "icon": "cloud-upload",
+        "content": "\f2c0"
+    },
+    {
+        "icon": "cloud",
+        "content": "\f2c1"
+    },
+    {
+        "icon": "clouds-fill",
+        "content": "\f2c2"
+    },
+    {
+        "icon": "clouds",
+        "content": "\f2c3"
+    },
+    {
+        "icon": "cloudy-fill",
+        "content": "\f2c4"
+    },
+    {
+        "icon": "cloudy",
+        "content": "\f2c5"
+    },
+    {
+        "icon": "code-slash",
+        "content": "\f2c6"
+    },
+    {
+        "icon": "code-square",
+        "content": "\f2c7"
+    },
+    {
+        "icon": "code",
+        "content": "\f2c8"
+    },
+    {
+        "icon": "collection-fill",
+        "content": "\f2c9"
+    },
+    {
+        "icon": "collection-play-fill",
+        "content": "\f2ca"
+    },
+    {
+        "icon": "collection-play",
+        "content": "\f2cb"
+    },
+    {
+        "icon": "collection",
+        "content": "\f2cc"
+    },
+    {
+        "icon": "columns-gap",
+        "content": "\f2cd"
+    },
+    {
+        "icon": "columns",
+        "content": "\f2ce"
+    },
+    {
+        "icon": "command",
+        "content": "\f2cf"
+    },
+    {
+        "icon": "compass-fill",
+        "content": "\f2d0"
+    },
+    {
+        "icon": "compass",
+        "content": "\f2d1"
+    },
+    {
+        "icon": "cone-striped",
+        "content": "\f2d2"
+    },
+    {
+        "icon": "cone",
+        "content": "\f2d3"
+    },
+    {
+        "icon": "controller",
+        "content": "\f2d4"
+    },
+    {
+        "icon": "cpu-fill",
+        "content": "\f2d5"
+    },
+    {
+        "icon": "cpu",
+        "content": "\f2d6"
+    },
+    {
+        "icon": "credit-card-2-back-fill",
+        "content": "\f2d7"
+    },
+    {
+        "icon": "credit-card-2-back",
+        "content": "\f2d8"
+    },
+    {
+        "icon": "credit-card-2-front-fill",
+        "content": "\f2d9"
+    },
+    {
+        "icon": "credit-card-2-front",
+        "content": "\f2da"
+    },
+    {
+        "icon": "credit-card-fill",
+        "content": "\f2db"
+    },
+    {
+        "icon": "credit-card",
+        "content": "\f2dc"
+    },
+    {
+        "icon": "crop",
+        "content": "\f2dd"
+    },
+    {
+        "icon": "cup-fill",
+        "content": "\f2de"
+    },
+    {
+        "icon": "cup-straw",
+        "content": "\f2df"
+    },
+    {
+        "icon": "cup",
+        "content": "\f2e0"
+    },
+    {
+        "icon": "cursor-fill",
+        "content": "\f2e1"
+    },
+    {
+        "icon": "cursor-text",
+        "content": "\f2e2"
+    },
+    {
+        "icon": "cursor",
+        "content": "\f2e3"
+    },
+    {
+        "icon": "dash-circle-dotted",
+        "content": "\f2e4"
+    },
+    {
+        "icon": "dash-circle-fill",
+        "content": "\f2e5"
+    },
+    {
+        "icon": "dash-circle",
+        "content": "\f2e6"
+    },
+    {
+        "icon": "dash-square-dotted",
+        "content": "\f2e7"
+    },
+    {
+        "icon": "dash-square-fill",
+        "content": "\f2e8"
+    },
+    {
+        "icon": "dash-square",
+        "content": "\f2e9"
+    },
+    {
+        "icon": "dash",
+        "content": "\f2ea"
+    },
+    {
+        "icon": "diagram-2-fill",
+        "content": "\f2eb"
+    },
+    {
+        "icon": "diagram-2",
+        "content": "\f2ec"
+    },
+    {
+        "icon": "diagram-3-fill",
+        "content": "\f2ed"
+    },
+    {
+        "icon": "diagram-3",
+        "content": "\f2ee"
+    },
+    {
+        "icon": "diamond-fill",
+        "content": "\f2ef"
+    },
+    {
+        "icon": "diamond-half",
+        "content": "\f2f0"
+    },
+    {
+        "icon": "diamond",
+        "content": "\f2f1"
+    },
+    {
+        "icon": "dice-1-fill",
+        "content": "\f2f2"
+    },
+    {
+        "icon": "dice-1",
+        "content": "\f2f3"
+    },
+    {
+        "icon": "dice-2-fill",
+        "content": "\f2f4"
+    },
+    {
+        "icon": "dice-2",
+        "content": "\f2f5"
+    },
+    {
+        "icon": "dice-3-fill",
+        "content": "\f2f6"
+    },
+    {
+        "icon": "dice-3",
+        "content": "\f2f7"
+    },
+    {
+        "icon": "dice-4-fill",
+        "content": "\f2f8"
+    },
+    {
+        "icon": "dice-4",
+        "content": "\f2f9"
+    },
+    {
+        "icon": "dice-5-fill",
+        "content": "\f2fa"
+    },
+    {
+        "icon": "dice-5",
+        "content": "\f2fb"
+    },
+    {
+        "icon": "dice-6-fill",
+        "content": "\f2fc"
+    },
+    {
+        "icon": "dice-6",
+        "content": "\f2fd"
+    },
+    {
+        "icon": "disc-fill",
+        "content": "\f2fe"
+    },
+    {
+        "icon": "disc",
+        "content": "\f2ff"
+    },
+    {
+        "icon": "discord",
+        "content": "\f300"
+    },
+    {
+        "icon": "display-fill",
+        "content": "\f301"
+    },
+    {
+        "icon": "display",
+        "content": "\f302"
+    },
+    {
+        "icon": "distribute-horizontal",
+        "content": "\f303"
+    },
+    {
+        "icon": "distribute-vertical",
+        "content": "\f304"
+    },
+    {
+        "icon": "door-closed-fill",
+        "content": "\f305"
+    },
+    {
+        "icon": "door-closed",
+        "content": "\f306"
+    },
+    {
+        "icon": "door-open-fill",
+        "content": "\f307"
+    },
+    {
+        "icon": "door-open",
+        "content": "\f308"
+    },
+    {
+        "icon": "dot",
+        "content": "\f309"
+    },
+    {
+        "icon": "download",
+        "content": "\f30a"
+    },
+    {
+        "icon": "droplet-fill",
+        "content": "\f30b"
+    },
+    {
+        "icon": "droplet-half",
+        "content": "\f30c"
+    },
+    {
+        "icon": "droplet",
+        "content": "\f30d"
+    },
+    {
+        "icon": "earbuds",
+        "content": "\f30e"
+    },
+    {
+        "icon": "easel-fill",
+        "content": "\f30f"
+    },
+    {
+        "icon": "easel",
+        "content": "\f310"
+    },
+    {
+        "icon": "egg-fill",
+        "content": "\f311"
+    },
+    {
+        "icon": "egg-fried",
+        "content": "\f312"
+    },
+    {
+        "icon": "egg",
+        "content": "\f313"
+    },
+    {
+        "icon": "eject-fill",
+        "content": "\f314"
+    },
+    {
+        "icon": "eject",
+        "content": "\f315"
+    },
+    {
+        "icon": "emoji-angry-fill",
+        "content": "\f316"
+    },
+    {
+        "icon": "emoji-angry",
+        "content": "\f317"
+    },
+    {
+        "icon": "emoji-dizzy-fill",
+        "content": "\f318"
+    },
+    {
+        "icon": "emoji-dizzy",
+        "content": "\f319"
+    },
+    {
+        "icon": "emoji-expressionless-fill",
+        "content": "\f31a"
+    },
+    {
+        "icon": "emoji-expressionless",
+        "content": "\f31b"
+    },
+    {
+        "icon": "emoji-frown-fill",
+        "content": "\f31c"
+    },
+    {
+        "icon": "emoji-frown",
+        "content": "\f31d"
+    },
+    {
+        "icon": "emoji-heart-eyes-fill",
+        "content": "\f31e"
+    },
+    {
+        "icon": "emoji-heart-eyes",
+        "content": "\f31f"
+    },
+    {
+        "icon": "emoji-laughing-fill",
+        "content": "\f320"
+    },
+    {
+        "icon": "emoji-laughing",
+        "content": "\f321"
+    },
+    {
+        "icon": "emoji-neutral-fill",
+        "content": "\f322"
+    },
+    {
+        "icon": "emoji-neutral",
+        "content": "\f323"
+    },
+    {
+        "icon": "emoji-smile-fill",
+        "content": "\f324"
+    },
+    {
+        "icon": "emoji-smile-upside-down-fill",
+        "content": "\f325"
+    },
+    {
+        "icon": "emoji-smile-upside-down",
+        "content": "\f326"
+    },
+    {
+        "icon": "emoji-smile",
+        "content": "\f327"
+    },
+    {
+        "icon": "emoji-sunglasses-fill",
+        "content": "\f328"
+    },
+    {
+        "icon": "emoji-sunglasses",
+        "content": "\f329"
+    },
+    {
+        "icon": "emoji-wink-fill",
+        "content": "\f32a"
+    },
+    {
+        "icon": "emoji-wink",
+        "content": "\f32b"
+    },
+    {
+        "icon": "envelope-fill",
+        "content": "\f32c"
+    },
+    {
+        "icon": "envelope-open-fill",
+        "content": "\f32d"
+    },
+    {
+        "icon": "envelope-open",
+        "content": "\f32e"
+    },
+    {
+        "icon": "envelope",
+        "content": "\f32f"
+    },
+    {
+        "icon": "eraser-fill",
+        "content": "\f330"
+    },
+    {
+        "icon": "eraser",
+        "content": "\f331"
+    },
+    {
+        "icon": "exclamation-circle-fill",
+        "content": "\f332"
+    },
+    {
+        "icon": "exclamation-circle",
+        "content": "\f333"
+    },
+    {
+        "icon": "exclamation-diamond-fill",
+        "content": "\f334"
+    },
+    {
+        "icon": "exclamation-diamond",
+        "content": "\f335"
+    },
+    {
+        "icon": "exclamation-octagon-fill",
+        "content": "\f336"
+    },
+    {
+        "icon": "exclamation-octagon",
+        "content": "\f337"
+    },
+    {
+        "icon": "exclamation-square-fill",
+        "content": "\f338"
+    },
+    {
+        "icon": "exclamation-square",
+        "content": "\f339"
+    },
+    {
+        "icon": "exclamation-triangle-fill",
+        "content": "\f33a"
+    },
+    {
+        "icon": "exclamation-triangle",
+        "content": "\f33b"
+    },
+    {
+        "icon": "exclamation",
+        "content": "\f33c"
+    },
+    {
+        "icon": "exclude",
+        "content": "\f33d"
+    },
+    {
+        "icon": "eye-fill",
+        "content": "\f33e"
+    },
+    {
+        "icon": "eye-slash-fill",
+        "content": "\f33f"
+    },
+    {
+        "icon": "eye-slash",
+        "content": "\f340"
+    },
+    {
+        "icon": "eye",
+        "content": "\f341"
+    },
+    {
+        "icon": "eyedropper",
+        "content": "\f342"
+    },
+    {
+        "icon": "eyeglasses",
+        "content": "\f343"
+    },
+    {
+        "icon": "facebook",
+        "content": "\f344"
+    },
+    {
+        "icon": "file-arrow-down-fill",
+        "content": "\f345"
+    },
+    {
+        "icon": "file-arrow-down",
+        "content": "\f346"
+    },
+    {
+        "icon": "file-arrow-up-fill",
+        "content": "\f347"
+    },
+    {
+        "icon": "file-arrow-up",
+        "content": "\f348"
+    },
+    {
+        "icon": "file-bar-graph-fill",
+        "content": "\f349"
+    },
+    {
+        "icon": "file-bar-graph",
+        "content": "\f34a"
+    },
+    {
+        "icon": "file-binary-fill",
+        "content": "\f34b"
+    },
+    {
+        "icon": "file-binary",
+        "content": "\f34c"
+    },
+    {
+        "icon": "file-break-fill",
+        "content": "\f34d"
+    },
+    {
+        "icon": "file-break",
+        "content": "\f34e"
+    },
+    {
+        "icon": "file-check-fill",
+        "content": "\f34f"
+    },
+    {
+        "icon": "file-check",
+        "content": "\f350"
+    },
+    {
+        "icon": "file-code-fill",
+        "content": "\f351"
+    },
+    {
+        "icon": "file-code",
+        "content": "\f352"
+    },
+    {
+        "icon": "file-diff-fill",
+        "content": "\f353"
+    },
+    {
+        "icon": "file-diff",
+        "content": "\f354"
+    },
+    {
+        "icon": "file-earmark-arrow-down-fill",
+        "content": "\f355"
+    },
+    {
+        "icon": "file-earmark-arrow-down",
+        "content": "\f356"
+    },
+    {
+        "icon": "file-earmark-arrow-up-fill",
+        "content": "\f357"
+    },
+    {
+        "icon": "file-earmark-arrow-up",
+        "content": "\f358"
+    },
+    {
+        "icon": "file-earmark-bar-graph-fill",
+        "content": "\f359"
+    },
+    {
+        "icon": "file-earmark-bar-graph",
+        "content": "\f35a"
+    },
+    {
+        "icon": "file-earmark-binary-fill",
+        "content": "\f35b"
+    },
+    {
+        "icon": "file-earmark-binary",
+        "content": "\f35c"
+    },
+    {
+        "icon": "file-earmark-break-fill",
+        "content": "\f35d"
+    },
+    {
+        "icon": "file-earmark-break",
+        "content": "\f35e"
+    },
+    {
+        "icon": "file-earmark-check-fill",
+        "content": "\f35f"
+    },
+    {
+        "icon": "file-earmark-check",
+        "content": "\f360"
+    },
+    {
+        "icon": "file-earmark-code-fill",
+        "content": "\f361"
+    },
+    {
+        "icon": "file-earmark-code",
+        "content": "\f362"
+    },
+    {
+        "icon": "file-earmark-diff-fill",
+        "content": "\f363"
+    },
+    {
+        "icon": "file-earmark-diff",
+        "content": "\f364"
+    },
+    {
+        "icon": "file-earmark-easel-fill",
+        "content": "\f365"
+    },
+    {
+        "icon": "file-earmark-easel",
+        "content": "\f366"
+    },
+    {
+        "icon": "file-earmark-excel-fill",
+        "content": "\f367"
+    },
+    {
+        "icon": "file-earmark-excel",
+        "content": "\f368"
+    },
+    {
+        "icon": "file-earmark-fill",
+        "content": "\f369"
+    },
+    {
+        "icon": "file-earmark-font-fill",
+        "content": "\f36a"
+    },
+    {
+        "icon": "file-earmark-font",
+        "content": "\f36b"
+    },
+    {
+        "icon": "file-earmark-image-fill",
+        "content": "\f36c"
+    },
+    {
+        "icon": "file-earmark-image",
+        "content": "\f36d"
+    },
+    {
+        "icon": "file-earmark-lock-fill",
+        "content": "\f36e"
+    },
+    {
+        "icon": "file-earmark-lock",
+        "content": "\f36f"
+    },
+    {
+        "icon": "file-earmark-lock2-fill",
+        "content": "\f370"
+    },
+    {
+        "icon": "file-earmark-lock2",
+        "content": "\f371"
+    },
+    {
+        "icon": "file-earmark-medical-fill",
+        "content": "\f372"
+    },
+    {
+        "icon": "file-earmark-medical",
+        "content": "\f373"
+    },
+    {
+        "icon": "file-earmark-minus-fill",
+        "content": "\f374"
+    },
+    {
+        "icon": "file-earmark-minus",
+        "content": "\f375"
+    },
+    {
+        "icon": "file-earmark-music-fill",
+        "content": "\f376"
+    },
+    {
+        "icon": "file-earmark-music",
+        "content": "\f377"
+    },
+    {
+        "icon": "file-earmark-person-fill",
+        "content": "\f378"
+    },
+    {
+        "icon": "file-earmark-person",
+        "content": "\f379"
+    },
+    {
+        "icon": "file-earmark-play-fill",
+        "content": "\f37a"
+    },
+    {
+        "icon": "file-earmark-play",
+        "content": "\f37b"
+    },
+    {
+        "icon": "file-earmark-plus-fill",
+        "content": "\f37c"
+    },
+    {
+        "icon": "file-earmark-plus",
+        "content": "\f37d"
+    },
+    {
+        "icon": "file-earmark-post-fill",
+        "content": "\f37e"
+    },
+    {
+        "icon": "file-earmark-post",
+        "content": "\f37f"
+    },
+    {
+        "icon": "file-earmark-ppt-fill",
+        "content": "\f380"
+    },
+    {
+        "icon": "file-earmark-ppt",
+        "content": "\f381"
+    },
+    {
+        "icon": "file-earmark-richtext-fill",
+        "content": "\f382"
+    },
+    {
+        "icon": "file-earmark-richtext",
+        "content": "\f383"
+    },
+    {
+        "icon": "file-earmark-ruled-fill",
+        "content": "\f384"
+    },
+    {
+        "icon": "file-earmark-ruled",
+        "content": "\f385"
+    },
+    {
+        "icon": "file-earmark-slides-fill",
+        "content": "\f386"
+    },
+    {
+        "icon": "file-earmark-slides",
+        "content": "\f387"
+    },
+    {
+        "icon": "file-earmark-spreadsheet-fill",
+        "content": "\f388"
+    },
+    {
+        "icon": "file-earmark-spreadsheet",
+        "content": "\f389"
+    },
+    {
+        "icon": "file-earmark-text-fill",
+        "content": "\f38a"
+    },
+    {
+        "icon": "file-earmark-text",
+        "content": "\f38b"
+    },
+    {
+        "icon": "file-earmark-word-fill",
+        "content": "\f38c"
+    },
+    {
+        "icon": "file-earmark-word",
+        "content": "\f38d"
+    },
+    {
+        "icon": "file-earmark-x-fill",
+        "content": "\f38e"
+    },
+    {
+        "icon": "file-earmark-x",
+        "content": "\f38f"
+    },
+    {
+        "icon": "file-earmark-zip-fill",
+        "content": "\f390"
+    },
+    {
+        "icon": "file-earmark-zip",
+        "content": "\f391"
+    },
+    {
+        "icon": "file-earmark",
+        "content": "\f392"
+    },
+    {
+        "icon": "file-easel-fill",
+        "content": "\f393"
+    },
+    {
+        "icon": "file-easel",
+        "content": "\f394"
+    },
+    {
+        "icon": "file-excel-fill",
+        "content": "\f395"
+    },
+    {
+        "icon": "file-excel",
+        "content": "\f396"
+    },
+    {
+        "icon": "file-fill",
+        "content": "\f397"
+    },
+    {
+        "icon": "file-font-fill",
+        "content": "\f398"
+    },
+    {
+        "icon": "file-font",
+        "content": "\f399"
+    },
+    {
+        "icon": "file-image-fill",
+        "content": "\f39a"
+    },
+    {
+        "icon": "file-image",
+        "content": "\f39b"
+    },
+    {
+        "icon": "file-lock-fill",
+        "content": "\f39c"
+    },
+    {
+        "icon": "file-lock",
+        "content": "\f39d"
+    },
+    {
+        "icon": "file-lock2-fill",
+        "content": "\f39e"
+    },
+    {
+        "icon": "file-lock2",
+        "content": "\f39f"
+    },
+    {
+        "icon": "file-medical-fill",
+        "content": "\f3a0"
+    },
+    {
+        "icon": "file-medical",
+        "content": "\f3a1"
+    },
+    {
+        "icon": "file-minus-fill",
+        "content": "\f3a2"
+    },
+    {
+        "icon": "file-minus",
+        "content": "\f3a3"
+    },
+    {
+        "icon": "file-music-fill",
+        "content": "\f3a4"
+    },
+    {
+        "icon": "file-music",
+        "content": "\f3a5"
+    },
+    {
+        "icon": "file-person-fill",
+        "content": "\f3a6"
+    },
+    {
+        "icon": "file-person",
+        "content": "\f3a7"
+    },
+    {
+        "icon": "file-play-fill",
+        "content": "\f3a8"
+    },
+    {
+        "icon": "file-play",
+        "content": "\f3a9"
+    },
+    {
+        "icon": "file-plus-fill",
+        "content": "\f3aa"
+    },
+    {
+        "icon": "file-plus",
+        "content": "\f3ab"
+    },
+    {
+        "icon": "file-post-fill",
+        "content": "\f3ac"
+    },
+    {
+        "icon": "file-post",
+        "content": "\f3ad"
+    },
+    {
+        "icon": "file-ppt-fill",
+        "content": "\f3ae"
+    },
+    {
+        "icon": "file-ppt",
+        "content": "\f3af"
+    },
+    {
+        "icon": "file-richtext-fill",
+        "content": "\f3b0"
+    },
+    {
+        "icon": "file-richtext",
+        "content": "\f3b1"
+    },
+    {
+        "icon": "file-ruled-fill",
+        "content": "\f3b2"
+    },
+    {
+        "icon": "file-ruled",
+        "content": "\f3b3"
+    },
+    {
+        "icon": "file-slides-fill",
+        "content": "\f3b4"
+    },
+    {
+        "icon": "file-slides",
+        "content": "\f3b5"
+    },
+    {
+        "icon": "file-spreadsheet-fill",
+        "content": "\f3b6"
+    },
+    {
+        "icon": "file-spreadsheet",
+        "content": "\f3b7"
+    },
+    {
+        "icon": "file-text-fill",
+        "content": "\f3b8"
+    },
+    {
+        "icon": "file-text",
+        "content": "\f3b9"
+    },
+    {
+        "icon": "file-word-fill",
+        "content": "\f3ba"
+    },
+    {
+        "icon": "file-word",
+        "content": "\f3bb"
+    },
+    {
+        "icon": "file-x-fill",
+        "content": "\f3bc"
+    },
+    {
+        "icon": "file-x",
+        "content": "\f3bd"
+    },
+    {
+        "icon": "file-zip-fill",
+        "content": "\f3be"
+    },
+    {
+        "icon": "file-zip",
+        "content": "\f3bf"
+    },
+    {
+        "icon": "file",
+        "content": "\f3c0"
+    },
+    {
+        "icon": "files-alt",
+        "content": "\f3c1"
+    },
+    {
+        "icon": "files",
+        "content": "\f3c2"
+    },
+    {
+        "icon": "film",
+        "content": "\f3c3"
+    },
+    {
+        "icon": "filter-circle-fill",
+        "content": "\f3c4"
+    },
+    {
+        "icon": "filter-circle",
+        "content": "\f3c5"
+    },
+    {
+        "icon": "filter-left",
+        "content": "\f3c6"
+    },
+    {
+        "icon": "filter-right",
+        "content": "\f3c7"
+    },
+    {
+        "icon": "filter-square-fill",
+        "content": "\f3c8"
+    },
+    {
+        "icon": "filter-square",
+        "content": "\f3c9"
+    },
+    {
+        "icon": "filter",
+        "content": "\f3ca"
+    },
+    {
+        "icon": "flag-fill",
+        "content": "\f3cb"
+    },
+    {
+        "icon": "flag",
+        "content": "\f3cc"
+    },
+    {
+        "icon": "flower1",
+        "content": "\f3cd"
+    },
+    {
+        "icon": "flower2",
+        "content": "\f3ce"
+    },
+    {
+        "icon": "flower3",
+        "content": "\f3cf"
+    },
+    {
+        "icon": "folder-check",
+        "content": "\f3d0"
+    },
+    {
+        "icon": "folder-fill",
+        "content": "\f3d1"
+    },
+    {
+        "icon": "folder-minus",
+        "content": "\f3d2"
+    },
+    {
+        "icon": "folder-plus",
+        "content": "\f3d3"
+    },
+    {
+        "icon": "folder-symlink-fill",
+        "content": "\f3d4"
+    },
+    {
+        "icon": "folder-symlink",
+        "content": "\f3d5"
+    },
+    {
+        "icon": "folder-x",
+        "content": "\f3d6"
+    },
+    {
+        "icon": "folder",
+        "content": "\f3d7"
+    },
+    {
+        "icon": "folder2-open",
+        "content": "\f3d8"
+    },
+    {
+        "icon": "folder2",
+        "content": "\f3d9"
+    },
+    {
+        "icon": "fonts",
+        "content": "\f3da"
+    },
+    {
+        "icon": "forward-fill",
+        "content": "\f3db"
+    },
+    {
+        "icon": "forward",
+        "content": "\f3dc"
+    },
+    {
+        "icon": "front",
+        "content": "\f3dd"
+    },
+    {
+        "icon": "fullscreen-exit",
+        "content": "\f3de"
+    },
+    {
+        "icon": "fullscreen",
+        "content": "\f3df"
+    },
+    {
+        "icon": "funnel-fill",
+        "content": "\f3e0"
+    },
+    {
+        "icon": "funnel",
+        "content": "\f3e1"
+    },
+    {
+        "icon": "gear-fill",
+        "content": "\f3e2"
+    },
+    {
+        "icon": "gear-wide-connected",
+        "content": "\f3e3"
+    },
+    {
+        "icon": "gear-wide",
+        "content": "\f3e4"
+    },
+    {
+        "icon": "gear",
+        "content": "\f3e5"
+    },
+    {
+        "icon": "gem",
+        "content": "\f3e6"
+    },
+    {
+        "icon": "geo-alt-fill",
+        "content": "\f3e7"
+    },
+    {
+        "icon": "geo-alt",
+        "content": "\f3e8"
+    },
+    {
+        "icon": "geo-fill",
+        "content": "\f3e9"
+    },
+    {
+        "icon": "geo",
+        "content": "\f3ea"
+    },
+    {
+        "icon": "gift-fill",
+        "content": "\f3eb"
+    },
+    {
+        "icon": "gift",
+        "content": "\f3ec"
+    },
+    {
+        "icon": "github",
+        "content": "\f3ed"
+    },
+    {
+        "icon": "globe",
+        "content": "\f3ee"
+    },
+    {
+        "icon": "globe2",
+        "content": "\f3ef"
+    },
+    {
+        "icon": "google",
+        "content": "\f3f0"
+    },
+    {
+        "icon": "graph-down",
+        "content": "\f3f1"
+    },
+    {
+        "icon": "graph-up",
+        "content": "\f3f2"
+    },
+    {
+        "icon": "grid-1x2-fill",
+        "content": "\f3f3"
+    },
+    {
+        "icon": "grid-1x2",
+        "content": "\f3f4"
+    },
+    {
+        "icon": "grid-3x2-gap-fill",
+        "content": "\f3f5"
+    },
+    {
+        "icon": "grid-3x2-gap",
+        "content": "\f3f6"
+    },
+    {
+        "icon": "grid-3x2",
+        "content": "\f3f7"
+    },
+    {
+        "icon": "grid-3x3-gap-fill",
+        "content": "\f3f8"
+    },
+    {
+        "icon": "grid-3x3-gap",
+        "content": "\f3f9"
+    },
+    {
+        "icon": "grid-3x3",
+        "content": "\f3fa"
+    },
+    {
+        "icon": "grid-fill",
+        "content": "\f3fb"
+    },
+    {
+        "icon": "grid",
+        "content": "\f3fc"
+    },
+    {
+        "icon": "grip-horizontal",
+        "content": "\f3fd"
+    },
+    {
+        "icon": "grip-vertical",
+        "content": "\f3fe"
+    },
+    {
+        "icon": "hammer",
+        "content": "\f3ff"
+    },
+    {
+        "icon": "hand-index-fill",
+        "content": "\f400"
+    },
+    {
+        "icon": "hand-index-thumb-fill",
+        "content": "\f401"
+    },
+    {
+        "icon": "hand-index-thumb",
+        "content": "\f402"
+    },
+    {
+        "icon": "hand-index",
+        "content": "\f403"
+    },
+    {
+        "icon": "hand-thumbs-down-fill",
+        "content": "\f404"
+    },
+    {
+        "icon": "hand-thumbs-down",
+        "content": "\f405"
+    },
+    {
+        "icon": "hand-thumbs-up-fill",
+        "content": "\f406"
+    },
+    {
+        "icon": "hand-thumbs-up",
+        "content": "\f407"
+    },
+    {
+        "icon": "handbag-fill",
+        "content": "\f408"
+    },
+    {
+        "icon": "handbag",
+        "content": "\f409"
+    },
+    {
+        "icon": "hash",
+        "content": "\f40a"
+    },
+    {
+        "icon": "hdd-fill",
+        "content": "\f40b"
+    },
+    {
+        "icon": "hdd-network-fill",
+        "content": "\f40c"
+    },
+    {
+        "icon": "hdd-network",
+        "content": "\f40d"
+    },
+    {
+        "icon": "hdd-rack-fill",
+        "content": "\f40e"
+    },
+    {
+        "icon": "hdd-rack",
+        "content": "\f40f"
+    },
+    {
+        "icon": "hdd-stack-fill",
+        "content": "\f410"
+    },
+    {
+        "icon": "hdd-stack",
+        "content": "\f411"
+    },
+    {
+        "icon": "hdd",
+        "content": "\f412"
+    },
+    {
+        "icon": "headphones",
+        "content": "\f413"
+    },
+    {
+        "icon": "headset",
+        "content": "\f414"
+    },
+    {
+        "icon": "heart-fill",
+        "content": "\f415"
+    },
+    {
+        "icon": "heart-half",
+        "content": "\f416"
+    },
+    {
+        "icon": "heart",
+        "content": "\f417"
+    },
+    {
+        "icon": "heptagon-fill",
+        "content": "\f418"
+    },
+    {
+        "icon": "heptagon-half",
+        "content": "\f419"
+    },
+    {
+        "icon": "heptagon",
+        "content": "\f41a"
+    },
+    {
+        "icon": "hexagon-fill",
+        "content": "\f41b"
+    },
+    {
+        "icon": "hexagon-half",
+        "content": "\f41c"
+    },
+    {
+        "icon": "hexagon",
+        "content": "\f41d"
+    },
+    {
+        "icon": "hourglass-bottom",
+        "content": "\f41e"
+    },
+    {
+        "icon": "hourglass-split",
+        "content": "\f41f"
+    },
+    {
+        "icon": "hourglass-top",
+        "content": "\f420"
+    },
+    {
+        "icon": "hourglass",
+        "content": "\f421"
+    },
+    {
+        "icon": "house-door-fill",
+        "content": "\f422"
+    },
+    {
+        "icon": "house-door",
+        "content": "\f423"
+    },
+    {
+        "icon": "house-fill",
+        "content": "\f424"
+    },
+    {
+        "icon": "house",
+        "content": "\f425"
+    },
+    {
+        "icon": "hr",
+        "content": "\f426"
+    },
+    {
+        "icon": "hurricane",
+        "content": "\f427"
+    },
+    {
+        "icon": "image-alt",
+        "content": "\f428"
+    },
+    {
+        "icon": "image-fill",
+        "content": "\f429"
+    },
+    {
+        "icon": "image",
+        "content": "\f42a"
+    },
+    {
+        "icon": "images",
+        "content": "\f42b"
+    },
+    {
+        "icon": "inbox-fill",
+        "content": "\f42c"
+    },
+    {
+        "icon": "inbox",
+        "content": "\f42d"
+    },
+    {
+        "icon": "inboxes-fill",
+        "content": "\f42e"
+    },
+    {
+        "icon": "inboxes",
+        "content": "\f42f"
+    },
+    {
+        "icon": "info-circle-fill",
+        "content": "\f430"
+    },
+    {
+        "icon": "info-circle",
+        "content": "\f431"
+    },
+    {
+        "icon": "info-square-fill",
+        "content": "\f432"
+    },
+    {
+        "icon": "info-square",
+        "content": "\f433"
+    },
+    {
+        "icon": "info",
+        "content": "\f434"
+    },
+    {
+        "icon": "input-cursor-text",
+        "content": "\f435"
+    },
+    {
+        "icon": "input-cursor",
+        "content": "\f436"
+    },
+    {
+        "icon": "instagram",
+        "content": "\f437"
+    },
+    {
+        "icon": "intersect",
+        "content": "\f438"
+    },
+    {
+        "icon": "journal-album",
+        "content": "\f439"
+    },
+    {
+        "icon": "journal-arrow-down",
+        "content": "\f43a"
+    },
+    {
+        "icon": "journal-arrow-up",
+        "content": "\f43b"
+    },
+    {
+        "icon": "journal-bookmark-fill",
+        "content": "\f43c"
+    },
+    {
+        "icon": "journal-bookmark",
+        "content": "\f43d"
+    },
+    {
+        "icon": "journal-check",
+        "content": "\f43e"
+    },
+    {
+        "icon": "journal-code",
+        "content": "\f43f"
+    },
+    {
+        "icon": "journal-medical",
+        "content": "\f440"
+    },
+    {
+        "icon": "journal-minus",
+        "content": "\f441"
+    },
+    {
+        "icon": "journal-plus",
+        "content": "\f442"
+    },
+    {
+        "icon": "journal-richtext",
+        "content": "\f443"
+    },
+    {
+        "icon": "journal-text",
+        "content": "\f444"
+    },
+    {
+        "icon": "journal-x",
+        "content": "\f445"
+    },
+    {
+        "icon": "journal",
+        "content": "\f446"
+    },
+    {
+        "icon": "journals",
+        "content": "\f447"
+    },
+    {
+        "icon": "joystick",
+        "content": "\f448"
+    },
+    {
+        "icon": "justify-left",
+        "content": "\f449"
+    },
+    {
+        "icon": "justify-right",
+        "content": "\f44a"
+    },
+    {
+        "icon": "justify",
+        "content": "\f44b"
+    },
+    {
+        "icon": "kanban-fill",
+        "content": "\f44c"
+    },
+    {
+        "icon": "kanban",
+        "content": "\f44d"
+    },
+    {
+        "icon": "key-fill",
+        "content": "\f44e"
+    },
+    {
+        "icon": "key",
+        "content": "\f44f"
+    },
+    {
+        "icon": "keyboard-fill",
+        "content": "\f450"
+    },
+    {
+        "icon": "keyboard",
+        "content": "\f451"
+    },
+    {
+        "icon": "ladder",
+        "content": "\f452"
+    },
+    {
+        "icon": "lamp-fill",
+        "content": "\f453"
+    },
+    {
+        "icon": "lamp",
+        "content": "\f454"
+    },
+    {
+        "icon": "laptop-fill",
+        "content": "\f455"
+    },
+    {
+        "icon": "laptop",
+        "content": "\f456"
+    },
+    {
+        "icon": "layer-backward",
+        "content": "\f457"
+    },
+    {
+        "icon": "layer-forward",
+        "content": "\f458"
+    },
+    {
+        "icon": "layers-fill",
+        "content": "\f459"
+    },
+    {
+        "icon": "layers-half",
+        "content": "\f45a"
+    },
+    {
+        "icon": "layers",
+        "content": "\f45b"
+    },
+    {
+        "icon": "layout-sidebar-inset-reverse",
+        "content": "\f45c"
+    },
+    {
+        "icon": "layout-sidebar-inset",
+        "content": "\f45d"
+    },
+    {
+        "icon": "layout-sidebar-reverse",
+        "content": "\f45e"
+    },
+    {
+        "icon": "layout-sidebar",
+        "content": "\f45f"
+    },
+    {
+        "icon": "layout-split",
+        "content": "\f460"
+    },
+    {
+        "icon": "layout-text-sidebar-reverse",
+        "content": "\f461"
+    },
+    {
+        "icon": "layout-text-sidebar",
+        "content": "\f462"
+    },
+    {
+        "icon": "layout-text-window-reverse",
+        "content": "\f463"
+    },
+    {
+        "icon": "layout-text-window",
+        "content": "\f464"
+    },
+    {
+        "icon": "layout-three-columns",
+        "content": "\f465"
+    },
+    {
+        "icon": "layout-wtf",
+        "content": "\f466"
+    },
+    {
+        "icon": "life-preserver",
+        "content": "\f467"
+    },
+    {
+        "icon": "lightbulb-fill",
+        "content": "\f468"
+    },
+    {
+        "icon": "lightbulb-off-fill",
+        "content": "\f469"
+    },
+    {
+        "icon": "lightbulb-off",
+        "content": "\f46a"
+    },
+    {
+        "icon": "lightbulb",
+        "content": "\f46b"
+    },
+    {
+        "icon": "lightning-charge-fill",
+        "content": "\f46c"
+    },
+    {
+        "icon": "lightning-charge",
+        "content": "\f46d"
+    },
+    {
+        "icon": "lightning-fill",
+        "content": "\f46e"
+    },
+    {
+        "icon": "lightning",
+        "content": "\f46f"
+    },
+    {
+        "icon": "link-45deg",
+        "content": "\f470"
+    },
+    {
+        "icon": "link",
+        "content": "\f471"
+    },
+    {
+        "icon": "linkedin",
+        "content": "\f472"
+    },
+    {
+        "icon": "list-check",
+        "content": "\f473"
+    },
+    {
+        "icon": "list-nested",
+        "content": "\f474"
+    },
+    {
+        "icon": "list-ol",
+        "content": "\f475"
+    },
+    {
+        "icon": "list-stars",
+        "content": "\f476"
+    },
+    {
+        "icon": "list-task",
+        "content": "\f477"
+    },
+    {
+        "icon": "list-ul",
+        "content": "\f478"
+    },
+    {
+        "icon": "list",
+        "content": "\f479"
+    },
+    {
+        "icon": "lock-fill",
+        "content": "\f47a"
+    },
+    {
+        "icon": "lock",
+        "content": "\f47b"
+    },
+    {
+        "icon": "mailbox",
+        "content": "\f47c"
+    },
+    {
+        "icon": "mailbox2",
+        "content": "\f47d"
+    },
+    {
+        "icon": "map-fill",
+        "content": "\f47e"
+    },
+    {
+        "icon": "map",
+        "content": "\f47f"
+    },
+    {
+        "icon": "markdown-fill",
+        "content": "\f480"
+    },
+    {
+        "icon": "markdown",
+        "content": "\f481"
+    },
+    {
+        "icon": "mask",
+        "content": "\f482"
+    },
+    {
+        "icon": "megaphone-fill",
+        "content": "\f483"
+    },
+    {
+        "icon": "megaphone",
+        "content": "\f484"
+    },
+    {
+        "icon": "menu-app-fill",
+        "content": "\f485"
+    },
+    {
+        "icon": "menu-app",
+        "content": "\f486"
+    },
+    {
+        "icon": "menu-button-fill",
+        "content": "\f487"
+    },
+    {
+        "icon": "menu-button-wide-fill",
+        "content": "\f488"
+    },
+    {
+        "icon": "menu-button-wide",
+        "content": "\f489"
+    },
+    {
+        "icon": "menu-button",
+        "content": "\f48a"
+    },
+    {
+        "icon": "menu-down",
+        "content": "\f48b"
+    },
+    {
+        "icon": "menu-up",
+        "content": "\f48c"
+    },
+    {
+        "icon": "mic-fill",
+        "content": "\f48d"
+    },
+    {
+        "icon": "mic-mute-fill",
+        "content": "\f48e"
+    },
+    {
+        "icon": "mic-mute",
+        "content": "\f48f"
+    },
+    {
+        "icon": "mic",
+        "content": "\f490"
+    },
+    {
+        "icon": "minecart-loaded",
+        "content": "\f491"
+    },
+    {
+        "icon": "minecart",
+        "content": "\f492"
+    },
+    {
+        "icon": "moisture",
+        "content": "\f493"
+    },
+    {
+        "icon": "moon-fill",
+        "content": "\f494"
+    },
+    {
+        "icon": "moon-stars-fill",
+        "content": "\f495"
+    },
+    {
+        "icon": "moon-stars",
+        "content": "\f496"
+    },
+    {
+        "icon": "moon",
+        "content": "\f497"
+    },
+    {
+        "icon": "mouse-fill",
+        "content": "\f498"
+    },
+    {
+        "icon": "mouse",
+        "content": "\f499"
+    },
+    {
+        "icon": "mouse2-fill",
+        "content": "\f49a"
+    },
+    {
+        "icon": "mouse2",
+        "content": "\f49b"
+    },
+    {
+        "icon": "mouse3-fill",
+        "content": "\f49c"
+    },
+    {
+        "icon": "mouse3",
+        "content": "\f49d"
+    },
+    {
+        "icon": "music-note-beamed",
+        "content": "\f49e"
+    },
+    {
+        "icon": "music-note-list",
+        "content": "\f49f"
+    },
+    {
+        "icon": "music-note",
+        "content": "\f4a0"
+    },
+    {
+        "icon": "music-player-fill",
+        "content": "\f4a1"
+    },
+    {
+        "icon": "music-player",
+        "content": "\f4a2"
+    },
+    {
+        "icon": "newspaper",
+        "content": "\f4a3"
+    },
+    {
+        "icon": "node-minus-fill",
+        "content": "\f4a4"
+    },
+    {
+        "icon": "node-minus",
+        "content": "\f4a5"
+    },
+    {
+        "icon": "node-plus-fill",
+        "content": "\f4a6"
+    },
+    {
+        "icon": "node-plus",
+        "content": "\f4a7"
+    },
+    {
+        "icon": "nut-fill",
+        "content": "\f4a8"
+    },
+    {
+        "icon": "nut",
+        "content": "\f4a9"
+    },
+    {
+        "icon": "octagon-fill",
+        "content": "\f4aa"
+    },
+    {
+        "icon": "octagon-half",
+        "content": "\f4ab"
+    },
+    {
+        "icon": "octagon",
+        "content": "\f4ac"
+    },
+    {
+        "icon": "option",
+        "content": "\f4ad"
+    },
+    {
+        "icon": "outlet",
+        "content": "\f4ae"
+    },
+    {
+        "icon": "paint-bucket",
+        "content": "\f4af"
+    },
+    {
+        "icon": "palette-fill",
+        "content": "\f4b0"
+    },
+    {
+        "icon": "palette",
+        "content": "\f4b1"
+    },
+    {
+        "icon": "palette2",
+        "content": "\f4b2"
+    },
+    {
+        "icon": "paperclip",
+        "content": "\f4b3"
+    },
+    {
+        "icon": "paragraph",
+        "content": "\f4b4"
+    },
+    {
+        "icon": "patch-check-fill",
+        "content": "\f4b5"
+    },
+    {
+        "icon": "patch-check",
+        "content": "\f4b6"
+    },
+    {
+        "icon": "patch-exclamation-fill",
+        "content": "\f4b7"
+    },
+    {
+        "icon": "patch-exclamation",
+        "content": "\f4b8"
+    },
+    {
+        "icon": "patch-minus-fill",
+        "content": "\f4b9"
+    },
+    {
+        "icon": "patch-minus",
+        "content": "\f4ba"
+    },
+    {
+        "icon": "patch-plus-fill",
+        "content": "\f4bb"
+    },
+    {
+        "icon": "patch-plus",
+        "content": "\f4bc"
+    },
+    {
+        "icon": "patch-question-fill",
+        "content": "\f4bd"
+    },
+    {
+        "icon": "patch-question",
+        "content": "\f4be"
+    },
+    {
+        "icon": "pause-btn-fill",
+        "content": "\f4bf"
+    },
+    {
+        "icon": "pause-btn",
+        "content": "\f4c0"
+    },
+    {
+        "icon": "pause-circle-fill",
+        "content": "\f4c1"
+    },
+    {
+        "icon": "pause-circle",
+        "content": "\f4c2"
+    },
+    {
+        "icon": "pause-fill",
+        "content": "\f4c3"
+    },
+    {
+        "icon": "pause",
+        "content": "\f4c4"
+    },
+    {
+        "icon": "peace-fill",
+        "content": "\f4c5"
+    },
+    {
+        "icon": "peace",
+        "content": "\f4c6"
+    },
+    {
+        "icon": "pen-fill",
+        "content": "\f4c7"
+    },
+    {
+        "icon": "pen",
+        "content": "\f4c8"
+    },
+    {
+        "icon": "pencil-fill",
+        "content": "\f4c9"
+    },
+    {
+        "icon": "pencil-square",
+        "content": "\f4ca"
+    },
+    {
+        "icon": "pencil",
+        "content": "\f4cb"
+    },
+    {
+        "icon": "pentagon-fill",
+        "content": "\f4cc"
+    },
+    {
+        "icon": "pentagon-half",
+        "content": "\f4cd"
+    },
+    {
+        "icon": "pentagon",
+        "content": "\f4ce"
+    },
+    {
+        "icon": "people-fill",
+        "content": "\f4cf"
+    },
+    {
+        "icon": "people",
+        "content": "\f4d0"
+    },
+    {
+        "icon": "percent",
+        "content": "\f4d1"
+    },
+    {
+        "icon": "person-badge-fill",
+        "content": "\f4d2"
+    },
+    {
+        "icon": "person-badge",
+        "content": "\f4d3"
+    },
+    {
+        "icon": "person-bounding-box",
+        "content": "\f4d4"
+    },
+    {
+        "icon": "person-check-fill",
+        "content": "\f4d5"
+    },
+    {
+        "icon": "person-check",
+        "content": "\f4d6"
+    },
+    {
+        "icon": "person-circle",
+        "content": "\f4d7"
+    },
+    {
+        "icon": "person-dash-fill",
+        "content": "\f4d8"
+    },
+    {
+        "icon": "person-dash",
+        "content": "\f4d9"
+    },
+    {
+        "icon": "person-fill",
+        "content": "\f4da"
+    },
+    {
+        "icon": "person-lines-fill",
+        "content": "\f4db"
+    },
+    {
+        "icon": "person-plus-fill",
+        "content": "\f4dc"
+    },
+    {
+        "icon": "person-plus",
+        "content": "\f4dd"
+    },
+    {
+        "icon": "person-square",
+        "content": "\f4de"
+    },
+    {
+        "icon": "person-x-fill",
+        "content": "\f4df"
+    },
+    {
+        "icon": "person-x",
+        "content": "\f4e0"
+    },
+    {
+        "icon": "person",
+        "content": "\f4e1"
+    },
+    {
+        "icon": "phone-fill",
+        "content": "\f4e2"
+    },
+    {
+        "icon": "phone-landscape-fill",
+        "content": "\f4e3"
+    },
+    {
+        "icon": "phone-landscape",
+        "content": "\f4e4"
+    },
+    {
+        "icon": "phone-vibrate-fill",
+        "content": "\f4e5"
+    },
+    {
+        "icon": "phone-vibrate",
+        "content": "\f4e6"
+    },
+    {
+        "icon": "phone",
+        "content": "\f4e7"
+    },
+    {
+        "icon": "pie-chart-fill",
+        "content": "\f4e8"
+    },
+    {
+        "icon": "pie-chart",
+        "content": "\f4e9"
+    },
+    {
+        "icon": "pin-angle-fill",
+        "content": "\f4ea"
+    },
+    {
+        "icon": "pin-angle",
+        "content": "\f4eb"
+    },
+    {
+        "icon": "pin-fill",
+        "content": "\f4ec"
+    },
+    {
+        "icon": "pin",
+        "content": "\f4ed"
+    },
+    {
+        "icon": "pip-fill",
+        "content": "\f4ee"
+    },
+    {
+        "icon": "pip",
+        "content": "\f4ef"
+    },
+    {
+        "icon": "play-btn-fill",
+        "content": "\f4f0"
+    },
+    {
+        "icon": "play-btn",
+        "content": "\f4f1"
+    },
+    {
+        "icon": "play-circle-fill",
+        "content": "\f4f2"
+    },
+    {
+        "icon": "play-circle",
+        "content": "\f4f3"
+    },
+    {
+        "icon": "play-fill",
+        "content": "\f4f4"
+    },
+    {
+        "icon": "play",
+        "content": "\f4f5"
+    },
+    {
+        "icon": "plug-fill",
+        "content": "\f4f6"
+    },
+    {
+        "icon": "plug",
+        "content": "\f4f7"
+    },
+    {
+        "icon": "plus-circle-dotted",
+        "content": "\f4f8"
+    },
+    {
+        "icon": "plus-circle-fill",
+        "content": "\f4f9"
+    },
+    {
+        "icon": "plus-circle",
+        "content": "\f4fa"
+    },
+    {
+        "icon": "plus-square-dotted",
+        "content": "\f4fb"
+    },
+    {
+        "icon": "plus-square-fill",
+        "content": "\f4fc"
+    },
+    {
+        "icon": "plus-square",
+        "content": "\f4fd"
+    },
+    {
+        "icon": "plus",
+        "content": "\f4fe"
+    },
+    {
+        "icon": "power",
+        "content": "\f4ff"
+    },
+    {
+        "icon": "printer-fill",
+        "content": "\f500"
+    },
+    {
+        "icon": "printer",
+        "content": "\f501"
+    },
+    {
+        "icon": "puzzle-fill",
+        "content": "\f502"
+    },
+    {
+        "icon": "puzzle",
+        "content": "\f503"
+    },
+    {
+        "icon": "question-circle-fill",
+        "content": "\f504"
+    },
+    {
+        "icon": "question-circle",
+        "content": "\f505"
+    },
+    {
+        "icon": "question-diamond-fill",
+        "content": "\f506"
+    },
+    {
+        "icon": "question-diamond",
+        "content": "\f507"
+    },
+    {
+        "icon": "question-octagon-fill",
+        "content": "\f508"
+    },
+    {
+        "icon": "question-octagon",
+        "content": "\f509"
+    },
+    {
+        "icon": "question-square-fill",
+        "content": "\f50a"
+    },
+    {
+        "icon": "question-square",
+        "content": "\f50b"
+    },
+    {
+        "icon": "question",
+        "content": "\f50c"
+    },
+    {
+        "icon": "rainbow",
+        "content": "\f50d"
+    },
+    {
+        "icon": "receipt-cutoff",
+        "content": "\f50e"
+    },
+    {
+        "icon": "receipt",
+        "content": "\f50f"
+    },
+    {
+        "icon": "reception-0",
+        "content": "\f510"
+    },
+    {
+        "icon": "reception-1",
+        "content": "\f511"
+    },
+    {
+        "icon": "reception-2",
+        "content": "\f512"
+    },
+    {
+        "icon": "reception-3",
+        "content": "\f513"
+    },
+    {
+        "icon": "reception-4",
+        "content": "\f514"
+    },
+    {
+        "icon": "record-btn-fill",
+        "content": "\f515"
+    },
+    {
+        "icon": "record-btn",
+        "content": "\f516"
+    },
+    {
+        "icon": "record-circle-fill",
+        "content": "\f517"
+    },
+    {
+        "icon": "record-circle",
+        "content": "\f518"
+    },
+    {
+        "icon": "record-fill",
+        "content": "\f519"
+    },
+    {
+        "icon": "record",
+        "content": "\f51a"
+    },
+    {
+        "icon": "record2-fill",
+        "content": "\f51b"
+    },
+    {
+        "icon": "record2",
+        "content": "\f51c"
+    },
+    {
+        "icon": "reply-all-fill",
+        "content": "\f51d"
+    },
+    {
+        "icon": "reply-all",
+        "content": "\f51e"
+    },
+    {
+        "icon": "reply-fill",
+        "content": "\f51f"
+    },
+    {
+        "icon": "reply",
+        "content": "\f520"
+    },
+    {
+        "icon": "rss-fill",
+        "content": "\f521"
+    },
+    {
+        "icon": "rss",
+        "content": "\f522"
+    },
+    {
+        "icon": "rulers",
+        "content": "\f523"
+    },
+    {
+        "icon": "save-fill",
+        "content": "\f524"
+    },
+    {
+        "icon": "save",
+        "content": "\f525"
+    },
+    {
+        "icon": "save2-fill",
+        "content": "\f526"
+    },
+    {
+        "icon": "save2",
+        "content": "\f527"
+    },
+    {
+        "icon": "scissors",
+        "content": "\f528"
+    },
+    {
+        "icon": "screwdriver",
+        "content": "\f529"
+    },
+    {
+        "icon": "search",
+        "content": "\f52a"
+    },
+    {
+        "icon": "segmented-nav",
+        "content": "\f52b"
+    },
+    {
+        "icon": "server",
+        "content": "\f52c"
+    },
+    {
+        "icon": "share-fill",
+        "content": "\f52d"
+    },
+    {
+        "icon": "share",
+        "content": "\f52e"
+    },
+    {
+        "icon": "shield-check",
+        "content": "\f52f"
+    },
+    {
+        "icon": "shield-exclamation",
+        "content": "\f530"
+    },
+    {
+        "icon": "shield-fill-check",
+        "content": "\f531"
+    },
+    {
+        "icon": "shield-fill-exclamation",
+        "content": "\f532"
+    },
+    {
+        "icon": "shield-fill-minus",
+        "content": "\f533"
+    },
+    {
+        "icon": "shield-fill-plus",
+        "content": "\f534"
+    },
+    {
+        "icon": "shield-fill-x",
+        "content": "\f535"
+    },
+    {
+        "icon": "shield-fill",
+        "content": "\f536"
+    },
+    {
+        "icon": "shield-lock-fill",
+        "content": "\f537"
+    },
+    {
+        "icon": "shield-lock",
+        "content": "\f538"
+    },
+    {
+        "icon": "shield-minus",
+        "content": "\f539"
+    },
+    {
+        "icon": "shield-plus",
+        "content": "\f53a"
+    },
+    {
+        "icon": "shield-shaded",
+        "content": "\f53b"
+    },
+    {
+        "icon": "shield-slash-fill",
+        "content": "\f53c"
+    },
+    {
+        "icon": "shield-slash",
+        "content": "\f53d"
+    },
+    {
+        "icon": "shield-x",
+        "content": "\f53e"
+    },
+    {
+        "icon": "shield",
+        "content": "\f53f"
+    },
+    {
+        "icon": "shift-fill",
+        "content": "\f540"
+    },
+    {
+        "icon": "shift",
+        "content": "\f541"
+    },
+    {
+        "icon": "shop-window",
+        "content": "\f542"
+    },
+    {
+        "icon": "shop",
+        "content": "\f543"
+    },
+    {
+        "icon": "shuffle",
+        "content": "\f544"
+    },
+    {
+        "icon": "signpost-2-fill",
+        "content": "\f545"
+    },
+    {
+        "icon": "signpost-2",
+        "content": "\f546"
+    },
+    {
+        "icon": "signpost-fill",
+        "content": "\f547"
+    },
+    {
+        "icon": "signpost-split-fill",
+        "content": "\f548"
+    },
+    {
+        "icon": "signpost-split",
+        "content": "\f549"
+    },
+    {
+        "icon": "signpost",
+        "content": "\f54a"
+    },
+    {
+        "icon": "sim-fill",
+        "content": "\f54b"
+    },
+    {
+        "icon": "sim",
+        "content": "\f54c"
+    },
+    {
+        "icon": "skip-backward-btn-fill",
+        "content": "\f54d"
+    },
+    {
+        "icon": "skip-backward-btn",
+        "content": "\f54e"
+    },
+    {
+        "icon": "skip-backward-circle-fill",
+        "content": "\f54f"
+    },
+    {
+        "icon": "skip-backward-circle",
+        "content": "\f550"
+    },
+    {
+        "icon": "skip-backward-fill",
+        "content": "\f551"
+    },
+    {
+        "icon": "skip-backward",
+        "content": "\f552"
+    },
+    {
+        "icon": "skip-end-btn-fill",
+        "content": "\f553"
+    },
+    {
+        "icon": "skip-end-btn",
+        "content": "\f554"
+    },
+    {
+        "icon": "skip-end-circle-fill",
+        "content": "\f555"
+    },
+    {
+        "icon": "skip-end-circle",
+        "content": "\f556"
+    },
+    {
+        "icon": "skip-end-fill",
+        "content": "\f557"
+    },
+    {
+        "icon": "skip-end",
+        "content": "\f558"
+    },
+    {
+        "icon": "skip-forward-btn-fill",
+        "content": "\f559"
+    },
+    {
+        "icon": "skip-forward-btn",
+        "content": "\f55a"
+    },
+    {
+        "icon": "skip-forward-circle-fill",
+        "content": "\f55b"
+    },
+    {
+        "icon": "skip-forward-circle",
+        "content": "\f55c"
+    },
+    {
+        "icon": "skip-forward-fill",
+        "content": "\f55d"
+    },
+    {
+        "icon": "skip-forward",
+        "content": "\f55e"
+    },
+    {
+        "icon": "skip-start-btn-fill",
+        "content": "\f55f"
+    },
+    {
+        "icon": "skip-start-btn",
+        "content": "\f560"
+    },
+    {
+        "icon": "skip-start-circle-fill",
+        "content": "\f561"
+    },
+    {
+        "icon": "skip-start-circle",
+        "content": "\f562"
+    },
+    {
+        "icon": "skip-start-fill",
+        "content": "\f563"
+    },
+    {
+        "icon": "skip-start",
+        "content": "\f564"
+    },
+    {
+        "icon": "slack",
+        "content": "\f565"
+    },
+    {
+        "icon": "slash-circle-fill",
+        "content": "\f566"
+    },
+    {
+        "icon": "slash-circle",
+        "content": "\f567"
+    },
+    {
+        "icon": "slash-square-fill",
+        "content": "\f568"
+    },
+    {
+        "icon": "slash-square",
+        "content": "\f569"
+    },
+    {
+        "icon": "slash",
+        "content": "\f56a"
+    },
+    {
+        "icon": "sliders",
+        "content": "\f56b"
+    },
+    {
+        "icon": "smartwatch",
+        "content": "\f56c"
+    },
+    {
+        "icon": "snow",
+        "content": "\f56d"
+    },
+    {
+        "icon": "snow2",
+        "content": "\f56e"
+    },
+    {
+        "icon": "snow3",
+        "content": "\f56f"
+    },
+    {
+        "icon": "sort-alpha-down-alt",
+        "content": "\f570"
+    },
+    {
+        "icon": "sort-alpha-down",
+        "content": "\f571"
+    },
+    {
+        "icon": "sort-alpha-up-alt",
+        "content": "\f572"
+    },
+    {
+        "icon": "sort-alpha-up",
+        "content": "\f573"
+    },
+    {
+        "icon": "sort-down-alt",
+        "content": "\f574"
+    },
+    {
+        "icon": "sort-down",
+        "content": "\f575"
+    },
+    {
+        "icon": "sort-numeric-down-alt",
+        "content": "\f576"
+    },
+    {
+        "icon": "sort-numeric-down",
+        "content": "\f577"
+    },
+    {
+        "icon": "sort-numeric-up-alt",
+        "content": "\f578"
+    },
+    {
+        "icon": "sort-numeric-up",
+        "content": "\f579"
+    },
+    {
+        "icon": "sort-up-alt",
+        "content": "\f57a"
+    },
+    {
+        "icon": "sort-up",
+        "content": "\f57b"
+    },
+    {
+        "icon": "soundwave",
+        "content": "\f57c"
+    },
+    {
+        "icon": "speaker-fill",
+        "content": "\f57d"
+    },
+    {
+        "icon": "speaker",
+        "content": "\f57e"
+    },
+    {
+        "icon": "speedometer",
+        "content": "\f57f"
+    },
+    {
+        "icon": "speedometer2",
+        "content": "\f580"
+    },
+    {
+        "icon": "spellcheck",
+        "content": "\f581"
+    },
+    {
+        "icon": "square-fill",
+        "content": "\f582"
+    },
+    {
+        "icon": "square-half",
+        "content": "\f583"
+    },
+    {
+        "icon": "square",
+        "content": "\f584"
+    },
+    {
+        "icon": "stack",
+        "content": "\f585"
+    },
+    {
+        "icon": "star-fill",
+        "content": "\f586"
+    },
+    {
+        "icon": "star-half",
+        "content": "\f587"
+    },
+    {
+        "icon": "star",
+        "content": "\f588"
+    },
+    {
+        "icon": "stars",
+        "content": "\f589"
+    },
+    {
+        "icon": "stickies-fill",
+        "content": "\f58a"
+    },
+    {
+        "icon": "stickies",
+        "content": "\f58b"
+    },
+    {
+        "icon": "sticky-fill",
+        "content": "\f58c"
+    },
+    {
+        "icon": "sticky",
+        "content": "\f58d"
+    },
+    {
+        "icon": "stop-btn-fill",
+        "content": "\f58e"
+    },
+    {
+        "icon": "stop-btn",
+        "content": "\f58f"
+    },
+    {
+        "icon": "stop-circle-fill",
+        "content": "\f590"
+    },
+    {
+        "icon": "stop-circle",
+        "content": "\f591"
+    },
+    {
+        "icon": "stop-fill",
+        "content": "\f592"
+    },
+    {
+        "icon": "stop",
+        "content": "\f593"
+    },
+    {
+        "icon": "stoplights-fill",
+        "content": "\f594"
+    },
+    {
+        "icon": "stoplights",
+        "content": "\f595"
+    },
+    {
+        "icon": "stopwatch-fill",
+        "content": "\f596"
+    },
+    {
+        "icon": "stopwatch",
+        "content": "\f597"
+    },
+    {
+        "icon": "subtract",
+        "content": "\f598"
+    },
+    {
+        "icon": "suit-club-fill",
+        "content": "\f599"
+    },
+    {
+        "icon": "suit-club",
+        "content": "\f59a"
+    },
+    {
+        "icon": "suit-diamond-fill",
+        "content": "\f59b"
+    },
+    {
+        "icon": "suit-diamond",
+        "content": "\f59c"
+    },
+    {
+        "icon": "suit-heart-fill",
+        "content": "\f59d"
+    },
+    {
+        "icon": "suit-heart",
+        "content": "\f59e"
+    },
+    {
+        "icon": "suit-spade-fill",
+        "content": "\f59f"
+    },
+    {
+        "icon": "suit-spade",
+        "content": "\f5a0"
+    },
+    {
+        "icon": "sun-fill",
+        "content": "\f5a1"
+    },
+    {
+        "icon": "sun",
+        "content": "\f5a2"
+    },
+    {
+        "icon": "sunglasses",
+        "content": "\f5a3"
+    },
+    {
+        "icon": "sunrise-fill",
+        "content": "\f5a4"
+    },
+    {
+        "icon": "sunrise",
+        "content": "\f5a5"
+    },
+    {
+        "icon": "sunset-fill",
+        "content": "\f5a6"
+    },
+    {
+        "icon": "sunset",
+        "content": "\f5a7"
+    },
+    {
+        "icon": "symmetry-horizontal",
+        "content": "\f5a8"
+    },
+    {
+        "icon": "symmetry-vertical",
+        "content": "\f5a9"
+    },
+    {
+        "icon": "table",
+        "content": "\f5aa"
+    },
+    {
+        "icon": "tablet-fill",
+        "content": "\f5ab"
+    },
+    {
+        "icon": "tablet-landscape-fill",
+        "content": "\f5ac"
+    },
+    {
+        "icon": "tablet-landscape",
+        "content": "\f5ad"
+    },
+    {
+        "icon": "tablet",
+        "content": "\f5ae"
+    },
+    {
+        "icon": "tag-fill",
+        "content": "\f5af"
+    },
+    {
+        "icon": "tag",
+        "content": "\f5b0"
+    },
+    {
+        "icon": "tags-fill",
+        "content": "\f5b1"
+    },
+    {
+        "icon": "tags",
+        "content": "\f5b2"
+    },
+    {
+        "icon": "telegram",
+        "content": "\f5b3"
+    },
+    {
+        "icon": "telephone-fill",
+        "content": "\f5b4"
+    },
+    {
+        "icon": "telephone-forward-fill",
+        "content": "\f5b5"
+    },
+    {
+        "icon": "telephone-forward",
+        "content": "\f5b6"
+    },
+    {
+        "icon": "telephone-inbound-fill",
+        "content": "\f5b7"
+    },
+    {
+        "icon": "telephone-inbound",
+        "content": "\f5b8"
+    },
+    {
+        "icon": "telephone-minus-fill",
+        "content": "\f5b9"
+    },
+    {
+        "icon": "telephone-minus",
+        "content": "\f5ba"
+    },
+    {
+        "icon": "telephone-outbound-fill",
+        "content": "\f5bb"
+    },
+    {
+        "icon": "telephone-outbound",
+        "content": "\f5bc"
+    },
+    {
+        "icon": "telephone-plus-fill",
+        "content": "\f5bd"
+    },
+    {
+        "icon": "telephone-plus",
+        "content": "\f5be"
+    },
+    {
+        "icon": "telephone-x-fill",
+        "content": "\f5bf"
+    },
+    {
+        "icon": "telephone-x",
+        "content": "\f5c0"
+    },
+    {
+        "icon": "telephone",
+        "content": "\f5c1"
+    },
+    {
+        "icon": "terminal-fill",
+        "content": "\f5c2"
+    },
+    {
+        "icon": "terminal",
+        "content": "\f5c3"
+    },
+    {
+        "icon": "text-center",
+        "content": "\f5c4"
+    },
+    {
+        "icon": "text-indent-left",
+        "content": "\f5c5"
+    },
+    {
+        "icon": "text-indent-right",
+        "content": "\f5c6"
+    },
+    {
+        "icon": "text-left",
+        "content": "\f5c7"
+    },
+    {
+        "icon": "text-paragraph",
+        "content": "\f5c8"
+    },
+    {
+        "icon": "text-right",
+        "content": "\f5c9"
+    },
+    {
+        "icon": "textarea-resize",
+        "content": "\f5ca"
+    },
+    {
+        "icon": "textarea-t",
+        "content": "\f5cb"
+    },
+    {
+        "icon": "textarea",
+        "content": "\f5cc"
+    },
+    {
+        "icon": "thermometer-half",
+        "content": "\f5cd"
+    },
+    {
+        "icon": "thermometer-high",
+        "content": "\f5ce"
+    },
+    {
+        "icon": "thermometer-low",
+        "content": "\f5cf"
+    },
+    {
+        "icon": "thermometer-snow",
+        "content": "\f5d0"
+    },
+    {
+        "icon": "thermometer-sun",
+        "content": "\f5d1"
+    },
+    {
+        "icon": "thermometer",
+        "content": "\f5d2"
+    },
+    {
+        "icon": "three-dots-vertical",
+        "content": "\f5d3"
+    },
+    {
+        "icon": "three-dots",
+        "content": "\f5d4"
+    },
+    {
+        "icon": "toggle-off",
+        "content": "\f5d5"
+    },
+    {
+        "icon": "toggle-on",
+        "content": "\f5d6"
+    },
+    {
+        "icon": "toggle2-off",
+        "content": "\f5d7"
+    },
+    {
+        "icon": "toggle2-on",
+        "content": "\f5d8"
+    },
+    {
+        "icon": "toggles",
+        "content": "\f5d9"
+    },
+    {
+        "icon": "toggles2",
+        "content": "\f5da"
+    },
+    {
+        "icon": "tools",
+        "content": "\f5db"
+    },
+    {
+        "icon": "tornado",
+        "content": "\f5dc"
+    },
+    {
+        "icon": "trash-fill",
+        "content": "\f5dd"
+    },
+    {
+        "icon": "trash",
+        "content": "\f5de"
+    },
+    {
+        "icon": "trash2-fill",
+        "content": "\f5df"
+    },
+    {
+        "icon": "trash2",
+        "content": "\f5e0"
+    },
+    {
+        "icon": "tree-fill",
+        "content": "\f5e1"
+    },
+    {
+        "icon": "tree",
+        "content": "\f5e2"
+    },
+    {
+        "icon": "triangle-fill",
+        "content": "\f5e3"
+    },
+    {
+        "icon": "triangle-half",
+        "content": "\f5e4"
+    },
+    {
+        "icon": "triangle",
+        "content": "\f5e5"
+    },
+    {
+        "icon": "trophy-fill",
+        "content": "\f5e6"
+    },
+    {
+        "icon": "trophy",
+        "content": "\f5e7"
+    },
+    {
+        "icon": "tropical-storm",
+        "content": "\f5e8"
+    },
+    {
+        "icon": "truck-flatbed",
+        "content": "\f5e9"
+    },
+    {
+        "icon": "truck",
+        "content": "\f5ea"
+    },
+    {
+        "icon": "tsunami",
+        "content": "\f5eb"
+    },
+    {
+        "icon": "tv-fill",
+        "content": "\f5ec"
+    },
+    {
+        "icon": "tv",
+        "content": "\f5ed"
+    },
+    {
+        "icon": "twitch",
+        "content": "\f5ee"
+    },
+    {
+        "icon": "twitter",
+        "content": "\f5ef"
+    },
+    {
+        "icon": "type-bold",
+        "content": "\f5f0"
+    },
+    {
+        "icon": "type-h1",
+        "content": "\f5f1"
+    },
+    {
+        "icon": "type-h2",
+        "content": "\f5f2"
+    },
+    {
+        "icon": "type-h3",
+        "content": "\f5f3"
+    },
+    {
+        "icon": "type-italic",
+        "content": "\f5f4"
+    },
+    {
+        "icon": "type-strikethrough",
+        "content": "\f5f5"
+    },
+    {
+        "icon": "type-underline",
+        "content": "\f5f6"
+    },
+    {
+        "icon": "type",
+        "content": "\f5f7"
+    },
+    {
+        "icon": "ui-checks-grid",
+        "content": "\f5f8"
+    },
+    {
+        "icon": "ui-checks",
+        "content": "\f5f9"
+    },
+    {
+        "icon": "ui-radios-grid",
+        "content": "\f5fa"
+    },
+    {
+        "icon": "ui-radios",
+        "content": "\f5fb"
+    },
+    {
+        "icon": "umbrella-fill",
+        "content": "\f5fc"
+    },
+    {
+        "icon": "umbrella",
+        "content": "\f5fd"
+    },
+    {
+        "icon": "union",
+        "content": "\f5fe"
+    },
+    {
+        "icon": "unlock-fill",
+        "content": "\f5ff"
+    },
+    {
+        "icon": "unlock",
+        "content": "\f600"
+    },
+    {
+        "icon": "upc-scan",
+        "content": "\f601"
+    },
+    {
+        "icon": "upc",
+        "content": "\f602"
+    },
+    {
+        "icon": "upload",
+        "content": "\f603"
+    },
+    {
+        "icon": "vector-pen",
+        "content": "\f604"
+    },
+    {
+        "icon": "view-list",
+        "content": "\f605"
+    },
+    {
+        "icon": "view-stacked",
+        "content": "\f606"
+    },
+    {
+        "icon": "vinyl-fill",
+        "content": "\f607"
+    },
+    {
+        "icon": "vinyl",
+        "content": "\f608"
+    },
+    {
+        "icon": "voicemail",
+        "content": "\f609"
+    },
+    {
+        "icon": "volume-down-fill",
+        "content": "\f60a"
+    },
+    {
+        "icon": "volume-down",
+        "content": "\f60b"
+    },
+    {
+        "icon": "volume-mute-fill",
+        "content": "\f60c"
+    },
+    {
+        "icon": "volume-mute",
+        "content": "\f60d"
+    },
+    {
+        "icon": "volume-off-fill",
+        "content": "\f60e"
+    },
+    {
+        "icon": "volume-off",
+        "content": "\f60f"
+    },
+    {
+        "icon": "volume-up-fill",
+        "content": "\f610"
+    },
+    {
+        "icon": "volume-up",
+        "content": "\f611"
+    },
+    {
+        "icon": "vr",
+        "content": "\f612"
+    },
+    {
+        "icon": "wallet-fill",
+        "content": "\f613"
+    },
+    {
+        "icon": "wallet",
+        "content": "\f614"
+    },
+    {
+        "icon": "wallet2",
+        "content": "\f615"
+    },
+    {
+        "icon": "watch",
+        "content": "\f616"
+    },
+    {
+        "icon": "water",
+        "content": "\f617"
+    },
+    {
+        "icon": "whatsapp",
+        "content": "\f618"
+    },
+    {
+        "icon": "wifi-1",
+        "content": "\f619"
+    },
+    {
+        "icon": "wifi-2",
+        "content": "\f61a"
+    },
+    {
+        "icon": "wifi-off",
+        "content": "\f61b"
+    },
+    {
+        "icon": "wifi",
+        "content": "\f61c"
+    },
+    {
+        "icon": "wind",
+        "content": "\f61d"
+    },
+    {
+        "icon": "window-dock",
+        "content": "\f61e"
+    },
+    {
+        "icon": "window-sidebar",
+        "content": "\f61f"
+    },
+    {
+        "icon": "window",
+        "content": "\f620"
+    },
+    {
+        "icon": "wrench",
+        "content": "\f621"
+    },
+    {
+        "icon": "x-circle-fill",
+        "content": "\f622"
+    },
+    {
+        "icon": "x-circle",
+        "content": "\f623"
+    },
+    {
+        "icon": "x-diamond-fill",
+        "content": "\f624"
+    },
+    {
+        "icon": "x-diamond",
+        "content": "\f625"
+    },
+    {
+        "icon": "x-octagon-fill",
+        "content": "\f626"
+    },
+    {
+        "icon": "x-octagon",
+        "content": "\f627"
+    },
+    {
+        "icon": "x-square-fill",
+        "content": "\f628"
+    },
+    {
+        "icon": "x-square",
+        "content": "\f629"
+    },
+    {
+        "icon": "x",
+        "content": "\f62a"
+    },
+    {
+        "icon": "youtube",
+        "content": "\f62b"
+    },
+    {
+        "icon": "zoom-in",
+        "content": "\f62c"
+    },
+    {
+        "icon": "zoom-out",
+        "content": "\f62d"
+    }
+]

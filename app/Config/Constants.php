@@ -78,6 +78,7 @@ defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest auto
 
 define('APP_NAME', 'Lets Scale Up');
 define('APP_LOGO', '/public/assets/images/logo-dark.png');
+define('APP_HOME_IMAGE', '/public/assets/images/startup.png');
 define('APP_DESCRIPTION', 'Lets Scale Up');
 define('APP_KEYWORDS', 'Lets Scale Up');
 define('APP_AUTHOR', 'Lets Scale Up');
@@ -106,3 +107,39 @@ define('BLOGS_FOLDER', 'public/images/blogs/');
 define('TEAM_FOLDER', 'public/images/teams/');
 define('APP_URL', 'http://localhost:8080/');
 // define('APP_URL', 'https://letsscaleup.in/');
+
+
+// SETTINGS
+// define('site_url', $_SERVER['HTTP_HOST']);
+// define('site_logo_type', 'image');
+// define('site_logo', APP_LOGO);
+// define('footer_email', 'support@letsscaleup.in');
+// define('footer_social_facebook', '');
+// define('footer_social_twitter', '');
+// define('footer_social_instagram', '');
+// define('footer_social_linkedin', '');
+// define('footer_social_youtube', '');
+// define('footer_toll_free', '');
+// define('footer_customer_care', '');
+// define('footer_testimonials', '');
+// define('footer_copyright_year', '');
+// define('footer_copyright', '');
+// define('footer_more_questions_block_enable', '0');
+// define('footer_more_questions_block_email', '0');
+// define('footer_more_questions_block_phone', '0');
+// define('service_footer_related_blogs', 'LetsScaleUp');
+// define('preloader', '1');
+// define('blog_comments_enable', '0');
+// define('blog_comments_review', '0');
+// define('site_email', 'holacontest@rbsmedia.in');
+// define('confirm_mail', '0');
+// define('razorpay_api', 'rzp_test_6eG5uYDWRmTdy6');
+// define('razorpay_secret', 'QMtO8V5Ac85YdzxcZerdXCj0');
+// define('payment_gateway', 'razorpay');
+// define('paypal_email', 'alex@ustea.ro');
+// define('paypal_currency', 'INR');
+// define('smtp_host', 'mail.holacontest.com');
+// define('smtp_user', 'info@holacontest.com');
+// define('smtp_pass', 'Devnasoam@1');
+// define('smtp_port', '465');
+// define('smtp_ssl', '1');

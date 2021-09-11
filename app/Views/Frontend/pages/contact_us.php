@@ -3,13 +3,9 @@
 <?= $this->section('content') ?>
 
 
-<?= view_cell('\App\Libraries\Pages::breadcrumb', ['pagedata' => $pagedata]) ?>
+<?= view_cell('\App\Libraries\Blocks::page_breadcrumb_block', ['pagedata' => $pagedata]) ?>
 
-
-<!-- MAIN CONTENT -->
-
-<!-- START CONTACT -->
-<section class="section" id="contact">
+<section class="section-white">
     <div class="container">
 
         <?php if (isset($statusMessage)) : ?>
@@ -25,7 +21,6 @@
             <div class="col-lg-4">
                 <div class="pl-0 pl-lg-2 mt-4">
                     <h5 class="f-18">Contact Details</h5>
-                    <!-- <p class="text-muted">Faucibus orci luctus atet ultrices posuere duiorci sollicitudin luctus.</p> -->
                     <div class="mt-4 bg-light p-4 rounded">
                         <div class="media">
                             <i class="pe-7s-home h4"></i>
@@ -45,20 +40,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- <div class="mt-4 pt-1">
-                            <div class="media">
-                                <i class="pe-7s-call h4"></i>
-                                <div class="media-body pl-3">
-                                    <h5 class="mt-0 f-17">Call Support</h5>
-                                    <p class="text-muted mb-0">
-                                    </p>
-                                    <p class="text-muted mb-0">
-                                    </p>
-                                </div>
-                            </div>
-                        </div> -->
-
                     </div>
                 </div>
             </div>
@@ -66,44 +47,43 @@
                 <div class="pl-0 pl-lg-2 mt-4">
                     <h5 class="f-18">Send a Message</h5>
 
-                    <div class="custom-form mt-3">
+                    <div class="mt-3">
                         <div id="message"></div>
                         <form method="post" action="">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <div class="form-group mt-3">
-                                        <label class="contact-lable">Full Name *</label>
-                                        <input name="user_name" id="user_name" class="form-control" type="text" required>
+                                    <div class="form-floating mb-3">
+                                        <input name="user_name" id="user_name" class="form-control" placeholder="" type="text" required>
+                                        <label for="user_name">Full Name *</label>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <div class="form-group mt-3">
-                                        <label class="contact-lable">Mobile *</label>
-                                        <input name="user_mobile" id="user_mobile" class="form-control" type="tel" required>
+                                    <div class="form-floating mb-3">
+                                        <input name="user_mobile" id="user_mobile" class="form-control" placeholder="" type="tel" required>
+                                        <label for="user_mobile">Mobile *</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="form-group mt-3">
-                                        <label class="contact-lable">Email Address *</label>
-                                        <input name="user_email" id="user_email" class="form-control" type="email" required>
+                                    <div class="form-floating mb-3">
+                                        <input name="user_email" id="user_email" class="form-control" placeholder="" type="email" required>
+                                        <label for="user_email">Email Address *</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="form-group mt-3">
-                                        <label class="contact-lable">Subject *</label>
-                                        <input name="user_subject" id="user_subject" class="form-control" type="text" required>
+                                    <div class="form-floating mb-3">
+                                        <input name="user_subject" id="user_subject" class="form-control" placeholder="" type="text" required>
+                                        <label for="user_subject">Subject *</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
-                                    <div class="form-group mt-3">
-                                        <label class="contact-lable">Your Message *</label>
-                                        <textarea name="user_message" id="user_message" rows="5" class="form-control" required></textarea>
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a comment here" name="user_message" id="user_message" style="min-height: 150px" required></textarea>
+                                        <label for="user_message">Your Message *</label>
                                     </div>
                                 </div>
                                 <div class="col-12 mt-3 text-right">
-                                    <input id="submit" name="send" class="submitBnt btn btn-primary btn-round" value="Send Message" type="submit">
-                                    <!-- <div id="simple-msg"></div> -->
+                                    <input id="submit" name="send" class="submitBnt btn btn-warning btn-round" value="Send Message" type="submit">
                                 </div>
                             </div>
                         </form>
@@ -113,10 +93,7 @@
             </div>
         </div>
     </div>
-
 </section>
-<!-- END CONTACT -->
-<!-- MAIN CONTENT -->
 
 <style>
     .postContent {

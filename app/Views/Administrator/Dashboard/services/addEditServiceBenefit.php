@@ -30,7 +30,7 @@
 
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <label class="form-label">Services</label>
+                                            <label class="form-label">Service</label>
                                             <div class="form-control-wrap">
                                                 <select class="form-control" name="service_id" required>
                                                     <option <?php if ($benefitData['service_id'] == 0) echo 'selected' ?> disabled value="">Select Service</option>
@@ -71,22 +71,33 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
+                                            <button type="submit" class="btn btn-lg btn-primary">
+                                                <?php if ($benefitData['service_id'] == 0) {
+                                                    echo 'Add Benefit Block';
+                                                } else {
+                                                    echo 'Update Benefit Block';
+                                                } ?>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
                                             <div class="form-control-wrap">
                                                 <div id="accordion" class="accordion">
                                                     <div class="accordion-item">
-                                                        <a href="#" class="accordion-head collapsed" data-toggle="collapse" data-target="#accordion-item-2">
+                                                        <a href="#" class="accordion-head" data-toggle="collapse" data-target="#accordion-item-2">
                                                             <h6 class="title">Choose Service Icon</h6>
                                                             <span class="accordion-icon"></span>
                                                         </a>
-                                                        <div class="accordion-body collapse" id="accordion-item-2" data-parent="#accordion">
+                                                        <div class="accordion-body collapse show" id="accordion-item-2" data-parent="#accordion">
                                                             <div class="accordion-inner row">
 
-                                                                <?php foreach ($icons as $icon) : ?>
-                                                                    <div class="col-md-2 col-sm-3 col-lg-1">
+                                                                <?php foreach ($icons as $key => $icon) : ?>
+                                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                                         <div class="preview-block">
                                                                             <div class="custom-control custom-radio">
-                                                                                <input type="radio" id="icon_<?= $icon ?>" <?php if ($benefitData['icon'] == $icon) echo 'checked' ?> value="<?= $icon ?>" name="icon" class="custom-control-input" required>
-                                                                                <label class="custom-control-label" for="icon_<?= $icon ?>"><i class="mdi mdi-<?= $icon ?> h4"></i></label>
+                                                                                <input type="radio" id="icon_<?= $key ?>" value="<?= $icon->icon ?>" <?php if ($benefitData['icon'] == $icon->icon) echo 'checked' ?> name="icon" class="custom-control-input" required>
+                                                                                <label class="custom-control-label" for="icon_<?= $key ?>"><i class="bi bi-<?= $icon->icon ?> h4"></i> <small><?= $icon->icon ?></small></label>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -99,7 +110,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="col-12">
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-lg btn-primary">
@@ -111,6 +121,7 @@
                                             </button>
                                         </div>
                                     </div>
+
                                 </div>
                             </form>
                         </div>

@@ -24,13 +24,13 @@
     </ul>
 </li>
 
-<li class="nk-menu-item has-sub <?= strstr('/'.uri_string(), route_to('admin_index').'/project') ? 'active' : ''  ?>">
+<li class="nk-menu-item has-sub <?= strstr('/'.uri_string(), route_to('admin_index').'/clients') ? 'active' : ''  ?>">
     <a href="#" class="nk-menu-link nk-menu-toggle">
-        <span class="nk-menu-text">Projects</span>
+        <span class="nk-menu-text">Clients</span>
     </a>
     <ul class="nk-menu-sub">
         <!-- // services menu -->
-        <?php echo view('Administrator/globals/menus/projects_menu'); ?>
+        <?php echo view('Administrator/globals/menus/clients_menu'); ?>
     </ul>
 </li>
 

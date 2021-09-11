@@ -18,13 +18,9 @@
       <div class="collapse navbar-collapse" id="navbarScroll">
 
         <!-- begin navbar-nav -->
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll justify-content-center">
+        <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll justify-content-center">
 
           <li class="nav-item"><a class="nav-link" href="<?= route_to('home_page') ?>">Home</a></li>
-
-          <!-- <li class="nav-item"><a class="nav-link" href="<?= route_to('about_us_page') ?>">About</a></li> -->
-
-          <!-- <li class="nav-item"><a class="nav-link" href="<?= route_to('home_page') ?>">What We Do?</a></li> -->
 
           <li class="nav-item"><a class="nav-link" href="<?= route_to('clients_page') ?>">Clients</a></li>
 
@@ -34,18 +30,22 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="aboutMenu">
               <li><a class="dropdown-item" href="<?= route_to('about_us_page') ?>">Who We Are!</a></li>
-              <li><a class="dropdown-item" href="<?= route_to('home_page') ?>">What We Do?</a></li>
+              <li><a class="dropdown-item" href="<?= route_to('about_us_page') ?>#what-we-do">What We Do?</a></li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="initiativesMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Initiatives
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="initiativesMenu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another</a></li>
-            </ul>
-          </li>
+          <?php $initiativeMenu = getInitiativesMenu();
+          if (count($initiativeMenu)) : ?>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="initiativesMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Initiatives
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="initiativesMenu">
+                <?php foreach ($initiativeMenu as $menuItem) : ?>
+                  <li><a class="dropdown-item" href="<?= route_to('single_initiative', $menuItem['slug']) ?>"><?= $menuItem['name'] ?></a></li>
+                <?php endforeach; ?>
+              </ul>
+            </li>
+          <?php endif; ?>
           <li class="nav-item"><a class="nav-link" href="<?= route_to('blogs_page') ?>">Blog</a></li>
 
           <li class="nav-item"><a class="nav-link" href="<?= route_to('contact_us_page') ?>">Contact</a></li>
@@ -60,16 +60,17 @@
                 <i class="bi bi-person"></i> Account
               </button>
               <ul class="dropdown-menu dropdown-menu-start dropdown-menu-md-end" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Overview</a></li>
-                <li><a class="dropdown-item" href="#">Orders</a></li>
-                <li><a class="dropdown-item" href="#">Documents</a></li>
-                <li><a class="dropdown-item" href="#">Legal Forms</a></li>
-                <li><a class="dropdown-item" href="#">Feedback</a></li>
+                <li><a class="dropdown-item" href="<?= route_to('account_overview') ?>">Overview</a></li>
+                <li><a class="dropdown-item" href="<?= route_to('account_orders') ?>">Orders</a></li>
+                <li><a class="dropdown-item" href="<?= route_to('account_documents') ?>">Documents</a></li>
+                <li><a class="dropdown-item" href="<?= route_to('account_legal_forms') ?>">Legal Forms</a></li>
+                <li><a class="dropdown-item" href="<?= route_to('account_feedback') ?>">Feedback</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Transactions</a></li>
+                <li><a class="dropdown-item" href="<?= route_to('account_payment_history') ?>">Transactions</a></li>
+                <li><a class="dropdown-item" href="<?= route_to('account_profile') ?>">Profile</a></li>
+                <li><a class="dropdown-item" href="<?= route_to('account_change_password') ?>">Change Password</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>

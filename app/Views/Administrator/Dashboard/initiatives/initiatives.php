@@ -29,7 +29,6 @@
                                     </div>
                                 </th>
                                 <th class="nk-tb-col"><span class="sub-text">Initiative</span></th>
-                                <th class="nk-tb-col tb-col-mb"><span class="sub-text">Category</span></th>
                                 <th class="nk-tb-col tb-col-mb"><span class="sub-text">Tags</span></th>
                                 <th class="nk-tb-col tb-col-xl"><span class="sub-text">Created</span></th>
                                 <th class="nk-tb-col tb-col-xl"><span class="sub-text">Updated</span></th>
@@ -56,9 +55,6 @@
                                         </div>
                                     </td>
                                     <td class="nk-tb-col tb-col-mb">
-                                        <span><?= $initiative['category_name'] ?></span>
-                                    </td>
-                                    <td class="nk-tb-col tb-col-mb">
                                         <span><?= $initiative['tags'] ?></span>
                                     </td>
                                     <td class="nk-tb-col tb-col-xl">
@@ -77,7 +73,7 @@
                                         <?php } ?>
                                     </td>
                                     <td class="nk-tb-col tb-col-md" data-order="Active - Not Active">
-                                        <?php if ($initiative['home_status'] == 1) { ?>
+                                        <?php if ($initiative['home_view'] == 1) { ?>
                                             <span class="tb-status text-success">Active</span>
                                         <?php } else { ?>
                                             <span class="tb-status text-danger">Not Active</span>
@@ -90,9 +86,9 @@
                                                     <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <ul class="link-list-opt no-bdr">
-                                                            <li><a href="/administrator/initiatives/edit/<?= $initiative['id'] ?>"><em class="icon ni ni-edit"></em><span>Edit</span></a></li>
-                                                            <li><a href="/administrator/initiatives/homestatus/<?= $initiative['id'] ?>"><em class="icon ni ni-eye"></em><span>Change Visible</span></a></li>
-                                                            <li><a href="/administrator/initiatives/status/<?= $initiative['id'] ?>"><em class="icon ni ni-repeat"></em><span>Change Status</span></a></li>
+                                                            <li><a href="/administrator/initiative/edit/<?= $initiative['id'] ?>"><em class="icon ni ni-edit"></em><span>Edit</span></a></li>
+                                                            <li><a href="/administrator/initiative/homestatus/<?= $initiative['id'] ?>"><em class="icon ni ni-eye"></em><span>Change Visible</span></a></li>
+                                                            <li><a href="/administrator/initiative/status/<?= $initiative['id'] ?>"><em class="icon ni ni-repeat"></em><span>Change Status</span></a></li>
                                                         </ul>
                                                     </div>
                                                 </div>

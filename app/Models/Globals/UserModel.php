@@ -18,6 +18,7 @@ class UserModel extends Model
 		'email',
 		'phone_no',
 		'password',
+		'avatar',
 	];
 
 	// Dates
@@ -37,9 +38,9 @@ class UserModel extends Model
 	protected $allowCallbacks       = true;
 	protected $beforeInsert         = ["beforeInsert"];
 	protected $afterInsert          = [];
-	protected $beforeUpdate         = [];
+	protected $beforeUpdate         = ["beforeInsert"];
 	protected $afterUpdate          = [];
-	protected $beforeFind           = [];
+	protected $beforeFind           = ["beforeInsert"];
 	protected $afterFind            = [];
 	protected $beforeDelete         = [];
 	protected $afterDelete          = [];

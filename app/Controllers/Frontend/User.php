@@ -9,8 +9,6 @@ class User extends BaseController
 {
 	public function login()
 	{
-		$data = [];
-
 		if ($this->request->getMethod() == 'post') {
 
 			$rules = [
@@ -61,19 +59,17 @@ class User extends BaseController
 			'phone_no' => $user->phone_no,
 			'email' => $user->email,
 		];
-		$data = [
+		$userdata = [
 			'user' => $user,
 			'isUserLoggedin' => true,
 		];
 
-		session()->set($data);
+		session()->set($userdata);
 		return true;
 	}
 
 	public function register()
 	{
-		$data = [];
-
 		if ($this->request->getMethod() == 'post') {
 			$rules = [
 				'name' => 'required|min_length[3]|max_length[20]',
@@ -119,11 +115,10 @@ class User extends BaseController
 
 	public function profile()
 	{
-		$data = [];
 		$model = new UserModel();
 
-		$data['user'] = $model->where('id', session()->get('id'))->first();
-		return view('profile', $data);
+		$this->data['user'] = $model->where('id', session()->get('id'))->first();
+		return view('profile', $this->data);
 	}
 
 	public function logout()

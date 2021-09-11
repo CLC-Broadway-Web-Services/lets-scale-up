@@ -121,16 +121,16 @@
                                         <span class="lead-text"><?= $admin['adm_name'] ?></span>
                                         <span class="sub-text"><?= $admin['adm_email'] ?></span>
                                     </div>
-                                    <div class="user-action">
+                                    <!-- <div class="user-action">
                                         <a class="btn btn-icon mr-n2" href="html/user-profile-setting.html"><em class="icon ni ni-setting"></em></a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="dropdown-inner">
                                 <ul class="link-list">
-                                    <li><a href="/administrator/user/profile"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
-                                    <li><a href="/administrator/user/edit-profile"><em class="icon ni ni-account-setting-alt"></em><span>Edit Profile</span></a></li>
-                                    <li><a href="/administrator/user/change-password"><em class="icon ni ni-security"></em><span>Change Password</span></a></li>
+                                    <li><a href="<?= route_to('site_settings') ?>?tab=profile"><em class="icon ni ni-account-setting-alt"></em><span>Profile</span></a></li>
+                                    <!-- <li><a href="/administrator/user/edit-profile"><em class="icon ni ni-account-setting-alt"></em><span>Edit Profile</span></a></li> -->
+                                    <li><a href="<?= route_to('site_settings') ?>?tab=password"><em class="icon ni ni-security"></em><span>Change Password</span></a></li>
                                     <li><a class="dark-switch" href="#"><em class="icon ni ni-moon"></em><span>Dark Mode</span></a></li>
                                 </ul>
                             </div>

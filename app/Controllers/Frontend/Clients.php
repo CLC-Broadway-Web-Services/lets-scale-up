@@ -4,58 +4,47 @@ namespace App\Controllers\Frontend;
 
 use App\Controllers\BaseController;
 use App\Models\Admin\ProjectsModel;
+use App\Models\Client\ClientModel;
 
 class Clients extends BaseController
 {
+	protected $clients_md;
+	public function __construct()
+	{
+		$this->clients_md = new ClientModel();
+	}
 	public function index()
 	{
-		$projectsDB = new ProjectsModel();
-		// $projects = $projectsDB->getAllProjectsFrontend();
+		$clients = $this->clients_md->getAllClientsFrontend();
+		$this->data['clients'] = $clients['clients'];
+		$this->data['pager'] = $clients['pager'];
 
-        $data = [
-            'projects' => $projectsDB->getAllProjectsFrontend()['projects'],
-            'pager' => $projectsDB->getAllProjectsFrontend()['pager'],
-        ];
-
-		// return print_r($projects);
-
-		// $data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';
-
-		// $data['pageJSbefore'] = '<script src="/public/libraries/splide/dist/js/splide.min.js"></script>';
-
-		// $data['pageJS'] = '<script src="/public/assets/js/counter.init.js"></script>
-		// <script src="/public/custom/assets/js/homepage2.js"></script>';
-
-		return view('Frontend/clients/index', $data);
+		return view('Frontend/clients/index', $this->data);
 	}
 	public function single($slug = '')
 	{
-        if($slug == null) {
-            return redirect()->to(route_to('clients_page'));
-        }
-		$projectsDB = new ProjectsModel();
-		$project = $projectsDB->getSingleProject($slug);
-		$data['project'] = $project;
-		$nextProject = $projectsDB->select('project_slug')->where('project_id >', $project['project_id'])->findAll(1);
-		$previousProject = $projectsDB->select('project_slug')->where('project_id <', $project['project_id'])->findAll(1);
-
-		if($previousProject) {
-			$data['previousProject'] = $previousProject[0];
+		if ($slug == null) {
+			return redirect()->to(route_to('clients_page'));
 		}
-		if($nextProject) {
-			$data['nextProject'] = $nextProject[0];
+		$client = $this->clients_md->getSingleClient($slug);
+		if(!$client) {
+			return redirect()->to(route_to('clients_page'));
 		}
+		$this->data['client'] = $client;
 
-		// return print_r($data);
+		// echo '<pre>';
+		// print_r($this->data);
+		// echo '</pre>';
 
-		// $data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';
+		// return;
 
-		// $data['pageJSbefore'] = '<script src="/public/libraries/splide/dist/js/splide.min.js"></script>';
+		// $this->data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';
 
-		// $data['pageJS'] = '<script src="/public/assets/js/counter.init.js"></script>
+		// $this->data['pageJSbefore'] = '<script src="/public/libraries/splide/dist/js/splide.min.js"></script>';
+
+		// $this->data['pageJS'] = '<script src="/public/assets/js/counter.init.js"></script>
 		// <script src="/public/custom/assets/js/homepage2.js"></script>';
 
-		return view('Frontend/clients/single', $data);
+		return view('Frontend/clients/single', $this->data);
 	}
-
 }

@@ -3,6 +3,8 @@ var form_heading = $("#form_heading");
 var form_fields = $("#form_fields");
 var service_id = $("#service_id");
 var form_id = $("#form_id");
+var form_inital_number = $("#form_inital_number");
+var form_is_multiple = $("#form_is_multiple");
 var sort_number = $("#sort_number");
 var form_status = $("#form_status");
 
@@ -132,6 +134,32 @@ class SelectField {
     this.value = dynamicValues.value || "";
   }
 }
+class SelectStateField {
+  input_type = "selectstate";
+  field_name = "";
+  required = false;
+  label = "";
+  value = "";
+  constructor(dynamicValues) {
+    this.field_name = dynamicValues.field_name || "";
+    this.required = dynamicValues.required || false;
+    this.label = dynamicValues.label || "";
+    this.value = dynamicValues.value || "";
+  }
+}
+class SelectCityField {
+  input_type = "selectcity";
+  field_name = "";
+  required = false;
+  label = "";
+  value = "";
+  constructor(dynamicValues) {
+    this.field_name = dynamicValues.field_name || "";
+    this.required = dynamicValues.required || false;
+    this.label = dynamicValues.label || "";
+    this.value = dynamicValues.value || "";
+  }
+}
 class TextArea {
   input_type = "textarea";
   field_name = "";
@@ -201,8 +229,17 @@ function selectElementType(event) {
     maxMinLengthHide();
     maxMinHide();
     maxMinSizeHide();
-
     addSelectOption();
+    return;
+  }
+  if (event.value == "selectstate" || event.value == "selectcity" || event.value == "selectstatecity") {
+    inputFieldData.setAttribute("hidden", "hidden");
+    selectFieldData.setAttribute("hidden", "hidden");
+    selectOptionsButton.setAttribute("hidden", "hidden");
+    maxMinLengthHide();
+    maxMinHide();
+    maxMinSizeHide();
+    addSelectOption("select");
     return;
   }
   if (event.value == "textarea") {
@@ -560,6 +597,76 @@ $("#addmissionFieldsForm").submit(function (e) {
     selectOptionsButton.setAttribute("hidden", "hidden");
     fieldAddingFormReset();
   }
+  if (formData.get("field_type") == "selectstate" || formData.get("field_type") == "selectcity") {
+    var SELECT = document.createElement("select");
+    SELECT.classList.add("custom-select");
+    SELECT.setAttribute("style", "position: relative;");
+    SELECT.setAttribute("name", fieldNameSmall);
+    SELECT.setAttribute("id", fieldNameSmall);
+    SELECT.setAttribute("required", "required");
+
+    var LABEL = document.createElement("label");
+    LABEL.setAttribute("for", fieldNameSmall);
+    LABEL.classList.add("bmd-label-floating");
+    LABEL.innerHTML = fieldName;
+
+    if (!required_field.is(":checked")) {
+      SELECT.removeAttribute("required");
+    } else {
+      SELECT.setAttribute("required", "required");
+    }
+    var OPTION = document.createElement("option");
+    OPTION.setAttribute("selected", "selected");
+    OPTION.setAttribute("disabled", "disabled");
+    OPTION.innerHTML = "Select " + fieldName;
+    SELECT.appendChild(OPTION);
+
+    // DATA/JSON OBJECT FOR DATABASE FOR CREATING SAME FORM AGAIN OR SHOWING TO USER
+    dataObjectJON = {
+      input_type: input_type,
+      field_name: fieldNameSmall,
+      required: $("#required_field").val(),
+      label: $("#field_name").val(),
+    };
+    if (formData.get("field_type") == "selectstate") {
+      var dataObjectJON = new SelectStateField(dataObjectJON);
+    }
+    if (formData.get("field_type") == "selectcity") {
+      var dataObjectJON = new SelectCityField(dataObjectJON);
+    }
+    console.log(dataObjectJON);
+
+    var SMALL = document.createElement("small");
+    SMALL.classList.add("removeFieldForm");
+    SMALL.setAttribute("id", f);
+    SMALL.setAttribute("style", "cursor:pointer;");
+
+    var STRONG = document.createElement("strong");
+    STRONG.innerHTML = "Remove";
+
+    SMALL.appendChild(STRONG);
+
+    var EDIt = document.createElement("small");
+    EDIt.classList.add("editThisField");
+    EDIt.setAttribute("id", f);
+    EDIt.setAttribute("style", "cursor:pointer;float: right;");
+
+    var EDITTEXT = document.createElement("strong");
+    EDITTEXT.innerHTML = "  Edit";
+
+    EDIt.appendChild(EDITTEXT);
+
+    // APPENDING DATA TOGETHER
+    DIV.setAttribute("json-data", JSON.stringify(dataObjectJON));
+    DIV.classList.add("json-data");
+    DIV.appendChild(LABEL);
+    DIV.appendChild(SELECT);
+    DIV.appendChild(SMALL);
+    DIV.appendChild(EDIt);
+    // APPEND FORM FIELDS TO HTML
+    onAllRemove();
+    fieldAddingFormReset();
+  }
 
   // APPEND FORM FIELDS TO HTML && CREATING JSON DATA
   if (mode == "edit") {
@@ -586,18 +693,18 @@ function addSelectOption(value = "") {
   i++;
   $("#selectFieldData").append(
     '<div class="form-group field_typeOptionsDiv" id="field_typeOptionsDiv' +
-      i +
-      '"><label for="field_typeOption' +
-      i +
-      '" class="bmd-label-floating">Option' +
-      i +
-      '</label><input class="form-control" name="field_typeOption[]" value="' +
-      value +
-      '" id="field_typeOption' +
-      i +
-      '" required><small style="cursor:pointer;" class="removingbutton" id="' +
-      i +
-      '"><strong>Remove</strong></small></div>'
+    i +
+    '"><label for="field_typeOption' +
+    i +
+    '" class="bmd-label-floating">Option' +
+    i +
+    '</label><input class="form-control" name="field_typeOption[]" value="' +
+    value +
+    '" id="field_typeOption' +
+    i +
+    '" required><small style="cursor:pointer;" class="removingbutton" id="' +
+    i +
+    '"><strong>Remove</strong></small></div>'
   );
 }
 
@@ -865,8 +972,8 @@ async function selectSection(event) {
   } else {
     alert(
       "HTTP-Error: " +
-        response.status +
-        " \nPlease refresh page before check again."
+      response.status +
+      " \nPlease refresh page before check again."
     );
   }
 }
@@ -888,9 +995,12 @@ function saveForm() {
       service_id: $("select#service_id option").filter(":selected").val(),
       form_fields: dataObjectToUpload,
       form_heading: form_heading.val(),
+      form_is_multiple: form_is_multiple.val(),
+      form_inital_number: form_inital_number.val(),
       sort_number: sort_number.val(),
       form_status: $("select#form_status option").filter(":selected").val(),
     };
+    // console.log(formData);
     // return;
     $.ajax({
       type: "POST",
@@ -971,3 +1081,11 @@ function maxMinSizeHide() {
   document.getElementById("inputMaxSize").setAttribute("hidden", "hidden");
   // document.getElementById("inputMinSize").setAttribute("hidden", "hidden");
 }
+$('#form_is_multiple').on('change', function (ev) {
+  const value = parseInt($(this).val());
+  if (value == 1) {
+    $('#form_inital_number_div').show();
+  } else {
+    $('#form_inital_number_div').hide();
+  }
+})

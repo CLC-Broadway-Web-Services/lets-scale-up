@@ -119,20 +119,6 @@ if (document.getElementById('loginModal')) {
     })
 }
 
-if ($('#search_services').length) {
-    var options = {
-        strings: ["Try 'Company Registration'", "Try 'GST Registration'", "Try 'Trademark'"],
-        typeSpeed: 70,
-        backSpeed: 50,
-        backDelay: 500,
-        startDelay: 1000,
-        loop: true,
-        attr: 'placeholder',
-        bindInputFocusEvents: true,
-        shuffle: true,
-    };
-    var typed = new Typed('#search_services', options);
-}
 var checkHTML = function (html) {
     var doc = document.createElement('div');
     doc.innerHTML = html;

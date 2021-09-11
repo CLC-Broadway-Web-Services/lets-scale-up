@@ -28,6 +28,16 @@ class BlogsModel extends Model
 	{
 		return $this->find($post_id);
 	}
+	public function getAllBlogsHomepage()
+	{
+		$catDB = new BlogcategoryModel();
+		$posts = $this->select('post_id, post_title, post_slug, post_image, post_category, post_tags, post_summary')->where('post_status', 1)->orderBy('id', 'RANDOM')->findAll(3);
+
+		foreach ($posts as $key => $post) {
+			$posts[$key]['category_name'] = $catDB->getCategoryNamebyID($post['post_category'])['post_cat_name'];
+		}
+		return $posts;
+	}
 	public function getAllPostsFrontend()
 	{
 		$catDB = new BlogcategoryModel();

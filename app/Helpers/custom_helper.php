@@ -1,8 +1,10 @@
 <?php
-// Function: used to create slugs
 
 use App\Models\Admin\ServiceCategoryModel;
+use App\Models\Admin\Settings;
+use App\Models\Initiative\InitiativeModel;
 
+// Function: used to create slugs
 if (!function_exists("slugify")) {
     function slugify($text)
     {
@@ -37,9 +39,7 @@ if (!function_exists("checkSlugDuplicacy")) {
         $db      = \Config\Database::connect();
         $builder = $db->table($table);
 
-        // $data = $this->where(['project_slug' => $slug])->countAll();
-
-        $data = $builder->getWhere([$slug_key => $slug])->countAll();
+        $data = $builder->like($slug_key, $slug)->countAll();
 
         if ($data > 0) {
             $slug2 = $slug . '-' . $data;
@@ -55,5 +55,21 @@ if (!function_exists("servicesMenu")) {
     {
         $ServiceCategoryModel = new ServiceCategoryModel();
         return $ServiceCategoryModel->getAllCategoryMenus();
+    }
+}
+
+if (!function_exists("getSettings")) {
+    function getSettings()
+    {
+        $setting_md = new Settings();
+        return $setting_md->getSettings();
+    }
+}
+
+if (!function_exists("getInitiativesMenu")) {
+    function getInitiativesMenu()
+    {
+        $initiative_md = new InitiativeModel();
+        return $initiative_md->getMenuItems();
     }
 }
