@@ -61,6 +61,7 @@
               </button>
               <ul class="dropdown-menu dropdown-menu-start dropdown-menu-md-end" aria-labelledby="dropdownMenuButton1">
                 <li><a class="dropdown-item" href="<?= route_to('account_overview') ?>">Overview</a></li>
+                <li><a class="dropdown-item" href="<?= route_to('account_subscriptions') ?>">Subscriptions</a></li>
                 <li><a class="dropdown-item" href="<?= route_to('account_orders') ?>">Orders</a></li>
                 <li><a class="dropdown-item" href="<?= route_to('account_documents') ?>">Documents</a></li>
                 <li><a class="dropdown-item" href="<?= route_to('account_legal_forms') ?>">Legal Forms</a></li>

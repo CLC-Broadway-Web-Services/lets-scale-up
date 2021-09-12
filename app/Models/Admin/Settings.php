@@ -61,4 +61,15 @@ class Settings extends Model
 		cache()->save('settings', $settings, 3600);
 		return $settings;
 	}
+
+	public function getRazorpayApi()
+	{
+		$razorpayApi = $this->select('set_value')->where(['set_key' => 'razorpay_api'])->first();
+		$razorpaySecret = $this->select('set_value')->where(['set_key' => 'razorpay_secret'])->first();
+		$razorpay = [
+			'api' => $razorpayApi['set_value'],
+			'secret' => $razorpaySecret['set_value']
+		];
+		return $razorpay;
+	}
 }

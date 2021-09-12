@@ -124,9 +124,12 @@ var checkHTML = function (html) {
     doc.innerHTML = html;
     const listItems = doc.getElementsByTagName('li');
     return listItems;
-    return (doc.innerHTML === html);
+    // return (doc.innerHTML === html);
 }
 
+if($("table").hasClass("datatable")) {
+    $('.datatable').DataTable();
+}
 
 //   // Add slideDown animation to Bootstrap dropdown when expanding.
 //   $('.dropdown').on('show.bs.dropdown', function() {

@@ -62,20 +62,23 @@ $routes->group('/', function ($routes) {
 		$routes->match(['get', 'post'], '(:num)', 'Frontend\PaymentController::checkout/$1', ['as' => 'checkout_order']);
 	});
 	$routes->group('account', ['filter' => 'auth'], function ($routes) {
-		$routes->match(['get', 'post'], '', 'Frontend\AccountController::overview', ['as' => 'account_overview']);
+		$routes->match(['get', 'post'], '/', 'Frontend\AccountController::overview', ['as' => 'account_overview']);
 		$routes->match(['get', 'post'], 'orders', 'Frontend\AccountController::orders', ['as' => 'account_orders']);
+		$routes->match(['get', 'post'], 'order/invoice/(:num)', 'Frontend\AccountController::order_invoice', ['as' => 'order_invoice']);
 		$routes->match(['get', 'post'], 'documents', 'Frontend\AccountController::documents', ['as' => 'account_documents']);
-		$routes->match(['get', 'post'], 'document-query', 'Frontend\AccountController::documents', ['as' => 'account_doc_query']);
+		$routes->match(['get', 'post'], 'document-queries', 'Frontend\AccountController::documentQueries', ['as' => 'account_doc_queries']);
+		$routes->match(['get', 'post'], 'document-query/(:num)', 'Frontend\AccountController::documentQuery/$1', ['as' => 'account_doc_query']);
 		$routes->match(['get', 'post'], 'legal-forms', 'Frontend\AccountController::legalForms', ['as' => 'account_legal_forms']);
 		$routes->match(['get', 'post'], 'profile', 'Frontend\AccountController::personalInfo', ['as' => 'account_profile']);
 		$routes->match(['get', 'post'], 'change-password', 'Frontend\AccountController::passwordChange', ['as' => 'account_change_password']);
 		$routes->match(['get', 'post'], 'transactions', 'Frontend\AccountController::paymentHistory', ['as' => 'account_payment_history']);
 		$routes->match(['get', 'post'], 'feedback', 'Frontend\AccountController::feedback', ['as' => 'account_feedback']);
-		$routes->match(['get', 'post'], 'subscriptions', 'Frontend\AccountController::subscriptions', ['as' => 'account_subscriptions']);
+		$routes->match(['get', 'post'], 'subscriptions', 'Frontend\SubscriptionsController::index', ['as' => 'account_subscriptions']);
+		$routes->group('subscription', ['filter' => 'auth'], function ($routes) {
+			$routes->match(['get', 'post'], '(:num)', 'Frontend\SubscriptionsController::subscription/$1', ['as' => 'single_subscription']);
+		});
 	});
 });
-
-
 
 $routes->group('auth', function ($routes) {
 	$routes->match(['get', 'post'], 'login', 'Frontend\User::login', ['as' => 'user_login']);
@@ -92,7 +95,7 @@ $routes->group('administrator', function ($routes) {
 
 	// ADMIN SERVICE ROUTES
 	$routes->group('services', ['filter' => 'adminauth'], function ($routes) {
-		$routes->match(['get', 'post'], '', 'Admin\Services::index', ['as' => 'admin_service_index']);
+		$routes->match(['get', 'post'], '/', 'Admin\Services::index', ['as' => 'admin_service_index']);
 		$routes->match(['get', 'post'], 'queries', 'Admin\Services::queries', ['as' => 'admin_service_queries']);
 		$routes->match(['get', 'post'], 'testimonials', 'Admin\Services::testimonials', ['as' => 'admin_service_testimonials']);
 	});
@@ -102,7 +105,6 @@ $routes->group('administrator', function ($routes) {
 		$routes->match(['get', 'post'], 'status/(:num)', 'Admin\Services::serviceStatusChange/$1', ['as' => 'admin_service_status_change']);
 		$routes->match(['get', 'post'], 'homestatus/(:num)', 'Admin\Services::serviceHomeStatusChange/$1', ['as' => 'admin_service_home_status']);
 
-
 		$routes->group('benefits', function ($routes) {
 			$routes->get('', 'Admin\Services::serviceBenefits', ['as' => 'admin_service_benefit_index']);
 			$routes->match(['get', 'post'], 'add', 'Admin\Services::addEditServiceBenefit', ['as' => 'admin_service_benefit_add']);
@@ -111,7 +113,7 @@ $routes->group('administrator', function ($routes) {
 		});
 
 		$routes->group('categories', function ($routes) {
-			$routes->match(['get', 'post'], '', 'Admin\Services::categories', ['as' => 'admin_service_category_index']);
+			$routes->match(['get', 'post'], '/', 'Admin\Services::categories', ['as' => 'admin_service_category_index']);
 			$routes->match(['get', 'post'], '(:num)', 'Admin\Services::categories/$1', ['as' => 'admin_service_category_edit']);
 			$routes->match(['get', 'post'], 'delete/(:num)', 'Admin\Services::categoriesDelete/$1', ['as' => 'admin_service_category_delete']);
 
@@ -151,7 +153,7 @@ $routes->group('administrator', function ($routes) {
 
 	// ADMIN BLOG ROUTES
 	$routes->group('blogs', ['filter' => 'adminauth'], function ($routes) {
-		$routes->match(['get', 'post'], '', 'Admin\Blogs::index', ['as' => 'admin_blogs_index']);
+		$routes->match(['get', 'post'], '/', 'Admin\Blogs::index', ['as' => 'admin_blogs_index']);
 	});
 	$routes->group('blog', ['filter' => 'adminauth'], function ($routes) {
 		$routes->match(['get', 'post'], 'categories', 'Admin\Blogs::categories', ['as' => 'admin_blog_category_index']);
@@ -167,7 +169,7 @@ $routes->group('administrator', function ($routes) {
 
 	// ADMIN PROJECT ROUTES
 	$routes->group('projects', ['filter' => 'adminauth'], function ($routes) {
-		$routes->match(['get', 'post'], '', 'Admin\Projects::index', ['as' => 'admin_project_index']);
+		$routes->match(['get', 'post'], '/', 'Admin\Projects::index', ['as' => 'admin_project_index']);
 	});
 	$routes->group('project', ['filter' => 'adminauth'], function ($routes) {
 		$routes->match(['get', 'post'], 'categories', 'Admin\Projects::categories', ['as' => 'admin_project_categories_index']);
@@ -182,7 +184,7 @@ $routes->group('administrator', function ($routes) {
 
 	// ADMIN INITIATIVES ROUTES
 	$routes->group('initiatives', ['filter' => 'adminauth'], function ($routes) {
-		$routes->match(['get', 'post'], '', 'Admin\Initiatives::index', ['as' => 'admin_initiatives_index']);
+		$routes->match(['get', 'post'], '/', 'Admin\Initiatives::index', ['as' => 'admin_initiatives_index']);
 
 		$routes->match(['get', 'post'], 'categories', 'Admin\Initiatives::categories', ['as' => 'admin_initiative_categories_index']);
 		$routes->match(['get', 'post'], 'categories/(:num)', 'Admin\Initiatives::categories/$1', ['as' => 'admin_initiative_category_edit']);
@@ -196,7 +198,7 @@ $routes->group('administrator', function ($routes) {
 
 	// ADMIN CLIENTS ROUTES
 	$routes->group('clients', ['filter' => 'adminauth'], function ($routes) {
-		$routes->match(['get', 'post'], '', 'Admin\Client::index', ['as' => 'admin_clients_index']);
+		$routes->match(['get', 'post'], '/', 'Admin\Client::index', ['as' => 'admin_clients_index']);
 
 		$routes->match(['get', 'post'], 'add', 'Admin\Client::addEditClient', ['as' => 'admin_clients_add']);
 		$routes->match(['get', 'post'], 'edit/(:num)', 'Admin\Client::addEditClient/$1', ['as' => 'admin_clients_edit']);
@@ -210,7 +212,7 @@ $routes->group('administrator', function ($routes) {
 
 	// ADMIN TEAM ROUTES
 	$routes->group('team', ['filter' => 'adminauth'], function ($routes) {
-		$routes->match(['get', 'post'], '', 'Admin\Team::index', ['as' => 'admin_team_index']);
+		$routes->match(['get', 'post'], '/', 'Admin\Team::index', ['as' => 'admin_team_index']);
 
 		$routes->match(['get', 'post'], 'add', 'Admin\Team::addEditMember', ['as' => 'admin_team_add']);
 		$routes->match(['get', 'post'], 'edit/(:num)', 'Admin\Team::addEditMember/$1/$2', ['as' => 'admin_team_edit']);

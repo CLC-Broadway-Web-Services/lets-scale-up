@@ -5,8 +5,10 @@ namespace App\Controllers\Frontend;
 use App\Controllers\BaseController;
 use App\Models\Admin\OrderModel;
 use App\Models\Admin\ServiceQuery;
+use App\Models\Admin\Settings;
 use App\Models\Globals\FrontservicesModel;
 use DateTime;
+use Razorpay\Api\Api;
 
 class Services extends BaseController
 {
@@ -61,7 +63,7 @@ class Services extends BaseController
     public function serviceSelectedPackage($service_slug = null, $package_id)
     {
         $user_id = 0;
-        if($this->data['user']) {
+        if ($this->data['user']) {
             $user_id = $this->data['user']['id'];
         }
         if ($service_slug == null) {
@@ -165,6 +167,19 @@ class Services extends BaseController
                 $formQuery->save($form);
             }
             // create order
+
+            $settingMd = new Settings();
+            $razorCred = $settingMd->getRazorpayApi();
+            // echo '<pre>';
+            // print_r($settingMd->getRazorpayApi());
+            // echo '</pre>';
+            // return;
+            $api = new Api($razorCred['api'], $razorCred['secret']);
+            $onlineOrder  = $api->order->create([
+                'receipt' => $unique_code,
+                'amount'  => $package['package_price']*100,
+                'currency' => 'INR'
+            ]);
             $orderData = [
                 'user_id' => $user_id,
                 'service_id' => $service['service_id'],
@@ -175,7 +190,8 @@ class Services extends BaseController
                 'shipping' => $package['package_shipping'],
                 'discount' => $package['package_discount'],
                 'gst' => $package['package_gst'],
-                'total_amount' => $package['package_price']
+                'total_amount' => $package['package_price'],
+                'online_order_id' => $onlineOrder['id']
             ];
             $order_md = new OrderModel();
             $orderId = $order_md->insertId($order_md->save($orderData));
@@ -192,7 +208,6 @@ class Services extends BaseController
 
         return view('Frontend/pages/selectedPackage', $this->data);
     }
-
     public function categoryPage($slug)
     {
         // echo 'this is single category page';
