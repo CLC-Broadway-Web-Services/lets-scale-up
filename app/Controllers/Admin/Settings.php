@@ -46,7 +46,10 @@ class Settings extends BaseController
 			foreach ($this->request->getVar() as $key => $value) {
 				// $keys[] = $key;
 				$userId = $this->data['admin']['adm_id'];
-				if ($value !== $settings[$key] && $value !== '') {
+				if ($value !== $settings[$key]) {
+					if($value == '') {
+						$value = null;
+					}
 					$query = $this->settings_md->where(['set_key' => $key])->set(['set_value' => $value, 'update_by' => $userId])->update();
 					// $query[] = ['site_key' => $key, 'site_value' => $value];
 					if ($query) {

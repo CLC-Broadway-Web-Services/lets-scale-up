@@ -62,6 +62,15 @@ class Settings extends Model
 		return $settings;
 	}
 
+	public function isSocialAvailable()
+	{
+		$settings = getSettings();
+		if ($settings['footer_social_facebook'] || $settings['footer_social_twitter'] || $settings['footer_social_instagram'] || $settings['footer_social_linkedin'] || $settings['footer_social_youtube']) {
+			return true;
+		}
+		return false;
+	}
+
 	public function getRazorpayApi()
 	{
 		$razorpayApi = $this->select('set_value')->where(['set_key' => 'razorpay_api'])->first();

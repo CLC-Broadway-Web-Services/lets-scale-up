@@ -42,6 +42,12 @@ $routes->group('/', function ($routes) {
 	$routes->get('terms-of-use', 'Frontend\Pages::terms_of_use', ['as' => 'terms_page']);
 	$routes->get('privacy-policy', 'Frontend\Pages::privacy_policy', ['as' => 'privacy_page']);
 
+	$routes->group('ajax', function ($routes) {
+		$routes->post('newsletter-subscribe', 'Frontend\AjaxServices::newsletterSubscription', ['as' => 'newsletterSubscription']);
+		$routes->post('service-query', 'Frontend\AjaxServices::serviceQuery', ['as' => 'serviceQueryOnly']);
+	});
+
+
 	$routes->get('clients', 'Frontend\Clients::index', ['as' => 'clients_page']);
 	$routes->get('client/(:segment)', 'Frontend\Clients::single/$1', ['as' => 'single_client_page']);
 
@@ -91,8 +97,37 @@ $routes->group('administrator', function ($routes) {
 	$routes->match(['get', 'post'], 'login', 'Admin\Auth::index', ['as' => 'admin_login']);
 	$routes->match(['get', 'post'], 'logout', 'Admin\Auth::logOut', ['as' => 'admin_logout']);
 	$routes->match(['get', 'post'], 'forgetpassword', 'Admin\Auth::forgetPassword', ['as' => 'admin_forget_password']);
-	$routes->get('', 'Admin\Dashboard::index', ['as' => 'admin_index'], ['filter' => 'adminauth']);
 
+
+	// ADMIN OTHERS ROUTES
+	$routes->group('', ['filter' => 'adminauth'], function ($routes) {
+		$routes->get('/', 'Admin\Dashboard::index', ['as' => 'admin_index'], ['filter' => 'adminauth']);
+		$routes->match(['get', 'post'], 'subscribers', 'Admin\Others::subscribers', ['as' => 'admin_subscribers']);
+		$routes->match(['get', 'post'], 'contact-submission', 'Admin\Others::contactSubmission', ['as' => 'admin_contact_submissions']);
+
+		$routes->match(['get', 'post'], 'testimonials', 'Admin\Others::testimonials', ['as' => 'admin_testimonials']);
+		$routes->match(['get', 'post'], 'testimonials/(:num)', 'Admin\Others::testimonials/$1', ['as' => 'admin_testimonials_edit']);
+		$routes->match(['get', 'post'], 'testimonials/delete/(:num)', 'Admin\Others::testimonialsDelete/$1', ['as' => 'admin_testimonials_delete']);
+
+		$routes->match(['get', 'post'], 'settings', 'Admin\Settings::index', ['as' => 'site_settings']);
+		$routes->group('press-release', ['filter' => 'adminauth'], function ($routes) {
+			$routes->match(['get', 'post'], '/', 'Admin\PressRelease::index', ['as' => 'admin_press_release_index']);
+			$routes->match(['get', 'post'], 'edit/(:num)', 'Admin\PressRelease::index/$1', ['as' => 'admin_press_release_edit']);
+			$routes->match(['get', 'post'], 'delete/(:num)', 'Admin\PressRelease::delete/$1', ['as' => 'admin_press_release_delete']);
+		});
+		$routes->group('newsletter', ['filter' => 'adminauth'], function ($routes) {
+			$routes->group('subscribers', ['filter' => 'adminauth'], function ($routes) {
+				$routes->match(['get', 'post'], '/', 'Admin\Newslatter::index', ['as' => 'admin_service_index']);
+				$routes->match(['get', 'post'], 'queries', 'Admin\Services::queries', ['as' => 'admin_service_queries']);
+				$routes->match(['get', 'post'], 'testimonials', 'Admin\Services::testimonials', ['as' => 'admin_service_testimonials']);
+			});
+			$routes->group('subscriptions', ['filter' => 'adminauth'], function ($routes) {
+				$routes->match(['get', 'post'], '/', 'Admin\Services::index', ['as' => 'admin_service_index']);
+				$routes->match(['get', 'post'], 'queries', 'Admin\Services::queries', ['as' => 'admin_service_queries']);
+				$routes->match(['get', 'post'], 'testimonials', 'Admin\Services::testimonials', ['as' => 'admin_service_testimonials']);
+			});
+		});
+	});
 	// ADMIN SERVICE ROUTES
 	$routes->group('services', ['filter' => 'adminauth'], function ($routes) {
 		$routes->match(['get', 'post'], '/', 'Admin\Services::index', ['as' => 'admin_service_index']);
@@ -216,18 +251,6 @@ $routes->group('administrator', function ($routes) {
 
 		$routes->match(['get', 'post'], 'add', 'Admin\Team::addEditMember', ['as' => 'admin_team_add']);
 		$routes->match(['get', 'post'], 'edit/(:num)', 'Admin\Team::addEditMember/$1/$2', ['as' => 'admin_team_edit']);
-	});
-
-	// ADMIN OTHERS ROUTES
-	$routes->group('other', ['filter' => 'adminauth'], function ($routes) {
-		$routes->match(['get', 'post'], 'subscribers', 'Admin\Others::subscribers', ['as' => 'admin_subscribers']);
-		$routes->match(['get', 'post'], 'contact-submission', 'Admin\Others::contactSubmission', ['as' => 'admin_contact_submissions']);
-
-		$routes->match(['get', 'post'], 'testimonials', 'Admin\Others::testimonials', ['as' => 'admin_testimonials']);
-		$routes->match(['get', 'post'], 'testimonials/(:num)', 'Admin\Others::testimonials/$1', ['as' => 'admin_testimonials_edit']);
-		$routes->match(['get', 'post'], 'testimonials/delete/(:num)', 'Admin\Others::testimonialsDelete/$1', ['as' => 'admin_testimonials_delete']);
-
-		$routes->match(['get', 'post'], 'settings', 'Admin\Settings::index', ['as' => 'site_settings']);
 	});
 
 	// ADMIN PROFILE

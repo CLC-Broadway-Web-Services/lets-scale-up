@@ -120,6 +120,10 @@
     <?php if (isset($pageJS)) {
         echo $pageJS;
     } ?>
+
+
+<?= $this->renderSection('javascript'); ?>
+
 </body>
 
 </html>

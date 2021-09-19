@@ -9,6 +9,15 @@
 
         </ul><!-- .nk-menu -->
         <ul class="nk-menu d-md-none d-lg-block">
+            <?php
+            $exclude_list = array("services", "service", "blogs", "blog", "clients", "client", "teams", "team", "other");
+            if (!in_array($uriSegments[2], $exclude_list)) : ?>
+                <li class="nk-menu-heading">
+                    <h6 class="overline-title text-primary-alt">Dashboard</h6>
+                </li>
+                <!-- // services menu -->
+                <?php echo view('Administrator/globals/menus/dashboard_menu'); ?>
+            <?php endif ?>
             <?php if ($uriSegments[2] == 'services' || $uriSegments[2] == 'service') : ?>
                 <li class="nk-menu-heading">
                     <h6 class="overline-title text-primary-alt">Services</h6>

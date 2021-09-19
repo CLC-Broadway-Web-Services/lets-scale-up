@@ -53,35 +53,37 @@
         </ul>
 
         <!-- <div class="col-md-3 text-end"> -->
-        <div class="d-flex" id="usernav">
-          <?php if (session()->get('isUserLoggedin')) : ?>
-            <div class="dropdown" id="user_menu">
-              <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person"></i> Account
-              </button>
-              <ul class="dropdown-menu dropdown-menu-start dropdown-menu-md-end" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="<?= route_to('account_overview') ?>">Overview</a></li>
-                <li><a class="dropdown-item" href="<?= route_to('account_subscriptions') ?>">Subscriptions</a></li>
-                <li><a class="dropdown-item" href="<?= route_to('account_orders') ?>">Orders</a></li>
-                <li><a class="dropdown-item" href="<?= route_to('account_documents') ?>">Documents</a></li>
-                <li><a class="dropdown-item" href="<?= route_to('account_legal_forms') ?>">Legal Forms</a></li>
-                <li><a class="dropdown-item" href="<?= route_to('account_feedback') ?>">Feedback</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="<?= route_to('account_payment_history') ?>">Transactions</a></li>
-                <li><a class="dropdown-item" href="<?= route_to('account_profile') ?>">Profile</a></li>
-                <li><a class="dropdown-item" href="<?= route_to('account_change_password') ?>">Change Password</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="<?= route_to('user_logout') ?>">Logout</a></li>
-              </ul>
-            </div>
-          <?php else : ?>
-            <button type="button" class="btn btn-warning" onclick="openLogin()"><i class="bi bi-person"></i> Login</button>
-          <?php endif; ?>
-        </div>
+        <?php if (APP_COMPLETED) : ?>
+          <div class="d-flex" id="usernav">
+            <?php if (session()->get('isUserLoggedin')) : ?>
+              <div class="dropdown" id="user_menu">
+                <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-person"></i> Account
+                </button>
+                <ul class="dropdown-menu dropdown-menu-start dropdown-menu-md-end" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="<?= route_to('account_overview') ?>">Overview</a></li>
+                  <li><a class="dropdown-item" href="<?= route_to('account_subscriptions') ?>">Subscriptions</a></li>
+                  <li><a class="dropdown-item" href="<?= route_to('account_orders') ?>">Orders</a></li>
+                  <li><a class="dropdown-item" href="<?= route_to('account_documents') ?>">Documents</a></li>
+                  <li><a class="dropdown-item" href="<?= route_to('account_legal_forms') ?>">Legal Forms</a></li>
+                  <li><a class="dropdown-item" href="<?= route_to('account_feedback') ?>">Feedback</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="<?= route_to('account_payment_history') ?>">Transactions</a></li>
+                  <li><a class="dropdown-item" href="<?= route_to('account_profile') ?>">Profile</a></li>
+                  <li><a class="dropdown-item" href="<?= route_to('account_change_password') ?>">Change Password</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="<?= route_to('user_logout') ?>">Logout</a></li>
+                </ul>
+              </div>
+            <?php else : ?>
+              <button type="button" class="btn btn-warning" onclick="openLogin()"><i class="bi bi-person"></i> Login</button>
+            <?php endif; ?>
+          </div>
+        <?php endif; ?>
       </div>
 
     </div>

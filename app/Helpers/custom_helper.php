@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Admin\PressRelease;
 use App\Models\Admin\ServiceCategoryModel;
 use App\Models\Admin\Settings;
 use App\Models\Initiative\InitiativeModel;
@@ -73,3 +74,19 @@ if (!function_exists("getInitiativesMenu")) {
         return $initiative_md->getMenuItems();
     }
 }
+
+if (!function_exists("isSocialAvailable")) {
+    function isSocialAvailable()
+    {
+        $setting_md = new Settings();
+        return $setting_md->isSocialAvailable();
+    }
+}
+if (!function_exists("getAllPressReleases")) {
+    function getAllPressReleases()
+    {
+        $release_md = new PressRelease();
+        return $release_md->getAllPressReleases(1);
+    }
+}
+

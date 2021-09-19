@@ -1,51 +1,100 @@
 <!--begin contact -->
-<?php if (!isset($noFooterContact)) : ?>
-    <!-- <section class="section-white" id="contact">
-
+<?php if (!isset($noFooterContact)) : $settings = getSettings();
+    $pressReleases = getAllPressReleases(); ?>
+    <section class="bg-warning py-4 newsletter-section">
         <div class="container">
-
-            <div class="row">
-                <div class="col-md-6">
-
-                    <h3>Get in touch</h3>
-                    <p class="contact_success_box" style="display:none;">We received your message and you'll hear from us soon.
-                        Thank You!</p>
-                    <form id="contact-form" class="contact" action="php/contact.php" method="post">
-
-                        <input class="contact-input white-input" required="" name="contact_names" placeholder="Full Name*" type="text">
-
-                        <input class="contact-input white-input" required="" name="contact_email" placeholder="Email Adress*" type="email">
-
-                        <input class="contact-input white-input" required="" name="contact_phone" placeholder="Phone Number*" type="text">
-
-                        <textarea class="contact-commnent white-input" rows="2" cols="20" name="contact_message" placeholder="Your Message..."></textarea>
-
-                        <input value="Send Message" id="submit-button" class="contact-submit" type="submit">
-
-                    </form>
-
-                </div>
-                <div class="col-md-6 responsive-top-margins">
-
-                    <h3>How to find us</h3>
-
-                    <iframe class="contact-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.9050207912896!2d-0.14675028449633118!3d51.514958479636384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ad554c335c1%3A0xda2164b934c67c1a!2sOxford+St%2C+London%2C+UK!5e0!3m2!1sen!2sro!4v1485889312335" width="600" height="270" style="border:0" allowfullscreen></iframe>
-
-                    <h5>Head Office</h5>
-
-                    <p class="contact-info"><i class="bi bi-geo-alt-fill"></i> 10 Oxford Street, London, UK, E1 1EC</p>
-
-                    <p class="contact-info"><i class="bi bi-envelope-open-fill"></i> <a href="mailto:contact@youremail.com">office@smart.co.uk</a></p>
-
-                    <p class="contact-info"><i class="bi bi-telephone-fill"></i> +44 987 654 321</p>
-
-                </div>
-
+            <div class="row align-items-center">
+                <h5 class="text-dark">Subscribe to our weekly Newsletter and stay tuned.</h5>
             </div>
-
+            <div class="row align-items-center" id="newsletter-form">
+                <div class="col-12" id="newsletterResponseColumn" style="display:none;">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert" id="newsletterResponseAlert">
+                        <i class="bi bi-info-circle flex-shrink-0 me-2"></i>
+                        <span id="newsletterResponseMessage"></span>
+                        <button type="button" id="newsletterResponseClose" class="btn-close"></button>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="newsletterFullName" placeholder="Your Full Name">
+                        <label for="newsletterFullName">Full Name</label>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="newsletterEmail" placeholder="name@example.com">
+                        <label for="newsletterEmail">Email address</label>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-lsu btn-lg" type="button" id="newsletterSubmit">Subscribe to newsletter</button>
+                    </div>
+                </div>
+            </div>
         </div>
-
-    </section> -->
+    </section>
+    <section class="section-white medium-padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h4>FEATURED ON</h4>
+                    <h2>Media & Recognitions</h2>
+                </div>
+            </div>
+            <div class="row press-release-row">
+                <div class="splide" id="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <?php foreach ($pressReleases as $press) : ?>
+                                <div class="card press-release splide__slide">
+                                    <a href="<?= $press['url'] ?>" target="_blank" title="<?= $press['name'] ?>"><img src="<?= $press['image'] ?>" alt="<?= $press['name'] ?>"></a>
+                                </div>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-white pb-2 pt-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <p class="contact-info">
+                        <i class="bi bi-telephone-fill"></i> <a href="tel:<?= $settings['footer_customer_care'] ? $settings['footer_customer_care'] : PHONE_NUMBER ?>"><?= $settings['footer_customer_care'] ? $settings['footer_customer_care'] : PHONE_NUMBER ?></a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p class="contact-info">
+                        <i class="bi bi-envelope-open-fill"></i> <a href="mailto:<?= $settings['footer_email'] ? $settings['footer_email'] : INFO_MAIL ?>"><?= $settings['footer_email'] ? $settings['footer_email'] : INFO_MAIL ?></a>
+                    </p>
+                </div>
+                <?php if (isSocialAvailable()) : ?>
+                    <div class="col-md-4">
+                        <ul class="footer_social">
+                            <!-- <li>Follow us:</li> -->
+                            <?php if ($settings['footer_social_facebook']) : ?>
+                                <li><a href="<?= $settings['footer_social_facebook'] ?>" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a></li>
+                            <?php endif;
+                            if ($settings['footer_social_twitter']) : ?>
+                                <li><a href="<?= $settings['footer_social_twitter'] ?>" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a></li>
+                            <?php endif;
+                            if ($settings['footer_social_instagram']) : ?>
+                                <li><a href="<?= $settings['footer_social_instagram'] ?>" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a></li>
+                            <?php endif;
+                            if ($settings['footer_social_linkedin']) : ?>
+                                <li><a href="<?= $settings['footer_social_linkedin'] ?>" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a></li>
+                            <?php endif;
+                            if ($settings['footer_social_youtube']) : ?>
+                                <li><a href="<?= $settings['footer_social_youtube'] ?>" target="_blank" class="youtube"><i class="bi bi-youtube"></i></a></li>
+                            <?php endif; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
 <?php endif ?>
 <!--end contact-->
 
@@ -59,36 +108,11 @@
         <div class="row">
 
             <!--begin col-md-7 -->
-            <div class="col-md-7">
+            <div class="col-12">
 
                 <p>© <?= date('Y') ?> <span class="template-name">Lets Scale Up</span>. Developed by <a href="https://www.clcbws.com" target="_blank" rel="follow" class="template-name">Broadway Web Services</a></p>
 
             </div>
-            <!--end col-md-7 -->
-
-            <!--begin col-md-5 -->
-            <div class="col-md-5">
-
-                <!--begin footer_social -->
-                <ul class="footer_social">
-
-                    <li>Follw us:</li>
-
-                    <li><a href="#" class="twitter"><i class="bi bi-twitter"></i></a></li>
-
-                    <li><a href="#" class="instagram"><i class="bi bi-instagram"></i></a></li>
-
-                    <li><a href="#" class="whatsapp"><i class="bi bi-whatsapp"></i></a></li>
-
-                    <li><a href="#" class="google"><i class="bi bi-google"></i></a></li>
-
-                    <li><a href="#" class="github"><i class="bi bi-github"></i></a></li>
-
-                </ul>
-                <!--end footer_social -->
-
-            </div>
-            <!--end col-md-5 -->
 
         </div>
         <!--end row -->
@@ -197,6 +221,62 @@
     .modal-backdrop {
         z-index: 9999;
     }
+
+    ul.footer_social {
+        margin-bottom: 0 !important;
+    }
+
+    ul.footer_social li a.facebook i {
+        color: #4267B2 !important;
+    }
+
+    ul.footer_social li a.twitter i {
+        color: #1DA1F2 !important;
+    }
+
+    ul.footer_social li a.instagram i {
+        color: #8a3ab9 !important;
+    }
+
+    ul.footer_social li a.linkedin i {
+        color: #0077b5 !important;
+    }
+
+    ul.footer_social li a.youtube i {
+        color: #ff0000 !important;
+    }
+
+    .press-release-row>div {
+        min-height: 100%;
+    }
+
+    .press-release {
+        min-height: 120px;
+    }
+
+    .press-release img {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #newsletterSubmit {
+        height: calc(3.5rem + 2px);
+    }
+
+    /* #newsletter-form .input-group {
+        height: 64px;
+        border: none !important;
+        background-color: #fff;
+        -moz-border-radius: 5px 0 0 5px;
+        -webkit-border-radius: 5px 0 0 5px;
+        border-radius: 5px;
+        color: #454545;
+        font-size: 17px;
+        margin: 0 !important;
+    } */
 
     /* .errors[role=alert] {
         background-color: red;

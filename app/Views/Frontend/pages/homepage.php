@@ -9,8 +9,8 @@
         <p class="hero-text">Business and legal consultant for Start-ups!</p>
         <h1>Let's connect to start and Scale your Start-up!</h1>
         <div class="">
-          <form id="search-services-form" class="search_service search_service_wrapper" method="post" name="skjjdbfkshdfbs" autocomplete="sjdfvshgfvs">
-            <input id="search_services" placeholder="search service here" type="text" name="sdkhfsjgfsjsk" autocomplete="dfbgjdhfvh">
+          <form id="search-services-form" class="search_service search_service_wrapper" method="post" name="searchServices_<?= date('ymdhms') ?>" autocomplete="searchServices_<?= date('ymdhms') ?>">
+            <input id="search_services" placeholder="search service here" type="text" name="searchInput_<?= date('ymdhms') ?>" autocomplete="searchInput_<?= date('ymdhms') ?>">
             <div id="autoSuggestList">
               <ul id="suggestionList">
               </ul>
@@ -82,24 +82,32 @@
     <div class="container" style="overflow: hidden">
       <div class="row">
         <div class="col-md-12 mx-auto padding-top-10 padding-bottom-30">
-          <div id="carouselTestimonials" class="carousel slide" data-bs-ride="carousel">
+          <div id="carouselTestimonials" class="carousel slide">
             <!-- <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div> -->
             <div class="carousel-inner text-center">
-              <?php foreach ($testimonials as $key => $testimonial) : ?>
-                <div class="carousel-item <?= $key == 0 ? 'active' : '' ?>">
-                  <div class="row align-items-center testim-inner">
-                    <div class="col-12 testim-info">
-                      <i class="bi bi-chat-left-quote green"></i>
-                      <p><?= $testimonial['testimonials_content'] ?></p>
-                      <h6><?= $testimonial['testimonials_name'] ?><span> — <?= $testimonial['testimonials_post'] ?> <span class="red">@<?= $testimonial['testimonials_company'] ?></span></span></h6>
-                    </div>
-                  </div>
+              <div class="splide" id="testimonials">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <?php foreach ($testimonials as $key => $testimonial) : ?>
+                      <li class="splide__slide">
+                        <div class="carousel-item active">
+                          <div class="row align-items-center testim-inner">
+                            <div class="col-12 testim-info">
+                              <i class="bi bi-chat-left-quote green"></i>
+                              <p><?= $testimonial['testimonials_content'] ?></p>
+                              <h6><?= $testimonial['testimonials_name'] ?><span> — <?= $testimonial['testimonials_post'] ?> <span class="red">@<?= $testimonial['testimonials_company'] ?></span></span></h6>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    <?php endforeach; ?>
+                  </ul>
                 </div>
-              <?php endforeach; ?>
+              </div>
             </div>
           </div>
         </div>
@@ -326,6 +334,22 @@
   ul#suggestionList li:hover {
     background: cadetblue;
   }
+
+  .carousel-item>div {
+    margin: 0 20px;
+  }
 </style>
 
+<?= $this->endSection(); ?>
+
+<?= $this->section('javascript'); ?>
+<script>
+  new Splide('#testimonials', {
+    type: 'loop',
+    perPage: 1,
+    pagination: false,
+    autoplay: true,
+    interval: 3000,
+  }).mount();
+</script>
 <?= $this->endSection(); ?>

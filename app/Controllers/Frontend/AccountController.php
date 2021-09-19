@@ -160,8 +160,6 @@ class AccountController extends BaseController
 		// echo '</pre>';
 		// return;
 		//
-		$this->data['pageCSS'] = '<link rel="stylesheet" type="text/css" href="/public/libraries/DataTables/datatables.min.css"/>';
-		$this->data['pageJSbefore'] = '<script type="text/javascript" src="/public/libraries/DataTables/datatables.min.js"></script>';
 		return view('Frontend/account/orders', $this->data);
 	}
 	public function order_invoice($order_id = null)

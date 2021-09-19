@@ -1,11 +1,14 @@
 var service_getstarted_form = $("#service_getstarted_form");
 var serviceCheckoutForm = $("#serviceCheckoutForm");
+var serviceQuerySubmitButton = $("#serviceQuerySubmitButton");
 var user_id = parseInt($("#user_id").val());
 console.log(user_id)
 
 $(document).ready(function () {
   service_getstarted_form.on("submit", function (event) {
     event.preventDefault();
+    serviceQuerySubmitButton.html('Submitting ...');
+    $('#service_getstarted_form input').attr('readonly', 'readonly');
     serviceGetStartedSubmition();
   });
   var userData = localStorage.getItem("service_user_details");
@@ -53,19 +56,52 @@ function serviceGetStartedSubmition() {
   // console.log(service_getstarted_form.serializeArray());
   //   var formArray = Array.from(formData);
 
-  const now = new Date();
-  var formArray = {
-    user_firstname: $("#user_firstname").val(),
-    user_lastname: $("#user_lastname").val(),
-    user_email: $("#user_email").val(),
-    user_mobile: $("#user_mobile").val(),
-    expiry: now.getTime() + 1800000,
-  };
-  var stringifyArray = JSON.stringify(formArray);
+  // const now = new Date();
+  // var formArray = {
+  //   user_firstname: $("#user_firstname").val(),
+  //   user_lastname: $("#user_lastname").val(),
+  //   user_email: $("#user_email").val(),
+  //   user_mobile: $("#user_mobile").val(),
+  //   expiry: now.getTime() + 1800000,
+  // };
+  // var stringifyArray = JSON.stringify(formArray);
 
-  localStorage.setItem("service_user_details", stringifyArray);
+  // localStorage.setItem("service_user_details", stringifyArray);
 
-  window.location.href = "#packages";
+  // window.location.href = "#packages";
+
+  var formData = new FormData(service_getstarted_form[0]);
+  $.ajax({
+    url: '/ajax/service-query',
+    method: 'post',
+    data: formData,
+    contentType: false,
+    processData: false,
+    success: function (data) {
+      console.log(JSON.parse(data))
+      if (JSON.parse(data)) {
+        // success here
+        showQueryAlert('success');
+        service_getstarted_form[0].reset();
+      } else {
+        // error here
+        showQueryAlert('error');
+      }
+    },
+    error: function (data) {
+      console.log(data)
+      showQueryAlert('error');
+    }
+  })
+}
+function showQueryAlert(type) {
+  var alertName = '#' + type + 'Alert';
+  $(alertName).show();
+  serviceQuerySubmitButton.html('Get Started');
+  $('#service_getstarted_form input').removeAttr('readonly');
+  setTimeout(() => {
+    $(alertName).hide();
+  }, 4000);
 }
 
 if ($('.selectstate')) {
@@ -76,7 +112,7 @@ if ($('.selectstate')) {
   fetch(statesJson).then(response => {
     return response.json();
   }).then(data => {
-    console.log(data);
+    // console.log(data);
     var options = '';
     options += '<option selected value="">Select State</option>';
     data.forEach((state) => {

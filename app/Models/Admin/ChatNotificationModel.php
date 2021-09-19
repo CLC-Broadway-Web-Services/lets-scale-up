@@ -14,6 +14,8 @@ class ChatNotificationModel extends Model
 	protected $allowedFields        = [
 		'inbox_id',
 		'is_notification', // boolean
+		'table_name',
+		'entity_id',
 		'message',
 		'is_user', // boolean to 1
 		'staff_id',

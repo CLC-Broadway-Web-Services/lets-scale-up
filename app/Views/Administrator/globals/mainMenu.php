@@ -1,7 +1,10 @@
 <li class="nk-menu-item <?= '/'.uri_string() == route_to('admin_index') ? 'active' : ''  ?>">
-    <a href="<?= route_to('admin_index') ?>" class="nk-menu-link">
+    <a href="#" class="nk-menu-link nk-menu-toggle">
         <span class="nk-menu-text">Dashboard</span>
     </a>
+    <ul class="nk-menu-sub">
+        <?php echo view('Administrator/globals/menus/dashboard_menu'); ?>
+    </ul>
 </li>
 
 <li class="nk-menu-item has-sub <?= strstr('/'.uri_string(), route_to('admin_index').'/service') ? 'active' : ''  ?>">
@@ -42,25 +45,5 @@
     <ul class="nk-menu-sub">
         <!-- // services menu -->
         <?php echo view('Administrator/globals/menus/initiatives_menu'); ?>
-    </ul>
-</li>
-
-<li class="nk-menu-item has-sub <?= strstr('/'.uri_string(), route_to('admin_index').'/team') ? 'active' : ''  ?>">
-    <a href="#" class="nk-menu-link nk-menu-toggle">
-        <span class="nk-menu-text">Team</span>
-    </a>
-    <ul class="nk-menu-sub">
-        <!-- // services menu -->
-        <?php echo view('Administrator/globals/menus/teams_menu'); ?>
-    </ul>
-</li>
-
-<li class="nk-menu-item has-sub <?= strstr('/'.uri_string(), route_to('admin_index').'/other') ? 'active' : ''  ?>">
-    <a href="#" class="nk-menu-link nk-menu-toggle">
-        <span class="nk-menu-text">Others</span>
-    </a>
-    <ul class="nk-menu-sub">
-        <!-- // services menu -->
-        <?php echo view('Administrator/globals/menus/others_menu'); ?>
     </ul>
 </li>

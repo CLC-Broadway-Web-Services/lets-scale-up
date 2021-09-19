@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\Globals;
+namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UserSubscriptionModel extends Model
+class TempServiceQuery extends Model
 {
-	protected $table                = 'usersubscriptions';
+	protected $table                = 'temp_service_query';
 	protected $primaryKey           = 'id';
 	protected $useAutoIncrement     = true;
 	protected $insertID             = 0;
@@ -14,16 +14,13 @@ class UserSubscriptionModel extends Model
 	protected $useSoftDeletes       = true;
 	protected $protectFields        = true;
 	protected $allowedFields        = [
-		'status', // bool
-		'start_at', // datetime
-		'expire_at', // datetime
+		'email',
+		'phone',
+		'first_name',
+		'last_name',
 		'service_id',
-		'order_id',
-		'unique_id',
-		'user_id',
-		'application_number',
-		'application_status',
-		'inbox_id'
+		'service_name',
+		'unread',
 	];
 
 	// Dates

@@ -4,9 +4,9 @@ namespace App\Models\Globals;
 
 use CodeIgniter\Model;
 
-class UserSubscriptionModel extends Model
+class NewsletterSubscriptionsModel extends Model
 {
-	protected $table                = 'usersubscriptions';
+	protected $table                = 'newsletter_subscriptions';
 	protected $primaryKey           = 'id';
 	protected $useAutoIncrement     = true;
 	protected $insertID             = 0;
@@ -14,16 +14,16 @@ class UserSubscriptionModel extends Model
 	protected $useSoftDeletes       = true;
 	protected $protectFields        = true;
 	protected $allowedFields        = [
-		'status', // bool
-		'start_at', // datetime
-		'expire_at', // datetime
-		'service_id',
-		'order_id',
-		'unique_id',
-		'user_id',
-		'application_number',
-		'application_status',
-		'inbox_id'
+		'subscription_name',
+		'subscription_name_slug',
+		'auto', // boolean
+		'interval_days', //days in numbers
+		'subject',
+		'content',
+		'from_email',
+		'from_name',
+		'last_run', // date only
+		'status'
 	];
 
 	// Dates

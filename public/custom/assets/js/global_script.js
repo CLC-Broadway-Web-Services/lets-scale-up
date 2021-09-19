@@ -127,10 +127,6 @@ var checkHTML = function (html) {
     // return (doc.innerHTML === html);
 }
 
-if($("table").hasClass("datatable")) {
-    $('.datatable').DataTable();
-}
-
 //   // Add slideDown animation to Bootstrap dropdown when expanding.
 //   $('.dropdown').on('show.bs.dropdown', function() {
 //     $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
