@@ -106,7 +106,7 @@
                                         <div class="form-group">
                                             <label class="form-label" for="post_description">Post Content</label>
                                             <div class="form-control-wrap">
-                                                <textarea class="form-control" rows="8" id="post_description" name="post_description"><?= $postData['post_description'] ?></textarea>
+                                                <textarea class="form-control tinymce_extended" rows="8" id="post_description" name="post_description"><?= $postData['post_description'] ?></textarea>
                                             </div>
                                         </div>
                                     </div>

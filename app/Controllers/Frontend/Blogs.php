@@ -3,6 +3,7 @@
 namespace App\Controllers\Frontend;
 
 use App\Controllers\BaseController;
+use App\Entities\MetaTags;
 use App\Models\Admin\BlogsModel;
 
 use App\Models\Admin\TestimonialsModel;
@@ -19,6 +20,9 @@ class Blogs extends BaseController
 		$this->data['posts'] = $blogDB->getAllPostsFrontend()['posts'];
 		$this->data['pager'] = $blogDB->getAllPostsFrontend()['pager'];
 
+		$postMeta = new MetaTags();
+		$postMeta->title = 'Blogs';
+		$this->data['meta'] = $postMeta;
 		// return print_r($this->data);
 
 		// $this->data['pageCSS'] = '<link rel="stylesheet" href="/public/libraries/splide/dist/css/splide.min.css">';
@@ -37,6 +41,15 @@ class Blogs extends BaseController
         }
 		$blogDB = new BlogsModel();
 		$post = $blogDB->getSinglePost($slug);
+		$postMeta = new MetaTags();
+		$postMeta->title = $post['post_title'];
+		$postMeta->description = $post['post_summary'];
+		$postMeta->keywords = $post['post_tags'];
+		// $postMeta->author = $post['post_title'];
+		// $postMeta->owner = $post['post_title'];
+		$postMeta->type = 'post';
+		$this->data['meta'] = $postMeta;
+
 		$this->data['post'] = $post;
 		$nextPost = $blogDB->select('post_slug')->where('post_id >', $post['post_id'])->findAll(1);
 		$previousPost = $blogDB->select('post_slug')->where('post_id <', $post['post_id'])->findAll(1);

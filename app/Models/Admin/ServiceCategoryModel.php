@@ -21,7 +21,8 @@ class ServiceCategoryModel extends Model
 		'subtitle',
 		'description',
 		'slug',
-		'parent' // parent category ID
+		'parent', // parent category ID
+		'show_in_menu'
 	];
 
 	// Dates
@@ -129,14 +130,13 @@ class ServiceCategoryModel extends Model
 			return false;
 		}
 	}
-
 	public function getAllCategoryMenus()
 	{
 		$serviceDB = new ServicesModel();
-		$data = $this->select('id, name, title, slug, parent')->where(['parent' => 0])->findAll();
+		$data = $this->select('id, name, title, slug, parent')->where(['parent' => 0, 'show_in_menu' => 1])->findAll();
 		foreach ($data as $key => $value) {
 			$id = $value['id'];
-			$childs = $this->select('id, name, title, slug, parent')->where(['parent' => $id])->findAll();
+			$childs = $this->select('id, name, title, slug, parent')->where(['parent' => $id, 'show_in_menu' => 1])->findAll();
 
 			foreach ($childs as $key2 => $menu) {
 				$catId = $menu['id'];

@@ -41,7 +41,11 @@ $routes->group('/', function ($routes) {
 	$routes->match(['get', 'post'], 'contact-us', 'Frontend\Pages::contact_us', ['as' => 'contact_us_page']);
 	$routes->get('terms-of-use', 'Frontend\Pages::terms_of_use', ['as' => 'terms_page']);
 	$routes->get('privacy-policy', 'Frontend\Pages::privacy_policy', ['as' => 'privacy_page']);
+	$routes->match(['get', 'post'], 'partner-with-us', 'Frontend\Pages::partner_with_us', ['as' => 'partner_page']);
 
+	$routes->group('p', function ($routes) {
+		$routes->get('(:segment)', 'Frontend\ServiceHomeCatController::index/$1', ['as' => 'personalized_service']);
+	});
 	$routes->group('ajax', function ($routes) {
 		$routes->post('newsletter-subscribe', 'Frontend\AjaxServices::newsletterSubscription', ['as' => 'newsletterSubscription']);
 		$routes->post('service-query', 'Frontend\AjaxServices::serviceQuery', ['as' => 'serviceQueryOnly']);
@@ -98,12 +102,12 @@ $routes->group('administrator', function ($routes) {
 	$routes->match(['get', 'post'], 'logout', 'Admin\Auth::logOut', ['as' => 'admin_logout']);
 	$routes->match(['get', 'post'], 'forgetpassword', 'Admin\Auth::forgetPassword', ['as' => 'admin_forget_password']);
 
-
 	// ADMIN OTHERS ROUTES
 	$routes->group('', ['filter' => 'adminauth'], function ($routes) {
 		$routes->get('/', 'Admin\Dashboard::index', ['as' => 'admin_index'], ['filter' => 'adminauth']);
 		$routes->match(['get', 'post'], 'subscribers', 'Admin\Others::subscribers', ['as' => 'admin_subscribers']);
 		$routes->match(['get', 'post'], 'contact-submission', 'Admin\Others::contactSubmission', ['as' => 'admin_contact_submissions']);
+		$routes->match(['get', 'post'], 'partner-queries', 'Admin\Others::partnerQueries', ['as' => 'admin_partner_queries']);
 
 		$routes->match(['get', 'post'], 'testimonials', 'Admin\Others::testimonials', ['as' => 'admin_testimonials']);
 		$routes->match(['get', 'post'], 'testimonials/(:num)', 'Admin\Others::testimonials/$1', ['as' => 'admin_testimonials_edit']);
@@ -127,6 +131,8 @@ $routes->group('administrator', function ($routes) {
 				$routes->match(['get', 'post'], 'testimonials', 'Admin\Services::testimonials', ['as' => 'admin_service_testimonials']);
 			});
 		});
+		$routes->match(['get', 'post'], 'service-queries', 'Admin\Others::tempServiceQueries', ['as' => 'temp_service_query_admin']);
+		$routes->match(['get', 'post'], 'another-service-queries', 'Admin\Others::extraSeriveQueries', ['as' => 'another_service_query_admin']);
 	});
 	// ADMIN SERVICE ROUTES
 	$routes->group('services', ['filter' => 'adminauth'], function ($routes) {
@@ -184,6 +190,14 @@ $routes->group('administrator', function ($routes) {
 			$routes->match(['get', 'post'], 'edit/(:num)', 'Admin\Services::addEditServicePackage/$1', ['as' => 'admin_service_package_edit']);
 			$routes->match(['get', 'post'], 'status/(:num)', 'Admin\Services::servicePackageStatusChange/$1', ['as' => 'admin_service_package_status']);
 		});
+	});
+
+	// PERSONALIZED SERVICE CATEGORY
+	$routes->group('personalized', ['filter' => 'adminauth'], function ($routes) {
+		$routes->match(['get', 'post'], '/', 'Admin\ServiceHomeCatController::index', ['as' => 'personalized_service_index']);
+		$routes->match(['get', 'post'], 'add', 'Admin\ServiceHomeCatController::addEditService', ['as' => 'personalized_service_add']);
+		$routes->match(['get', 'post'], 'edit/(:num)', 'Admin\ServiceHomeCatController::addEditService/$1', ['as' => 'personalized_service_edit']);
+		$routes->match(['get', 'post'], 'status/(:num)', 'Admin\ServiceHomeCatController::serviceStatusChange/$1', ['as' => 'personalized_service_status_change']);
 	});
 
 	// ADMIN BLOG ROUTES
@@ -250,7 +264,9 @@ $routes->group('administrator', function ($routes) {
 		$routes->match(['get', 'post'], '/', 'Admin\Team::index', ['as' => 'admin_team_index']);
 
 		$routes->match(['get', 'post'], 'add', 'Admin\Team::addEditMember', ['as' => 'admin_team_add']);
-		$routes->match(['get', 'post'], 'edit/(:num)', 'Admin\Team::addEditMember/$1/$2', ['as' => 'admin_team_edit']);
+		$routes->match(['get', 'post'], 'edit/(:num)', 'Admin\Team::addEditMember/$1', ['as' => 'admin_team_edit']);
+		
+		$routes->match(['get', 'post'], 'status/(:num)', 'Admin\Team::memberStatusChange/$1', ['as' => 'admin_team_member_status']);
 	});
 
 	// ADMIN PROFILE

@@ -5,11 +5,7 @@
 
     <div class="container" style="width:100%">
 
-      <!-- begin logo -->
-      <!-- <a class="navbar-brand" href="#"><i class="bi bi-intersect"></i> Smart</a> -->
       <a class="navbar-brand" href="<?= route_to('home_page') ?>"><img class="navbar-brand" src="<?= APP_LOGO ?>" style="max-height: 30px;"></a>
-      <!-- end logo -->
-
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
@@ -17,22 +13,13 @@
 
       <div class="collapse navbar-collapse" id="navbarScroll">
 
-        <!-- begin navbar-nav -->
-        <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll justify-content-center">
+        <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll justify-content-center">
 
+          <li class="nav-item green"><a class="nav-link green" href="tel:+919873350509"><i class="bi bi-telephone green"></i> 98733 50509</a></li>
           <li class="nav-item"><a class="nav-link" href="<?= route_to('home_page') ?>">Home</a></li>
 
           <li class="nav-item"><a class="nav-link" href="<?= route_to('clients_page') ?>">Clients</a></li>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="aboutMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              About
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="aboutMenu">
-              <li><a class="dropdown-item" href="<?= route_to('about_us_page') ?>">Who We Are!</a></li>
-              <li><a class="dropdown-item" href="<?= route_to('about_us_page') ?>#what-we-do">What We Do?</a></li>
-            </ul>
-          </li>
           <?php $initiativeMenu = getInitiativesMenu();
           if (count($initiativeMenu)) : ?>
             <li class="nav-item dropdown">
@@ -50,9 +37,30 @@
 
           <li class="nav-item"><a class="nav-link" href="<?= route_to('contact_us_page') ?>">Contact</a></li>
 
+          <li class="nav-item position-relative" id="servicesDropdownMenu">
+            <a class="nav-link" data-bs-toggle="collapse" href="#servicesDropdown" role="button" aria-expanded="false" aria-controls="servicesDropdown">Services <span class="rotateIcon"><i class="bi bi-chevron-down"></i></span></a>
+            <div class="collapse position-absolute" id="servicesDropdown">
+              <div class="card-body">
+                <div class="row g-3">
+                  <?php foreach (getPersonalizedMenu() as $key => $personalMenu) : ?>
+                    <div class="col-md-3 col-12">
+                      <a href="<?= route_to('personalized_service', $personalMenu['slug']) ?>">
+                        <h6 class="fs-5"><i class="bi bi-<?= $personalMenu['icon'] ?>"></i> <?= $personalMenu['title'] ?></h6>
+                      </a>
+                      <ul class="list-unstyled service_list">
+                        <?php foreach ($personalMenu['services'] as $key => $value) : ?>
+                          <li class="service_list_item"><i class="bi bi-<?= $value['service_icon'] ?>"></i> <span class="service_title"><?= $value['service_title'] ?></span></li>
+                        <?php endforeach; ?>
+                      </ul>
+                    </div>
+                  <?php endforeach; ?>
+
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
 
-        <!-- <div class="col-md-3 text-end"> -->
         <?php if (APP_COMPLETED) : ?>
           <div class="d-flex" id="usernav">
             <?php if (session()->get('isUserLoggedin')) : ?>

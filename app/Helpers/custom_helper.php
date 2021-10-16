@@ -2,6 +2,7 @@
 
 use App\Models\Admin\PressRelease;
 use App\Models\Admin\ServiceCategoryModel;
+use App\Models\Admin\ServiceHomeCatModel;
 use App\Models\Admin\Settings;
 use App\Models\Initiative\InitiativeModel;
 
@@ -87,6 +88,13 @@ if (!function_exists("getAllPressReleases")) {
     {
         $release_md = new PressRelease();
         return $release_md->getAllPressReleases(1);
+    }
+}
+if (!function_exists("getPersonalizedMenu")) {
+    function getPersonalizedMenu()
+    {
+        $dbModel = new ServiceHomeCatModel();
+        return $dbModel->getAllForMenu();
     }
 }
 

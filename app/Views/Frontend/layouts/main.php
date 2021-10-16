@@ -2,31 +2,36 @@
 <html lang="en">
 <?php
 
-$pageTitle = APP_NAME;
-$pageDescription = APP_DESCRIPTION;
-$pageKeywords = APP_KEYWORDS;
-$pageAuthor = APP_AUTHOR;
-$pageOwner = APP_OWNER;
-$pageType = APP_PAGE_TYPE;
+// $pageTitle = APP_NAME;
+// $pageDescription = APP_DESCRIPTION;
+// $pageKeywords = APP_KEYWORDS;
+// $pageAuthor = APP_AUTHOR;
+// $pageOwner = APP_OWNER;
+// $pageType = APP_PAGE_TYPE;
 
-if (isset($title)) {
-    $pageTitle = $title;
-}
-if (isset($description)) {
-    $pageDescription = $description;
-}
-if (isset($keywords)) {
-    $pageKeywords = $keywords;
-}
-if (isset($author)) {
-    $pageAuthor = $author;
-}
-if (isset($owner)) {
-    $pageOwner = $owner;
-}
-if (isset($type)) {
-    $pageType = $type;
-}
+// if (isset($meta)) {
+$pageTitle = isset($meta) && $meta->title ? $meta->title . ' | ' . APP_NAME : APP_NAME;
+$pageDescription = isset($meta) && $meta->description ? $meta->description : APP_DESCRIPTION;
+$pageKeywords = isset($meta) && $meta->keywords ? $meta->keywords : APP_KEYWORDS;
+$pageAuthor = isset($meta) && $meta->author ? $meta->author : APP_AUTHOR;
+$pageOwner = isset($meta) && $meta->owner ? $meta->owner : APP_OWNER;
+$pageType = isset($meta) && $meta->type ? $meta->type : APP_PAGE_TYPE;
+// }
+// if (isset($description)) {
+//     $pageDescription = $description;
+// }
+// if (isset($keywords)) {
+//     $pageKeywords = $keywords;
+// }
+// if (isset($author)) {
+//     $pageAuthor = $author;
+// }
+// if (isset($owner)) {
+//     $pageOwner = $owner;
+// }
+// if (isset($type)) {
+//     $pageType = $type;
+// }
 
 ?>
 
@@ -57,22 +62,29 @@ if (isset($type)) {
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
-
-    <!-- <link href="/public/assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" /> -->
-    <!-- Pe-icon-7 icon -->
-    <!-- <link rel="stylesheet" type="text/css" href="/public/assets/css/pe-icon-7-stroke.css"> -->
-    <!--Slider-->
-    <!-- <link rel="stylesheet" type="text/css" href="/public/assets/css/owl.carousel.css" />
-    <link rel="stylesheet" type="text/css" href="/public/assets/css/owl.theme.css" />
-    <link rel="stylesheet" type="text/css" href="/public/assets/css/owl.transitions.css" /> -->
-    <!-- magnific pop-up -->
-    <!-- <link rel="stylesheet" type="text/css" href="/public/assets/css/magnific-popup.css" /> -->
-    <!-- <link href="/public/assets/css/style.css" rel="stylesheet" type="text/css" /> -->
     <link href="/public/custom/assets/css/custom.css" rel="stylesheet" type="text/css" />
 
     <link rel='stylesheet' type='text/css' href='/public/libraries/DataTables/datatables.min.css' />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
+    <style>
+        #services .feature-box {
+            height: 100%;
+            margin-top: 0 !important;
+        }
+
+        #services .service_title>h4 {
+            line-height: 1.1;
+            position: absolute;
+            max-width: 100%;
+            bottom: 1px;
+        }
+
+        #services .service_title {
+            position: relative;
+            height: 42px;
+        }
+    </style>
     <!-- page css -->
     <?php if (isset($pageCSS)) {
         echo $pageCSS;

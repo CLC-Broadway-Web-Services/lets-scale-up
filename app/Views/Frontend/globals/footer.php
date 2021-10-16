@@ -99,27 +99,30 @@
 <!--end contact-->
 
 <!--begin footer -->
-<div class="footer">
-
-    <!--begin container -->
+<div class="footer footer2">
     <div class="container">
-
-        <!--begin row -->
         <div class="row">
-
-            <!--begin col-md-7 -->
-            <div class="col-12">
-
-                <p>© <?= date('Y') ?> <span class="template-name">Lets Scale Up</span>. Developed by <a href="https://www.clcbws.com" target="_blank" rel="follow" class="template-name">Broadway Web Services</a></p>
-
+            <div class="col-12 footer2_links">
+                <a href="<?= route_to('about_us_page') ?>">About Us</a>
+                <a href="<?= route_to('terms_page') ?>">Terms & Conditions</a>
+                <a href="<?= route_to('privacy_page') ?>">Privacy Policy</a>
+                <a href="#">Refund Policy</a>
+                <a href="<?= route_to('blogs_page') ?>">Blog</a>
+                <a href="<?= route_to('partner_page') ?>">Partner With Us</a>
+                <a href="<?= route_to('contact_us_page') ?>">Contact Us</a>
             </div>
-
         </div>
-        <!--end row -->
-
     </div>
-    <!--end container -->
-
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="copyright">Copyright <b>&copy;</b> <?= date('Y') ?> <a href="<?= $_SERVER['HTTP_HOST'] ?>" target="self" rel="follow">Lets Scale Up</a> is the provider of personalized online legal solutions & legal documents in India.
+                <br>Design & Developed by <a href="https://www.clcbws.com" target="_blank" rel="follow">Broadway Web Services</a></p>
+            </div>
+        </div>
+    </div>
 </div>
 <!--end footer -->
 
@@ -226,22 +229,27 @@
         margin-bottom: 0 !important;
     }
 
+    a.facebook i,
     ul.footer_social li a.facebook i {
         color: #4267B2 !important;
     }
 
+    a.twitter i,
     ul.footer_social li a.twitter i {
         color: #1DA1F2 !important;
     }
 
+    a.instagram i,
     ul.footer_social li a.instagram i {
         color: #8a3ab9 !important;
     }
 
+    a.linkedin i,
     ul.footer_social li a.linkedin i {
         color: #0077b5 !important;
     }
 
+    a.youtube i,
     ul.footer_social li a.youtube i {
         color: #ff0000 !important;
     }

@@ -7,7 +7,7 @@
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="/public/dashboard/images/favicon.png">
     <!-- Page Title  -->
-    <title>Login | DashLite Admin Template</title>
+    <title>Login</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="/public/dashboard/assets/css/dashlite.css?ver=2.2.0">
     <link id="skin-default" rel="stylesheet" href="/public/dashboard/assets/css/theme.css?ver=2.2.0">

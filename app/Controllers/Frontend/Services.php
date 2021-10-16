@@ -3,10 +3,12 @@
 namespace App\Controllers\Frontend;
 
 use App\Controllers\BaseController;
+use App\Entities\MetaTags;
 use App\Models\Admin\OrderModel;
 use App\Models\Admin\ServiceQuery;
 use App\Models\Admin\Settings;
 use App\Models\Globals\FrontservicesModel;
+use App\Models\Globals\ServiceExtraQueryModel;
 use DateTime;
 use Razorpay\Api\Api;
 
@@ -34,9 +36,33 @@ class Services extends BaseController
                 return print_r($this->request->getVar());
                 // save data to database alongwith service id
             }
+            if ($this->request->getVar('form_name') == 'another_request') {
+                // return print_r($this->request->getVar());
+                $dataToSave = $this->request->getVar();
+                unset($dataToSave['form_name']);
+                unset($dataToSave['send']);
+                $serviceExtraDb = new ServiceExtraQueryModel();
+                $query = $serviceExtraDb->save($dataToSave);
+                $respose = array(
+                    'status' => true,
+                    'class' => 'success',
+                    'message' => 'Your message recieved succesfully, we will contact you within 72 hours.',
+                );
+                session()->setFlashdata('service_anything_else_response', $respose);
+                // $this->data['statusMessage'] = session()->getFlashdata('service_anything_else_response');
+                redirect()->route('service_detail', [$slug]);
+            }
         }
 
         $service = $this->serviceDB->getSingleServiceBySlug($slug);
+        $postMeta = new MetaTags();
+        $postMeta->title = $service['service_title'];
+        $postMeta->description = $service['service_summary'];
+        // $postMeta->keywords = $service['post_tags'];
+        // $postMeta->author = $service['post_title'];
+        // $postMeta->owner = $service['post_title'];
+        $postMeta->type = 'service';
+        $this->data['meta'] = $postMeta;
         // return print_r($service);
 
         $this->data['service'] = $service;
@@ -177,7 +203,7 @@ class Services extends BaseController
             $api = new Api($razorCred['api'], $razorCred['secret']);
             $onlineOrder  = $api->order->create([
                 'receipt' => $unique_code,
-                'amount'  => $package['package_price']*100,
+                'amount'  => $package['package_price'] * 100,
                 'currency' => 'INR'
             ]);
             $orderData = [

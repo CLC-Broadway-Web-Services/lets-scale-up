@@ -5,6 +5,9 @@ namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Models\Admin\ContactsModel;
 use App\Models\Admin\TestimonialsModel;
+use App\Models\Globals\PartnerwithusModel;
+use App\Models\Globals\ServiceExtraQueryModel;
+use App\Models\TempServiceQuery;
 
 class Others extends BaseController
 {
@@ -34,7 +37,8 @@ class Others extends BaseController
 
         return view('Administrator/Dashboard/others/contacts-all', $data);
     }
-    public function testimonials($testimonial_id = 0) {
+    public function testimonials($testimonial_id = 0)
+    {
         $data = array();
 
         $testimonialDB = new TestimonialsModel();
@@ -119,5 +123,45 @@ class Others extends BaseController
             session()->setFlashdata($message);
             return redirect()->to('/administrator/other/testimonials');
         }
+    }
+    public function tempServiceQueries()
+    {
+        $query_md = new TempServiceQuery();
+        $data['queries'] = $query_md->orderBy('unread', 'DESC')->orderBy('id', 'DESC')->findAll();
+        // print_r($data);
+        // return;
+        return view('Administrator/Dashboard/others/service_queries', $data);
+    }
+    public function tempServicereadStatus($id)
+    {
+        $query_md = new TempServiceQuery();
+        $data = [
+            'id' => $id,
+            'unread' => 0
+        ];
+        $query_md->save($data);
+        return redirect()->route('temp_service_query_admin');
+    }
+    public function partnerQueries()
+    {
+        $data = array();
+        $contactDB = new PartnerwithusModel();
+        $data['queries'] = $contactDB->orderBy('id', 'desc')->orderBy('id', 'desc')->findAll();
+
+        // return print_r($data);
+
+        // $admin = session()->get('admin');
+        // $data['admin'] =  $admin;
+        // $data['pageCSS'] = '';
+        // $data['pageJS'] = '';
+
+        return view('Administrator/Dashboard/others/partner_queries', $data);
+    }
+    public function extraSeriveQueries()
+    {
+        $data = array();
+        $srvXdb = new ServiceExtraQueryModel();
+        $data['queries'] = $srvXdb->orderBy('id', 'desc')->findAll();
+        return view('Administrator/Dashboard/others/service_extra_queries', $data);
     }
 }

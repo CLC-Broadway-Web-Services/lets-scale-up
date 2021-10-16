@@ -3,7 +3,8 @@
 <?= $this->section('content') ?>
 
 
-<section class=" bg-light" id="home">
+<?= view_cell('\App\Libraries\Blocks::page_breadcrumb_block', ['pagedata' => ["pagename" => "Our latest blog posts <br> insights articles"]]) ?>
+<!-- <section class=" bg-light" id="home">
     <div class="home-center">
         <div class="home-desc-center">
             <div class="container">
@@ -28,7 +29,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <section class="section" id="blog">
     <div class="container">
         <div class="row mt-4">

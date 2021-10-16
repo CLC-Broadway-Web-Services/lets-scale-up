@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
 
 
-<?= view_cell('\App\Libraries\Pages::breadcrumb', ['pagedata' => $pagedata]) ?>
+<?= view_cell('\App\Libraries\Blocks::page_breadcrumb_block', ['pagedata' => $pagedata]) ?>
 
 
 <!-- MAIN CONTENT -->

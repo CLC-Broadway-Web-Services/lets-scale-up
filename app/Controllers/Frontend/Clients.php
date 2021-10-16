@@ -3,6 +3,7 @@
 namespace App\Controllers\Frontend;
 
 use App\Controllers\BaseController;
+use App\Entities\MetaTags;
 use App\Models\Admin\ProjectsModel;
 use App\Models\Client\ClientModel;
 
@@ -19,6 +20,10 @@ class Clients extends BaseController
 		$this->data['clients'] = $clients['clients'];
 		$this->data['pager'] = $clients['pager'];
 
+		$postMeta = new MetaTags();
+		$postMeta->title = 'Clients';
+		$this->data['meta'] = $postMeta;
+
 		return view('Frontend/clients/index', $this->data);
 	}
 	public function single($slug = '')
@@ -31,6 +36,15 @@ class Clients extends BaseController
 			return redirect()->to(route_to('clients_page'));
 		}
 		$this->data['client'] = $client;
+		
+		$postMeta = new MetaTags();
+		$postMeta->title = $client['name'];
+		$postMeta->description = $client['summary'];
+		// $postMeta->keywords = $service['post_tags'];
+		// $postMeta->author = $service['post_title'];
+		// $postMeta->owner = $service['post_title'];
+		$postMeta->type = 'client';
+		$this->data['meta'] = $postMeta;
 
 		// echo '<pre>';
 		// print_r($this->data);

@@ -110,7 +110,7 @@ class AjaxServices extends BaseController
 			$dataToSave = [
 				'email' => $this->request->getVar('email'),
 				'first_name' => $this->request->getVar('first_name'),
-				'last_namme' => $this->request->getVar('last_namme'),
+				'last_name' => $this->request->getVar('last_name'),
 				'phone' => $this->request->getVar('phone'),
 				'service_id' => $this->request->getVar('service_id'),
 				'service_name' => $this->request->getVar('service_name'),
@@ -118,9 +118,7 @@ class AjaxServices extends BaseController
 			$saveQuery = $query_md->save($dataToSave);
 
 			// send email here
-
-
-			$name = $this->request->getVar('first_name') . ' ' . $this->request->getVar('last_namme');
+			$name = $this->request->getVar('first_name') . ' ' . $this->request->getVar('last_name');
 			$userEmail = $this->request->getVar('email');
 			$phone = $this->request->getVar('phone');
 			$service_name = $this->request->getVar('service_name');
@@ -143,7 +141,6 @@ class AjaxServices extends BaseController
 		}
 		return json_encode(false);
 	}
-
 	function sendEmail($to, $subject, $message, $textMessage = '')
 	{
 		$email = \Config\Services::email();

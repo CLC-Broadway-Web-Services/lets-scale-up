@@ -5,6 +5,12 @@
     </a>
 </li>
 
+<li class="nk-menu-item <?= '/' . uri_string() == route_to('temp_service_query_admin') ? 'active' : ''  ?>">
+    <a href="<?= route_to('temp_service_query_admin') ?>" class="nk-menu-link">
+        <span class="nk-menu-icon"><em class="icon ni ni-growth"></em></span>
+        <span class="nk-menu-text">Service Queries</span>
+    </a>
+</li>
 <li class="nk-menu-item <?= '/' . uri_string() == route_to('admin_contact_submissions') ? 'active' : ''  ?>">
     <a href="<?= route_to('admin_contact_submissions') ?>" class="nk-menu-link">
         <span class="nk-menu-icon"><em class="icon ni ni-growth"></em></span>

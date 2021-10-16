@@ -81,7 +81,10 @@ a:visited {
 a:hover {
   color: #6d1311;
 }
-
+main {
+  position: absolute;
+  width: 100%;
+}
 .btn {
   font-family: "Nunito", sans-serif;
   font-size: 17px;
@@ -153,18 +156,18 @@ h6 {
 }
 
 .blue {
-  color: #6d1311;
+  color: #6d1311 !important;
 }
 
 .red {
-  color: #e52f37;
+  color: #e52f37 !important;
 }
 .lsu {
-  color: #6d1311;
+  color: #6d1311 !important;
 }
 
 .green {
-  color: #27b36a;
+  color: #27b36a !important;
 }
 
 .section-white {
@@ -645,19 +648,23 @@ iframe {
   position: relative;
   overflow: hidden;
   display: block;
-  padding: 40px 0 20px 0;
+  padding: 10px 0;
+  /* font-size: 14px; */
+  /* padding: 40px 0 20px 0; */
   background-color: #f5f7fc;
 }
 
-.footer p {
+.footer p {  
+  font-size: 12px;
+  line-height: 14px;
   margin-bottom: 5px;
-  line-height: 24px;
+  /* line-height: 14px; */
   color: #454545;
 }
 
 .footer p > a {
-  font-size: 17px;
-  color: #454545;
+  /* font-size: 14px; */
+  /* color: #454545; */
   font-weight: bold;
   text-decoration: none;
 }
@@ -667,13 +674,13 @@ iframe {
   text-decoration: underline;
 }
 
-span.template-name {
+/* span.template-name {
   font-weight: bold;
-}
+} */
 
 a.footer-links {
   display: block;
-  font-size: 17px;
+  /* font-size: 14px; */
   margin-bottom: 2px;
   color: #454545;
 }
@@ -699,7 +706,7 @@ ul.footer_social li a i {
   display: inline-block;
   margin: 0 8px;
   padding: 0;
-  font-size: 26px !important;
+  /* font-size: 26px !important; */
   line-height: 26px !important;
   color: #1e90ff;
   transition: all 0.5s ease-in-out;
@@ -734,7 +741,25 @@ ul.footer_social li a.github i {
 ul.footer_social li a i:hover {
   opacity: 0.59;
 }
-
+.footer2 {
+  background: #6d1311;
+  padding: 20px 0;
+}
+.footer2 a,
+.footer2 span,
+.footer2 p {
+  margin-bottom: 5px;
+  line-height: 24px;
+  color: #fff;
+  /* font-size: 14px; */
+}
+.footer2_links a:not(:last-child)::after {
+  content: " | ";
+}
+.footer2_links a:hover {
+  color: rgb(255 193 7);
+  font-weight: 500;
+}
 /* ========================================================== */
 /* 			               04. HOME                           */
 /* ========================================================== */

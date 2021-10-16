@@ -1,6 +1,74 @@
 <?= $this->extend('Frontend/layouts/main'); ?>
 
 <?= $this->section('content'); ?>
+<style>
+  .circled_icon i {
+    padding: 10px 14.5px;
+    line-height: 50px;
+    background-color: #800000;
+    font-size: 25px;
+    color: #ffffff !important;
+    border-radius: 50%;
+  }
+
+  #homepageBlocks .main-services {
+    height: 100%;
+    margin-top: 0;
+  }
+
+  #homepageBlocks {
+    margin-top: 40px;
+  }
+
+  #homepageBlocks p {
+    color: #3d3d3d;
+  }
+
+  .testim-info {
+    max-width: max-content;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+
+  #search-services-form {
+    position: relative;
+  }
+
+  .currency-value::first-letter {
+    font-size: 50% !important;
+    margin-right: 10px;
+  }
+
+  #autoSuggestList {
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 14px 12px rgb(0 0 0 / 10%);
+    display: none;
+    width: 100%;
+    padding: 5px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  ul#suggestionList li {
+    text-align: left;
+    padding: 3px;
+    border-top: 0.5px #80808033 solid;
+    color: #3d3d3d;
+  }
+
+  ul#suggestionList li a {
+    color: #3d3d3d;
+  }
+
+  ul#suggestionList li:hover {
+    background: cadetblue;
+  }
+
+  .carousel-item>div {
+    margin: 0 20px;
+  }
+</style>
 
 <section class="home-section" id="home">
   <div class="container">
@@ -255,90 +323,6 @@
   </section>
 <?php endif; ?>
 
-<style>
-  .circled_icon i {
-    padding: 10px 14.5px;
-    line-height: 50px;
-    background-color: #800000;
-    font-size: 25px;
-    color: #ffffff !important;
-    border-radius: 50%;
-  }
-
-  #homepageBlocks .main-services {
-    height: 100%;
-    margin-top: 0;
-  }
-
-  #homepageBlocks {
-    margin-top: 40px;
-  }
-
-  #homepageBlocks p {
-    color: #3d3d3d;
-  }
-
-  .testim-info {
-    max-width: max-content;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  #services .feature-box {
-    height: 100%;
-    margin-top: 0 !important;
-  }
-
-  #services .service_title>h4 {
-    line-height: 1.1;
-    position: absolute;
-    max-width: 100%;
-    bottom: 1px;
-  }
-
-  #services .service_title {
-    position: relative;
-    height: 42px;
-  }
-
-  #search-services-form {
-    position: relative;
-  }
-
-  .currency-value::first-letter {
-    font-size: 50% !important;
-    margin-right: 10px;
-  }
-
-  #autoSuggestList {
-    position: absolute;
-    background: #fff;
-    box-shadow: 0 14px 12px rgb(0 0 0 / 10%);
-    display: none;
-    width: 100%;
-    padding: 5px;
-    border-radius: 0 0 5px 5px;
-  }
-
-  ul#suggestionList li {
-    text-align: left;
-    padding: 3px;
-    border-top: 0.5px #80808033 solid;
-    color: #3d3d3d;
-  }
-
-  ul#suggestionList li a {
-    color: #3d3d3d;
-  }
-
-  ul#suggestionList li:hover {
-    background: cadetblue;
-  }
-
-  .carousel-item>div {
-    margin: 0 20px;
-  }
-</style>
 
 <?= $this->endSection(); ?>
 

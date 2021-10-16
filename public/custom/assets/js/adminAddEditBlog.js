@@ -25,14 +25,14 @@ function validateForm() {
     }
     return true;
 }
-tinymce.init({
-    selector: "#post_description",
-    setup: function (editor) {
-        editor.on('change', function () {
-            editor.save();
-        });
-    }
-});
+// tinymce.init({
+//     selector: "#post_description",
+//     setup: function (editor) {
+//         editor.on('change', function () {
+//             editor.save();
+//         });
+//     }
+// });
 
 function consoleForm(form) {
     var fomrData = new FormData(form[0]);

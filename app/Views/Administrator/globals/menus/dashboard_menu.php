@@ -4,10 +4,30 @@
         <span class="nk-menu-text">Overview</span>
     </a>
 </li>
-<li class="nk-menu-item <?= '/' . uri_string() == route_to('admin_service_add') ? 'active' : ''  ?>">
-    <a href="<?= route_to('admin_service_add') ?>" class="nk-menu-link">
-        <span class="nk-menu-icon"><em class="icon ni ni-grid-add-c"></em></span>
-        <span class="nk-menu-text">User Subscriptions</span>
+
+<li class="nk-menu-item <?= '/' . uri_string() == route_to('another_service_query_admin') ? 'active' : ''  ?>">
+    <a href="<?= route_to('another_service_query_admin') ?>" class="nk-menu-link">
+        <span class="nk-menu-icon"><em class="icon ni ni-growth"></em></span>
+        <span class="nk-menu-text">Another Service Queries</span>
+    </a>
+</li>
+
+<li class="nk-menu-item <?= '/' . uri_string() == route_to('temp_service_query_admin') ? 'active' : ''  ?>">
+    <a href="<?= route_to('temp_service_query_admin') ?>" class="nk-menu-link">
+        <span class="nk-menu-icon"><em class="icon ni ni-growth"></em></span>
+        <span class="nk-menu-text">Service Queries</span>
+    </a>
+</li>
+<li class="nk-menu-item <?= '/' . uri_string() == route_to('admin_partner_queries') ? 'active' : ''  ?>">
+    <a href="<?= route_to('admin_partner_queries') ?>" class="nk-menu-link">
+        <span class="nk-menu-icon"><em class="icon ni ni-setting"></em></span>
+        <span class="nk-menu-text">Partner Queries</span>
+    </a>
+</li>
+<li class="nk-menu-item <?= '/' . uri_string() == route_to('admin_contact_submissions') ? 'active' : ''  ?>">
+    <a href="<?= route_to('admin_contact_submissions') ?>" class="nk-menu-link">
+        <span class="nk-menu-icon"><em class="icon ni ni-growth"></em></span>
+        <span class="nk-menu-text">Contact Submission</span>
     </a>
 </li>
 <li class="nk-menu-item <?= '/' . uri_string() == route_to('admin_testimonials') ? 'active' : ''  ?>">
@@ -17,10 +37,10 @@
     </a>
 </li>
 
-<li class="nk-menu-item <?= '/' . uri_string() == route_to('admin_contact_submissions') ? 'active' : ''  ?>">
-    <a href="<?= route_to('admin_contact_submissions') ?>" class="nk-menu-link">
-        <span class="nk-menu-icon"><em class="icon ni ni-growth"></em></span>
-        <span class="nk-menu-text">Contact Submission</span>
+<li class="nk-menu-item <?= '/' . uri_string() == route_to('admin_service_add') ? 'active' : ''  ?>">
+    <a href="<?= route_to('admin_service_add') ?>" class="nk-menu-link">
+        <span class="nk-menu-icon"><em class="icon ni ni-grid-add-c"></em></span>
+        <span class="nk-menu-text">User Subscriptions</span>
     </a>
 </li>
 <li class="nk-menu-item <?= '/' . uri_string() == route_to('admin_press_release_index') ? 'active' : ''  ?>">

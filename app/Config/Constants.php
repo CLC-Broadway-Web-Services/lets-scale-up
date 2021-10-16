@@ -76,6 +76,9 @@ defined('EXIT_DATABASE')       || define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
+define('PLACEHOLDER_JPG', '/public/assets/images/placeholder-image.jpg');
+define('PLACEHOLDER_PNG', '/public/assets/images/placeholder-image.png');
+
 define('APP_NAME', 'Lets Scale Up');
 define('APP_COMPLETED', false);
 define('APP_LOGO', '/public/assets/images/logo-dark.png');
