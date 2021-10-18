@@ -5,6 +5,7 @@ namespace App\Controllers\Frontend;
 use App\Controllers\BaseController;
 use App\Entities\MetaTags;
 use App\Models\Admin\OrderModel;
+use App\Models\Admin\ServiceCategorySlider;
 use App\Models\Admin\ServiceQuery;
 use App\Models\Admin\Settings;
 use App\Models\Globals\FrontservicesModel;
@@ -240,6 +241,10 @@ class Services extends BaseController
         // find the category by slug, if that was not found go to the alll category OR 404 page
         $categoryData = null;
         $categoryData = $this->serviceDB->getParentCategoryWithServices($slug);
+        $id = $categoryData['id'];
+        $slideDb = new ServiceCategorySlider();
+        $slides = $slideDb->where(['status' => 1, 'category_id' => $id])->findAll();
+        $categoryData['slides'] = $slides;
 
         $this->data['category'] = $categoryData;
 

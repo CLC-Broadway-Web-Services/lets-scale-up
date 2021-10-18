@@ -29,6 +29,12 @@
         <span class="nk-menu-text">Add Category Question</span>
     </a>
 </li>
+<li class="nk-menu-item <?= '/' . uri_string() == route_to('admin_service_slider_index') ? 'active' : ''  ?>">
+    <a href="<?= route_to('admin_service_slider_index') ?>" class="nk-menu-link">
+        <span class="nk-menu-icon"><em class="icon ni ni-growth"></em></span>
+        <span class="nk-menu-text">Category Sliders</span>
+    </a>
+</li>
 
 <li class="nk-menu-item <?= '/' . uri_string() == route_to('admin_service_benefit_index') ? 'active' : ''  ?>">
     <a href="<?= route_to('admin_service_benefit_index') ?>" class="nk-menu-link">

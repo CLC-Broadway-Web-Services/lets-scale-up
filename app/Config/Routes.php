@@ -152,7 +152,6 @@ $routes->group('administrator', function ($routes) {
 			$routes->match(['get', 'post'], 'edit/(:num)', 'Admin\Services::addEditServiceBenefit/$1', ['as' => 'admin_service_benefit_edit']);
 			$routes->match(['get', 'post'], 'status/(:num)', 'Admin\Services::serviceBenefitStatusChange/$1', ['as' => 'admin_service_benefit_status']);
 		});
-
 		$routes->group('categories', function ($routes) {
 			$routes->match(['get', 'post'], '/', 'Admin\Services::categories', ['as' => 'admin_service_category_index']);
 			$routes->match(['get', 'post'], '(:num)', 'Admin\Services::categories/$1', ['as' => 'admin_service_category_edit']);
@@ -165,7 +164,13 @@ $routes->group('administrator', function ($routes) {
 				$routes->match(['get', 'post'], 'status/(:num)', 'Admin\Services::serviceCatFaqStatusChange/$1', ['as' => 'admin_service_cat_faq_status']);
 			});
 		});
-
+		$routes->group('categories-slider', function ($routes) {
+			$routes->get('', 'Admin\ServiceCatSlider::index', ['as' => 'admin_service_slider_index']);
+			$routes->match(['get', 'post'], 'add', 'Admin\ServiceCatSlider::addEdit', ['as' => 'admin_service_slider_add']);
+			$routes->match(['get', 'post'], 'edit/(:num)', 'Admin\ServiceCatSlider::addEdit/$1', ['as' => 'admin_service_slider_edit']);
+			$routes->match(['get', 'post'], 'status/(:num)', 'Admin\ServiceCatSlider::statusChange/$1', ['as' => 'admin_service_slider_status']);
+			$routes->match(['get', 'post'], 'delete/(:num)', 'Admin\ServiceCatSlider::delete/$1', ['as' => 'admin_service_slider_delete']);
+		});
 		$routes->group('forms', function ($routes) {
 			$routes->get('', 'Admin\Serviceforms::index', ['as' => 'admin_service_form_index']);
 			$routes->match(['get', 'post'], 'add', 'Admin\Serviceforms::addEditForm', ['as' => 'admin_service_form_add']);

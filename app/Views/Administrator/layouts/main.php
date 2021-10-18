@@ -27,6 +27,22 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+
+        ul.nk-menu-sub {
+            overflow: hidden;
+            overflow-y: scroll;
+            max-height: 80vh;
+        }
+
+        *::-webkit-scrollbar {
+            background: #fff;
+            width: 8px;
+            height: auto;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background: #c5c5c5;
+        }
     </style>
     <!-- page css -->
     <?php if (isset($pageCSS)) {

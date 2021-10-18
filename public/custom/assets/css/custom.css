@@ -4,6 +4,9 @@
     padding-left: 0 !important;
   }
 } */
+.press-release a img {
+  padding: 15px;
+}
 @media (min-width: 800px) {
   #servicesDropdown {
     min-width: max-content;

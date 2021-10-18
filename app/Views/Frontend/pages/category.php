@@ -1,12 +1,46 @@
 <?= $this->extend('Frontend/layouts/main'); ?>
 
 <?= $this->section('content'); ?>
+<style>
+    @media (max-width: 1001px) {
+        section.home-section.section-white {
+            padding-top: 91px !important;
+        }
+    }
 
-<section class="section-white small-padding-bottom">
+    section.home-section.section-white {
+        padding-top: 107px;
+        padding-bottom: 0;
+    }
+
+    img.category_slide {
+        width: 100%;
+    }
+</style>
+
+<?php if (count($category['slides'])) : ?>
+    <section class="home-section section-white">
+        <!-- <div class="home-center"> -->
+        <?php if (count($category['slides']) == 1) : ?>
+            <img src="<?= $category['slides'][0]['image'] ?>" class="category_slide">
+        <?php else : ?>
+            <div class="splide" id="serviceSlider">
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <?php foreach ($category['slides'] as $key => $slide) : ?>
+                            <img src="<?= $slide['image'] ?>" class="category_slide splide__slide">
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
+        <!-- </div> -->
+    </section>
+<?php endif; ?>
+<section class="section-white small-padding-bottom <?php if (count($category['slides'])) echo 'pt-0' ?>">
     <div class="container pt-5">
         <div class="row align-items-center text-center">
             <div class="col-12">
-
                 <h2><?= $category['title'] ? $category['title'] : $category['name'] ?></h2>
                 <?php if ($category['subtitle']) : ?>
                     <h4><?= $category['subtitle'] ?></h4>
@@ -14,7 +48,6 @@
                 <?php if ($category['description']) : ?>
                     <p><?= $category['description'] ?></p>
                 <?php endif; ?>
-
             </div>
         </div>
     </div>
@@ -47,6 +80,7 @@
 
     <?php endif; ?>
 <?php endforeach; ?>
+
 <?php if (count($category['faqs']) > 0) : ?>
     <section class="section-white">
         <div class="container">
@@ -95,4 +129,16 @@
     }
 </style>
 
+<?= $this->endSection(); ?>
+<?= $this->section('javascript'); ?>
+<script>
+    new Splide('#serviceSlider', {
+        autoplay: true,
+        interval: 3000,
+        perPage: 1,
+        arrows: false,
+        type: 'loop',
+        pagination: false
+    }).mount();
+</script>
 <?= $this->endSection(); ?>
